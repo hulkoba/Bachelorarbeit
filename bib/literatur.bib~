@@ -1,0 +1,53 @@
+% Hier kommen Referenzen hinein
+% Damit diese auch gefunden werden, muss im Hauptverzeichnis bibtex "datei.aux" ausgeführt werden%BÜCHER
+@Book{refActionScript,
+	author = {Hauser Tobias and Kappler Armin and Wenz Christian},
+	year = 2010,
+	title = {Das Praxisbuch ActionScript 3 -- Aktuell zu Adobe Flash CS5},
+	note = {Bonn},
+	publisher = {Galileo Press}	
+}
+%LINKS
+@misc{MoMo,
+title = {Projekt MoMo},
+howpublished = {\url{http://projekt.beuth-hochschule.de/momo/}},
+note = {Zugriff: 18.11.2014}
+}
+%STATE OF THE ART
+@misc{Travolution,
+title = {Verkehrsoptimierung mit Genetischen Algorithmen},
+howpublished = {\url{http://www.travolution-ingolstadt.de/index.php?id=69}},
+note = {Zugriff: 28.11.2014}
+}
+@misc{ToyotaDev,
+title = {Toyota develops GPS system that recognises red traffic lights},
+howpublished = {\url{http://en.trend.az/world/other/1904536.html}},
+note = {Zugriff: 28.11.2014}
+}
+@misc{ToyotaTest,
+title = {Toyota starts tests of traffic-light warning system},
+howpublished = {\url{http://www.traffictechnologytoday.com/news.php?NewsID=48598}},
+note = {Zugriff: 28.11.2014}
+}
+@misc{AudiTravolution,
+title = {Audi travolution: vehicle to traffic light communication system reduces fuel consumption},
+howpublished = {\url{http://www.gizmag.com/audi-travolution-vehicle-to-traffic-light-communication/15340/}},
+note = {Zugriff: 28.11.2014}
+}
+@misc{AudiTrafficLightSystem,
+title = {Audi Online traffic light system helps drivers hit the green lights},
+author = {David Szondy},
+howpublished = {\url{http://www.gizmag.com/audi-connected-traffic-light-system/31159/}},
+note = {Zugriff: 28.11.2014}
+}
+@misc{EnLighten,
+title = {EnLighten},
+howpublished = {\url{http://connectedsignals.com/index.php}},
+note = {Zugriff: Datum}
+}
+@misc{Beispiel,
+author = {Monika Muster},
+title = {Beispielprojekt},
+howpublished = {\url{http://projekt.beuth-hochschule.de/momo/}},
+note = {besucht am: 18.11.2014}
+}

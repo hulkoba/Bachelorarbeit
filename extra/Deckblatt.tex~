@@ -1,0 +1,61 @@
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\includegraphics[scale=0.9]{beuth}  \\[1.5cm]
+\end{center}
+%\includegraphics[scale=0.9]{}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[1.4cm]
+{\huge  \bfseries \textsc{Bachelorarbeit}} %%\onehalfsize 
+\\[0.5cm] % Title of your document
+{\LARGE Ampelphasen-Informationssystem für FahrradfahrerInnen auf Grundlage persistenter geo- und zeitbasierter Daten }\\[1.5cm]
+{\Large Berlin, den \today{}} \\[0.5cm]
+\HRule \\[10cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Autorin:}\\
+Jacoba \textsc{Brandner} \\
+\emph{Matrikelnummer}\\
+786635
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.45\textwidth}
+\begin{flushright} \large
+\emph{Betreuerin:} \\
+Frau Prof. Dr. Gudrun \textsc{Görlitz} \\
+\emph{Gutachter:} \\
+Philipp \textsc{Wolfer} \\
+\end{flushright}
+\end{minipage}\\
+
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+% Include a department/university logo - this will require the graphicx package
+%\includegraphics[scale=0.1]{extra/parolu} 
+
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}

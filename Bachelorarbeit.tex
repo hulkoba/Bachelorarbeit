@@ -1,0 +1,105 @@
+\documentclass[a4paper,
+oneside,
+11pt, 
+headsepline,
+abstracton,
+]{scrreprt} %%scrreprt
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % Umlaute für linux
+\usepackage[english, ngerman]{babel}
+\usepackage{lmodern}	 %Type1-Schriftart fuer nicht-englische Texte
+\usepackage{graphicx}
+% Zeilenumbruch bei Bildbeschreibungen.
+\setcapindent{1em}
+% aller Bilder werden im Unterverzeichnis figures gesucht:
+\graphicspath{{img/}}
+\usepackage{float}
+\usepackage{cite}
+% Paket für Quotes
+\usepackage[babel, german=swiss]{csquotes}
+\usepackage{txfonts} %Schriftart Times New Roman
+\usepackage{titlesec} % formatiert titel-absätze
+\usepackage[left=25mm,right=20mm,top=20mm,bottom=20mm]{geometry} %Seitenränder
+\usepackage[pdfborder={ 0 0 0 }, breaklinks]{hyperref} % bricht links und macht die umrandung weiß
+\usepackage{enumitem}
+\usepackage{xspace} % setzt Leerzeichen, wenn welche hingehören (vor nächstem wort, aber nicht vor "." oder ")")
+\linespread {1.25}\selectfont
+\usepackage[
+%printonlyused      %nur verwendete abkürzungen zeigen
+footnote            % Langform als Fußnote
+]{acronym}
+\usepackage[ngerman]{translator}
+\usepackage[
+nonumberlist,   %keine Seitenzahlen anzeigen
+%nopostdot,      %keine Punkte am Ende
+acronym,       %ein Abkürzungsverzeichnis erstellen
+toc]            %Einträge im Inhaltsverzeichnis
+{glossaries}
+\makeglossaries
+%Glossar-Befehle anschalten
+\include{extra/Glossary}
+\addtokomafont{chapter}{\LARGE \scshape \mdseries}
+\addtokomafont{section}{\scshape \mdseries} %formatierung der sections
+\addtokomafont{subsection}{\scshape \mdseries}
+\addtokomafont{subsubsection}{\scshape \mdseries}
+\renewcommand*{\chapterheadendvskip}{\vspace {16pt}}
+%------------------------------------------------------------------------
+% DOKUMENT
+%------------------------------------------------------------------------
+\begin{document}
+\setlist{noitemsep}  %% verringert Zeilenabstand bei aufzaehlungen
+\pagestyle{empty} %%Keine Kopf-/Fusszeilen auf den ersten Seiten.
+% 
+%Deckblatt
+%
+\input{extra/Deckblatt} 
+%
+%Inhaltsverzeichnis
+%
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\renewcommand{\contentsname}{Inhalt} %Inhaltsverzeichnistitel = Inhalt
+\tableofcontents 		
+
+\cleardoublepage 	
+\pagestyle{headings}	 	%%Ab hier die Kopf-/Fusszeilen: headings / fancy .
+\hyphenation{MoMo} %trennt MoMo nie
+%
+% Kapitel / Hauptteil des Dokumentes 
+%
+%\input{dir/Kapitel} 	
+\input{chapter/Abstract}
+\input{chapter/Einleitung}
+\input{chapter/Grundlagen}
+\input{chapter/Anforderungen}   %Anforderungsanalyse
+\input{chapter/Entwurf}         %Konzeption
+\input{chapter/Implementierung} %Umsetzung Prototyp
+\input{chapter/Fazit}
+%
+% Verzeichnisse
+%
+%% Ein kleiner Abstand zu den Kapiteln im Inhaltsverzeichnis (toc)
+\addtocontents{toc}{\protect\vspace*{\baselineskip}}
+
+\include{extra/Acronym}
+%Glossar ausgeben
+\printglossary[type=\acronymtype, title=Abkürzungen, style=list]
+\printglossary[style=altlist,type=main]
+% 
+%Abbildungsverzeichnis
+%
+\clearpage
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+% Literaturverzeichnis
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\nocite{*} 		%Auch nicht-zitierte BibTeX-Eintraege werden angezeigt.
+\bibliographystyle{alphadin} %Art der Ausgabe alphadin
+\bibliography{bib/literatur}
+% Anhang
+\clearpage
+%\appendix
+%\include{extra/Eid}
+%\addcontentsline{toc}{chapter}{Anhang}
+%\include{extra/Eidesstattliche}
+\end{document}
