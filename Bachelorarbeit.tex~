@@ -84,7 +84,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 \include{extra/Acronym}
 %Glossar ausgeben
 \printglossary[type=\acronymtype, title=Abkürzungen, style=list]
-\printglossary[type=main,style=altlist]
+\printglossary[style=altlist,type=main]
 % 
 %Abbildungsverzeichnis
 %

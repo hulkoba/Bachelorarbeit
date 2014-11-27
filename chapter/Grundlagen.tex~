@@ -31,6 +31,8 @@ Hierbei verbindet sich die App über \gls{DSRC} mit den Lichtsignalanlagen und b
 Die Installation der \gls{DSRC}-Hardware an den Komponenten ist sehr aufändig und teuer, weswegen EnLighten erst in einigen amerikanischen Städten funktionstüchtig ist.
 \subsection{SignalGuru}
 Die App SignalGuru errechnet über die Smartphones vieler Nutzer - welche miteinander kommunizieren -  die Wahrscheinlichkeit, wann eine Ampel grün wird und wie das eigene Fahrverhalten entsprechend anzupassen ist. Hierbei muss die eingebaute Kamera durch die Windschutzscheibe die Ampel registrieren. Bei Testläufen im Straßenverkehr vielen die Ergebnise bei statisch geschalteten Ampeln deutlich besser aus als bei angepassten Ampelschaltungen \footnote{Vgl. \cite{SignalGuru}} 
+Die Smartphones kommunizieren miteinander und teilen sich die Dauer der Ampelphasen mit. So entsteht mit der Zeit ein recht genaues Muster über die Schaltpläne der Ampeln. Daraus wiederum lässt sich vorausberechnen, welche Phase eine Ampel zeigt.
+http://www.golem.de/1108/86013.html
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.8]{SignalGuru}

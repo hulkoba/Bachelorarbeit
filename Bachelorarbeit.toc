@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {2.2.4}Projekt Travolution}{8}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}Mobile Ampel-Informationssysteme}{8}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}EnLighten}{9}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}SignalGuru}{9}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Signal Guru}{9}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Ampelmeter}{10}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Analyseergebnis}{10}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}Technische Grundlagen}{10}{section.2.4}
@@ -57,5 +57,6 @@
 \contentsline {section}{\numberline {6.2}Ausblick}{15}{section.6.2}
 \vspace *{\baselineskip }
 \contentsline {chapter}{Akronyme}{16}{section*.2}
-\contentsline {chapter}{Abbildungsverzeichnis}{17}{chapter*.3}
-\contentsline {chapter}{Literaturverzeichnis}{17}{chapter*.4}
+\contentsline {chapter}{Glossar}{17}{section*.4}
+\contentsline {chapter}{Abbildungsverzeichnis}{18}{chapter*.5}
+\contentsline {chapter}{Literaturverzeichnis}{18}{chapter*.6}

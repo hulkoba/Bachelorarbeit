@@ -1,1 +1,6 @@
-\null
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{A}\relax \glsresetentrylist %
+\glossaryentryfield{AntwD}{\glsnamefont{Antwortdatei}}{ Informationen zum Installieren einer Anwendung oder des Betriebssystems}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{15}}}%
+\end{theglossary}\glossarypostamble

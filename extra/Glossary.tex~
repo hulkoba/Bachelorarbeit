@@ -3,30 +3,22 @@
     description={ Informationen zum
 Installieren einer Anwendung oder des Betriebssystems}
 }
-\newglossaryentry{computer}{
-  name=Computer,
-  description={is a programmable machine that receives input,
-               stores and manipulates data, and provides
-               output in a useful format}
-}
-\newglossaryentry{naiive}{
-  name=na\"{\i}ve,
-  description={is a French loanword (adjective, form of naïf)
-               indicating having or showing a lack of experience,
-               understanding or sophistication}
-}
-\newglossaryentry{Linux}{
-  name=Linux,
-  description={is a generic term referring to the family of Unix-like
-               computer operating systems that use the Linux kernel},
-  plural=Linuces
-}
-\newglossaryentry{pi}{
-  name={\ensuremath{\pi}},
-  description={ratio of circumference of circle to its
-               diameter},
-  sort=pi
-}
-
-
-
+\newacronym{App}{App}{Applikation}
+\newacronym{OSM}{OSM}{Open Street Map}
+\newacronym{LED}{LED}{Licht-emittierende Diode, auch Lumineszenz-Diode || Leuchtdiode}
+\newacronym{V2X}{V2X}{Vehicle-to-X}
+\newacronym{I2V}{I2V}{Infrastructure-to-Vehicle}
+\newacronym{V2R}{V2R}{Vehicle-to-Roadside}
+\newacronym{DSRC}{DSRC}{Dedicated Short Range Communication}
+\newacronym{SQL}{SQL}{Structured Query Language}
+\newacronym{Bash}{Bash}{Bourne-again shell}
+\newacronym{JDK}{JDK}{Java Development Kit}
+\newacronym{VM}{VM}{Virtuelle Maschine}
+\newacronym{GPS}{GPS}{Global Positioning System}
+\newacronym{UI}{UI}{User Interface}
+\newacronym{GUI}{GUI}{Graphical User Interface}
+\newacronym{HTML}{HTML}{HyperText Markup Language}
+\newacronym{CSS}{CSS}{Cascading Style Sheet}
+\newacronym{XML}{XML}{Extensible Markup Language}
+\newacronym{SDK}{SDK}{Software development kit}
+\newacronym{BMW}{BMW}{Bayerische Motoren Werke}
