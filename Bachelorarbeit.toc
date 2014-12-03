@@ -5,19 +5,17 @@
 \select@language {ngerman}
 \contentsline {chapter}{\numberline {1}Einf\IeC {\"u}hrung}{5}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Zielsetzung -- Umsetzung}{5}{section.1.2}
+\contentsline {section}{\numberline {1.2}Ziel- und Umsetzung}{5}{section.1.2}
 \contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{6}{section.1.3}
 \contentsline {chapter}{\numberline {2}State of the art und Grundlagen}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}State of the art}{7}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Ampel-Informationssysteme im Fahrzeug}{7}{subsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.1}Toyota}{7}{subsubsection.2.1.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.2}Projekt Wolfsburg}{7}{subsubsection.2.1.1.2}
-\contentsline {subsubsection}{\numberline {2.1.1.3}Projekt Travolution}{7}{subsubsection.2.1.1.3}
-\contentsline {subsection}{\numberline {2.1.2}Mobile Ampel-Informationssysteme}{8}{subsection.2.1.2}
-\contentsline {subsubsection}{\numberline {2.1.2.1}EnLighten}{8}{subsubsection.2.1.2.1}
-\contentsline {subsubsection}{\numberline {2.1.2.2}Signal Guru}{9}{subsubsection.2.1.2.2}
-\contentsline {subsubsection}{\numberline {2.1.2.3}Ampelmeter}{9}{subsubsection.2.1.2.3}
-\contentsline {subsection}{\numberline {2.1.3}Analyseergebnis}{9}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.1}Projekt Wolfsburger Welle}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Projekt Travolution}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Autokonzerne}{8}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}EnLighten}{8}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Signal Guru}{9}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.6}Ampelmeter}{10}{subsection.2.1.6}
+\contentsline {subsection}{\numberline {2.1.7}Analyseergebnis}{10}{subsection.2.1.7}
 \contentsline {section}{\numberline {2.2}Technische Grundlagen}{10}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Arduino / Android-App}{10}{subsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.1.1}Mobile Sensing}{10}{subsubsection.2.2.1.1}
