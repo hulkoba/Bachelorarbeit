@@ -1,50 +1,8 @@
 \chapter{Einführung}
-
-Glossareintrag: \gls{glos:AntwD}
-
 \section{Motivation}
-Im Berliner Verkehrswesen ist ein deutlicher Trend zu bemerken. Das Fahrrad wird zum ökologischen und gesundheitlichen, aktiven Lebensstil und wird dem hohen Verkehrsaufkommen der Automobile, insbesondere in der Stadtregion, entgegenwirken. “Fahrradfahren boomt in Berlin stärker als bislang bekannt”  (J.Anker, Berliner Morgenpost, am 6.06.2014)\\\\
-Neue Fahrradwege und Vergrößerung des Fahrradstraßennetzes sind regionale Baumaßnahmen, die dabei aktuell diesen Fahrradtrend unterstützen.\\
-Grund der neuen Fahrradeuphorie ist nicht zuletzt die erfolgreiche Etablierung der E-Bikes. E-Bikes erfreuen sich großer Beliebtheit und ermöglichen auch längere Touren ohne große Anstrengung.\\
-Die Digitalisierung der Autoinnenräume mit Navigation und Bordelektronik sowie die Verbindungen zu Smartphones stellen aktuell keine Besonderheit mehr dar. Wird das Fahrrad nun als „vollwertiges“ Mitglied im Straßenverkehr angesehen, kann zusätzliche Elektronik wie Navigation und Blickmechanismen den Fahrradfahrer unterstützen.\\\\
-Der Fahrtfluss des Radfahrers soll nicht unnötig unterbrochen werden. Dafür werden die potentiellen Wartezeiten an der nächsten Ampel vorzeitig errechnet und dem Fahrer mitgeteilt.
-Resultierend kann der Nutzer die Geschwindigkeit anpassen und die verbleibende Wegstrecke zur Ampel nutzen, um bei Grün ohne anzuhalten die Kreuzung zu überqueren. Für die Datenerhebung werden zugleich die mobilen Systeme der Radfahrer genutzt.\\\\
-Das Ziel der Arbeit ist ein Ampelhinweissystem, welches einem auf Basis der zu erstellenden  Ampeldatenbank Informationen über die Ampelschaltung zukommen lässt und ihn so interaktiv durch das Verkehrsnetz führt.
-
-\section{Analyse / state of the art}
-Die Verkehrsstrategie des Senats sieht vor, dass das Radfahren bis zum Jahr 2025 20 Prozent des Gesamtverkehrs ausmachen soll. (J.Anker, Berliner Morgenpost, am 6.06.2014)
-"Wir brauchen eine intelligente Konstruktion, die alle Verkehrsarten verbindet", sagte Stadtentwicklungssenator Michael Müller (SPD).\\
-Für Autos gibt es bereits funktionierende Apps wie EnLighten und SignalGuru, wenn auch ausschließlich in Amerika,  sowie Gespräche über eingebaute Systeme im Autocomputer von Audi und Toyota. \\\\
-Toyotas System erfordert eine spezielle Infrastruktur an Kreuzungen, die Installation von Infrarot-Sendern, die mit dem Toyota-GPS kommunizieren. An roter Ampel wird der Fahrer über die verbleibende Wartezeit informiert. Andere Autohersteller wie BMW, Volvo und Volkswagen kooperieren in diesem Forschungsprojekt, mit dem Forschungziel die Sicherheit an Kreuzungen zu verbessern. Im Auto installierte Sensoren kommunizieren mit Kameras und Scanner in der Ampel. \\
-Allerdings funktioniert das System nur mit dem ambitionierten Ziel, wenn alle Autohersteller zusammenarbeiten und sich auf den gleichen Standard einigen.\\\\
-Audi fragt über das Internet die Daten aus dem ‘area’s central traffic computer’, über die automatisch geschalteten Ampeln an. Damit berechnet das System die Geschwindigkeit, die man benötigt, um so viele grüne Ampeln wie möglich zu passieren.\\
-Die App SignalGuru errechnet über die Smartphones vieler Nutzer - welche miteinander kommunizieren -  die Wahrscheinlichkeit, wann eine Ampel grün wird und wie das eigene Fahrverhalten entsprechend anzupassen ist. Hierbei muss die eingebaute Kamera durch die Windschutzscheibe die Ampel registrieren. \\
-Ob das auch in Deutschland funktioniert ist schwer zu sagen, da die Ampeln hierzulande so gesetzt sind, dass das Smartphone in der Pole-Position die Ampel evtl. nicht erfassen kann. Dies gilt es in der Entwicklungsarbeit zu testen und gegebenenfalls auszuarbeiten.\\\\
-EnLighten synchronisiert sich auch mit dem Ampelschaltsystem und ist allein deshalb nur in einigen Städten funktionstüchtig.
-\\\\
-\textit{Solche Beispiele zeigen deutlich, dass kein anderer Industriezweig in den letzten Jahrzehnten
-ein ähnlich explosives Wachstum erfahren hat wie die Computer- und Videospielbranche. Aber
-auch mobile Anwendung zeigen zunehmend, wie Gamification als erfolgreiches Konzept einge-
-setzt werden kann. Gamification findet sich in vielen Bereichen wieder und wird auch ein Trend
-der Zukunft bleiben.}
-
-
-\section[Das MoMo-Projekt]{Das MoMo-Projekt\footnote{Vgl. \cite{MoMo}}}
-%fußnote im Titel
-Seit Juni 2011 gibt es an der Beuth Hochschule für Technik Berlin das Projekt „MoMo“. Dieses Projekt wird aus Mitteln des Europäischen Fonds für Regionale Entwicklung (EFRE) gefördert und beschäftigt sich hauptsächlich mit zwei Themenbereichen, aus denen sich auch der Name des Projekts zusammensetzt: \\\\
-\textbf{Mo}bile Computing und Eco-\textbf{Mo}bility\\\\
-Im Bereich des Mobile Computing liegt das Hauptaugenmerk auf der Entwicklung innovativer
-und praxisnaher Applikationen für mobile Endgeräte. Ein Teilbereich ist hierbei die Konzeption und Entwicklung von mobilen Informationssystemen für Freizeitanlagen der Bildung und Erholung.\\ Hierzu zählt unter anderem die Entwicklung von Besucherinformationssystemen, in der auch einzelne Projektinhalte des ehemaligen BAER2FIT3 -Projekts weiter geführt werden.\\
-Weiterhin wird innerhalb des Mobile Computings an Lösungen zur Positionsbestimmung und
-Navigation in Gebäuden geforscht. Da dies mit den aktuellen GPS-Empfängern nicht möglich
-ist, werden unter anderem Lösungen mit Bluetooth, NFC/RFID sowie anderen GNS-Systemen
-untersucht.\\
-Der zweite Teilbereich, die Eco-Mobility, beschäftigt sich vornehmlich mit Batterie-Management.
-In diesem Bereich wird unter anderem an der Leistungssteigerung von Batterien für Elektroautos gearbeitet. Außerdem sollen neue Lademöglichkeiten für diesen Bereich entwickelt werden.\\
-Im Projektbereich des Mobile Computing wurde die vorliegende Masterarbeit angesiedelt. Sie
-leistet hier einen Beitrag zu Besucherinformationssystemen und soll eine weiterverwendbare
-Grundlage aus Wegsuche-Algorithmen bilden.
-
+Im Berliner Verkehrswesen ist ein deutlicher Trend zu bemerken. Das Fahrrad wird zum ökologischen und gesundheitlichen, aktiven Lebensstil und wird dem hohen Verkehrsaufkommen der Automobile, insbesondere in der Stadtregion, entgegenwirken. “Fahrradfahren boomt in Berlin stärker als bislang bekannt”\cite{Mopo}\\\\
+Neue Fahrradwege und Vergrößerung des Fahrradstraßennetzes sind regionale Baumaßnahmen, die dabei aktuell diesen Fahrradtrend unterstützen. Grund der neuen Fahrradeuphorie ist nicht zuletzt die erfolgreiche Etablierung der E-Bikes\footnote{Elektrofahrrad. Ein Fahrrad mit elektrischem Hilfsmotor}. E-Bikes erfreuen sich großer Beliebtheit und ermöglichen auch längere Touren ohne große Anstrengung.\\ Die Digitalisierung der Autoinnenräume mit Navigation und Bordelektronik sowie die Verbindungen zu Smartphones stellen aktuell keine Besonderheit mehr dar. Wird das Fahrrad nun als „vollwertiges“ Mitglied im Straßenverkehr angesehen, kann zusätzliche Elektronik wie Navigation und Blickmechanismen die FahrradfahrerInnen unterstützen.\\\\ 
+Der Fahrtfluss des Radfahrers soll nicht unnötig unterbrochen werden. Dafür werden die potentiellen Wartezeiten an der nächsten Ampel vorzeitig errechnet und dem Fahrer mitgeteilt. Resultierend kann der Nutzer die Geschwindigkeit anpassen und die verbleibende Wegstrecke zur Ampel nutzen, um bei Grün ohne anzuhalten die Kreuzung zu überqueren. Für die Datenerhebung werden zugleich die mobilen Systeme der Radfahrer genutzt.
 \section{Zielsetzung- / Umsetzung???}
 Um die Ampeldaten zu erfassen, gibt es verschiedene Möglichkeiten. 
 Eine 100prozentige Deckung erreicht man durch manuelle Ablesung jeder Ampel. Wenn man das mit Ampeln auf gegebener Teststrecke umsetzt, kann zunächst der Prototyp des Ampelhinweissystem entwickelt werden. \\
@@ -52,37 +10,23 @@ Eine zweite Möglichkeit ist es, jedes Fahrrad mit einem GPS Tracker auszustatte
 Gewiss von Vorteil und sicher wäre es natürlich auch, die Verkehrsdaten bei der Verkehrsregelungszentrale anzufragen. Realistisch ist allerdings höchstens, die Daten der automatischen Ampeln zu bekommen. Wenn diese jedoch für eine hohe Trefferquote genügen würden.\\
 Des Weiteren gibt es an viel befahrenen Kreuzungen Kameras, die ebenfalls die Ampeln filmen. Die Aufnahmen analysierend, hat man für diese Kreuzungen ebenso entsprechende Daten.\\\\
 Zunächst ist eine Datenbank zu erstellen, in der die Positionen und Zustände der Ampeln gespeichert wird. Mithilfe von OpenStreetMap man die Ampeln lokalisieren und gegebenenfalls in die Karte der Navigationsoftware einbinden. Um den Projektrahmen nicht zu sprengen genügt die Umsetzung der ersten genannten Erfassungsweges.\\\\
-Nun wird anhand eines Algorithmus, der die empfohlene Geschwindigkeit mittels der verbleibenden Zeit der jeweiligen Ampelphase und der Distanz zwischen Fahrrad und Ampel errechnet.\\\\
+Nun wird anhand eines Algorithmus, der die empfohlene Geschwindigkeit mittels der verbleibenden Zeit der jeweiligen Ampelphase und der Distanz zwischen Fahrrad und Ampel errechnet.\\
 Die Auswertung erfolgt entweder durch eine Smartphone-App oder durch ein LED-Licht-System per Blinkfrequenz; beides am Lenker angebracht. Bei Nutzung des Telefons, nimmt man den integrierten GPS-Sender, bei der zweiten Variante muss man das System mit einem ausstatten.
 \\\\
-\textit{Verschiedene Hardware-Sensoren eines Smartphones, z.B. GPS, Kompass, Ka-
-mera oder Mikrofon, zusammengefasst unter dem Begriff Mobile Sensing, können so als Werk-
-zeuge verwendet werden, um neue und unterschiedliche Interaktionswege innerhalb einer
-Problemstellung zu schaffen (Lane, Miluzzo, Lu, Peebles, Choudhury, & Campbell, 2010,
-September) --- Zeitschrift.\\
-}
-
-Diese Bachelorarbeit hat den Anspruch, den Nutzen von Mobile Sensing als sinnvoll und bereichernd zu begünden. 
-Es soll Konzept für eine mobile Anwendung ausgearbeitet werden. Dieses Konzept wird schließlich in einer prototypischen Anwendung exemplarisch umgesetzt.
-
+Das Ziel der Arbeit ist ein Konzept und dessen prototypische Anwendung eines Ampelhinweissystem, welches einem auf Basis der zu erstellenden  Ampeldatenbank Informationen über die Ampelschaltung zukommen lässt und ihn so interaktiv durch das Verkehrsnetz führt.
 \section{Aufbau der Arbeit}
 2. Grundlagenkapitel:\\
-Grundbegriff, Herkunft, Definition, Überblick über mögliche Einsatzgebiete , Begriff Mobile Sensing.\\\\
+State of the art: Was gibt es schon. Projekte und Studien und fertige Apps,\\ 
+Grundbegriffe (technische Grundlagen), Definitionen, Überblick über mögliche Einsatzgebiete \\
 3. Analysekapitel:\\
-Anforderungsanalyse für Fahrradapp. Personas werden eingeführt, fiktive Benutzer, die vier bereits bestehende Applikationen zum Thema Ampelhinweissystem in den darauffolgenden Abschnitten kritisch untersuchen., dann Zusammenfassung der herausgearbeiteten Anforderungen.\\\\
+Anforderungsanalyse für Fahrradapp. Personas werden eingeführt?, =fiktive Benutzer, dann Zusammenfassung der herausgearbeiteten Anforderungen.\\
+Funktionalität, graphische Oberfläche
 4. Kapitel = Kern -- Konzipierung:\\
 mobile Anwendung. app. anrduino. die nutzer auf ampeln hinweist und die dauer der phase. 
 es wird auf.. einngegangen. Der Einsatz von mobile sensig wird dargelegt, alles vorgestellt.
-Zusammenfassend wird das Konzept am Ende von allen vier Personas nocheinmal kritisch betrachtet und evaluiert.\\\\
-5. Kapitel: Umsetzung in exemplarischen Prototyp der ... als bsp für mobile sensing verwendet. dafür wird... 
-dann wird der Prototyp in Design, Funktionalität und Architektur erläutert und schließlich in mehreren Testreihen uf die Probe gestellt. Die Ergebnisse folgen in den letzten Abschnitten des Kapitels.\\\\
+Zusammenfassend wird das Konzept am Ende von allen Personas nocheinmal kritisch betrachtet und evaluiert.\\
+5. Kapitel: Umsetzung in exemplarischen Prototyp der ... 
+Nach klärung der theoretischen berechnungsgrundlagen... 
+dann wird der Prototyp in Design, Funktionalität und Architektur erläutert und schließlich in mehreren Testreihen uf die Probe gestellt. Die Ergebnisse folgen in den letzten Abschnitten des Kapitels.\\
 6. Kapitel: \\
 Abschluss dieser Arbeit = Evaluation der These der Arbeit, Zusammenfassung, Auslick auf zukünftige Entwicklung hinsichtlich des Themas.
-
-
-
-
-
-
-
-

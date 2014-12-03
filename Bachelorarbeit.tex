@@ -8,12 +8,15 @@ abstracton,
 \usepackage[utf8]{inputenc} % Umlaute für linux
 \usepackage[english, ngerman]{babel}
 \usepackage{lmodern}	 %Type1-Schriftart fuer nicht-englische Texte
+
 \usepackage{graphicx}
+\usepackage{scrhack}
+\usepackage{listings} %dient der Darstellung von Quellcode
+\usepackage{float}
 % Zeilenumbruch bei Bildbeschreibungen.
 \setcapindent{1em}
 % aller Bilder werden im Unterverzeichnis figures gesucht:
 \graphicspath{{img/}}
-\usepackage{float}
 \usepackage{cite}
 % Paket für Quotes
 \usepackage[babel, german=swiss]{csquotes}
@@ -63,7 +66,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 
 \cleardoublepage 	
 \pagestyle{headings}	 	%%Ab hier die Kopf-/Fusszeilen: headings / fancy .
-\hyphenation{MoMo} %trennt MoMo nie
+%\hyphenation{MoMo} %trennt MoMo nie
 %
 % Kapitel / Hauptteil des Dokumentes 
 %
