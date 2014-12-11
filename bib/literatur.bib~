@@ -1,93 +1,147 @@
-% Hier kommen Referenzen hinein
-% Damit diese auch gefunden werden, muss im Hauptverzeichnis bibtex "datei.aux" ausgeführt werden%BÜCHER
-@Book{refActionScript,
-	author = {Hauser Tobias and Kappler Armin and Wenz Christian},
-	year = 2010,
-	title = {Das Praxisbuch ActionScript 3 -- Aktuell zu Adobe Flash CS5},
-	note = {Bonn},
-	publisher = {Galileo Press}	
-}
 %Zeitschriften
 @article{ebikes,
-    author = {Holger Dambeck},
-    title = {Wir fahren schon mal vor},
-    year = 2014, 
-    month = "August",
+    author  = {Holger Dambeck},
+    title   = {Wir fahren schon mal vor},
+    year    = "2014", 
+    month   = "August",
     journal = {Technology Review - Das Magazin für Innovation},
-    pages = {70ff.}
+    pages   = {70ff.}
 }
- %06.06.2014
+%06.06.2014
 @article{Mopo,
-    author = {J.Anker},
-    title = {Fahrradfahren boomt in Berlin stärker als bislang bekannt},
-    journal = {Berliner Morgenpost},
-    year = 2014,
-    month = "Juni"
+    author  = "J.Anker",
+    title   = "Fahrradfahren boomt in Berlin stärker als bislang bekannt",
+    journal = "Berliner Morgenpost",
+    year    = "2014",
+    month   = "Juni"
 }
-, Berliner Morgenpost, am 6.06.2014
+%01.04.2014 nicht verwendet
+@article{BZ0,
+    author  = "Peter Neumann",
+    title   = "Erste grüne Welle für Radler in Berlin",
+    journal = "Berliner Zeitung",
+    year    = "2014",
+    month   = "April"
+}
+%07.09.2014
+@article{BZ,
+    author  = "Peter Neumann",
+    title   = "Berlin bekommt zweite grüne Welle für Radler",
+    journal = "Berliner Zeitung",
+    year    = "2014",
+    month   = "September"
+}
+%12.08.2014 -- Bild
+@article{NYT,
+    author  = "Diane Cardwell",
+    title   = "Copenhagen Lighting the Way to Greener, More Efficient Cities",
+    journal = "The New York Times",
+    year    = "2014",
+    month   = "Dezember"
+}
+@misc{KopIng,
+   author  = "Gudrun von Schoenebeck",
+   title   = "Kopenhagen verwöhnt Radfahrer mit Grünen Wellen",
+   howpublished = {\url{http://www.ingenieur.de/Themen/Fahrrad/Kopenhagen-verwoehnt-Radfahrer-Gruenen-Wellen}},
+   note    = {Zugriff: 28.12.2014}
+}
 %LINKS
 @misc{MoMo,
-title = {Projekt MoMo},
-key = {MoMo},
-year = {2011},
+title   = {Projekt MoMo},
+key     = {MoMo},
+year    = "2011",
 howpublished = {\url{http://projekt.beuth-hochschule.de/momo/}},
-note = {Zugriff: 18.11.2014}
+note    = {Zugriff: 18.11.2014}
 }
 %STATE OF THE ART
+@phdthesis{MenschMaschine,
+author	= "Stephan Thoma",
+title	= "Mensch-Maschine-Interaktion",
+school	= "Technische Universität München",
+year	= "2009",
+month	= "Oktober",
+}
+@conference{Welle,
+author  = "Walter Zimdahl",
+title   = "Guidelines and some developments for a new modular driver information system",
+institution = "Volkswagenwerk AG",
+year    = "1984",
+pages   = "178 - 182",
+}
 @misc{Travolution,
-title = {Verkehrsoptimierung mit Genetischen Algorithmen},
-key = {travolution},
+title   = {Verkehrsoptimierung mit Genetischen Algorithmen},
+key     = {travolution},
 howpublished = {\url{http://www.travolution-ingolstadt.de}},
-note = {Zugriff: 28.11.2014}
-}
-@misc{ToyotaDev,
-key = {Toyota},
-year = {2011},
-title = {Toyota develops GPS system that recognises red traffic lights},
-howpublished = {\url{http://en.trend.az/world/other/1904536.html}},
-note = {Zugriff: 28.11.2014}
-}
-@misc{ToyotaTest,
-key = {Toyota},
-title = {Toyota starts tests of traffic-light warning system},
-year = {2013},
-howpublished = {\url{http://www.traffictechnologytoday.com/news.php?NewsID=48598}},
-note = {Zugriff: 28.11.2014}
+note    = {Zugriff: 28.11.2014}
 }
 @misc{AudiTravolution,
-key = {Audi Travolution},
-title = {Audi travolution: vehicle to traffic light communication system reduces fuel consumption},
+key     = {Audi Travolution},
+title   = {Audi travolution: vehicle to traffic light communication system reduces fuel consumption},
 howpublished = {\url{http://www.gizmag.com/audi-travolution-vehicle-to-traffic-light-communication/15340/picture/115853/}},
-note = {Zugriff: 08.12.2014}
+note    = {Zugriff: 08.12.2014}
 }
-@misc{AudiTrafficLightSystem,
-key = {Audi},
-title = {Audi Online traffic light system helps drivers hit the green lights},
-author = {David Szondy},
-howpublished = {\url{http://www.gizmag.com/audi-connected-traffic-light-system/31159/}},
-year = 2014,
-note = {Zugriff: 28.11.2014}
+@misc{Toyota,
+key     = {Toyota},
+author  = "Toyota",
+title   = {TMC Develops Navigation System Compatible with Vehicle-Infrastructure Cooperative Safety System},
+year    = {2011},
+howpublished = {\url{http://www2.toyota.co.jp/en/news/11/06/0629.html}},
+note    = {Zugriff: 08.12.2014}
+}
+<<<<<<< HEAD
+@misc{Telematik,
+key     = {Telematik},
+title   = {Testfeld Telematik -- für eine nachhaltige Mobilität durch kooperative Dienste},
+year    = "2013",
+howpublished = {\url{http://www.testfeld-telematik.at/}},
+note    = {Zugriff: 08.12.2014}
+}
+@misc{Siemens,
+key     = {Siemens},
+=======
+@article{Siemens,
+>>>>>>> bf3bc358df650a2f6c6c8e4b62bb19d801474d9d
+author  = "Nicole Elflein",
+title   = "Der perfekte Beifahrer",
+journal = "Pictures of the Future",
+pages   = "104-106",
+year    = "2013",
+month   = "Frühjahr"
+}
+@misc{kolibri,
+key     = {kolibri},
+title   = {Kooperative Lichtsignaloptimierung},
+howpublished = {\url{http://www.kolibri-projekt.de/}},
+note    = {Zugriff: 28.12.2014}
+}
+%Pressemitteilung
+@misc{kolibriTUM,
+key     = {kolibriTU},
+title   = {Pilotprojekt zur Verbesserung des Verkehrsflusses:
+Grüne Welle auf der Landstraße},
+howpublished = {\url{https://portal.mytum.de/pressestelle/pressemitteilungen/NewsArticle_20111216_212527}},
+note    = {Zugriff: 28.12.2014}
 }
 @misc{EnLighten,
-key = {EnLighten},
-title = {EnLighten},
+key     = {EnLighten},
+title   = {EnLighten},
 howpublished = {\url{http://connectedsignals.com/index.php}},
-note = {Zugriff: 28.11.2014}
+note    = {Zugriff: 28.11.2014}
 }
 @misc{SignalGuru,
-key = {Signal Guru},
-title = {Signal Guru: App soll helfen Sprit zu sparen},
-author = {Thomas Hartmann},
+key     = {Signal Guru},
+title   = {Signal Guru: App soll helfen Sprit zu sparen},
+author  = "Thomas Hartmann",
 howpublished = {\url{http://www.macwelt.de/news/Apps-fuer-iPhone-Smartphones-Signal-Guru-App-soll-helfen-Sprit-zu-sparen-6620993.html}},
-year = 2012,
-month = "September",
-note = {Zugriff: 28.11.2014}
+year    = "2012",
+month   = "September",
+note    = {Zugriff: 28.11.2014}
 }
 @techreport{SignalGuruPaper,
-key = {Signal Guru Paper},
-title = {SignalGuru: Leveraging Mobile Phones for Collaborative
+key     = {Signal Guru Paper},
+title   = {SignalGuru: Leveraging Mobile Phones for Collaborative
 Traffic Signal Schedule Advisory},
 institution = {MIT and Princeton University},
-author = {Emmanouil Koukoumidis and Li-Shiuan Peh and Margaret Martonosi},
-year = 2011
+author  = {Emmanouil Koukoumidis and Li-Shiuan Peh and Margaret Martonosi},
+year    = "2011",
 }

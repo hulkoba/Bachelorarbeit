@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  3 DEC 2014 18:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  11 DEC 2014 20:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -730,14 +730,6 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
-Package: acronym 2010/09/08 v1.36 Support for acronyms (Tobias Oetiker)
-
-(/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
-Package: suffix 2006/07/15 1.5 Variant command support
-)
-\AC@clearlist=\toks23
-)
 (/usr/share/texmf/tex/latex/beamer/base/translator/translator.sty
 Package: translator 2010/06/12 ver 1.10
 
@@ -752,32 +744,32 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-\XKV@toks=\toks24
-\XKV@tempa@toks=\toks25
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
 \XKV@depth=\count114
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/mfirstuc.sty
 Package: mfirstuc 2012/05/21 v1.06 (NLCT)
-\@glsmfirst=\toks26
-\@glsmrest=\toks27
+\@glsmfirst=\toks25
+\@glsmrest=\toks26
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xfor/xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks28
+\@emptytoks=\toks27
 \ex@=\dimen123
 )
 \gls@level=\count115
-\@gls@tmpb=\toks29
+\@gls@tmpb=\toks28
 \gls@tmplen=\skip51
 \glswrite=\write3
-\glskeylisttok=\toks30
-\glslabeltok=\toks31
-\glsshorttok=\toks32
-\glslongtok=\toks33
+\glskeylisttok=\toks29
+\glslabeltok=\toks30
+\glsshorttok=\toks31
+\glslongtok=\toks32
 
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.st
 y
@@ -804,7 +796,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LT@rows=\count118
 \c@LT@tables=\count119
 \c@LT@chunks=\count120
-\LT@p@ftn=\toks34
+\LT@p@ftn=\toks33
 )
 Class scrreprt Info: longtable captions redefined on input line 43.
 \glsdescwidth=\skip57
@@ -840,12 +832,12 @@ Package: glossary-tree 2011/03/28 v3.0 (NLCT)
 \openout4 = `Bachelorarbeit.glo'.
 
 Package glossaries Info: Writing glossary file Bachelorarbeit.glo on input line
- 38.
+ 35.
 \glo@acronym@file=\write5
 \openout5 = `Bachelorarbeit.acn'.
 
 Package glossaries Info: Writing glossary file Bachelorarbeit.acn on input line
- 38.
+ 35.
 
 \@input{extra/Glossary.aux}
 \openout2 = `extra/Glossary.aux'.
@@ -856,44 +848,44 @@ Package csquotes Info: ... found 'babel' package.
  (./Bachelorarbeit.aux (./extra/Acronym.aux))
 \openout1 = `Bachelorarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 49.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 49.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 46.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 46.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 49.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 49.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 46.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 49.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 49.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 46.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 49.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 49.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Try loading font information for T1+txr on input line 49.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Try loading font information for T1+txr on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txr.fd
 File: t1txr.fd 2000/12/15 v3.1
@@ -905,12 +897,12 @@ File: t1txr.fd 2000/12/15 v3.1
 \scratchbox=\box36
 \nofMPsegments=\count123
 \nofMParguments=\count124
-\everyMPshowfont=\toks35
+\everyMPshowfont=\toks34
 \MPscratchCnt=\count125
 \MPscratchDim=\dimen137
 \MPnumerator=\count126
 \makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks36
+\everyMPtoPDFconversion=\toks35
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -961,7 +953,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box37
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 46.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -970,9 +962,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count128
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
 
 (./Bachelorarbeit.out) (./Bachelorarbeit.out)
 \@outlinefile=\write6
@@ -986,7 +978,7 @@ Dictionary: glossaries-dictionary, Language: English
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/dict/glossaries-dictionary-
 German.dict
 Dictionary: glossaries-dictionary, Language: German 
-) (./extra/Deckblatt.tex <img/beuth.jpg, id=217, 481.8pt x 80.3pt>
+) (./extra/Deckblatt.tex <img/beuth.jpg, id=233, 481.8pt x 80.3pt>
 File: img/beuth.jpg Graphic file (type jpg)
 
 <use img/beuth.jpg>
@@ -1023,21 +1015,21 @@ File: utxsyc.fd 2000/12/15 v3.1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/beuth.jpg>])
-LaTeX Font Info:    Try loading font information for T1+txss on input line 62.
+LaTeX Font Info:    Try loading font information for T1+txss on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txss.fd
 File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 62.
+(Font)              scaled to size 10.40245pt on input line 59.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 10.40245pt on input line 62.
+(Font)              scaled to size 10.40245pt on input line 59.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 19.70294pt on input line 62.
+(Font)              scaled to size 19.70294pt on input line 59.
 LaTeX Font Info:    Font shape `T1/txss/bx/sc' will be
-(Font)              scaled to size 19.70294pt on input line 62.
+(Font)              scaled to size 19.70294pt on input line 59.
 LaTeX Font Info:    Font shape `T1/txss/m/sc' will be
-(Font)              scaled to size 19.70294pt on input line 62.
+(Font)              scaled to size 19.70294pt on input line 59.
 
 (./Bachelorarbeit.toc [2
 
@@ -1095,87 +1087,103 @@ Overfull \vbox (1.9pt too high) has occurred while \output is active []
  [6]
 Kapitel 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--8
+Underfull \hbox (badness 10000) in paragraph at lines 2--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--8
+Underfull \hbox (badness 10000) in paragraph at lines 2--7
 
  []
 
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 11.39996pt on input line 11.
+(Font)              scaled to size 11.39996pt on input line 9.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 11.
-<img/audi-travolution.jpg, id=325, 496.85625pt x 321.2pt>
+(Font)              scaled to size 11.39996pt on input line 9.
+<img/copenhagen.jpg, id=339, 65.3011pt x 42.32957pt>
+File: img/copenhagen.jpg Graphic file (type jpg)
+ <use img/copenhagen.jpg>
+Package pdftex.def Info: img/copenhagen.jpg used on input line 13.
+(pdftex.def)             Requested size: 195.9028pt x 126.9884pt.
+
+[7
+
+ <./img/copenhagen.jpg>]
+<img/audi-travolution.jpg, id=366, 496.85625pt x 321.2pt>
 File: img/audi-travolution.jpg Graphic file (type jpg)
 
 <use img/audi-travolution.jpg>
-Package pdftex.def Info: img/audi-travolution.jpg used on input line 17.
+Package pdftex.def Info: img/audi-travolution.jpg used on input line 25.
 (pdftex.def)             Requested size: 322.95273pt x 208.77753pt.
- [7
 
-]
-<img/EnLighten.png, id=353, 681.54625pt x 356.33125pt>
+Overfull \vbox (1.9pt too high) has occurred while \output is active []
+
+ [8 <./img/audi-travolution.jpg>]
+Overfull \hbox (1.75479pt too wide) in paragraph at lines 43--44
+\T1/txr/m/n/10.95 Ampelassistenten als App sind re-la-tiv un-pro-ble-ma-tisch. 
+Smart-pho-nes sind be-reits mit ei-nem GPS-Empfänger
+ []
+
+<img/EnLighten.png, id=404, 681.54625pt x 356.33125pt>
 File: img/EnLighten.png Graphic file (type png)
  <use img/EnLighten.png>
-Package pdftex.def Info: img/EnLighten.png used on input line 32.
+Package pdftex.def Info: img/EnLighten.png used on input line 49.
 (pdftex.def)             Requested size: 340.7723pt x 178.16518pt.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [8 <./img/audi-travolution.jpg>] <img/SignalGuru.jpg, id=375, 258.9675pt x 176
-.66pt>
+ [9]
+<img/SignalGuru.jpg, id=428, 258.9675pt x 176.66pt>
 File: img/SignalGuru.jpg Graphic file (type jpg)
-
-<use img/SignalGuru.jpg>
-Package pdftex.def Info: img/SignalGuru.jpg used on input line 42.
+ <use img/SignalGuru.jpg>
+Package pdftex.def Info: img/SignalGuru.jpg used on input line 59.
 (pdftex.def)             Requested size: 233.06857pt x 158.99252pt.
 
-Overfull \hbox (1.31427pt too wide) in paragraph at lines 48--50
+Overfull \vbox (1.9pt too high) has occurred while \output is active []
+
+ [10 <./img/EnLighten.png>]
+Overfull \hbox (1.31427pt too wide) in paragraph at lines 65--67
 \T1/txr/m/n/10.95 Ampelmeter ist ei-ne An-wen-dung, die ei-ne Ge-schwin-dig-kei
 ts-emp-feh-lung an-gibt, bei der man die in Fahrtrich-
  []
 
-
-Overfull \vbox (1.9pt too high) has occurred while \output is active []
-
- [9 <./img/EnLighten.png> <./img/SignalGuru.jpg>]
 LaTeX Font Info:    Font shape `T1/txss/bx/sc' will be
-(Font)              scaled to size 10.40245pt on input line 55.
+(Font)              scaled to size 10.40245pt on input line 72.
 LaTeX Font Info:    Font shape `T1/txss/m/sc' will be
-(Font)              scaled to size 10.40245pt on input line 55.
-) (./chapter/Anforderungen.tex
+(Font)              scaled to size 10.40245pt on input line 72.
+
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [10]
+ [11 <./img/SignalGuru.jpg>]) (./chapter/Anforderungen.tex
+Overfull \vbox (1.9pt too high) has occurred while \output is active []
+
+ [12]
 Kapitel 3.
-) (./chapter/Entwurf.tex [11
+) (./chapter/Entwurf.tex [13
 
 ]
 Kapitel 4.
-) (./chapter/Implementierung.tex [12
+) (./chapter/Implementierung.tex [14
 
 ]
 Kapitel 5.
-) (./chapter/Fazit.tex [13
+) (./chapter/Fazit.tex [15
 
 ]
 Kapitel 6.
-) [14
+) [16
 
 ]
 \openout2 = `extra/Acronym.aux'.
 
  (./extra/Acronym.tex) (./Bachelorarbeit.acr) (./Bachelorarbeit.gls
-[15
+[17
 
 
 
 
 
-]) [16
+]) [18
 
 
 
@@ -1183,7 +1191,7 @@ Kapitel 6.
 \tf@lof=\write8
 \openout8 = `Bachelorarbeit.lof'.
 
- (./Bachelorarbeit.bbl [17
+ (./Bachelorarbeit.bbl [19
 
 
 ]
@@ -1210,41 +1218,75 @@ ication / 15340 / picture /
  []
 
 
-Overfull \hbox (78.3669pt too wide) in paragraph at lines 37--43
+Overfull \hbox (78.3669pt too wide) in paragraph at lines 40--46
 \T1/txtt/m/n/10.95 news / Apps-[]fuer-[]iPhone-[]Smartphones-[]Signal-[]Guru-[]
 App-[]soll-[]helfen-[]Sprit-[]zu-[]sparen-[]6620993 .
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 58--61
+Underfull \hbox (badness 8132) in paragraph at lines 59--64
+[]\T1/txr/m/it/10.95 Pilotprojekt zur Ver-bes-se-rung des Ver-kehrs-flus-ses: G
+rü-ne Wel-le auf der Land-stra-
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 59--64
+\T1/txr/m/it/10.95 ÿe\T1/txr/m/n/10.95 .  []$\T1/txtt/m/n/10.95 https : / / por
+tal . mytum . de / pressestelle / pressemitteilungen / NewsArticle _
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 74--77
 []\T1/txr/m/it/10.95 Projekt Mo-Mo\T1/txr/m/n/10.95 .  []$\T1/txtt/m/n/10.95 ht
 tp : / / projekt . beuth-[]hochschule . de / momo/$[]\T1/txr/m/n/10.95 , 2011. 
 --  Zu-griff:
  []
 
-) [18
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
- (./Bachelorarbeit.aux (./extra/Acronym.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Underfull \hbox (badness 10000) in paragraph at lines 89--95
+[]\T1/txr/m/sc/10.95 Schoenebeck\T1/txr/m/n/10.95 , Gu-drun von:  \T1/txr/m/it/
+10.95 Ko-pen-ha-gen ver-wöhnt Rad-fah-rer mit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--95
+\T1/txr/m/it/10.95 Grü-nen Wel-len\T1/txr/m/n/10.95 .  []$\T1/txtt/m/n/10.95 ht
+tp : / / www . ingenieur . de / Themen / Fahrrad /
+ []
+
+[20
+
+])
+Overfull \vbox (1.9pt too high) has occurred while \output is active []
+
+ [21]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
+
+(./Bachelorarbeit.aux (./extra/Acronym.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 3ABBEE163FC0D92BD4B495BE85C891B1;3440.
+(rerunfilecheck)             Checksum: 020F83901AAA5D640AF26A051532DDE3;3717.
  )
 (\end occurred when \ifx on line 16 was incomplete)
 (\end occurred when \ifx on line 10 was incomplete) 
 Here is how much of TeX's memory you used:
- 13090 strings out of 493485
- 193435 string characters out of 3143525
- 332134 words of memory out of 3000000
- 15957 multiletter control sequences out of 15000+200000
+ 12976 strings out of 493485
+ 191780 string characters out of 3143525
+ 330072 words of memory out of 3000000
+ 15828 multiletter control sequences out of 15000+200000
  119549 words of font info for 160 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,8n,47p,1449b,595s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,47p,1449b,554s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{
-glo:VW} has been referenced but does not exist, replaced by a fixed one
+glo:BMW} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:TUM} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{glo:VW} has been referenced but does not exist, rep
+laced by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
 texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texlive/texmf-dist/f
@@ -1256,10 +1298,10 @@ are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (18 pages, 411004 bytes).
+Output written on Bachelorarbeit.pdf (21 pages, 568446 bytes).
 PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
- 473 compressed objects within 5 object streams
- 108 named destinations out of 1000 (max. 500000)
- 445 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 545 compressed objects within 6 object streams
+ 130 named destinations out of 1000 (max. 500000)
+ 482 words of extra memory for PDF output out of 10000 (max. 10000000)
 

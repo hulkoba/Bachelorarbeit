@@ -15,18 +15,21 @@
   . --
 \newblock Zugriff: 08.12.2014
 
+\bibitem[Car14]{NYT}
+\textsc{Cardwell}, Diane:
+\newblock Copenhagen Lighting the Way to Greener, More Efficient Cities.
+\newblock {In: }\emph{The New York Times}  (2014), Dezember
+
 \bibitem[Dam14]{ebikes}
 \textsc{Dambeck}, Holger:
 \newblock Wir fahren schon mal vor.
 \newblock {In: }\emph{Technology Review - Das Magazin für Innovation}  (2014),
   August, S. 70ff.
 
-\bibitem[Elf14]{Siemens}
+\bibitem[Elf13]{Siemens}
 \textsc{Elflein}, Nicole:
-\newblock \emph{Der perfekte Beifahrer}.
-\newblock \url{http://www2.toyota.co.jp/en/news/11/06/0629.html}, August 2014.
-  --
-\newblock Zugriff: 08.12.2014
+\newblock Der perfekte Beifahrer.
+\newblock {In: }\emph{Pictures of the Future}  (2013), Frühjahr, S. 104--106
 
 \bibitem[EnL]{EnLighten}
 \emph{EnLighten}.
@@ -46,6 +49,19 @@
 \newblock Fahrradfahren boomt in Berlin stärker als bislang bekannt.
 \newblock {In: }\emph{Berliner Morgenpost}  (2014), Juni
 
+\bibitem[kola]{kolibri}
+\emph{Kooperative Lichtsignaloptimierung}.
+\newblock \url{http://www.kolibri-projekt.de/}, . --
+\newblock Zugriff: 28.12.2014
+
+\bibitem[kolb]{kolibriTUM}
+\emph{Pilotprojekt zur Verbesserung des Verkehrsflusses: Grüne Welle auf der
+  Landstraße}.
+\newblock
+  \url{https://portal.mytum.de/pressestelle/pressemitteilungen/NewsArticle_20111216_212527},
+  . --
+\newblock Zugriff: 28.12.2014
+
 \bibitem[KPM11]{SignalGuruPaper}
 \textsc{Koukoumidis}, Emmanouil ; \textsc{Peh}, Li-Shiuan  ;
   \textsc{Martonosi}, Margaret:
@@ -58,6 +74,30 @@
 \emph{Projekt MoMo}.
 \newblock \url{http://projekt.beuth-hochschule.de/momo/}, 2011. --
 \newblock Zugriff: 18.11.2014
+
+\bibitem[Neu14a]{BZ}
+\textsc{Neumann}, Peter:
+\newblock Berlin bekommt zweite grüne Welle für Radler.
+\newblock {In: }\emph{Berliner Zeitung}  (2014), September
+
+\bibitem[Neu14b]{BZ0}
+\textsc{Neumann}, Peter:
+\newblock Erste grüne Welle für Radler in Berlin.
+\newblock {In: }\emph{Berliner Zeitung}  (2014), April
+
+\bibitem[Sch]{KopIng}
+\textsc{Schoenebeck}, Gudrun von:
+\newblock \emph{Kopenhagen verwöhnt Radfahrer mit Grünen Wellen}.
+\newblock
+  \url{http://www.ingenieur.de/Themen/Fahrrad/Kopenhagen-verwoehnt-Radfahrer-Gruenen-Wellen},
+  . --
+\newblock Zugriff: 28.12.2014
+
+\bibitem[Tel13]{Telematik}
+\emph{Testfeld Telematik -- für eine nachhaltige Mobilität durch kooperative
+  Dienste}.
+\newblock \url{http://www.testfeld-telematik.at/}, 2013. --
+\newblock Zugriff: 08.12.2014
 
 \bibitem[Tho09]{MenschMaschine}
 \textsc{Thoma}, Stephan:
