@@ -8,13 +8,10 @@ abstracton,
 \usepackage[utf8]{inputenc} % Umlaute für linux
 \usepackage[english, ngerman]{babel}
 \usepackage{lmodern}	 %Type1-Schriftart fuer nicht-englische Texte
-
 \usepackage{graphicx}
 \usepackage{scrhack}
-\usepackage{listings} %dient der Darstellung von Quellcode
+%\usepackage{listings} %dient der Darstellung von Quellcode
 \usepackage{float}
-% Zeilenumbruch bei Bildbeschreibungen.
-\setcapindent{1em}
 % aller Bilder werden im Unterverzeichnis figures gesucht:
 \graphicspath{{img/}}
 \usepackage{cite}
@@ -27,10 +24,7 @@ abstracton,
 \usepackage{enumitem}
 \usepackage{xspace} % setzt Leerzeichen, wenn welche hingehören (vor nächstem wort, aber nicht vor "." oder ")")
 \linespread {1.25}\selectfont
-\usepackage[
-%printonlyused      %nur verwendete abkürzungen zeigen
-footnote            % Langform als Fußnote
-]{acronym}
+%\usepackage[%printonlyused  %nur verwendete abkürzungen zeigen footnote            % Langform als Fußnote ]{acronym}
 \usepackage[ngerman]{translator}
 \usepackage[
 nonumberlist,   %keine Seitenzahlen anzeigen
@@ -41,9 +35,9 @@ toc]            %Einträge im Inhaltsverzeichnis
 \makeglossaries
 %Glossar-Befehle anschalten
 \include{extra/Glossary}
-\addtokomafont{chapter}{\LARGE \scshape \mdseries}
-\addtokomafont{section}{\scshape \mdseries} %formatierung der sections
-\addtokomafont{subsection}{\scshape \mdseries}
+\addtokomafont{chapter}{\huge \scshape \mdseries}
+\addtokomafont{section}{\LARGE \scshape \mdseries} %formatierung der sections
+\addtokomafont{subsection}{ \mdseries}
 \addtokomafont{subsubsection}{\scshape \mdseries}
 \renewcommand*{\chapterheadendvskip}{\vspace {16pt}}
 %------------------------------------------------------------------------
@@ -69,8 +63,6 @@ toc]            %Einträge im Inhaltsverzeichnis
 %\hyphenation{MoMo} %trennt MoMo nie
 %
 % Kapitel / Hauptteil des Dokumentes 
-%
-%\input{dir/Kapitel} 	
 \input{chapter/Abstract}
 \input{chapter/Einleitung}
 \input{chapter/Grundlagen}
@@ -83,9 +75,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 %
 %% Ein kleiner Abstand zu den Kapiteln im Inhaltsverzeichnis (toc)
 \addtocontents{toc}{\protect\vspace*{\baselineskip}}
-
 \include{extra/Acronym}
-%Glossar ausgeben
 \printglossary[type=\acronymtype, title=Abkürzungen, style=list]
 \printglossary[type=main,style=altlist]
 % 

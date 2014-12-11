@@ -1,7 +1,11 @@
-This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Bachelorarbeit.aux
-A level-1 auxiliary file: extra/Acronym.aux
+I couldn't open auxiliary file extra/Acronym.aux
+---line 125 of file Bachelorarbeit.aux
+ : \@input{extra/Acronym.aux
+ :                          }
+I'm skipping whatever remains of this command
 The style file: alphadin.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -15,45 +19,45 @@ Warning--empty number in SignalGuruPaper
 Warning--empty note in SignalGuruPaper
 Warning--empty year in Travolution
 Warning--empty booktitle in Welle
-You've used 12 entries,
+You've used 14 entries,
             4793 wiz_defined-function locations,
-            955 strings with 7905 characters,
-and the built_in function-call counts, 4772 in all, are:
-= -- 528
-> -- 85
-< -- 84
-+ -- 89
-- -- 23
-* -- 279
-:= -- 789
-add.period$ -- 10
-call.type$ -- 12
-change.case$ -- 50
-chr.to.int$ -- 12
-cite$ -- 18
-duplicate$ -- 167
-empty$ -- 377
-format.name$ -- 58
-if$ -- 1010
+            965 strings with 8077 characters,
+and the built_in function-call counts, 5614 in all, are:
+= -- 614
+> -- 101
+< -- 100
++ -- 105
+- -- 27
+* -- 327
+:= -- 927
+add.period$ -- 12
+call.type$ -- 14
+change.case$ -- 58
+chr.to.int$ -- 14
+cite$ -- 20
+duplicate$ -- 201
+empty$ -- 449
+format.name$ -- 70
+if$ -- 1188
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 42
-newline$ -- 72
-num.names$ -- 24
-pop$ -- 67
+missing$ -- 52
+newline$ -- 82
+num.names$ -- 30
+pop$ -- 83
 preamble$ -- 1
-purify$ -- 74
+purify$ -- 86
 quote$ -- 0
-skip$ -- 261
+skip$ -- 313
 stack$ -- 0
-substring$ -- 252
-swap$ -- 27
-text.length$ -- 19
-text.prefix$ -- 11
+substring$ -- 288
+swap$ -- 33
+text.length$ -- 23
+text.prefix$ -- 13
 top$ -- 0
-type$ -- 127
+type$ -- 147
 warning$ -- 6
-while$ -- 29
-width$ -- 17
-write$ -- 151
-(There were 6 warnings)
+while$ -- 35
+width$ -- 19
+write$ -- 175
+(There was 1 error message)
