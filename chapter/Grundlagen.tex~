@@ -10,7 +10,7 @@ Unter dem Prinzip "'Grüne Welle'" wird die Abstimmung der Ampelschaltzustände,
 In Kopenhagen unterstützen grüne \gls{LED}s auf Radwegen die Radfahrer indem sie wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der Grünen Welle befinden. 
 \begin{figure}[H]  
     \centering  
-    \includegraphics[scale=0.65]{copenhagen}
+    \includegraphics[scale=3]{copenhagen}
     \label{fig:copenhagen}
     \caption[Grüne Welle durch \gls{LED}s]{\gls{LED}s signalisieren die Grüne Welle bei 20 km/h  Quelle: \cite{NYT}}
 \end{figure}
@@ -27,9 +27,7 @@ Im Sommer 2008 wurde das Projekt TRAVOLUTION\footnote{\cite{Travolution}} (TRAff
     \caption[Projekt Travolution]{\gls{V2I}-Kommunikation: Der Bordcomputer zeigt die optimale Geschwindigkeit an, sodass die nächste Kreuzung ohne Halt überquert werden kann. Quelle: \cite{AudiTravolution}}
 \end{figure}
 Ziel des zweiten Teilprojektes ist es, die Autofahrer über die Ampelphasen zu informieren. Die \gls{V2I}-Kommunikation mittels WLAN umsetzend, senden mit Kommunikationsmodulen ausgestattete Ampeln die Grünphasen an den Bordcomputer der Autos, welcher widerum die Geschwindigkeit für ein reibungsloses Passieren errechnet.
-<<<<<<< HEAD
 \subsection{Projekt Testfeld Telematik}
-=======
 \subsection{Projekt Kolibri}
 In Bayern wurde im April 2011 das Pilot-Projekt "'KOLIBRI'" (Kooperative Lichtsignaloptimierung -- Bayrisches Pilotprojekt) mit den Teststrecken der B13 bei München mit sieben und der St2145 in der Nähe von Regensburg mit acht ampelgeregelten Kreuzungen gestartet.
 Gemeinsam untersuchten TRANSFER GmbH\footnote{ein Beratungs- und Softwareunternehmen für Transport und Verkehr}, die \gls{BMW} Group, der Lehrstuhl für Ergonomie an der \gls{TUM} und die Oberste Baubehörde im Bayerischen Innenministerium die Funktionen und Auswirkungen eines Ampelassistenten außerhalb von Ortschaften\footnote{\cite{kolibri}, \cite{kolibriTUM}}. 
@@ -37,7 +35,6 @@ Gemeinsam untersuchten TRANSFER GmbH\footnote{ein Beratungs- und Softwareunterne
 Zusätzlich wurden die Fahrer sowohl fahrzeugintegriert\footnote{On-Board-Computer} als auch via Smartphone über die Schaltung der nächsten Ampel informiert und erhielten Empfehlungen über die aktuelle Progressionsgeschwindigkeit. 
 Bei dem „Kolibri“-Projekt wurde auf den Datenaustausch über das Internet durch bereits vorhandene Kommunikationsstrukturen (GSM und UMTS) gesetzt. Für den Test stattete man die Lichtsignalanlagen mit Funkdatenmodems aus, die ihre Daten an einen Zentralserver senden, wo sie ausgewertet und an die Smartphones der Autofahrer geschickt werden. 
 \subsection{Autokonzerne}
->>>>>>> bf3bc358df650a2f6c6c8e4b62bb19d801474d9d
 Toyotas System erfordert eine spezielle Infrastruktur an Kreuzungen, die Installation von Infrarot-Sendern, die mit dem Toyota-Navigationssystem kommunizieren. An roter Ampel werden die Fahrer über die verbleibende Wartezeit informiert.\footnote{\cite{Toyota}}\\
 Andere Autohersteller wie BMW, Volvo und Volkswagen kooperieren in diesem Forschungsprojekt, mit dem Forschungziel die Sicherheit an Kreuzungen zu verbessern. Im Auto installierte Sensoren kommunizieren mit Kameras und Scanner in der Ampel. \\
 Allerdings funktioniert das System nur mit dem ambitionierten Ziel, wenn alle Autohersteller zusammenarbeiten und sich auf den gleichen Standard einigen.\footnote{\cite{Siemens}}

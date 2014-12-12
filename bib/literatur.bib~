@@ -96,11 +96,7 @@ year    = "2013",
 howpublished = {\url{http://www.testfeld-telematik.at/}},
 note    = {Zugriff: 08.12.2014}
 }
-@misc{Siemens,
-key     = {Siemens},
-=======
 @article{Siemens,
->>>>>>> bf3bc358df650a2f6c6c8e4b62bb19d801474d9d
 author  = "Nicole Elflein",
 title   = "Der perfekte Beifahrer",
 journal = "Pictures of the Future",
