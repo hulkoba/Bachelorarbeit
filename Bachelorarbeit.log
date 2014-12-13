@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  13 DEC 2014 17:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  13 DEC 2014 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1087,23 +1087,18 @@ Overfull \vbox (1.9pt too high) has occurred while \output is active []
  [6]
 Kapitel 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--7
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--7
+Underfull \hbox (badness 10000) in paragraph at lines 2--8
 
  []
 
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 11.39996pt on input line 9.
+(Font)              scaled to size 11.39996pt on input line 10.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 9.
+(Font)              scaled to size 11.39996pt on input line 10.
 <img/copenhagen.jpg, id=345, 65.3011pt x 42.32957pt>
 File: img/copenhagen.jpg Graphic file (type jpg)
  <use img/copenhagen.jpg>
-Package pdftex.def Info: img/copenhagen.jpg used on input line 13.
+Package pdftex.def Info: img/copenhagen.jpg used on input line 14.
 (pdftex.def)             Requested size: 328.6279pt x 213.08768pt.
 
 [7
@@ -1113,10 +1108,10 @@ Package pdftex.def Info: img/copenhagen.jpg used on input line 13.
 File: img/audi-travolution.jpg Graphic file (type jpg)
 
 <use img/audi-travolution.jpg>
-Package pdftex.def Info: img/audi-travolution.jpg used on input line 25.
+Package pdftex.def Info: img/audi-travolution.jpg used on input line 26.
 (pdftex.def)             Requested size: 328.6279pt x 141.00624pt.
 
-Overfull \hbox (123.3304pt too wide) in paragraph at lines 27--27
+Overfull \hbox (123.3304pt too wide) in paragraph at lines 28--28
 \T1/txr/m/n/10.95 Quelle: http://www.audiusanews.com/imagegallery/adhoc/12647//
 12647,12649,12652,12648,12651,12650,/travolution-
  []
@@ -1129,18 +1124,18 @@ Overfull \vbox (1.9pt too high) has occurred while \output is active []
 File: img/telematik.png Graphic file (type png)
 
 <use img/telematik.png>
-Package pdftex.def Info: img/telematik.png used on input line 39.
+Package pdftex.def Info: img/telematik.png used on input line 40.
 (pdftex.def)             Requested size: 328.6279pt x 205.13318pt.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [9]
-Underfull \hbox (badness 10000) in paragraph at lines 43--50
+Underfull \hbox (badness 10000) in paragraph at lines 44--51
 
  []
 
 
-Overfull \hbox (1.75479pt too wide) in paragraph at lines 51--53
+Overfull \hbox (1.75479pt too wide) in paragraph at lines 52--54
 \T1/txr/m/n/10.95 Ampelassistenten als App sind re-la-tiv un-pro-ble-ma-tisch. 
 Smart-pho-nes sind be-reits mit ei-nem [][]GPS[]-Empfänger
  []
@@ -1148,13 +1143,13 @@ Smart-pho-nes sind be-reits mit ei-nem [][]GPS[]-Empfänger
 <img/EnLighten.png, id=444, 681.54625pt x 356.33125pt>
 File: img/EnLighten.png Graphic file (type png)
  <use img/EnLighten.png>
-Package pdftex.def Info: img/EnLighten.png used on input line 57.
+Package pdftex.def Info: img/EnLighten.png used on input line 58.
 (pdftex.def)             Requested size: 328.6279pt x 171.81456pt.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [10 <./img/telematik.png>]
-Overfull \hbox (2.64241pt too wide) in paragraph at lines 61--63
+Overfull \hbox (2.64241pt too wide) in paragraph at lines 62--64
 \T1/txr/m/n/10.95 Höchst-ge-schwin-dig-keit, Fahrtrich-tung und Ta-ges-zeit. Au
 f-grund von ho-hen In-stal-la-ti-ons-kos-ten und -Aufwand
  []
@@ -1162,13 +1157,13 @@ f-grund von ho-hen In-stal-la-ti-ons-kos-ten und -Aufwand
 <img/SignalGuru.jpg, id=462, 258.9675pt x 176.66pt>
 File: img/SignalGuru.jpg Graphic file (type jpg)
  <use img/SignalGuru.jpg>
-Package pdftex.def Info: img/SignalGuru.jpg used on input line 67.
+Package pdftex.def Info: img/SignalGuru.jpg used on input line 68.
 (pdftex.def)             Requested size: 328.6279pt x 224.20474pt.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [11 <./img/EnLighten.png> <./img/SignalGuru.jpg>]
-Overfull \hbox (1.31427pt too wide) in paragraph at lines 74--77
+Overfull \hbox (1.31427pt too wide) in paragraph at lines 75--78
 \T1/txr/m/n/10.95 Am-pel-me-ter ist ei-ne An-wen-dung, die ei-ne Ge-schwin-dig-
 keits-emp-feh-lung an-gibt, bei der man die in Fahrtrich-
  []
@@ -1320,7 +1315,7 @@ texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (22 pages, 682992 bytes).
+Output written on Bachelorarbeit.pdf (22 pages, 683125 bytes).
 PDF statistics:
  636 PDF objects out of 1000 (max. 8388607)
  581 compressed objects within 6 object streams
