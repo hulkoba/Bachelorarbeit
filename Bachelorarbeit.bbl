@@ -7,13 +7,17 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Aud]{AudiTravolution}
-\emph{Audi travolution: vehicle to traffic light communication system reduces
-  fuel consumption}.
+\bibitem[Amp14]{Ampelinfo}
+\emph{Audi connect -- Intelligent durch den Stadtverkehr mit Ampelinfo online}.
 \newblock
-  \url{http://www.gizmag.com/audi-travolution-vehicle-to-traffic-light-communication/15340/picture/115853/},
-  . --
-\newblock Zugriff: 08.12.2014
+  {\url{http://www.audi.de/de/brand/de/vorsprung_durch_technik/content/2014/06/ampelinfo-online.html}},
+  Juni 2014
+
+\bibitem[Aud10]{AudiTravolution}
+\emph{Audi travolution: efficiently through the city}.
+\newblock \url{http://www.audiusanews.com/newsrelease.do?&id=1812#}, Juni 2010.
+  --
+\newblock Zugriff: 15.12.2014
 
 \bibitem[Car14]{NYT}
 \textsc{Cardwell}, Diane:
@@ -49,7 +53,7 @@
 \newblock Fahrradfahren boomt in Berlin stärker als bislang bekannt.
 \newblock {In: }\emph{Berliner Morgenpost}  (2014), Juni
 
-\bibitem[Jan14]{telematik}
+\bibitem[Jan14]{Telematik}
 \textsc{Jandrisits}, Dipl.-Ing.(FH)~M.:
 \newblock Testfeld Telematik -- Publizierbarer Endbericht.
 \newblock 2014. --

@@ -1,11 +1,11 @@
 \chapter{Einführung}
 \section{Motivation}
 Im Berliner Verkehrswesen ist ein deutlicher Trend zu bemerken. Das Fahrrad wird zum ökologischen und gesundheitlichen, aktiven Lebensstil und wird dem hohen Verkehrsaufkommen der Automobile, insbesondere in der Stadtregion, entgegenwirken. “Fahrradfahren boomt in Berlin stärker als bislang bekannt”\cite{Mopo}\\\\
-Neue Fahrradwege und Vergrößerung des Fahrradstraßennetzes sind regionale Baumaßnahmen, die dabei aktuell diesen Fahrradtrend unterstützen. Grund der neuen Fahrradeuphorie ist nicht zuletzt die erfolgreiche Etablierung der E-Bikes\footnote{ Elektrofahrrad. Ein Fahrrad mit elektrischem Hilfsmotor}. E-Bikes erfreuen sich großer Beliebtheit und ermöglichen auch längere Touren ohne große Anstrengung.\\ Die Digitalisierung der Autoinnenräume mit Navigation und Bordelektronik sowie die Verbindungen zu Smartphones stellen aktuell keine Besonderheit mehr dar. Wird das Fahrrad nun als „vollwertiges“ Mitglied im Straßenverkehr angesehen, kann zusätzliche Elektronik wie Navigation und Blickmechanismen die FahrradfahrerInnen unterstützen.\\\\ 
+Neue Fahrradwege und Vergrößerung des Fahrradstraßennetzes sind regionale Baumaßnahmen, die dabei aktuell diesen Fahrradtrend unterstützen. Grund der neuen Fahrradeuphorie ist nicht zuletzt die erfolgreiche Etablierung der E-Bikes\footnote{Elektrofahrrad. Ein Fahrrad mit elektrischem Hilfsmotor}. E-Bikes erfreuen sich großer Beliebtheit und ermöglichen auch längere Touren ohne große Anstrengung.\\ Die Digitalisierung der Autoinnenräume mit Navigation und Bordelektronik sowie die Verbindungen zu Smartphones stellen aktuell keine Besonderheit mehr dar. Wird das Fahrrad nun als „vollwertiges“ Mitglied im Straßenverkehr angesehen, kann zusätzliche Elektronik wie Navigation und Blickmechanismen die FahrradfahrerInnen unterstützen.\\\\ 
 Der Fahrtfluss des Radfahrers soll nicht unnötig unterbrochen werden. Dafür werden die potentiellen Wartezeiten an der nächsten Ampel vorzeitig errechnet und dem Fahrer mitgeteilt. Resultierend kann der Nutzer die Geschwindigkeit anpassen und die verbleibende Wegstrecke zur Ampel nutzen, um bei Grün ohne anzuhalten die Kreuzung zu überqueren. Für die Datenerhebung werden zugleich die mobilen Systeme der Radfahrer genutzt.
 \section{Ziel- und Umsetzung}
 Um die Ampeldaten zu erfassen, gibt es verschiedene Möglichkeiten. Eine 100prozentige Deckung erreicht man durch manuelle Ablesung jeder Ampel. Wenn man das mit Ampeln auf gegebener Teststrecke umsetzt, kann zunächst der Prototyp des Ampelhinweissystem entwickelt werden. \\
-Eine zweite Möglichkeit ist es, jedes Fahrrad mit einem \gls{GPS} Tracker auszustatten und die Ampeldaten durch einen Algorithmus zu erfassen. Dieser vergleicht die Standorte an denen die Radfahrer stehen bleiben mit der Position der Ampel, interpretiert die Daten und hat nach einer gewissen Zeit ziemlich genaue Ergebnisse zu welcher Zeit die Fahrradfahrer an einer zu erwartenden "'roten"' Ampel warten.\\
+Eine zweite Möglichkeit ist es, jedes Fahrrad mit einem \gls{GPS} Tracker auszustatten und die Ampeldaten durch einen Algorithmus zu erfassen. Dieser vergleicht die Standorte an denen die Radfahrer stehen bleiben mit der Position der Ampel, interpretiert die Daten und hat nach einer gewissen Zeit ziemlich genaue Ergebnisse zu welcher Zeit die Fahrradfahrer an einer zu erwartenden “roten” Ampel warten.\\
 Gewiss von Vorteil und sicher wäre es natürlich auch, die Verkehrsdaten bei der Verkehrsregelungszentrale anzufragen. Realistisch ist allerdings höchstens, die Daten der automatischen Ampeln zu bekommen. Wenn diese jedoch für eine hohe Trefferquote genügen würden.\\
 Des Weiteren gibt es an viel befahrenen Kreuzungen Kameras, die ebenfalls die Ampeln filmen. Die Aufnahmen analysierend, hat man für diese Kreuzungen ebenso entsprechende Daten.\\\\
 Zunächst ist eine Datenbank zu erstellen, in der die Positionen und Zustände der Ampeln gespeichert wird. Mithilfe von OpenStreetMap man die Ampeln lokalisieren und gegebenenfalls in die Karte der Navigationsoftware einbinden. Um den Projektrahmen nicht zu sprengen genügt die Umsetzung der ersten genannten Erfassungsweges.\\\\
@@ -14,15 +14,15 @@ Die Auswertung erfolgt entweder durch eine Smartphone-App oder durch ein \gls{LE
 \\\\
 Das Ziel der Arbeit ist ein Konzept und dessen prototypische Anwendung eines Ampelhinweissystem, welches einem auf Basis der zu erstellenden  Ampeldatenbank Informationen über die Ampelschaltung zukommen lässt und ihn so interaktiv durch das Verkehrsnetz führt.
 \section{Aufbau der Arbeit}
-2. state of the art:\\
-Was gibt es schon. Projekte und Studien und fertige Apps,\\ 
-3. Grundbegriffe (technische Grundlagen), Theoriewissen (Berechnungen, Formeln etc) Definitionen, Überblick über mögliche Einsatzgebiete \\
-4. Analysekapitel:?\\
+2. Grundlagenkapitel:\\
+State of the art: Was gibt es schon. Projekte und Studien und fertige Apps,\\ 
+Grundbegriffe (technische Grundlagen), Definitionen, Überblick über mögliche Einsatzgebiete \\
+3. Analysekapitel:\\
 Anforderungsanalyse für Fahrradapp. Personas werden eingeführt?, =fiktive Benutzer, dann Zusammenfassung der herausgearbeiteten Anforderungen.\\
 Funktionalität, graphische Oberfläche
-5. Kapitel = Kern der Arbeit -- Konzipierung:\\
+4. Kapitel = Kern -- Konzipierung:\\
 mobile Anwendung. app. anrduino. die nutzer auf ampeln hinweist und die dauer der phase. 
 es wird auf.. einngegangen. Der Einsatz von mobile sensig wird dargelegt, alles vorgestellt. Zusammenfassend wird das Konzept am Ende von allen Personas nocheinmal kritisch betrachtet und evaluiert.\\
-6. Kapitel: Umsetzung in exemplarischen Prototyp der ... Nach klärung der theoretischen berechnungsgrundlagen... dann wird der Prototyp in Design, Funktionalität und Architektur erläutert und schließlich in mehreren Testreihen uf die Probe gestellt. Die Ergebnisse folgen in den letzten Abschnitten des Kapitels.\\
-7. Kapitel: \\
+5. Kapitel: Umsetzung in exemplarischen Prototyp der ... Nach klärung der theoretischen berechnungsgrundlagen... dann wird der Prototyp in Design, Funktionalität und Architektur erläutert und schließlich in mehreren Testreihen uf die Probe gestellt. Die Ergebnisse folgen in den letzten Abschnitten des Kapitels.\\
+6. Kapitel: \\
 Abschluss dieser Arbeit = Evaluation der These der Arbeit, Zusammenfassung, Auslick auf zukünftige Entwicklung hinsichtlich des Themas.

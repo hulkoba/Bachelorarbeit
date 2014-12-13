@@ -2,6 +2,7 @@
 \glossaryentry{LED?\glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode, auch Leuchtdiode}{\relax }|setentrycounter[]{page}\glsnumberformat}{6}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{6}
 \glossaryentry{C2X?\glossaryentryfield{C2X}{\glsnamefont{C2X}}{Car-to-X oder Vehicle-to-X}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
+\glossaryentry{GLOSA?\glossaryentryfield{GLOSA}{\glsnamefont{GLOSA}}{green light optimal speed advisory}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{LED?\glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode, auch Leuchtdiode}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{LED?\glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode, auch Leuchtdiode}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{VW?\glossaryentryfield{VW}{\glsnamefont{VW}}{Volkswagen}{\relax }|setentrycounter[]{page}\glsnumberformat}{8}
@@ -10,17 +11,15 @@
 \glossaryentry{C2I?\glossaryentryfield{C2I}{\glsnamefont{C2I}}{Car-to-Infrastructure oder Vehicle-to-Infrastructure}{\relax }|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{WLAN?\glossaryentryfield{WLAN}{\glsnamefont{WLAN}}{Wireless Local Area Network}{\relax }|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{UMTS?\glossaryentryfield{UMTS}{\glsnamefont{UMTS}}{Universal Mobile Telecommunications System}{\relax }|setentrycounter[]{page}\glsnumberformat}{9}
+\glossaryentry{C2X?\glossaryentryfield{C2X}{\glsnamefont{C2X}}{Car-to-X oder Vehicle-to-X}{\relax }|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{BMW?\glossaryentryfield{BMW}{\glsnamefont{BMW}}{Bayerische Motoren Werke}{\relax }|setentrycounter[]{page}\glsnumberformat}{9}
+\glossaryentry{TUM?\glossaryentryfield{TUM}{\glsnamefont{TUM}}{Technische Universität München}{\relax }|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{BMW?\glossaryentryfield{BMW}{\glsnamefont{BMW}}{Bayerische Motoren Werke}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
-\glossaryentry{TUM?\glossaryentryfield{TUM}{\glsnamefont{TUM}}{Technische Universität München}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
-\glossaryentry{App?\glossaryentryfield{App}{\glsnamefont{App}}{Applikation}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{C2X?\glossaryentryfield{C2X}{\glsnamefont{C2X}}{Car-to-X oder Vehicle-to-X}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
-\glossaryentry{DSRC?\glossaryentryfield{DSRC}{\glsnamefont{DSRC}}{Dedicated Short Range Communication}{\relax }|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{DSRC?\glossaryentryfield{DSRC}{\glsnamefont{DSRC}}{Dedicated Short Range Communication}{\relax }|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{MIT?\glossaryentryfield{MIT}{\glsnamefont{MIT}}{Massachusetts Institute of Technology}{\relax }|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{12}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{12}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{12}
-\glossaryentry{LED?\glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode, auch Leuchtdiode}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{LED?\glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode, auch Leuchtdiode}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
