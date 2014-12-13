@@ -1,7 +1,6 @@
 \glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
 \begin{theglossary}\glossaryheader
 \glsgroupheading{C}\relax \glsresetentrylist %
-\glossaryentryfield{C2X}{\glsnamefont{Car-to-X-Kommunikation}}{ direkter Informationsaustausch zwischen Fahrzeugen jeglicher Art, Verkehrsleittechnik wie z.B. Lichtsignalanlagen und Verkehrsleitzentralen}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
+\glossaryentryfield{C2X-glo}{\glsnamefont{Car-to-X-Kommunikation}}{ direkter Informationsaustausch zwischen Fahrzeugen jeglicher Art, Verkehrsleittechnik wie z.B. Lichtsignalanlagen und Verkehrsleitzentralen}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{9}}}%
 \end{theglossary}\glossarypostamble

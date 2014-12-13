@@ -19,7 +19,7 @@
 \contentsline {subsection}{\numberline {2.2.1}EnLighten}{10}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Signal Guru}{11}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Ampelmeter}{11}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Analyseergebnis}{11}{section.2.3}
+\contentsline {section}{\numberline {2.3}Analyseergebnis}{12}{section.2.3}
 \contentsline {section}{\numberline {2.4}Technische Grundlagen}{12}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Arduino / Android-App}{12}{subsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.1.1}Mobile Sensing}{12}{subsubsection.2.4.1.1}

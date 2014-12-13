@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  13 DEC 2014 14:20
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  13 DEC 2014 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1055,9 +1055,6 @@ LaTeX Font Info:    Font shape `T1/txss/bx/sc' will be
 LaTeX Font Info:    Font shape `T1/txss/m/sc' will be
 (Font)              scaled to size 16.41594pt on input line 2.
 
-LaTeX Warning: Citation `Mopo' on page 5 undefined on input line 3.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -1090,9 +1087,6 @@ Overfull \vbox (1.9pt too high) has occurred while \output is active []
  [6]
 Kapitel 2.
 
-LaTeX Warning: Citation `Mopo' on page 7 undefined on input line 2.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 2--7
 
  []
@@ -1106,88 +1100,41 @@ LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
 (Font)              scaled to size 11.39996pt on input line 9.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 9.
-<img/copenhagen.jpg, id=337, 65.3011pt x 42.32957pt>
+<img/copenhagen.jpg, id=339, 65.3011pt x 42.32957pt>
 File: img/copenhagen.jpg Graphic file (type jpg)
  <use img/copenhagen.jpg>
 Package pdftex.def Info: img/copenhagen.jpg used on input line 13.
-(pdftex.def)             Requested size: 195.9028pt x 126.9884pt.
-
-
-LaTeX Warning: Citation `NYT' on page 7 undefined on input line 15.
-
-
-LaTeX Warning: Citation `NYT' on page 7 undefined on input line 15.
-
-
-LaTeX Warning: Citation `KopIng' on page 7 undefined on input line 17.
-
-
-LaTeX Warning: Citation `BZ' on page 7 undefined on input line 18.
+(pdftex.def)             Requested size: 328.6279pt x 213.08768pt.
 
 [7
 
  <./img/copenhagen.jpg>]
-
-LaTeX Warning: Citation `Welle' on page 8 undefined on input line 20.
-
-
-LaTeX Warning: Citation `MenschMaschine' on page 8 undefined on input line 20.
-
-
-LaTeX Warning: Citation `Travolution' on page 8 undefined on input line 22.
-
-<img/audi-travolution.jpg, id=355, 496.85625pt x 321.2pt>
+<img/audi-travolution.jpg, id=364, 297.11pt x 127.47626pt>
 File: img/audi-travolution.jpg Graphic file (type jpg)
 
 <use img/audi-travolution.jpg>
 Package pdftex.def Info: img/audi-travolution.jpg used on input line 25.
-(pdftex.def)             Requested size: 322.95273pt x 208.77753pt.
+(pdftex.def)             Requested size: 328.6279pt x 141.00624pt.
 
-
-LaTeX Warning: Citation `AudiTravolution' on page 8 undefined on input line 27.
-
-
-
-LaTeX Warning: Citation `AudiTravolution' on page 8 undefined on input line 27.
-
+Overfull \hbox (123.3304pt too wide) in paragraph at lines 27--27
+\T1/txr/m/n/10.95 Quelle: http://www.audiusanews.com/imagegallery/adhoc/12647//
+12647,12649,12652,12648,12651,12650,/travolution-
+ []
 
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [8 <./img/audi-travolution.jpg>] <img/telematik.png, id=373, 464.73625pt x 290
+ [8 <./img/audi-travolution.jpg>] <img/telematik.png, id=389, 464.73625pt x 290
 .08376pt>
 File: img/telematik.png Graphic file (type png)
 
 <use img/telematik.png>
 Package pdftex.def Info: img/telematik.png used on input line 34.
-(pdftex.def)             Requested size: 418.25876pt x 261.07295pt.
-
-
-LaTeX Warning: Citation `telematik' on page 9 undefined on input line 36.
-
-
-LaTeX Warning: Citation `telematik' on page 9 undefined on input line 36.
-
-
-LaTeX Warning: Citation `Siemens' on page 9 undefined on input line 38.
-
-
-LaTeX Warning: Citation `kolibri' on page 9 undefined on input line 41.
-
-
-LaTeX Warning: Citation `kolibriTUM' on page 9 undefined on input line 41.
-
-
-LaTeX Warning: Citation `kolibriTUM' on page 9 undefined on input line 41.
-
+(pdftex.def)             Requested size: 328.6279pt x 205.13318pt.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [9 <./img/telematik.png>]
-
-LaTeX Warning: Citation `Toyota' on page 10 undefined on input line 44.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 44--48
 
  []
@@ -1198,53 +1145,35 @@ Overfull \hbox (1.75479pt too wide) in paragraph at lines 49--51
 Smart-pho-nes sind be-reits mit ei-nem [][]GPS[]-Empfänger
  []
 
-<img/EnLighten.png, id=395, 681.54625pt x 356.33125pt>
+<img/EnLighten.png, id=423, 681.54625pt x 356.33125pt>
 File: img/EnLighten.png Graphic file (type png)
  <use img/EnLighten.png>
 Package pdftex.def Info: img/EnLighten.png used on input line 55.
-(pdftex.def)             Requested size: 340.7723pt x 178.16518pt.
-
-
-LaTeX Warning: Citation `EnLighten' on page 10 undefined on input line 57.
-
-
-LaTeX Warning: Citation `EnLighten' on page 10 undefined on input line 57.
-
+(pdftex.def)             Requested size: 328.6279pt x 171.81456pt.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [10 <./img/EnLighten.png>]
-
-LaTeX Warning: Citation `SignalGuru' on page 11 undefined on input line 62.
-
-<img/SignalGuru.jpg, id=415, 258.9675pt x 176.66pt>
+ [10 <./img/EnLighten.png>] <img/SignalGuru.jpg, id=448, 258.9675pt x 176.66pt>
 File: img/SignalGuru.jpg Graphic file (type jpg)
- <use img/SignalGuru.jpg>
+
+<use img/SignalGuru.jpg>
 Package pdftex.def Info: img/SignalGuru.jpg used on input line 65.
-(pdftex.def)             Requested size: 233.06857pt x 158.99252pt.
-
-
-LaTeX Warning: Citation `SignalGuruPaper' on page 11 undefined on input line 66
-.
-
-
-LaTeX Warning: Citation `SignalGuruPaper' on page 11 undefined on input line 66
-.
-
+(pdftex.def)             Requested size: 328.6279pt x 224.20474pt.
 
 Overfull \hbox (1.31427pt too wide) in paragraph at lines 72--74
 \T1/txr/m/n/10.95 Ampelmeter ist ei-ne An-wen-dung, die ei-ne Ge-schwin-dig-kei
 ts-emp-feh-lung an-gibt, bei der man die in Fahrtrich-
  []
 
+
+Overfull \vbox (1.9pt too high) has occurred while \output is active []
+
+ [11 <./img/SignalGuru.jpg>]
 LaTeX Font Info:    Font shape `T1/txss/bx/sc' will be
 (Font)              scaled to size 10.40245pt on input line 83.
 LaTeX Font Info:    Font shape `T1/txss/m/sc' will be
 (Font)              scaled to size 10.40245pt on input line 83.
-
-Overfull \vbox (1.9pt too high) has occurred while \output is active []
-
- [11 <./img/SignalGuru.jpg>]) (./chapter/Anforderungen.tex
+) (./chapter/Anforderungen.tex
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [12]
@@ -1274,7 +1203,7 @@ Kapitel 6.
 
 
 ]
-Overfull \hbox (2.22258pt too wide) in paragraph at lines 6--7
+Overfull \hbox (2.22258pt too wide) in paragraph at lines 5--6
 \T1/txr/m/n/10.95 di-rek-ter In-for-ma-ti-ons-aus-tausch zwi-schen Fahr-zeu-gen
  jeg-li-cher Art, Ver-kehrs-lei-t-tech-nik wie z.B. Licht-
  []
@@ -1287,48 +1216,108 @@ Overfull \hbox (2.22258pt too wide) in paragraph at lines 6--7
 \tf@lof=\write8
 \openout8 = `Bachelorarbeit.lof'.
 
- (./Bachelorarbeit.bbl) [19
+ (./Bachelorarbeit.bbl [19
 
 
 ]
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 14.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
+[]\T1/txr/m/it/10.95 Audi tra-vo-lu-ti-on: ve-hic-le to traf-fic light com-mu-n
+i-ca-ti-on sys-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
+\T1/txr/m/it/10.95 tem re-du-ces fuel con-sump-ti-on\T1/txr/m/n/10.95 .  []$\T1
+/txtt/m/n/10.95 http : / / www . gizmag . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
+\T1/txtt/m/n/10.95 audi-[]travolution-[]vehicle-[]to-[]traffic-[]light-[]commun
+ication / 15340 / picture /
+ []
+
+
+Overfull \hbox (78.3669pt too wide) in paragraph at lines 40--46
+\T1/txtt/m/n/10.95 news / Apps-[]fuer-[]iPhone-[]Smartphones-[]Signal-[]Guru-[]
+App-[]soll-[]helfen-[]Sprit-[]zu-[]sparen-[]6620993 .
+ []
+
+
+Underfull \hbox (badness 8132) in paragraph at lines 65--70
+[]\T1/txr/m/it/10.95 Pilotprojekt zur Ver-bes-se-rung des Ver-kehrs-flus-ses: G
+rü-ne Wel-le auf der Land-stra-
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 65--70
+\T1/txr/m/it/10.95 ÿe\T1/txr/m/n/10.95 .  []$\T1/txtt/m/n/10.95 https : / / por
+tal . mytum . de / pressestelle / pressemitteilungen / NewsArticle _
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 80--83
+[]\T1/txr/m/it/10.95 Projekt Mo-Mo\T1/txr/m/n/10.95 .  []$\T1/txtt/m/n/10.95 ht
+tp : / / projekt . beuth-[]hochschule . de / momo/$[]\T1/txr/m/n/10.95 , 2011. 
+--  Zu-griff:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--96
+[]\T1/txr/m/sc/10.95 Schoenebeck\T1/txr/m/n/10.95 , Gu-drun von:  \T1/txr/m/it/
+10.95 Ko-pen-ha-gen ver-wöhnt Rad-fah-rer mit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--96
+\T1/txr/m/it/10.95 Grü-nen Wel-len\T1/txr/m/n/10.95 .  []$\T1/txtt/m/n/10.95 ht
+tp : / / www . ingenieur . de / Themen / Fahrrad /
+ []
+
+[20
+
+])
+Overfull \vbox (1.9pt too high) has occurred while \output is active []
+
+ [21]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
- (./Bachelorarbeit.aux (./extra/Acronym.aux))
+
+(./Bachelorarbeit.aux (./extra/Acronym.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: 020F83901AAA5D640AF26A051532DDE3;3717.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  )
 (\end occurred when \ifx on line 16 was incomplete)
 (\end occurred when \ifx on line 10 was incomplete) 
 Here is how much of TeX's memory you used:
- 12900 strings out of 493485
- 190680 string characters out of 3143525
- 329979 words of memory out of 3000000
- 15771 multiletter control sequences out of 15000+200000
- 125325 words of font info for 165 fonts, out of 3000000 for 9000
+ 12986 strings out of 493485
+ 192042 string characters out of 3143525
+ 330904 words of memory out of 3000000
+ 15835 multiletter control sequences out of 15000+200000
+ 119549 words of font info for 160 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,8n,47p,1449b,554s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-di
 st/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/publi
-c/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rt
-xsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsssc.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
-mr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (19 pages, 789301 bytes).
+c/txfonts/rtxi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rt
+xr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsssc.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Bachelorarbeit.pdf (21 pages, 667314 bytes).
 PDF statistics:
- 529 PDF objects out of 1000 (max. 8388607)
- 485 compressed objects within 5 object streams
- 109 named destinations out of 1000 (max. 500000)
+ 604 PDF objects out of 1000 (max. 8388607)
+ 552 compressed objects within 6 object streams
+ 132 named destinations out of 1000 (max. 500000)
  487 words of extra memory for PDF output out of 10000 (max. 10000000)
 

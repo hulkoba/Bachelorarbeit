@@ -10,7 +10,7 @@ Unter dem Prinzip "'Grüne Welle'" wird die Abstimmung der Ampelschaltzustände,
 In Kopenhagen unterstützen grüne \gls{LED}s auf Radwegen die Radfahrer indem sie wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der Grünen Welle befinden. 
 \begin{figure}[H]  
     \centering  
-    \includegraphics[scale=3]{copenhagen}
+    \includegraphics[width=0.7\textwidth]{copenhagen}
     \label{fig:copenhagen}
     \caption[Grüne Welle durch \gls{LED}s]{\gls{LED}s signalisieren die Grüne Welle bei 20 km/h  Quelle: \cite{NYT}}
 \end{figure}
@@ -22,18 +22,18 @@ Die \gls{VW}-Forschung initiierte in den 80er Jahren mit dem Projekt "'Wolfsburg
 Im Sommer 2008 wurde das Projekt TRAVOLUTION\footnote{\cite{Travolution}} (TRAffic \& eVOLUTION), von dem Amt für Verkehrsmanagement und Geoinformation der Stadt Ingolstadt, Audi AG\footnote{Automobilhersteller, dem Volkswagen-Konzern zugehörig}, GEVAS Software und dem Lehrstuhl für Verkehrstechnik an der \gls{TUM} abgeschlossen. Es besteht aus den Teilprojekten \textsc{verkehrsadaptive Netzsteuerung mit Genetischen Algorithmen} und \textsc{Der informierte Fahrer}. Im Netzsteuerungsprojekt wurden 46 Lichtsignalanlagen in Ingolstadt mit der Netzsteuerungssoftware BALANCE ausgestattet, wodurch sie intelligent auf den Verkehr reagieren und die Schaltung an den Verkehr anpassen. 
 \begin{figure}[H]  
     \centering  
-    \includegraphics[scale=0.65]{audi-travolution}
+    \includegraphics[width=0.7\textwidth]{audi-travolution}
     \label{fig:travolution}
-    \caption[Projekt Travolution]{\gls{C2I}-Kommunikation: Der Bordcomputer zeigt die optimale Geschwindigkeit an, sodass die nächste Kreuzung ohne Halt überquert werden kann. Quelle: \cite{AudiTravolution}}
+    \caption[Projekt Travolution]{\gls{C2I}-Kommunikation: Der Bordcomputer zeigt die optimale Geschwindigkeit an, sodass die nächste Kreuzung ohne Halt überquert werden kann.\\ Quelle: {http://www.audiusanews.com/imagegallery/adhoc/12647//12647,12649,12652,12648,12651,12650,/travolution-promotes-eco-friendly-driving}}
 \end{figure}
-Ziel des zweiten Teilprojektes ist es, die Autofahrer über die Ampelphasen zu informieren. Die \gls{C2I}-Kommunikation mittels WLAN umsetzend, senden mit Kommunikationsmodulen ausgestattete Ampeln die Grünphasen an den Bordcomputer der Autos, welcher widerum die Geschwindigkeit für ein reibungsloses Passieren errechnet.
+Ziel des zweiten Teilprojektes ist es, die Autofahrer über die Ampelphasen zu informieren. Die \gls{C2I}-Kommunikation mittels \gls{WLAN} und \gls{UMTS} umsetzend, senden mit Kommunikationsmodulen ausgestattete Ampeln die Grünphasen an den Bordcomputer der Autos, welcher widerum die Geschwindigkeit für ein reibungsloses Passieren errechnet.
 \subsection{Projekt Testfeld Telematik}
-Ende des Jahres 2013 wurde in Wien das Projekt Testfeld Telematik -- Feldversuch zur Stärkung österreichischen Know-Hows im Bereich umweltverträglicher Mobilität erfolgreich abgeschlossen. Per \gls{C2X}-Kommunikation\footnote{direkter Informationsaustausch zwischen Fahrzeugen jeglicher Art, Verkehrsleittechnik wie z.B. Lichtsignalanlagen und Verkehrsleitzentralen} bringt das Projekt unter Kooperative Dienste wie Ampelinformationen direkt ins Auto. Über Navigationssysteme, integrierte Systeme, Nachrüst-Plattformen oder mobile Endgeräte erreicht die FahrerInnen die Information der optimalen Geschwindigkeit sowie die Dauer der jeweiligen Ampelphase. Die Kommunikation zwischen den beteiligten Objekten verlief über ITS-GS, WAVE, CALM-IR und Mobilfunk. // Siemens artikel: kameras+Sensoren die zb als induktionsschleife in die fahrbahn eingelassen sind.
+Ende des Jahres 2013 wurde in Wien das Projekt Testfeld Telematik -- Feldversuch zur Stärkung österreichischen Know-Hows im Bereich umweltverträglicher Mobilität erfolgreich abgeschlossen. Per \gls{C2X-glo}-Kommunikation bringt das Projekt unter Kooperative Dienste wie Ampelinformationen direkt ins Auto. Über Navigationssysteme, integrierte Systeme, Nachrüst-Plattformen oder mobile Endgeräte erreicht die FahrerInnen die Information der optimalen Geschwindigkeit sowie die Dauer der jeweiligen Ampelphase. Die Kommunikation zwischen den beteiligten Objekten verlief über ITS-GS, WAVE, CALM-IR und Mobilfunk. // Siemens artikel: kameras+Sensoren die z.B. als Induktionsschleife in die Fahrbahn eingelassen sind.
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.9]{telematik}
+    \includegraphics[width=0.7\textwidth]{telematik}
     \label{fig:telematik}
-    \caption[Telematik Ampelinformation]{"'Grüne Welle bei 50 km/h'" Quelle: \cite{telematik}}
+    \caption[Projekt Testfeld-Telematik Ampelinformation]{"Grüne Welle bei 50 km/h"  Quelle: \cite{telematik}}
 \end{figure}
 Andere Autohersteller wie \gls{BMW}, Volvo und Volkswagen kooperieren als Forschungsprojekt "'Car 2 Car Communication Consortium'" mit Testfeld Telematik, ebenfalls mit dem Ziel die Sicherheit an Kreuzungen zu verbessern. Im Auto installierte Sensoren kommunizieren mit Kameras und Scanner in der Ampel. Allerdings funktioniert das System nur mit dem ambitionierten Ziel, wenn alle Autohersteller zusammenarbeiten und sich auf den gleichen Standard einigen.\footnote{\cite{Siemens}}
 %%% KOLIBRI %%%
@@ -46,15 +46,15 @@ Toyotas System erfordert eine spezielle Infrastruktur an Kreuzungen, die Install
 %%% Apps %%% 
 %
 \section{Apps}
-Ampelassistenten als App sind relativ unproblematisch. Smartphones sind bereits mit einem \gls{GPS}-Empfänger ausgestattet und haben fast durchgänging Internetzugang. Die hier vorgestellten mobilen Anwendungen existieren bereits oder befinden sich in der Testphase.
+Ampelassistenten als App sind relativ unproblematisch. Smartphones sind bereits mit einem \gls{GPS}-Empfänger ausgestattet und haben fast durchgängig Internetzugang. Die hier vorgestellten mobilen Anwendungen existieren bereits oder befinden sich in der Testphase.
 %%% ENLIGHTEN %%%
 \subsection{EnLighten}
-Die \gls{App} EnLighten erkennt rote Ampeln und visualisiert die Dauer dieser Phase. EnLighten nutzt \gls{GPS} zur Lokalisierung des Autos und verwendet die \gls{C2R}-Kommunikation zu Ampelphasenprognose.
+Die \gls{App} EnLighten erkennt rote Ampeln und visualisiert die Dauer dieser Phase. EnLighten nutzt \gls{GPS} zur Lokalisierung des Autos und verwendet die \gls{C2X}-Kommunikation zu Ampelphasenprognose.
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{EnLighten}
+    \includegraphics[width=0.7\textwidth]{EnLighten}
     \label{fig:Ampelsignalstatus}
-    \caption[Echtzeit Ampelsignalstatus]{Schnappschuss der Echtzeit Ampelsignalstatusprognose in Portland. Quelle: \cite{EnLighten}}
+    \caption[EnLighten]{Schnappschuss der Echtzeit Ampelsignalstatusprognose in Portland. Quelle: \cite{EnLighten}}
 \end{figure}
 Hierbei verbindet sich die App über \gls{DSRC} mit den Lichtsignalanlagen und beachtet dabei Komponenten wie die Höchstgeschwindigkeit, Fahrtrichtung und Tageszeit. Die Installation der \gls{DSRC}-Hardware an den Komponenten ist sehr aufändig und teuer, weswegen EnLighten erst in einigen amerikanischen Städten funktionstüchtig ist.
 %%% SIGNAL GURU %%%
@@ -62,8 +62,8 @@ Hierbei verbindet sich die App über \gls{DSRC} mit den Lichtsignalanlagen und b
 Signal Guru wurde von den Wissenschaftlern des \gls{MIT} und der Universität von Princeton entwickelt. Die App errechnet über die Smartphones vieler Nutzer - welche miteinander kommunizieren -  die Wahrscheinlichkeit, wann eine Ampel grün wird und wie das eigene Fahrverhalten entsprechend anzupassen ist. Wie in Abbildung \ref{fig:AppSignalGuru} ist zu sehen ist, muss die eingebaute Kamera durch die Windschutzscheibe die Ampel registrieren. Bei Testläufen im Straßenverkehr vielen die Ergebnise bei statisch geschalteten Ampeln deutlich besser aus als bei angepassten Ampelschaltungen \footnote{\cite{SignalGuru}} 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.9]{SignalGuru}
-    \caption[Signal Guru]{Signal Guru App muss in der Lage sein die Ampel zu 'sehen'.  Quelle: \cite{SignalGuruPaper}}
+    \includegraphics[width=0.7\textwidth]{SignalGuru}
+    \caption[Signal Guru]{Signal Guru muss in der Lage sein die Ampel zu 'sehen'.  Quelle: \cite{SignalGuruPaper}}
     \label{fig:AppSignalGuru}
 \end{figure}
 \textit{Ob das auch in Deutschland funktioniert ist schwer zu sagen, da die Ampeln hierzulande so gesetzt sind, dass das Smartphone in der Pole-Position die Ampel evtl. nicht erfassen kann. Dies gilt es in der Entwicklungsarbeit zu testen und gegebenenfalls auszuarbeiten.}
@@ -72,7 +72,7 @@ Signal Guru wurde von den Wissenschaftlern des \gls{MIT} und der Universität vo
 Ampelmeter ist eine Anwendung, die eine Geschwindigkeitsempfehlung angibt, bei der man die in Fahrtrichtung nächste Ampel bei grün erreichen. Der zweite Anwendungsfall ist die Restrot- bzw. Restgrünanzeige. Da der timingbezogene Teil der Datenbank zum Startzeitpunkt noch leer ist, bedarf es der Mitarbeit der NutzerInnen.
 %%% ERGIBNIS %%%
 \section{Analyseergebnis}
-Diese Beispiele zeigen deutlich, dass die Nachfrage nach Ampelassistenten -- mobil oder statisch -- steigt und auf dem Markt Anklang findet. Der Verkehr ist flüssiger, die Teilnehmer entspannter, die Luft sauberer. AutofahrerInnen sind schon lange nicht mehr allein auf der Straße und so gilt es, dieses erfolgreiche Konzept für alle VerkehrteilnehmerInnen zu erweitern.
+Diese Beispiele zeigen deutlich, dass die Nachfrage nach Ampelassistenten -- mobil oder statisch -- steigt und auf dem Markt Anklang findet. Der Verkehr ist flüssiger, die Teilnehmer entspannter, die Luft sauberer. AutofahrerInnen sind schon lange nicht mehr allein auf der Straße und so gilt es, dieses erfolgreiche Konzept für alle VerkehrsteilnehmerInnen zu erweitern.
 %
 %
 %%% Technische Grundlagen %%%

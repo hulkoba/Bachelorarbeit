@@ -1,48 +1,62 @@
 This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Bachelorarbeit.aux
-I found no \citation commands---while reading file Bachelorarbeit.aux
-I found no \bibdata command---while reading file Bachelorarbeit.aux
-I found no \bibstyle command---while reading file Bachelorarbeit.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            83 strings with 502 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
-int.to.chr$ -- 0
+A level-1 auxiliary file: extra/Acronym.aux
+The style file: alphadin.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bib/literatur.bib
+Warning--empty year in AudiTravolution
+Warning--empty number in telematik
+Warning--empty note in telematik
+Warning--empty year in kolibri
+Warning--empty number in SignalGuruPaper
+Warning--empty note in SignalGuruPaper
+Warning--empty year in Travolution
+Warning--empty number in Welle
+Warning--empty note in Welle
+You've used 18 entries,
+            4793 wiz_defined-function locations,
+            989 strings with 8738 characters,
+and the built_in function-call counts, 7401 in all, are:
+= -- 813
+> -- 129
+< -- 137
++ -- 150
+- -- 41
+* -- 423
+:= -- 1194
+add.period$ -- 18
+call.type$ -- 18
+change.case$ -- 74
+chr.to.int$ -- 18
+cite$ -- 27
+duplicate$ -- 256
+empty$ -- 609
+format.name$ -- 82
+if$ -- 1576
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+missing$ -- 65
+newline$ -- 106
+num.names$ -- 36
+pop$ -- 101
+preamble$ -- 1
+purify$ -- 110
 quote$ -- 0
-skip$ -- 0
+skip$ -- 436
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
+substring$ -- 400
+swap$ -- 41
+text.length$ -- 29
+text.prefix$ -- 17
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+type$ -- 191
+warning$ -- 9
+while$ -- 43
+width$ -- 23
+write$ -- 227
+(There were 9 warnings)
