@@ -1,7 +1,6 @@
-\newglossaryentry{AntwD}{
-    name=Antwortdatei, 
-    description={ Informationen zum
-Installieren einer Anwendung oder des Betriebssystems}
+\newglossaryentry{C2X}{
+    name=Car-to-X-Kommunikation, 
+    description={ direkter Informationsaustausch zwischen Fahrzeugen jeglicher Art, Verkehrsleittechnik wie z.B. Lichtsignalanlagen und Verkehrsleitzentralen}
 }
 \newacronym{App}{App}{Applikation}
 \newacronym{WLAN}{WLAN}{Wireless Local Area Network}
@@ -11,10 +10,10 @@ Installieren einer Anwendung oder des Betriebssystems}
 \newacronym{TUM}{TUM}{Technische Universität München}
 \newacronym{VW}{VW}{Volkswagen}
 \newacronym{LED}{LED}{Licht-emittierende Diode, auch Lumineszenz-Diode || Leuchtdiode}
-\newacronym{V2X}{V2X}{Vehicle-to-X}
-\newacronym{I2V}{I2V}{Infrastructure-to-Vehicle}
-\newacronym{V2R}{V2R}{Vehicle-to-Roadside}
-\newacronym{V2I}{V2I}{Vehicle-to-Infrastructure}
+\newacronym{C2X}{C2X}{Car-to-X oder Vehicle-to-X}
+\newacronym{I2C}{I2C}{Infrastructure-to-Car oder Infrastructure-to-Vehicle}
+\newacronym{C2R}{C2R}{Car-to-Roadside oder Vehicle-to-Roadside}
+\newacronym{C2I}{C2I}{Car-to-Infrastructure oder Vehicle-to-Infrastructure}
 \newacronym{DSRC}{DSRC}{Dedicated Short Range Communication}
 \newacronym{MIT}{MIT}{Massachusetts Institute of Technology}
 \newacronym{SQL}{SQL}{Structured Query Language}
