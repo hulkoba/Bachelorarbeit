@@ -1,17 +1,18 @@
 \chapter{State of the art}
 Die Verkehrsstrategie des Senats sieht vor, dass das Radfahren bis zum Jahr 2025 20 Prozent des Gesamtverkehrs ausmachen soll. \cite{Mopo}
 "Wir brauchen eine intelligente Konstruktion, die alle Verkehrsarten verbindet", sagte Stadtentwicklungssenator Michael Müller (SPD).\\
-Sowohl statisch an Radwegen, als auch für den Einsatz in Kraftfahrzeugen gibt es bereits Projekte zu Ampelassistenten in Bordcomputern, Navigationssystemen, oder aber auch als App die rote Ampeln erkennen und die optimale Fahrtgeschwindigkeit für die Grüne Welle ermitteln. Auch Erweiterungen für's Rad direkt werden vielfältiger --- vom einfachen Navigationssystem bis hin zu intelligenten Aufsätzen, die an das Smartphone gekoppelt sind.
+Sowohl statisch an Radwegen, als auch für den Einsatz in Kraftfahrzeugen gibt es bereits Projekte zu Ampelassistenten in Bordcomputern, Navigationssystemen, oder aber auch als App die rote Ampeln erkennen und die optimale Fahrtgeschwindigkeit für die Grüne Welle ermitteln.\\\\
 \gls{C2X}- Kommunikation oder/und \gls{GLOSA} definieren?\\
 auch fahrraderweiterungssysteme aufführen? Helios-lenker, Cobi app etc?
 % ### Auto ###
-\section{Ampelinformationssysteme}
-Unter dem Prinzip "'Grüne Welle"' wird die Abstimmung der Ampelschaltzustände, sodass ein Fahrzeug in einer bestimmten Geschwindigkeit mehrere Ampeln passieren kann ohne anzuhalten, verstanden. Der folgende Abschnitt soll die existierenden Lösungen und Ansätze für Ampelinformationssysteme darstellen.
+\section{Projekte zu Ampelinformationssystemen im Auto}
+Unter dem Prinzip "'Grüne Welle"' wird die Abstimmung der Ampelschaltzustände, sodass ein Fahrzeug in einer bestimmten Geschwindigkeit mehrere Ampeln passieren kann ohne anzuhalten, verstanden. Der folgende Abschnitt soll die existierenden Lösungen und Ansätze für die Ampelinformationssystemen darstellen.
 \subsection{Grüne Welle auf Radwegen}
 In Kopenhagen unterstützen grüne \gls{LED}s auf Radwegen die Radfahrer indem sie wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der Grünen Welle befinden. 
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=0.7\textwidth]{copenhagen} \label{fig:copenhagen}
+    \includegraphics[width=0.7\textwidth]{copenhagen}
+    \label{fig:copenhagen}
     \caption[Grüne Welle durch \gls{LED}s]{\gls{LED}s signalisieren die Grüne Welle bei 20 km/h  Quelle: \cite{NYT}}
 \end{figure}
 Zusätzlich erkennen Sensoren im Radweg Fahrradgruppen und veranlassen dann die Ampel zu einer längeren Grünphase. In einem anderen Stadtteil sind Leuchttafeln, die die verbleibende Zeit der Ampelphase anzeigen, am Radwegrand installiert\footnote{\cite{KopIng}}.\\
@@ -22,8 +23,9 @@ Die \gls{VW}-Forschung initiierte in den 80er Jahren mit dem Projekt "'Wolfsburg
 Im Sommer 2008 wurde das Projekt TRAVOLUTION (TRAffic \& eVOLUTION), von dem Amt für Verkehrsmanagement und Geoinformation der Stadt Ingolstadt, Audi AG\footnote{ Automobilhersteller, dem Volkswagen-Konzern zugehörig}, GEVAS Software\footnote{ Softwareunternehmen für Verkehrstechnik} und dem Lehrstuhl für Verkehrstechnik an der \gls{TUM} abgeschlossen. Es besteht aus den Teilprojekten \textsc{verkehrsadaptive Netzsteuerung mit Genetischen Algorithmen} und \textsc{Der informierte Fahrer}. Im Netzsteuerungsprojekt wurden 46 Lichtsignalanlagen in Ingolstadt mit der Netzsteuerungssoftware BALANCE ausgestattet, wodurch sie intelligent auf den Verkehr reagieren und die Schaltung an den Verkehr anpassen. 
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=0.7\textwidth]{audi-travolution}  \label{fig:travolution}
-    \caption[Projekt Travolution]{\gls{C2I}-Kommunikation: Der Bordcomputer zeigt die optimale Geschwindigkeit an, sodass die nächste Kreuzung ohne Halt überquert werden kann.\\ Quelle: {\url{http://www.audiusanews.com/imagegallery/adhoc/12647//12647,12649,12652,12648,12651,12650,/travolution-promotes-eco-friendly-driving}}}
+    \includegraphics[width=0.7\textwidth]{audi-travolution}
+    \label{fig:travolution}
+    \caption[Projekt Travolution]{\gls{C2I}-Kommunikation: Der Bordcomputer zeigt die optimale Geschwindigkeit an, sodass die nächste Kreuzung ohne Halt überquert werden kann.\\ Quelle: {http://www.audiusanews.com/imagegallery/adhoc/12647//12647,12649,12652,12648,12651,12650,/travolution-promotes-eco-friendly-driving}}
 \end{figure}
 Ziel des zweiten Teilprojektes ist es, die Autofahrer über die Ampelphasen zu informieren. Die \gls{C2I}-Kommunikation mittels \gls{WLAN} und \gls{UMTS} umsetzend, senden mit Kommunikationsmodulen ausgestattete Ampeln die Grünphasen an den Bordcomputer der Autos, welcher widerum die Geschwindigkeit für ein reibungsloses Passieren errechnet\footnote{\cite{Travolution, AudiTravolution}}.\\ 
 Fundierend auf Travolution wurden Folgeprojekte wie zum Beispiel das ebenfalls von Audi ins Leben gerufene "'Ampelinfo online"'. Über Mobilfunk ist in der \gls{C2X}-Anwendung das Auto mit dem zentralen Verkehrsrechner, welcher die Ampelanlagen steuert, vernetzt und visualisiert die entsprechenden Informationen im Bordcomputer. \footnote{\cite{Ampelinfo}}
@@ -35,13 +37,14 @@ Ende des Jahres 2013 wurde in Wien das Projekt Testfeld Telematik -- Feldversuch
 %Die Kommunikation zwischen den beteiligten Objekten verlief über ITS-GS, WAVE, CALM-IR und Mobilfunk.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{telematik} \label{fig:telematik}
+    \includegraphics[width=0.7\textwidth]{telematik}
+    \label{fig:telematik}
     \caption[Projekt Testfeld-Telematik Ampelinformation]{"'Grüne Welle bei 50 km/h"'  Quelle: \cite{Telematik}}
 \end{figure}
 Andere Autohersteller wie \gls{BMW}, Volvo und Volkswagen kooperieren als Forschungsprojekt "'Car 2 Car Communication Consortium"' mit Testfeld Telematik, ebenfalls mit dem Ziel die Sicherheit an Kreuzungen zu verbessern. Im Auto installierte Sensoren kommunizieren mit Kameras und Scanner in der Ampel. Allerdings funktioniert das System nur mit dem ambitionierten Ziel, wenn alle Autohersteller zusammenarbeiten und sich auf den gleichen Standard einigen.\footnote{\cite{Siemens}}
 %TOYOTA 
 \\ \textbf{WO SOLL DER TOYOTA ABSCHNITT HIN??? :} \\
-Auch Toyota hat ein System entwickelt, welches eine spezielle Infrastruktur an Kreuzungen, die Installation von Infrarot-Sendern, die mit dem Toyota-Navigationssystem kommunizieren erfordert. An roter Ampel werden die Fahrer über die verbleibende Wartezeit informiert. Die ausgestatteten Navigationssysteme wurden bis jetzt jedoch ausschließlich in Japan getestet.\footnote{\cite{Toyota}}
+Auch Toyota hat ein System entwickelt, welches eine spezielle Infrastruktur an Kreuzungen, die Installation von Infrarot-Sendern, die mit dem Toyota-Navigationssystem kommunizieren erfordert. An roter Ampel werden die Fahrer über die verbleibende Wartezeit informiert. Die ausgestatteten Navigationssysteme wurden bis jetzt jedoch ausschließlich in Japan getestet.\footnote{\cite{Toyota}}\\
 %
 %%% Apps %%% 
 %
@@ -49,43 +52,33 @@ Auch Toyota hat ein System entwickelt, welches eine spezielle Infrastruktur an K
 Ampelassistenten als App sind relativ unproblematisch. Smartphones sind bereits mit einem \gls{GPS}-Empfänger ausgestattet und haben fast durchgängig Internetzugang. Die hier vorgestellten mobilen Anwendungen existieren bereits oder befinden sich in der Testphase.
 %%% ENLIGHTEN %%%
 \subsection{EnLighten}
-EnLighten erkennt rote Ampeln und visualisiert die Dauer dieser Phase. Die mobile Anwendung nutzt \gls{GPS} zur Lokalisierung des Autos und verwendet ebenfalls die \gls{C2X}-Kommunikation zu Ampelphasenprognose. Hierbei verbindet sich die App mit den Lichtsignalanlagen und beachtet dabei Komponenten wie die Höchstgeschwindigkeit, Fahrtrichtung und Tageszeit. Aufgrund von hohen Installationskosten und -Aufwand ist EnLighten erst in einigen amerikanischen Städten funktionstüchtig und verfügbar.
+EnLighten erkennt rote Ampeln und visualisiert die Dauer dieser Phase. Die mobile Anwendung nutzt \gls{GPS} zur Lokalisierung des Autos und verwendet ebenfalls die \gls{C2X}-Kommunikation zu Ampelphasenprognose.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{EnLighten}
+    \label{fig:Ampelsignalstatus}
+    \caption[EnLighten]{Schnappschuss der Echtzeit Ampelsignalstatusprognose in Portland. Quelle: \cite{EnLighten}}
+\end{figure}
+Hierbei verbindet sich die App mit den Lichtsignalanlagen und beachtet dabei Komponenten wie die Höchstgeschwindigkeit, Fahrtrichtung und Tageszeit. Aufgrund von hohen Installationskosten und -Aufwand ist EnLighten erst in einigen amerikanischen Städten funktionstüchtig und verfügbar.
 %%% SIGNAL GURU %%%
 \subsection{Signal Guru}
 Signal Guru wurde von den Wissenschaftlern des \gls{MIT} und der Universität von Princeton entwickelt. Die App errechnet über die Smartphones vieler Nutzer - welche miteinander kommunizieren -  die Wahrscheinlichkeit, wann eine Ampel grün wird und wie das eigene Fahrverhalten entsprechend anzupassen ist. Wie in Abbildung \ref{fig:AppSignalGuru} ist zu sehen ist, muss die eingebaute Kamera durch die Windschutzscheibe die Ampel registrieren. Bei Testläufen im Straßenverkehr vielen die Ergebnise bei statisch geschalteten Ampeln deutlich besser aus als bei angepassten Ampelschaltungen \footnote{\cite{SignalGuru}} 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{SignalGuru}
-    \caption[Signal Guru]{Signal Guru muss in der Lage sein die Ampel zu 'sehen'.  Quelle: \cite{SignalGuruPaper}} \label{fig:AppSignalGuru}
+    \caption[Signal Guru]{Signal Guru muss in der Lage sein die Ampel zu 'sehen'.  Quelle: \cite{SignalGuruPaper}}
+    \label{fig:AppSignalGuru}
 \end{figure}
-\textit{Ob das auch in Deutschland funktioniert ist schwer zu sagen, da die Ampeln hierzulande so gesetzt sind, dass das Smartphone in der Pole-Position die Ampel evtl. nicht erfassen kann. Dies gilt es in der Entwicklungsarbeit zu testen und gegebenenfalls auszuarbeiten.}
+\textit{Ob das auch in Deutschland funktioniert ist schwer zu sagen, da die Ampeln hierzulande so gesetzt sind, dass das Smartphone in der Pole-Position die Ampel evtl. nicht erfassen kann. Dies gilt es in der Entwicklungsarbeit zu testen und gegebenenfalls auszuarbeiten.}s
 %%% AMPELMETER %%%
 \subsection{Ampelmeter}
 \textbf{= Lorem Ipsum: gibt/gabs es die App wirklich? \\}
 Ampelmeter ist eine Anwendung, die eine Geschwindigkeitsempfehlung angibt, bei der man die in Fahrtrichtung nächste Ampel bei grün erreichen. Der zweite Anwendungsfall ist die Restrot- bzw. Restgrünanzeige. Da der timingbezogene Teil der Datenbank zum Startzeitpunkt noch leer ist, bedarf es der Mitarbeit der NutzerInnen.
 \section{Fahrraderweiterungen}
-Als Schnittstelle das Smarthone nutzend gibt es ausgeklügelte Systeme mit reichlich Funktionen. Das einfache Navigationssystem für Fahrräder ist kaum noch notwendig, wo doch zum Beispiel die hier aufgeführten um einiges umfangreicher sind.
-\subsection{Displaylose Fahrradnavigation}
-Das "'\textsc{Hammerhead}"' ist ein "'Hammer"', oder einfach ein "'T"', an den Lenker angebracht und gespickt mit verschiedenfarbigen \gls{LDS}s zeigt es den Weg zeigen, warnt vor Hindernissen und ersetzt die vorderen Scheinwerfer.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{hammerhead}
-    \caption[Hammerhead]{LEDs zeigen den Weg.  Quelle: \url{http://blog.hammerhead.io/}} \label{fig:hammerhead}
-\end{figure}
-Via Bluetooth ist \textsc{Hammerhead} an das Smartphone gekoppelt, auf dem die zugehörige Navigationsanwendung läuft mit der man Routen eingeben, teilen und speichern kann\footnote{\cite{Hammerhead}}.\\
- Ein sehr ähnliches Prinzip verfolgt das "'CycleNav"' von der Firma Schwinn. Untersiede findet man hier im Design und integriertem Lautsprecher, der Abbiegehinweise ausgibt und auf Wunsch wiederholt\footnote{\cite{CycleNav}}.
-\subsection{Intelligente Fahrradlenker}
-Mehr High-Tech, aber auch umfangreichere Funktionen bietet der vom amerikanischen Startup "'Helios-Bikes"' entwickelte \textsc{Helios}-Lenker. Neben dem Frontlicht hat der Lenker wie in \ref{fig:helios} zu sehen, an den Enden \gls{LED}s die einen zum gewünschten Standort leiten. 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{helios}
-    \caption[Helios-Lenker]{Helios-Lenker.  Quelle: \url{http://www.ridehelios.com/products.php}} \label{fig:helios}
-\end{figure}
-Sie passen ihre Farbe der Geschwindigkeit an und haben auf Wunsch auch eine Blinkfunktion. Verbindet man den Lenker mit einem Smartphone, lässt sich die Farbe der \gls{LED}s individualisieren. Die Verbindung zum Handy hat weitere Vorteile: dank des eingebauten \gls{GPS}-Trackers und eingesteckter SIM-Karte lässt sich das Fahrrad per SMS über den derzeitigen Standort abfragen}\footnote{\cite{Helios}}, was im Falle eines Diebstahl sehr hilfreich sein kann.\\
-"'Vanhawks Valour"' heißt das Rad, das ab April 2015 lieferbar ist. Wie im \textsc{Helios}-Lenker steckt auch hier ein über das Smartphon steuerbares Navigationssystem, das die Abbiegehinweise per \gls{LED} signalisiert, im Lenker. Auf den gefahrenen Routen merkt sich das Rad durch einen Erschütterungssensor erfasste Hindernisse wie Unebenheiten in der Fahrbahn und ermittelt beim nächsten Mal darauf rücksicht nehmend eine andere Route. Es ist darüber hinaus in der Lage mit anderen \textsc{Vanhawks valour}-Rädern zu kommunizieren und dessen Routenbegebenheiten ebenfalls zu berücksichtigen. Mittels Radarsensoren registriert das Fahrrad Autos im toten Winkel und benachrichtig die FahrerInnen durch ein vibrierenden Lenker\footnote{\cite{vanhawks}}.
-%bluetooth kommunikation ... Akku im Rad wird mit Hilfe des Nabendynamos aufgeladen. yeah! App hat auch fitnesstrainer
-\subsection{Samsung Smart Bike mit Smartphone und Lasern}
 \subsection{der Cobi Fahrradcomputer}
+\subsection{Helios Lenker}
+\subsection{Hammerhead Fahrradnavigation}
+\subsection{Samsung Smart Bike mit Smartphone und Lasern}
 %%% ERGIBNIS %%%
 \section{Analyseergebnis}
-Diese Beispiele zeigen deutlich, dass sowohl die Nachfrage nach Ampelassistenten -- mobil oder statisch -- als auch an Fahrraderweiterungen steigt und auf dem Markt Anklang findet. Der Verkehr ist flüssiger, die Teilnehmer entspannter, die Luft sauberer. AutofahrerInnen sind schon lange nicht mehr allein auf der Straße und so gilt es, dieses erfolgreiche Konzept für alle VerkehrsteilnehmerInnen zu erweitern.
+Diese Beispiele zeigen deutlich, dass die Nachfrage nach Ampelassistenten -- mobil oder statisch -- steigt und auf dem Markt Anklang findet. Der Verkehr ist flüssiger, die Teilnehmer entspannter, die Luft sauberer. AutofahrerInnen sind schon lange nicht mehr allein auf der Straße und so gilt es, dieses erfolgreiche Konzept für alle VerkehrsteilnehmerInnen zu erweitern.

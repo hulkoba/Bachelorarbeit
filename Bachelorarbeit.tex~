@@ -65,6 +65,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 % Kapitel / Hauptteil des Dokumentes 
 \input{chapter/Abstract}
 \input{chapter/Einleitung}
+\input{chapter/StateOfTheArt}
 \input{chapter/Grundlagen}
 \input{chapter/Anforderungen}   %Anforderungsanalyse
 \input{chapter/Entwurf}         %Konzeption
