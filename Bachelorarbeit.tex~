@@ -9,6 +9,8 @@ abstracton,
 \usepackage[english, ngerman]{babel}
 \usepackage{lmodern}	 %Type1-Schriftart fuer nicht-englische Texte
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{scrhack}
 %\usepackage{listings} %dient der Darstellung von Quellcode
 \usepackage{float}
