@@ -1,0 +1,69 @@
+\select@language {ngerman}
+\select@language {ngerman}
+\select@language {english}
+\select@language {ngerman}
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Einf\IeC {\"u}hrung}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Ziel- und Umsetzung}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{6}{section.1.3}
+\contentsline {chapter}{\numberline {2}State of the art}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Ampelinformationssysteme}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Gr\IeC {\"u}ne Welle auf Radwegen}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Projekt Wolfsburger Welle}{8}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Projekt Travolution}{8}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Projekt Kolibri}{9}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Projekt Testfeld Telematik}{9}{subsection.2.1.5}
+\contentsline {section}{\numberline {2.2}Ampelinformationssysteme als mobile Applikation}{10}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}EnLighten}{10}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Signal Guru}{10}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Ampelmeter}{11}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Fahrraderweiterungen}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Displaylose Fahrradnavigation}{11}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Intelligente Fahrradlenker}{12}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Das Samsung Smart Bike}{13}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Der COBI Fahrradcomputer}{13}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Analyseergebnis}{14}{section.2.4}
+\contentsline {chapter}{\numberline {3}Grundlagen}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Theorie}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Technische Grundlagen}{15}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Arduino / Android-App}{15}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Mobile Sensing}{15}{subsubsection.3.2.1.1}
+\contentsline {subsection}{\numberline {3.2.2}Backend mit nodejs / socket.io und MongoDB}{15}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Open-Street-Map}{15}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Die Anforderungsanalyse}{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}Personas}{16}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Einleitung}{16}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Definition}{16}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Grund f\IeC {\"u}r Personas}{16}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Prototyp: Personas}{16}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Funktionalit\IeC {\"a}t}{16}{section.4.2}
+\contentsline {section}{\numberline {4.3}Die graphische Oberfl\IeC {\"a}che}{16}{section.4.3}
+\contentsline {chapter}{\numberline {5}Der Entwurf}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Klassenstruktur}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}Mockup}{17}{section.5.2}
+\contentsline {section}{\numberline {5.3}bla}{17}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Sensoren}{17}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}GPS}{17}{subsubsection.5.3.1.1}
+\contentsline {section}{\numberline {5.4}Evaluation}{17}{section.5.4}
+\contentsline {chapter}{\numberline {6}Der Prototyp}{18}{chapter.6}
+\contentsline {section}{\numberline {6.1}Theorie}{18}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Die Berechnung der Entferung}{18}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Die Berechnung der Ankunft in Abh\IeC {\"a}ngigkeit der Geschwindigkeit}{18}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Die Berechnung der Dauer der Ampelphase?}{18}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Das Design}{18}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}screens... }{18}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Karte... }{18}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Funktionalit\IeC {\"a}ten}{18}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Sensorik (GPS)}{18}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Open Street Map}{18}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}Architektur}{18}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Technologien}{18}{subsection.6.4.1}
+\contentsline {chapter}{\numberline {7}Ergebnis und Ausblick}{19}{chapter.7}
+\contentsline {section}{\numberline {7.1}Ampelhinweissystem}{19}{section.7.1}
+\contentsline {section}{\numberline {7.2}Ausblick}{19}{section.7.2}
+\vspace *{\baselineskip }
+\contentsline {chapter}{Akronyme}{20}{section*.10}
+\contentsline {chapter}{Glossar}{21}{section*.12}
+\contentsline {chapter}{Abbildungsverzeichnis}{22}{chapter*.13}
+\contentsline {chapter}{Literaturverzeichnis}{22}{chapter*.14}
