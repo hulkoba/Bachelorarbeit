@@ -1,11 +1,21 @@
-\newglossaryentry{C2X-glo}{
-    name=Car-to-X-Kommunikation, 
+\newglossaryentry{C2Xg}{
+    name={C2X}, 
     description={ direkter Informationsaustausch zwischen Fahrzeugen jeglicher Art, Verkehrsleittechnik wie z.B. Lichtsignalanlagen und Verkehrsleitzentralen}
 }
-\newacronym{C2X}{C2X}{Car-to-X oder Vehicle-to-X}
-\newacronym{I2C}{I2C}{Infrastructure-to-Car oder Infrastructure-to-Vehicle}
-\newacronym{C2I}{C2I}{Car-to-Infrastructure oder Vehicle-to-Infrastructure}
-\newacronym{GLOSA}{GLOSA}{green light optimal speed advisory}
+%%% define the acronym and use the see= option
+\newglossaryentry{C2X}{type=\acronymtype, name={C2X}, description={Car-to-X oder Vehicle-to-X}, first={Car-to-X (C2X)\glsadd{C2Xg}}, see=[Glossary:]{C2Xg}}
+\newglossaryentry{C2Ig}{
+    name={C2I}, 
+    description={ direkter, drahtloser Informationsaustausch zwischen Fahrzeugen jeglicher Art und infrastrukturellen Einrichtungen wie Funkbaken und Lichtsignalanlagen auf Basis von \gls{WLAN}, Bluetooth oder \gls{DSRC}}
+}
+\newglossaryentry{C2I}{type=\acronymtype, name={C2X}, description={Car-to-Infrastructure oder Vehicle-to-Infrastructure}, first={Car-to-Infrastructure (C2I)\glsadd{C2Ig}}, see=[Glossary:]{C2Ig}}
+\newglossaryentry{DSRCg}{
+    name={DSRC}, 
+    description={ funkgestützte sicherheitsrelevante und private Dienste, die in der Automotive-Technik von mobilen Stationen ausgeführt werden können}
+}
+\newglossaryentry{DSRC}{type=\acronymtype, name={DSRC}, description={Dedicated Short Range Communication}, first={Dedicated Short Range Communication (DSRC)\glsadd{DSRCg}}, see=[Glossary:]{DSRCg}
+}
+\newacronym{GLOSA}{GLOSA}{Green Light Optimal Speed Advisory}
 \newacronym{App}{App}{Applikation}
 \newacronym{WLAN}{WLAN}{Wireless Local Area Network}
 \newacronym{UMTS}{UMTS}{Universal Mobile Telecommunications System}
@@ -15,7 +25,6 @@
 \newacronym{TUM}{TUM}{Technische Universität München}
 \newacronym{VW}{VW}{Volkswagen}
 \newacronym{LED}{LED}{Licht-emittierende Diode, auch Leuchtdiode}
-\newacronym{DSRC}{DSRC}{Dedicated Short Range Communication}
 \newacronym{MIT}{MIT}{Massachusetts Institute of Technology}
 \newacronym{SQL}{SQL}{Structured Query Language}
 \newacronym{GPS}{GPS}{Global Positioning System}

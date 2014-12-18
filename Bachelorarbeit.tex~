@@ -21,16 +21,16 @@ abstracton,
 \usepackage[babel, german=swiss]{csquotes}
 \usepackage{txfonts} %Schriftart Times New Roman
 \usepackage{titlesec} % formatiert titel-absätze
+\usepackage{xcolor}
 \usepackage[left=25mm,right=20mm,top=20mm,bottom=20mm]{geometry} %Seitenränder
 \usepackage[pdfborder={ 0 0 0 }, breaklinks]{hyperref} % bricht links und macht die umrandung weiß
 \usepackage{enumitem}
-\usepackage{xspace} % setzt Leerzeichen, wenn welche hingehören (vor nächstem wort, aber nicht vor "." oder ")")
+\usepackage{xspace} % setzt Leerzeichen, wenn welche hingehören 
 \linespread {1.25}\selectfont
-%\usepackage[%printonlyused  %nur verwendete abkürzungen zeigen footnote            % Langform als Fußnote ]{acronym}
 \usepackage[ngerman]{translator}
 \usepackage[
 nonumberlist,   %keine Seitenzahlen anzeigen
-%nopostdot,      %keine Punkte am Ende
+nopostdot,      %keine Punkte am Ende
 acronym,       %ein Abkürzungsverzeichnis erstellen
 toc]            %Einträge im Inhaltsverzeichnis
 {glossaries}
@@ -38,10 +38,10 @@ toc]            %Einträge im Inhaltsverzeichnis
 %Glossar-Befehle anschalten
 \include{extra/Glossary}
 \addtokomafont{chapter}{\huge \scshape \mdseries}
-\addtokomafont{section}{\LARGE \scshape \mdseries} %formatierung der sections
-\addtokomafont{subsection}{ \mdseries}
+\addtokomafont{section}{\LARGE \scshape \mdseries \color{darkgray}} 
+\addtokomafont{subsection}{ \mdseries \color{gray}}
 \addtokomafont{subsubsection}{\scshape \mdseries}
-%\renewcommand*{\chapterheadendvskip}{\vspace {16pt}}
+\setlength{\parindent}{0pt}  % keine Einrückungen nach Absätzen
 %------------------------------------------------------------------------
 % DOKUMENT
 %------------------------------------------------------------------------
@@ -55,8 +55,8 @@ toc]            %Einträge im Inhaltsverzeichnis
 %
 %Inhaltsverzeichnis
 %
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
 \renewcommand{\contentsname}{Inhalt} %Inhaltsverzeichnistitel = Inhalt
 \tableofcontents 		
 
@@ -79,7 +79,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 %% Ein kleiner Abstand zu den Kapiteln im Inhaltsverzeichnis (toc)
 \addtocontents{toc}{\protect\vspace*{\baselineskip}}
 \include{extra/Acronym}
-\printglossary[type=\acronymtype, title=Abkürzungen, style=list]
+\printglossary[type=\acronymtype, title=Abkürzungen, style=altlist]
 \printglossary[type=main,style=altlist]
 % 
 %Abbildungsverzeichnis
