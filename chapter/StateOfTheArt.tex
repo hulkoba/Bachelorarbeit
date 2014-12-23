@@ -1,6 +1,6 @@
-\chapter{State of the art}
+\chapter{Bestehende Konzepte und deren Beurteilung}
 Die Verkehrsstrategie des Senats sieht vor, dass das Radfahren bis zum Jahr 2025 20 Prozent des Gesamtverkehrs ausmachen soll. (Vgl. \cite{Mopo})
-"Wir brauchen eine intelligente Konstruktion, die alle Verkehrsarten verbindet", sagte Stadtentwicklungssenator Michael Müller (SPD).\\
+"Wir brauchen eine intelligente Konstruktion, die alle Verkehrsarten verbindet", sagte Berlins derzeitiger Bürgermeister Michael Müller (SPD).\\
 Sowohl statisch an Radwegen, als auch für den Einsatz in Kraftfahrzeugen gibt es bereits Projekte zu Ampelassistenten in Bordcomputern, Navigationssystemen, oder aber auch als \gls{App} die rote Ampeln erkennen und die optimale Fahrtgeschwindigkeit für die Grüne Welle ermitteln. Auch Erweiterungen für's Rad direkt werden vielfältiger --- vom einfachen Navigationssystem bis hin zu intelligenten Aufsätzen, die an das Smartphone gekoppelt sind.
 % ### Auto ###
 \section{Ampelinformationssysteme}
@@ -22,10 +22,11 @@ Die \gls{VW}-Forschung initiierte in den 80er Jahren mit dem Projekt "'Wolfsburg
 Im Sommer 2008 wurde das Projekt \textsc{Travolution} (TRAffic \& eVOLUTION), von den Projektpartnern\footnote{\url{http://www.travolution-ingolstadt.de/index.php?id=73}} abgeschlossen. Es besteht aus den Teilprojekten \textsc{verkehrsadaptive Netzsteuerung mit Genetischen Algorithmen} und \textsc{Der informierte Fahrer}. Im Netzsteuerungsprojekt wurden 46 Lichtsignalanlagen in Ingolstadt mit der Netzsteuerungssoftware BALANCE ausgestattet, wodurch sie intelligent auf den Verkehr reagieren und die Schaltung an den Verkehr anpassen. 
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=0.7\textwidth]{audi-travolution}  \label{fig:travolution}
-    \caption[Projekt Travolution]{Projekt Travolution -- Der Bordcomputer zeigt die optimale Geschwindigkeit an, sodass die nächste Kreuzung ohne Halt überquert werden kann. Quelle: {\url{http://www.audiusanews.com/imagegallery/adhoc/12647//12647,12649,12652,12648,12651,12650,/travolution-promotes-eco-friendly-driving}}}
+    \includegraphics[width=0.7\textwidth]{travolution}      
+    \caption[Projekt Travolution]{Der Bordcomputer zeigt die optimale Geschwindigkeit an. Quelle: \cite{Travolution}}
+    \label{fig:travolution}
 \end{figure}
-Ziel des zweiten Teilprojektes ist es, die Autofahrer über die Ampelphasen zu informieren. Die \gls{C2I} mittels \gls{WLAN} und \gls{UMTS} umsetzend, senden mit Kommunikationsmodulen ausgestattete Ampeln die Grünphasen an den Bordcomputer der Autos, welcher dann die Geschwindigkeit für ein reibungsloses Passieren errechnet\cite{Travolution, Audi_Travolution}.\\ 
+Ziel des zweiten Teilprojektes ist es, die Autofahrer über die Ampelphasen zu informieren. Die \gls{C2I} mittels \gls{WLAN} und \gls{UMTS} umsetzend, senden mit Kommunikationsmodulen ausgestattete Ampeln die Grünphasen an den Bordcomputer der Autos, welcher dann die Geschwindigkeit für ein reibungsloses Passieren errechnet\cite{Travolution, Stvtechnik} und wie in Abbildung \ref{fig:travolution} zu sehen, anzeigt.\\ 
 Fundierend auf \textsc{Travolution} sind Folgeprojekte wie zum Beispiel das ebenfalls von Audi ins Leben gerufene "'Ampelinfo online"' entstanden. Über Mobilfunk ist in der \gls{C2X}-Anwendung das Auto mit dem zentralen Verkehrsrechner, welcher die Ampelanlagen steuert, vernetzt und visualisiert die entsprechenden Informationen im Bordcomputer. \cite{Ampelinfo}
 %%% KOLIBRI %%%
 \subsection*{Projekt Kolibri}
@@ -68,7 +69,8 @@ Das \textsc{Hammerhead} ist ein "'Hammer"', oder einfach ein "'T"', an den Lenke
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{hammerhead}
-    \caption[Hammerhead]{Hammerhead -- LEDs zeigen den Weg.  Quelle: \url{http://blog.hammerhead.io/}} \label{fig:hammerhead}
+    \caption[Hammerhead]{Hammerhead -- LEDs zeigen den Weg.  Quelle: \cite{Hammerhead}} 
+    \label{fig:hammerhead}
 \end{figure}
 Via Bluetooth ist \textsc{Hammerhead} an das Smartphone gekoppelt, auf dem die zugehörige Navigationsanwendung läuft mit der man Routen eingeben, teilen und speichern kann\cite{Hammerhead}.\\
 Ein sehr ähnliches Prinzip verfolgt das \textsc{CycleNav} von der Firma Schwinn. Untersiede findet man hier im Design und einem integriertem Lautsprecher, der Abbiegehinweise ausgibt und auf Wunsch wiederholt\cite{CycleNav}.
@@ -77,7 +79,7 @@ Mehr High-Tech, aber auch umfangreichere Funktionen bietet der vom amerikanische
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{helios}
-    \caption[Helios-Lenker]{Helios-Lenker  Quelle: \url{http://www.ridehelios.com/products.php}} \label{fig:helios}
+    \caption[Helios-Lenker]{Helios-Lenker  Quelle: \cite{Helios}} 		\label{fig:helios}
 \end{figure}
 Sie passen ihre Farbe der Geschwindigkeit an und haben auf Wunsch auch eine Blinkfunktion. Verbindet man den Lenker mit einem Smartphone, lässt sich die Farbe der \gls{LED}s individualisieren. Die Verbindung zum Handy hat weitere Vorteile: dank des eingebauten \gls{GPS}-Trackers und eingesteckter SIM-Karte lässt sich das Fahrrad per SMS über den derzeitigen Standort abfragen\cite{Helios}, was im Falle eines Diebstahl sehr hilfreich sein kann.\\
 \textsc{Vanhawks Valour} heißt das Rad, das ab April 2015 lieferbar ist. Wie im \textsc{Helios}-Lenker steckt auch hier ein über das Smartphone steuerbares Navigationssystem, das die Abbiegehinweise per \gls{LED} signalisiert, im Lenker. Auf den gefahrenen Routen merkt sich das Rad durch einen Erschütterungssensor erfasste Hindernisse wie Unebenheiten in der Fahrbahn und ermittelt beim nächsten Mal darauf rücksicht nehmend eine andere Route. Es ist darüber hinaus in der Lage mit anderen \textsc{Vanhawks valour}-Rädern zu kommunizieren und dessen Routenbegebenheiten ebenfalls zu berücksichtigen. Mittels Radarsensoren registriert das Fahrrad Autos im toten Winkel und benachrichtig die FahrerInnen durch ein vibrierenden Lenker\cite{vanhawks}.
@@ -87,7 +89,8 @@ Auf der Mailänder Designwoche hat Samsung ein Smartbike vorgestellt, das mit ve
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{samsung}
-    \caption[Samsung Smart Bike]{Samsung Smart Bike  Quelle: \url{http://www.maestrosacademy.it/progetto-sbike}} \label{fig:samsung}
+    \caption[Samsung Smart Bike]{Samsung Smart Bike  Quelle: \cite{smartbike}} 
+    \label{fig:samsung}
 \end{figure}
 Natürlich ist auch dieses Fahrrad mit dem Smartphone verbunden, das sich dank eines Magneten einfach am Lenker anbringen lässt. Darüber kann man die Laserprojektoren ein- und ausschalten, dafür einen Timer bestimmen und über die eingebaute Kamera unter dem Sattel den Verkehr hinter sich im Auge behalten. Das Smartphone fungiert außerdem als Navigationsgerät und durch den eingebauten \gls{GPS}-Empfänger lassen eigene und Routen von anderen Nutzern speichern und intelligent verarbeiten\cite{smartbike}. Wenn also viele Menschen mit einem Samsung Smartbike unterwegs sind, erkennt das Rad die Route als angenehm und navigiert dort entlang. 
 \subsection{Der COBI Fahrradcomputer}
@@ -106,7 +109,8 @@ Ein Kickstarterprojekt aus Frankfurt am Main entwickelt das System \textsc{COBI}
                 \caption{Bremslicht und Blinker}
                 \label{fig:cobi2}
         \end{subfigure}
-        \caption[COBI]{COBI -- Das smarte Fahrradsystem Quelle: \url{http://www.cobi.bike}}\label{fig:cobi}
+        \caption[COBI]{COBI -- Das smarte Fahrradsystem. Quelle: \cite{cobi_pic}}
+        \label{fig:cobi}
 \end{figure}
 Möchte man das Smartphone trotzdem nicht am Lenker haben, bleibt die Verbindung zum Modul über Funk bestehen. Steuern lässt sich das System dann über einen Controller, den man am Lenker angebracht, mit dem Daumen bedienen kann. Ist es jedoch in der Halterung, wird das Smartphone über den E-Bike-Akku oder einen zusätzlich integrierten Akku aufgeladen. Wie bei den anderen genannten Systemen ist in der \textsc{COBI}-App eine Navigationsanwendung, wie auch die tracking\&share Funktion inklusive. Darüber hinaus verfügt es über einen Diebstahlschutz, Fitnesstracker sowie die Möglichkeit einer Anbindung an Spotify\footnote{ Digitaler Musikstreaming Dienst}.\\
 Das Projekt ist bereits voll finanziert und der Versand der vorbestellten Systeme beginnt vorrausichtlich im Frühjahr 2015\cite{cobi}.

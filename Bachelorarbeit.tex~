@@ -22,7 +22,7 @@ abstracton,
 \usepackage{txfonts} %Schriftart Times New Roman
 \usepackage{titlesec} % formatiert titel-absätze
 \usepackage{xcolor}
-\usepackage[left=25mm,right=20mm,top=20mm,bottom=20mm]{geometry} %Seitenränder
+\usepackage[left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry} %Seitenränder
 \usepackage[pdfborder={ 0 0 0 }, breaklinks]{hyperref} % bricht links und macht die umrandung weiß
 \usepackage{enumitem}
 \usepackage{xspace} % setzt Leerzeichen, wenn welche hingehören 
@@ -30,7 +30,7 @@ abstracton,
 \usepackage[ngerman]{translator}
 \usepackage[
 nonumberlist,   %keine Seitenzahlen anzeigen
-nopostdot,      %keine Punkte am Ende
+%nopostdot,      %keine Punkte am Ende
 acronym,       %ein Abkürzungsverzeichnis erstellen
 toc]            %Einträge im Inhaltsverzeichnis
 {glossaries}
@@ -55,8 +55,8 @@ toc]            %Einträge im Inhaltsverzeichnis
 %
 %Inhaltsverzeichnis
 %
-%\setcounter{secnumdepth}{3}
-%\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 \renewcommand{\contentsname}{Inhalt} %Inhaltsverzeichnistitel = Inhalt
 \tableofcontents 		
 
@@ -79,7 +79,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 %% Ein kleiner Abstand zu den Kapiteln im Inhaltsverzeichnis (toc)
 \addtocontents{toc}{\protect\vspace*{\baselineskip}}
 \include{extra/Acronym}
-\printglossary[type=\acronymtype, title=Abkürzungen, style=altlist]
+\printglossary[type=\acronymtype, title=Abkürzungen, style=long]
 \printglossary[type=main,style=altlist]
 % 
 %Abbildungsverzeichnis
@@ -89,7 +89,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 \listoffigures
 % Literaturverzeichnis
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\nocite{*} 		%Auch nicht-zitierte BibTeX-Eintraege werden angezeigt.
+%\nocite{*} 		%Auch nicht-zitierte BibTeX-Eintraege werden angezeigt.
 \bibliographystyle{alphadin} %Art der Ausgabe alphadin
 \bibliography{bib/literatur}
 % Anhang

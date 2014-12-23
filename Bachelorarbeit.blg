@@ -9,53 +9,56 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bib/literatur.bib
+Warning--empty year in Hammerhead
 Warning--empty number in Telematik
 Warning--empty note in Telematik
 Warning--empty year in kolibri
+Warning--empty author in kolibriTUM
 Warning--empty number in SignalGuruPaper
 Warning--empty note in SignalGuruPaper
 Warning--empty year in Travolution
+Warning--empty year in vanhawks
 Warning--empty number in Welle
 Warning--empty note in Welle
-You've used 25 entries,
+You've used 23 entries,
             4793 wiz_defined-function locations,
-            1016 strings with 9325 characters,
-and the built_in function-call counts, 8753 in all, are:
-= -- 982
-> -- 136
-< -- 137
-+ -- 150
-- -- 41
-* -- 505
-:= -- 1397
-add.period$ -- 20
-call.type$ -- 25
-change.case$ -- 102
-chr.to.int$ -- 25
-cite$ -- 33
-duplicate$ -- 303
-empty$ -- 709
-format.name$ -- 82
-if$ -- 1872
-int.to.chr$ -- 1
+            1011 strings with 9355 characters,
+and the built_in function-call counts, 9515 in all, are:
+= -- 1047
+> -- 176
+< -- 196
++ -- 221
+- -- 58
+* -- 562
+:= -- 1523
+add.period$ -- 23
+call.type$ -- 23
+change.case$ -- 101
+chr.to.int$ -- 22
+cite$ -- 34
+duplicate$ -- 320
+empty$ -- 754
+format.name$ -- 111
+if$ -- 2004
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 78
-newline$ -- 130
+missing$ -- 84
+newline$ -- 131
 num.names$ -- 36
-pop$ -- 113
+pop$ -- 125
 preamble$ -- 1
-purify$ -- 152
+purify$ -- 147
 quote$ -- 0
-skip$ -- 510
+skip$ -- 566
 stack$ -- 0
-substring$ -- 484
-swap$ -- 46
-text.length$ -- 29
-text.prefix$ -- 24
+substring$ -- 523
+swap$ -- 53
+text.length$ -- 35
+text.prefix$ -- 21
 top$ -- 0
-type$ -- 267
-warning$ -- 8
-while$ -- 43
-width$ -- 30
+type$ -- 243
+warning$ -- 11
+while$ -- 52
+width$ -- 28
 write$ -- 282
-(There were 8 warnings)
+(There were 11 warnings)
