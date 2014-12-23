@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.17)  23 DEC 2014 11:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.17)  23 DEC 2014 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1135,7 +1135,7 @@ LaTeX Font Info:    Try loading font information for T1+txtt on input line 22.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-<img/travolution.jpg, id=406, 521.0667pt x 308.5929pt>
+<img/travolution.jpg, id=412, 521.0667pt x 308.5929pt>
 File: img/travolution.jpg Graphic file (type jpg)
 
 <use img/travolution.jpg>
@@ -1145,10 +1145,10 @@ Package pdftex.def Info: img/travolution.jpg used on input line 25.
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [8]
-<img/telematik.png, id=436, 460.72125pt x 240.9pt>
+<img/telematik.png, id=443, 460.72125pt x 240.9pt>
 File: img/telematik.png Graphic file (type png)
  <use img/telematik.png>
-Package pdftex.def Info: img/telematik.png used on input line 38.
+Package pdftex.def Info: img/telematik.png used on input line 37.
 (pdftex.def)             Requested size: 318.66948pt x 166.62183pt.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
@@ -1156,49 +1156,49 @@ Overfull \vbox (1.9pt too high) has occurred while \output is active []
  [9 <./img/travolution.jpg>]
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [10 <./img/telematik.png>] <img/SignalGuru.jpg, id=478, 257.96375pt x 161.6037
+ [10 <./img/telematik.png>] <img/SignalGuru.jpg, id=477, 257.96375pt x 161.6037
 4pt>
 File: img/SignalGuru.jpg Graphic file (type jpg)
 
 <use img/SignalGuru.jpg>
-Package pdftex.def Info: img/SignalGuru.jpg used on input line 57.
+Package pdftex.def Info: img/SignalGuru.jpg used on input line 56.
 (pdftex.def)             Requested size: 318.66948pt x 199.65173pt.
-
-Overfull \vbox (1.9pt too high) has occurred while \output is active []
-
- [11 <./img/SignalGuru.jpg>] <img/hammerhead.jpg, id=493, 134.60287pt x 49.3845
-pt>
+ <img/hammerhead.jpg, id=481, 134.60287pt x 49.3845pt>
 File: img/hammerhead.jpg Graphic file (type jpg)
 
 <use img/hammerhead.jpg>
-Package pdftex.def Info: img/hammerhead.jpg used on input line 71.
+Package pdftex.def Info: img/hammerhead.jpg used on input line 66.
 (pdftex.def)             Requested size: 318.66948pt x 116.9239pt.
- <img/helios.jpg, id=500, 621.32124pt x 296.10625pt>
+
+Overfull \vbox (1.9pt too high) has occurred while \output is active []
+
+ [11 <./img/SignalGuru.jpg>] <img/helios.jpg, id=497, 621.32124pt x 296.10625pt
+>
 File: img/helios.jpg Graphic file (type jpg)
 
 <use img/helios.jpg>
-Package pdftex.def Info: img/helios.jpg used on input line 81.
+Package pdftex.def Info: img/helios.jpg used on input line 76.
 (pdftex.def)             Requested size: 318.66948pt x 151.87064pt.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [12 <./img/hammerhead.jpg> <./img/helios.jpg>]
-<img/samsung.jpg, id=518, 617.30624pt x 293.095pt>
+<img/samsung.jpg, id=515, 617.30624pt x 293.095pt>
 File: img/samsung.jpg Graphic file (type jpg)
  <use img/samsung.jpg>
-Package pdftex.def Info: img/samsung.jpg used on input line 91.
+Package pdftex.def Info: img/samsung.jpg used on input line 86.
 (pdftex.def)             Requested size: 318.66948pt x 151.30562pt.
 
-<img/COBI_01.jpg, id=523, 1919.17pt x 1501.61pt>
+<img/COBI_01.jpg, id=520, 1919.17pt x 1501.61pt>
 File: img/COBI_01.jpg Graphic file (type jpg)
  <use img/COBI_01.jpg>
-Package pdftex.def Info: img/COBI_01.jpg used on input line 101.
+Package pdftex.def Info: img/COBI_01.jpg used on input line 96.
 (pdftex.def)             Requested size: 223.07211pt x 174.52599pt.
 
-<img/COBI_02.jpg, id=524, 1935.23pt x 1495.5875pt>
+<img/COBI_02.jpg, id=521, 1935.23pt x 1495.5875pt>
 File: img/COBI_02.jpg Graphic file (type jpg)
  <use img/COBI_02.jpg>
-Package pdftex.def Info: img/COBI_02.jpg used on input line 108.
+Package pdftex.def Info: img/COBI_02.jpg used on input line 103.
 (pdftex.def)             Requested size: 223.07211pt x 172.3883pt.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
@@ -1340,30 +1340,29 @@ Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
 (\end occurred when \ifx on line 15 was incomplete)
 (\end occurred when \ifx on line 9 was incomplete) 
 Here is how much of TeX's memory you used:
- 14597 strings out of 495007
- 218316 string characters out of 3179689
+ 14593 strings out of 495007
+ 218284 string characters out of 3179689
  359323 words of memory out of 3000000
- 17292 multiletter control sequences out of 15000+200000
- 125891 words of font info for 167 fonts, out of 3000000 for 9000
+ 17291 multiletter control sequences out of 15000+200000
+ 122842 words of font info for 164 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  40i,9n,74p,1449b,553s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{g
 lo:LSA} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfon
-ts/rtxsssc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
-es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (26 pages, 4404498 bytes).
+texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/txfonts/rtxsssc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
+fonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on Bachelorarbeit.pdf (26 pages, 4392152 bytes).
 PDF statistics:
- 714 PDF objects out of 1000 (max. 8388607)
- 649 compressed objects within 7 object streams
+ 705 PDF objects out of 1000 (max. 8388607)
+ 642 compressed objects within 7 object streams
  151 named destinations out of 1000 (max. 500000)
  579 words of extra memory for PDF output out of 10000 (max. 10000000)
 
