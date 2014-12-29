@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.17)  29 DEC 2014 15:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.17)  29 DEC 2014 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1106,19 +1106,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--8
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
+Underfull \hbox (badness 10000) in paragraph at lines 9--14
 
  []
 
 [6
 
 ]) (./chapter/StateOfTheArt.tex
-Underfull \hbox (badness 10000) in paragraph at lines 14--1
+Underfull \hbox (badness 10000) in paragraph at lines 15--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--1
+Underfull \hbox (badness 10000) in paragraph at lines 15--1
 
  []
 
@@ -1131,7 +1131,7 @@ LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
 (Font)              scaled to size 11.39996pt on input line 8.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 8.
-<img/copenhagen.jpg, id=413, 64.65584pt x 40.13567pt>
+<img/copenhagen.jpg, id=417, 64.65584pt x 40.13567pt>
 File: img/copenhagen.jpg Graphic file (type jpg)
  <use img/copenhagen.jpg>
 Package pdftex.def Info: img/copenhagen.jpg used on input line 12.
@@ -1140,12 +1140,7 @@ Package pdftex.def Info: img/copenhagen.jpg used on input line 12.
 [8
 
  <./img/copenhagen.jpg>]
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 22.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
-File: t1txtt.fd 2000/12/15 v3.1
-)
-<img/travolution.jpg, id=438, 521.0667pt x 308.5929pt>
+<img/travolution.jpg, id=442, 521.0667pt x 308.5929pt>
 File: img/travolution.jpg Graphic file (type jpg)
 
 <use img/travolution.jpg>
@@ -1155,7 +1150,12 @@ Package pdftex.def Info: img/travolution.jpg used on input line 25.
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [9]
-<img/telematik.png, id=469, 460.72125pt x 240.9pt>
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 32.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+<img/telematik.png, id=473, 460.72125pt x 240.9pt>
 File: img/telematik.png Graphic file (type png)
  <use img/telematik.png>
 Package pdftex.def Info: img/telematik.png used on input line 37.
@@ -1166,14 +1166,14 @@ Overfull \vbox (1.9pt too high) has occurred while \output is active []
  [10 <./img/travolution.jpg>]
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [11 <./img/telematik.png>] <img/SignalGuru.jpg, id=504, 257.96375pt x 161.6037
+ [11 <./img/telematik.png>] <img/SignalGuru.jpg, id=509, 257.96375pt x 161.6037
 4pt>
 File: img/SignalGuru.jpg Graphic file (type jpg)
 
 <use img/SignalGuru.jpg>
 Package pdftex.def Info: img/SignalGuru.jpg used on input line 56.
 (pdftex.def)             Requested size: 318.66948pt x 199.65173pt.
- <img/hammerhead.jpg, id=508, 134.60287pt x 49.3845pt>
+ <img/hammerhead.jpg, id=514, 134.60287pt x 49.3845pt>
 File: img/hammerhead.jpg Graphic file (type jpg)
 
 <use img/hammerhead.jpg>
@@ -1182,7 +1182,7 @@ Package pdftex.def Info: img/hammerhead.jpg used on input line 66.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [12 <./img/SignalGuru.jpg>] <img/helios.jpg, id=522, 621.32124pt x 296.10625pt
+ [12 <./img/SignalGuru.jpg>] <img/helios.jpg, id=528, 621.32124pt x 296.10625pt
 >
 File: img/helios.jpg Graphic file (type jpg)
 
@@ -1193,19 +1193,19 @@ Package pdftex.def Info: img/helios.jpg used on input line 76.
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [13 <./img/hammerhead.jpg> <./img/helios.jpg>]
-<img/samsung.jpg, id=541, 617.30624pt x 293.095pt>
+<img/samsung.jpg, id=547, 617.30624pt x 293.095pt>
 File: img/samsung.jpg Graphic file (type jpg)
  <use img/samsung.jpg>
 Package pdftex.def Info: img/samsung.jpg used on input line 86.
 (pdftex.def)             Requested size: 318.66948pt x 151.30562pt.
 
-<img/COBI_01.jpg, id=546, 1919.17pt x 1501.61pt>
+<img/COBI_01.jpg, id=552, 1919.17pt x 1501.61pt>
 File: img/COBI_01.jpg Graphic file (type jpg)
  <use img/COBI_01.jpg>
 Package pdftex.def Info: img/COBI_01.jpg used on input line 96.
 (pdftex.def)             Requested size: 223.07211pt x 174.52599pt.
 
-<img/COBI_02.jpg, id=547, 1935.23pt x 1495.5875pt>
+<img/COBI_02.jpg, id=553, 1935.23pt x 1495.5875pt>
 File: img/COBI_02.jpg Graphic file (type jpg)
  <use img/COBI_02.jpg>
 Package pdftex.def Info: img/COBI_02.jpg used on input line 103.
@@ -1357,10 +1357,10 @@ exlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (28 pages, 4394957 bytes).
+Output written on Bachelorarbeit.pdf (28 pages, 4394632 bytes).
 PDF statistics:
- 730 PDF objects out of 1000 (max. 8388607)
- 665 compressed objects within 7 object streams
+ 736 PDF objects out of 1000 (max. 8388607)
+ 671 compressed objects within 7 object streams
  156 named destinations out of 1000 (max. 500000)
  611 words of extra memory for PDF output out of 10000 (max. 10000000)
 
