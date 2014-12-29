@@ -16,7 +16,7 @@
 \newglossaryentry{DSRC}{type=\acronymtype, name={DSRC}, description={Dedicated Short Range Communication}, first={Dedicated Short Range Communication (DSRC)\glsadd{DSRCg}}, see=[Glossary:]{DSRCg}
 }
 \newacronym{GLOSA}{GLOSA}{Green Light Optimal Speed Advisory}
-\newacronym{App}{App}{aaaaaaApplikation}
+\newacronym{App}{App}{Applikation}
 \newacronym{WLAN}{WLAN}{Wireless Local Area Network}
 \newacronym{UMTS}{UMTS}{Universal Mobile Telecommunications System}
 \newacronym{LSA}{LSA}{Lichtsignalanlage}

@@ -29,38 +29,42 @@
 \BOOKMARK [2][-]{subsection.4.1.3}{Grund f\374r Personas}{section.4.1}% 29
 \BOOKMARK [2][-]{subsection.4.1.4}{Prototyp: Personas}{section.4.1}% 30
 \BOOKMARK [1][-]{section.4.2}{Funktionalit\344t}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.3}{Die graphische Oberfl\344che}{chapter.4}% 32
-\BOOKMARK [0][-]{chapter.5}{Konzeption}{}% 33
-\BOOKMARK [1][-]{section.5.1}{Architektur}{chapter.5}% 34
-\BOOKMARK [2][-]{subsection.5.1.1}{Technologien}{section.5.1}% 35
-\BOOKMARK [2][-]{subsection.5.1.2}{Navigation \(bei App\)}{section.5.1}% 36
-\BOOKMARK [1][-]{section.5.2}{Das Design}{chapter.5}% 37
-\BOOKMARK [2][-]{subsection.5.2.1}{Anzeigeelemente}{section.5.2}% 38
-\BOOKMARK [3][-]{subsubsection.5.2.1.1}{Geschwindigkeit}{subsection.5.2.1}% 39
-\BOOKMARK [3][-]{subsubsection.5.2.1.2}{Ampeln}{subsection.5.2.1}% 40
-\BOOKMARK [3][-]{subsubsection.5.2.1.3}{Informationen}{subsection.5.2.1}% 41
-\BOOKMARK [1][-]{section.5.3}{Ampeldatenanfrage und Auswertung}{chapter.5}% 42
-\BOOKMARK [2][-]{subsection.5.3.1}{Sensoren}{section.5.3}% 43
-\BOOKMARK [3][-]{subsubsection.5.3.1.1}{GPS}{subsection.5.3.1}% 44
-\BOOKMARK [1][-]{section.5.4}{Theorie}{chapter.5}% 45
-\BOOKMARK [2][-]{subsection.5.4.1}{Die Berechnung der Entferung}{section.5.4}% 46
-\BOOKMARK [2][-]{subsection.5.4.2}{Die Berechnung der Ankunft in Abh\344ngigkeit der Geschwindigkeit}{section.5.4}% 47
-\BOOKMARK [2][-]{subsection.5.4.3}{Die Berechnung der Dauer der Ampelphase?}{section.5.4}% 48
-\BOOKMARK [1][-]{section.5.5}{Funktionalit\344ten \205> Anforderungsanalyse?}{chapter.5}% 49
-\BOOKMARK [2][-]{subsection.5.5.1}{Sensorik \(GPS\)}{section.5.5}% 50
-\BOOKMARK [2][-]{subsection.5.5.2}{Open Street Map}{section.5.5}% 51
-\BOOKMARK [0][-]{chapter.6}{Der Prototyp}{}% 52
-\BOOKMARK [1][-]{subsection.6.0.3}{APIs}{chapter.6}% 53
-\BOOKMARK [2][-]{subsection.6.0.4}{Komponenten}{subsection.6.0.3}% 54
-\BOOKMARK [3][-]{subsubsection.6.0.4.1}{.css}{subsection.6.0.4}% 55
-\BOOKMARK [3][-]{subsubsection.6.0.4.2}{.html}{subsection.6.0.4}% 56
-\BOOKMARK [3][-]{subsubsection.6.0.4.3}{.js}{subsection.6.0.4}% 57
-\BOOKMARK [0][-]{chapter.7}{Evaluierung}{}% 58
-\BOOKMARK [1][-]{section.7.1}{Systemtest}{chapter.7}% 59
-\BOOKMARK [0][-]{chapter.8}{Ergebnis und Ausblick}{}% 60
-\BOOKMARK [1][-]{section.8.1}{Ampelhinweissystem}{chapter.8}% 61
-\BOOKMARK [1][-]{section.8.2}{Ausblick}{chapter.8}% 62
-\BOOKMARK [0][-]{section*.10}{Akronyme}{}% 63
-\BOOKMARK [0][-]{section*.12}{Glossar}{}% 64
-\BOOKMARK [0][-]{chapter*.13}{Abbildungsverzeichnis}{}% 65
-\BOOKMARK [0][-]{chapter*.14}{Literaturverzeichnis}{}% 66
+\BOOKMARK [1][-]{section.4.3}{Diagramme}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.3.1}{Sequenzdiagramm}{section.4.3}% 33
+\BOOKMARK [2][-]{subsection.4.3.2}{Ablaufdiagramm}{section.4.3}% 34
+\BOOKMARK [2][-]{subsection.4.3.3}{UML \205 Diagramm}{section.4.3}% 35
+\BOOKMARK [1][-]{section.4.4}{Die graphische Oberfl\344che}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{Konzeption}{}% 37
+\BOOKMARK [1][-]{section.5.1}{Architektur}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.1.1}{Technologien}{section.5.1}% 39
+\BOOKMARK [2][-]{subsection.5.1.2}{Navigation \(bei App\)}{section.5.1}% 40
+\BOOKMARK [1][-]{section.5.2}{Das Design}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.2.1}{Anzeigeelemente}{section.5.2}% 42
+\BOOKMARK [3][-]{subsubsection.5.2.1.1}{Geschwindigkeit}{subsection.5.2.1}% 43
+\BOOKMARK [3][-]{subsubsection.5.2.1.2}{Ampeln}{subsection.5.2.1}% 44
+\BOOKMARK [3][-]{subsubsection.5.2.1.3}{Informationen}{subsection.5.2.1}% 45
+\BOOKMARK [1][-]{section.5.3}{Ampeldatenanfrage und Auswertung}{chapter.5}% 46
+\BOOKMARK [2][-]{subsection.5.3.1}{Sensoren}{section.5.3}% 47
+\BOOKMARK [3][-]{subsubsection.5.3.1.1}{GPS}{subsection.5.3.1}% 48
+\BOOKMARK [1][-]{section.5.4}{Theorie}{chapter.5}% 49
+\BOOKMARK [2][-]{subsection.5.4.1}{Die Berechnung der Entferung}{section.5.4}% 50
+\BOOKMARK [2][-]{subsection.5.4.2}{Die Berechnung der Ankunft in Abh\344ngigkeit der Geschwindigkeit}{section.5.4}% 51
+\BOOKMARK [2][-]{subsection.5.4.3}{Die Berechnung der Dauer der Ampelphase?}{section.5.4}% 52
+\BOOKMARK [1][-]{section.5.5}{Funktionalit\344ten \205> Anforderungsanalyse?}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.5.1}{Sensorik \(GPS\)}{section.5.5}% 54
+\BOOKMARK [2][-]{subsection.5.5.2}{Open Street Map}{section.5.5}% 55
+\BOOKMARK [0][-]{chapter.6}{Der Prototyp}{}% 56
+\BOOKMARK [1][-]{subsection.6.0.3}{APIs}{chapter.6}% 57
+\BOOKMARK [2][-]{subsection.6.0.4}{Komponenten}{subsection.6.0.3}% 58
+\BOOKMARK [3][-]{subsubsection.6.0.4.1}{.css}{subsection.6.0.4}% 59
+\BOOKMARK [3][-]{subsubsection.6.0.4.2}{.html}{subsection.6.0.4}% 60
+\BOOKMARK [3][-]{subsubsection.6.0.4.3}{.js}{subsection.6.0.4}% 61
+\BOOKMARK [0][-]{chapter.7}{Evaluierung}{}% 62
+\BOOKMARK [1][-]{section.7.1}{Systemtest}{chapter.7}% 63
+\BOOKMARK [0][-]{chapter.8}{Ergebnis und Ausblick}{}% 64
+\BOOKMARK [1][-]{section.8.1}{Ampelhinweissystem}{chapter.8}% 65
+\BOOKMARK [1][-]{section.8.2}{Ausblick}{chapter.8}% 66
+\BOOKMARK [0][-]{section*.10}{Akronyme}{}% 67
+\BOOKMARK [0][-]{section*.12}{Glossar}{}% 68
+\BOOKMARK [0][-]{chapter*.13}{Abbildungsverzeichnis}{}% 69
+\BOOKMARK [0][-]{chapter*.14}{Literaturverzeichnis}{}% 70
