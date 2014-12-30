@@ -78,12 +78,6 @@
 \newblock \url{http://www.kolibri-projekt.de/}, . --
 \newblock Zugriff: 28.12.2014
 
-\bibitem[kol11]{kolibriTUM}
-Pilotprojekt zur Verbesserung des Verkehrsflusses: Grüne Welle auf der
-  Landstraße.
-\newblock   (2011), Dezember. --
-\newblock Zugriff: 28.12.2014
-
 \bibitem[KPM11]{SignalGuruPaper}
 \textsc{Koukoumidis}, Emmanouil ; \textsc{Peh}, Li-Shiuan  ;
   \textsc{Martonosi}, Margaret:
@@ -91,6 +85,13 @@ Pilotprojekt zur Verbesserung des Verkehrsflusses: Grüne Welle auf der
   Schedule Advisory / MIT and Princeton University.
 \newblock 2011. --
 \newblock Forschungsbericht
+
+\bibitem[MB11]{kolibriTUM}
+\textsc{Marsch}, Dr.~U. ; \textsc{Battenberg}, Dr.~A.:
+\newblock Pilotprojekt zur Verbesserung des Verkehrsflusses: Grüne Welle auf
+  der Landstraße.
+\newblock   (2011), Dezember. --
+\newblock Pressemitteilung
 
 \bibitem[Neu14]{BZ}
 \textsc{Neumann}, Peter:
@@ -123,9 +124,9 @@ Pilotprojekt zur Verbesserung des Verkehrsflusses: Grüne Welle auf der
 \newblock Zugriff: 08.12.2014
 
 \bibitem[tra]{Travolution}
-\emph{Verkehrsoptimierung mit Genetischen Algorithmen}.
-\newblock \url{http://www.travolution-ingolstadt.de}, . --
-\newblock Zugriff: 28.11.2014
+\emph{Verkehrsoptimierung mit Genetischen Algorithmen -- Pojektpartner}.
+\newblock \url{http://www.travolution-ingolstadt.de/index.php?id=73}, . --
+\newblock Zugriff: 30.12.2014
 
 \bibitem[van]{vanhawks}
 \emph{Vanhawks}.

@@ -13,7 +13,6 @@ Warning--empty year in Hammerhead
 Warning--empty number in Telematik
 Warning--empty note in Telematik
 Warning--empty year in kolibri
-Warning--empty author in kolibriTUM
 Warning--empty number in SignalGuruPaper
 Warning--empty note in SignalGuruPaper
 Warning--empty year in Travolution
@@ -22,43 +21,43 @@ Warning--empty number in Welle
 Warning--empty note in Welle
 You've used 22 entries,
             4793 wiz_defined-function locations,
-            1004 strings with 9143 characters,
-and the built_in function-call counts, 9119 in all, are:
-= -- 1002
-> -- 168
-< -- 187
-+ -- 212
-- -- 56
-* -- 540
-:= -- 1454
+            1005 strings with 9207 characters,
+and the built_in function-call counts, 9460 in all, are:
+= -- 1041
+> -- 186
+< -- 212
++ -- 241
+- -- 64
+* -- 559
+:= -- 1528
 add.period$ -- 22
 call.type$ -- 22
-change.case$ -- 97
+change.case$ -- 98
 chr.to.int$ -- 21
-cite$ -- 33
-duplicate$ -- 307
+cite$ -- 32
+duplicate$ -- 309
 empty$ -- 729
-format.name$ -- 105
-if$ -- 1924
+format.name$ -- 116
+if$ -- 1972
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 80
-newline$ -- 125
-num.names$ -- 33
-pop$ -- 121
+newline$ -- 126
+num.names$ -- 36
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 141
+purify$ -- 142
 quote$ -- 0
-skip$ -- 543
+skip$ -- 569
 stack$ -- 0
-substring$ -- 504
-swap$ -- 50
-text.length$ -- 33
-text.prefix$ -- 20
+substring$ -- 531
+swap$ -- 52
+text.length$ -- 35
+text.prefix$ -- 19
 top$ -- 0
 type$ -- 231
-warning$ -- 11
-while$ -- 49
+warning$ -- 10
+while$ -- 54
 width$ -- 27
-write$ -- 269
-(There were 11 warnings)
+write$ -- 271
+(There were 10 warnings)
