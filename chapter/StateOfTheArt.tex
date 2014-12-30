@@ -6,32 +6,41 @@ Sowohl statisch an Radwegen, als auch für den Einsatz in Kraftfahrzeugen gibt e
 \section{Ampelinformationssysteme}
 Unter dem Prinzip "'Grüne Welle"' wird die Abstimmung der Ampelschaltzustände, sodass ein Fahrzeug in einer bestimmten Geschwindigkeit mehrere Ampeln passieren kann ohne anzuhalten, verstanden. Der folgende Abschnitt soll die existierenden Lösungen und Ansätze für Ampelinformationssysteme darstellen.
 \subsection{Grüne Welle auf Radwegen}
-In Kopenhagen unterstützen grüne \gls{LED}s auf Radwegen die Radfahrer indem sie wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der Grünen Welle befinden. 
+In Kopenhagen unterstützen grüne \glspl{LED} auf Radwegen die RadfahrerInnen indem sie wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der Grünen Welle befinden. 
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.7\textwidth]{copenhagen} \label{fig:copenhagen}
-    \caption[Grüne Welle durch \gls{LED}s]{Kopenhagen: \gls{LED}s signalisieren die Grüne Welle bei 20 km/h  Quelle: \cite{NYT}}
+    \caption[Grüne Welle durch \glspl{LED}]{Kopenhagen: \glspl{LED} signalisieren die Grüne Welle bei 20 km/h  Quelle: \cite{NYT}}
 \end{figure}
 Zusätzlich erkennen Sensoren im Radweg Fahrradgruppen und veranlassen dann die Ampel zu einer längeren Grünphase. In einem anderen Stadtteil sind Leuchttafeln, die die verbleibende Zeit der Ampelphase anzeigen, am Radwegrand installiert\cite{KopIng}.\\
 Kopenhagen als Vorbild hat Berlin mit vier Ampeln in Schöneberg eine Grüne Welle für RadfahrerInnen umgesetzt und plant bereits die zweite\cite{BZ}. Auch hier möchte man die Benutzung des Rades attraktiver machen und den Fahrradverkehr beschleunigen.
 \subsection{Individuelle Ampelinformationssysteme im Auto}
-In den letzten Jahrzehnten gab es immer wieder Intentionen, eine Anzeige von Geschwindigkeitsempfehlungen im Auto umzusetzen. Der folgende Abschnitt soll die existierenden Lösungen und Ansätze dafür aufzeigen.
+In den letzten Jahrzehnten gab es immer wieder Intentionen, eine Anzeige von Geschwindigkeitsempfehlungen im Fahrzeug umzusetzen. Der folgende Abschnitt stellt existierende Lösungen und Ansätze für Ampelinformationssysteme im Auto vor.
 \subsection*{Projekt Wolfsburger Welle}
 Die \gls{VW}-Forschung initiierte in den 80er Jahren mit dem Projekt "'Wolfsburger Welle"' die ersten Untersuchungen zur "'Grünen Welle"' Informationen im Fahrzeug; mit der Idee, beim Annähern an eine Ampel die optimale Geschwindigkeit im Fahrzeug zu geben.\cite{Welle} "Dazu sendet die Ampelanlage ihren aktuellen Phasenzustand und eine Prognose für den nächsten Zustandwechsel an alle Fahrzeuge, die sich annähern. Der Fahrzeugcomputer setzt dann die aktuelle Fahrzeuggeschwindigkeit mit dem Abstand zur Ampel und der aktuellen Ampelphase in Bezug. Daraus wird errechnet, ob das Fahrzeug im Moment mit der grünen Welle ’mitschwimmt’ oder ob die Geschwindigkeit außerhalb des optimalen Bereichs liegt" (\cite{MenschMaschine}).
+%%% TRAVOLUTION %%%
 \subsection*{Projekt Travolution}
-Im Sommer 2008 wurde das Projekt \textsc{Travolution} (TRAffic \& eVOLUTION), von den Projektpartnern\footnote{\cite{Travolution}} abgeschlossen. Es besteht aus den Teilprojekten \textsc{verkehrsadaptive Netzsteuerung mit Genetischen Algorithmen} und \textsc{Der informierte Fahrer}. Im Netzsteuerungsprojekt wurden 46 Lichtsignalanlagen in Ingolstadt mit der Netzsteuerungssoftware BALANCE ausgestattet, wodurch sie intelligent auf den Verkehr reagieren und die Schaltung an den Verkehr anpassen.  Ziel des zweiten Teilprojektes ist es, die Autofahrer über die Ampelphasen zu informieren. Die \gls{C2I} mittels \gls{WLAN} und \gls{UMTS} umsetzend, senden mit Kommunikationsmodulen ausgestattete Ampeln die Grünphasen an den Bordcomputer der Autos, welcher dann die Geschwindigkeit für ein reibungsloses Passieren errechnet\cite{Travolution, Stvtechnik} und wie in Abbildung \ref{fig:travolution} zu sehen, anzeigt.
+Im Sommer 2008 wurde das Projekt \textsc{Travolution} (TRAffic \& eVOLUTION), von den Projektpartnern\footnote{\cite{Travolution}} abgeschlossen. Es besteht aus den Teilprojekten \textsc{verkehrsadaptive Netzsteuerung mit Genetischen Algorithmen} und \textsc{Der informierte Fahrer}. Im Netzsteuerungsprojekt wurden 46 Lichtsignalanlagen in Ingolstadt mit der Netzsteuerungssoftware BALANCE ausgestattet, wodurch sie intelligent auf den Verkehr reagieren und die Schaltung an den Verkehr anpassen.  Ziel des zweiten Teilprojektes ist es, die Autofahrer über die Ampelphasen zu informieren. Die \gls{C2I} auf Basis von \gls{WLAN} umsetzend, senden mit Kommunikationsmodulen ausgestattete Ampeln die Grünphasen an den Bordcomputer der Autos, welcher dann die Geschwindigkeit für ein reibungsloses Passieren errechnet\cite{Stvtechnik} und wie in Abbildung \ref{fig:travolution} zu sehen ist, anzeigt. Im Rahmen des Projektes wurden zwei Anwendungsfälle umgesetzt. Die Restrotanzeige -- die die Dauer der verbleibenden Rotphase angibt, und die "'Dynamische Grüne Welle"' -- die Anzeige der Progressionsgeschwindigkeit.
+Die Vorhersage der Schaltbilder ist aufgrund der verkehrsabhängigen Logik bei nicht festzeitgesteuerten \gls{LSA} nur mit einer gewissen Wahrscheinlichkeit möglich. So werden sekündlich die Grünwahrscheinlichkeiten vom \gls{LSA}-Kommunikationsmodul aktualisiert und an das Fahrzeugmodul gesendet, welches diese in Relation zu eigener Position, Geschwindigkeit und Richtung setzt und die entsprechende Empfehlung ausgibt.
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.7\textwidth]{travolution}      
     \caption[Projekt Travolution]{Der Bordcomputer zeigt die optimale Geschwindigkeit an. Quelle: \cite{Travolution}}
     \label{fig:travolution}
-\end{figure}
+\end{figure} 
 Fundierend auf \textsc{Travolution} sind Folgeprojekte wie zum Beispiel das ebenfalls von Audi ins Leben gerufene "'Ampelinfo online"' entstanden. Über Mobilfunk ist in der \gls{C2X}-Anwendung das Auto mit dem zentralen Verkehrsrechner, welcher die Ampelanlagen steuert, vernetzt und visualisiert die entsprechenden Informationen im Bordcomputer. \cite{Ampelinfo}
 %%% KOLIBRI %%%
 \subsection*{Projekt Kolibri}
-In Bayern wurde im April 2011 das Pilot-Projekt \textsc{KOLIBRI}\footnote{ Kooperative Lichtsignaloptimierung -- Bayrisches Pilotprojekt} mit den Teststrecken der B13 bei München mit sieben und der St2145 in der Nähe von Regensburg mit acht ampelgeregelten Kreuzungen gestartet. Gemeinsam untersuchten die Projektpartner\footnote{ \url{http://www.kolibri-projekt.de/Sites/kolibri3.html}} die Funktionen und Auswirkungen eines Ampelassistenten außerhalb von Ortschaften (\cite{kolibri}, \cite{kolibriTUM}). "'Per Mobilfunk übermittelt das Fahrzeug Rohdaten wie Zeit und genaue Position. Der Computer in der Zentrale kann daraus Informationen über die Verkehrslage, die Geschwindigkeit oder die Zahl der Ampelstopps und die Wartezeiten ermitteln, die dann als Korrekturgrößen wieder in die Steuerung der \gls{LSA} einfließen können."' (\cite{kolibriTUM}) Zusätzlich wurden die FahrerInnen sowohl fahrzeugintegriert\footnote{ On-Board-Computer} als auch via Smartphone über die Schaltung der nächsten Ampel informiert und erhielten Empfehlungen über die aktuelle Progressionsgeschwindigkeit. 
+In Bayern wurde im April 2011 das Pilot-Projekt \textsc{kolibri}\footnote{ Kooperative Lichtsignaloptimierung -- Bayrisches Pilotprojekt} mit den Teststrecken der B13 bei München mit sieben und der St2145 in der Nähe von Regensburg mit acht ampelgeregelten Kreuzungen gestartet. Gemeinsam untersuchten die Projektpartner\footnote{ \url{http://www.kolibri-projekt.de/Sites/kolibri3.html}} die Funktionen und Auswirkungen eines Ampelassistenten außerhalb von Ortschaften (\cite{kolibri}). "'Per Mobilfunk übermittelt das Fahrzeug Rohdaten wie Zeit und genaue Position. Der Computer in der Zentrale kann daraus Informationen über die Verkehrslage, die Geschwindigkeit oder die Zahl der Ampelstopps und die Wartezeiten ermitteln, die dann als Korrekturgrößen wieder in die Steuerung der Lichtsignalanlage einfließen können."' (\cite{kolibriTUM} ) 
+\begin{figure}[H]  
+    \centering  
+    \includegraphics[width=0.7\textwidth]{kolibri}      
+    \caption[Projekt Kolibri]{Anzeige der Geschwindigkeitsempfehlung. Quelle: \cite{kolibri}}
+    \label{fig:kolibri}
+\end{figure}
+Die FahrerInnen wurden sowohl fahrzeugintegriert\footnote{ On-Board-Computer} als auch via Smartphone, wie Abbildung \ref{fig:kolibri} zeigt, über die Schaltung der nächsten Ampel informiert und erhielten Empfehlungen über die aktuelle Progressionsgeschwindigkeit. Nach zwei Jahren war das Pilotprojekt abgeschlossen 
 \subsection*{Projekt Testfeld Telematik}
-Ende des Jahres 2013 wurde in Wien das Projekt \textsc{Testfeld Telematik} -- Feldversuch zur Stärkung österreichischen Know-Hows im Bereich umweltverträglicher Mobilität erfolgreich abgeschlossen. Per \gls{C2X} bringt das Projekt Kooperative Dienste wie Ampelinformationen direkt ins Auto. 
+Ende des Jahres 2013 wurde in Wien das Projekt \textsc{Testfeld Telematik} -- Feldversuch zur Stärkung österreichischen Know-Hows im Bereich umweltverträglicher Mobilität erfolgreich abgeschlossen. Per \gls{C2X}-Kommunikation bringt das Projekt Kooperative Dienste wie Ampelinformationen direkt ins Auto. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{telematik} \label{fig:telematik}
@@ -60,23 +69,24 @@ Dieser Ansatz ist für Fahrräder jedoch nicht umsetzbar, da das Smartphone in d
 \section{Fahrraderweiterungen}
 Als Schnittstelle das Smarthone nutzend gibt es ausgeklügelte Systeme mit reichlich Funktionen. Das einfache Navigationssystem für Fahrräder ist kaum noch notwendig, wo doch zum Beispiel die hier aufgeführten um einiges umfangreicher sind.
 \subsection{Displaylose Fahrradnavigation}
-Das \textsc{Hammerhead} ist ein "'Hammer"', oder einfach ein "'T"', an den Lenker angebracht. Gespickt mit verschiedenfarbigen \gls{LED}s zeigt es den Weg zeigen, warnt vor Hindernissen und ersetzt die vorderen Scheinwerfer.
+Das \textsc{Hammerhead} ist ein "'Hammer"', oder einfach ein "'T"', an den Lenker angebracht. Gespickt mit verschiedenfarbigen \glspl{LED} zeigt es den Weg zeigen, warnt vor Hindernissen und ersetzt die vorderen Scheinwerfer.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{hammerhead}
-    \caption[Hammerhead]{Hammerhead -- LEDs zeigen den Weg.  Quelle: \cite{Hammerhead}} 
+    \caption[Hammerhead]{Hammerhead -- \glspl{LED} zeigen den Weg.  Quelle: \cite{Hammerhead}} 
     \label{fig:hammerhead}
 \end{figure}
 Via Bluetooth ist \textsc{Hammerhead} an das Smartphone gekoppelt, auf dem die zugehörige Navigationsanwendung läuft mit der man Routen eingeben, teilen und speichern kann\cite{Hammerhead}.\\
 Ein sehr ähnliches Prinzip verfolgt das \textsc{CycleNav} von der Firma Schwinn. Untersiede findet man hier im Design und einem integriertem Lautsprecher, der Abbiegehinweise ausgibt und auf Wunsch wiederholt\cite{CycleNav}.
 \subsection{Intelligente Fahrradlenker}
-Mehr High-Tech, aber auch umfangreichere Funktionen bietet der vom amerikanischen Startup \textsc{Helios-Bikes} entwickelte \textsc{Helios}-Lenker. Neben dem Frontlicht hat der Lenker wie in Abbildung \ref{fig:helios} zu sehen, an den Enden \gls{LED}s die einen zum gewünschten Standort leiten. 
+Mehr High-Tech, aber auch umfangreichere Funktionen bietet der vom amerikanischen Startup \textsc{Helios-Bikes} entwickelte \textsc{Helios}-Lenker. Neben dem Frontlicht hat der Lenker wie in Abbildung \ref{fig:helios} zu sehen, an den Enden \glspl{LED} die einen zum gewünschten Standort leiten. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{helios}
-    \caption[Helios-Lenker]{Helios-Lenker  Quelle: \cite{Helios}} 		\label{fig:helios}
+    \caption[Helios-Lenker]{Helios-Lenker  Quelle: \cite{Helios}} 		
+    \label{fig:helios}
 \end{figure}
-Sie passen ihre Farbe der Geschwindigkeit an und haben auf Wunsch auch eine Blinkfunktion. Verbindet man den Lenker mit einem Smartphone, lässt sich die Farbe der \gls{LED}s individualisieren. Die Verbindung zum Handy hat weitere Vorteile: dank des eingebauten \gls{GPS}-Trackers und eingesteckter SIM-Karte lässt sich das Fahrrad per SMS über den derzeitigen Standort abfragen\cite{Helios}, was im Falle eines Diebstahl sehr hilfreich sein kann.\\
+Sie passen ihre Farbe der Geschwindigkeit an und haben auf Wunsch auch eine Blinkfunktion. Verbindet man den Lenker mit einem Smartphone, lässt sich die Farbe der \glspl{LED} individualisieren. Die Verbindung zum Handy hat weitere Vorteile: dank des eingebauten \gls{GPS}-Trackers und eingesteckter SIM-Karte lässt sich das Fahrrad per SMS über den derzeitigen Standort abfragen\cite{Helios}, was im Falle eines Diebstahl sehr hilfreich sein kann.\\
 \textsc{Vanhawks Valour} heißt das Rad, das ab April 2015 lieferbar ist. Wie im \textsc{Helios}-Lenker steckt auch hier ein über das Smartphone steuerbares Navigationssystem, das die Abbiegehinweise per \gls{LED} signalisiert, im Lenker. Auf den gefahrenen Routen merkt sich das Rad durch einen Erschütterungssensor erfasste Hindernisse wie Unebenheiten in der Fahrbahn und ermittelt beim nächsten Mal darauf rücksicht nehmend eine andere Route. Es ist darüber hinaus in der Lage mit anderen \textsc{Vanhawks valour}-Rädern zu kommunizieren und dessen Routenbegebenheiten ebenfalls zu berücksichtigen. Mittels Radarsensoren registriert das Fahrrad Autos im toten Winkel und benachrichtig die FahrerInnen durch ein vibrierenden Lenker\cite{vanhawks}.
 %bluetooth kommunikation ... Akku im Rad wird mit Hilfe des Nabendynamos aufgeladen. yeah! App hat auch fitnesstrainer
 \subsection{Das Samsung Smart Bike}
