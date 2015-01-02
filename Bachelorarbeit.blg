@@ -19,45 +19,45 @@ Warning--empty year in Travolution
 Warning--empty year in vanhawks
 Warning--empty number in Welle
 Warning--empty note in Welle
-You've used 22 entries,
+You've used 23 entries,
             4793 wiz_defined-function locations,
-            1005 strings with 9222 characters,
-and the built_in function-call counts, 9290 in all, are:
-= -- 1021
-> -- 175
-< -- 201
-+ -- 226
-- -- 59
-* -- 546
-:= -- 1496
-add.period$ -- 22
-call.type$ -- 22
-change.case$ -- 97
-chr.to.int$ -- 21
-cite$ -- 32
-duplicate$ -- 309
-empty$ -- 728
-format.name$ -- 111
-if$ -- 1946
+            1011 strings with 9337 characters,
+and the built_in function-call counts, 9679 in all, are:
+= -- 1054
+> -- 183
+< -- 208
++ -- 233
+- -- 61
+* -- 567
+:= -- 1565
+add.period$ -- 23
+call.type$ -- 23
+change.case$ -- 101
+chr.to.int$ -- 22
+cite$ -- 33
+duplicate$ -- 326
+empty$ -- 767
+format.name$ -- 117
+if$ -- 2027
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 80
-newline$ -- 126
-num.names$ -- 36
-pop$ -- 122
+missing$ -- 84
+newline$ -- 131
+num.names$ -- 39
+pop$ -- 130
 preamble$ -- 1
-purify$ -- 141
+purify$ -- 147
 quote$ -- 0
-skip$ -- 555
+skip$ -- 576
 stack$ -- 0
-substring$ -- 518
-swap$ -- 51
-text.length$ -- 35
-text.prefix$ -- 20
+substring$ -- 535
+swap$ -- 53
+text.length$ -- 37
+text.prefix$ -- 21
 top$ -- 0
-type$ -- 231
+type$ -- 237
 warning$ -- 10
-while$ -- 52
-width$ -- 27
-write$ -- 271
+while$ -- 55
+width$ -- 29
+write$ -- 282
 (There were 10 warnings)

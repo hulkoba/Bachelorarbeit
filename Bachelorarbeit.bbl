@@ -111,6 +111,12 @@
 \newblock \url{http://www.maestrosacademy.it/progetto-sbike}, 2014. --
 \newblock Zugriff: 28.12.2014
 
+\bibitem[Som10]{arduino}
+\textsc{Sommer}, Ulli:
+\newblock \emph{Arduino -- Mikrocontroller-Programmierung mit
+  Arduino/Freeduino}.
+\newblock 85586 Poing : Franzis Verlag GmbH, 2010
+
 \bibitem[Tho09]{MenschMaschine}
 \textsc{Thoma}, Stephan:
 \newblock \emph{Mensch-Maschine-Interaktion}, Technische Universität München,

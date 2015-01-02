@@ -1,4 +1,4 @@
 *.tex~
-*/*.tex
+*/*.tex~
 *.aux
 */*.aux

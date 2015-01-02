@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  2 JAN 2015 18:28
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  2 JAN 2015 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1369,7 +1369,7 @@ txr/m/n/10.95 , Au-gust 2014. --  Zu-griff:
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 127--130
+Underfull \hbox (badness 2626) in paragraph at lines 133--136
 []\T1/txr/m/it/10.95 Verkehrsoptimierung mit Ge-ne-ti-schen Al-go-rith-men -- P
 o-jekt-part-ner\T1/txr/m/n/10.95 .  []$\T1/txtt/m/n/10.95 http : / / www .
  []
@@ -1390,28 +1390,29 @@ Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
 (\end occurred when \ifx on line 15 was incomplete)
 (\end occurred when \ifx on line 9 was incomplete) 
 Here is how much of TeX's memory you used:
- 14638 strings out of 493485
- 219021 string characters out of 3143525
- 360925 words of memory out of 3000000
- 17435 multiletter control sequences out of 15000+200000
+ 14640 strings out of 493485
+ 219042 string characters out of 3143525
+ 360958 words of memory out of 3000000
+ 17436 multiletter control sequences out of 15000+200000
  126097 words of font info for 168 fonts, out of 3000000 for 9000
  958 hyphenation exceptions out of 8191
  40i,9n,74p,1449b,588s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dis
 t/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public
-/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtx
-sc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsssc.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
-mes/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (30 pages, 4581534 bytes).
+/txfonts/rtxi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtx
+r.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsssc.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
+lvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Bachelorarbeit.pdf (30 pages, 4583265 bytes).
 PDF statistics:
- 704 PDF objects out of 1000 (max. 8388607)
- 632 compressed objects within 7 object streams
- 150 named destinations out of 1000 (max. 500000)
+ 711 PDF objects out of 1000 (max. 8388607)
+ 638 compressed objects within 7 object streams
+ 151 named destinations out of 1000 (max. 500000)
  512 words of extra memory for PDF output out of 10000 (max. 10000000)
 
