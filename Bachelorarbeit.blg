@@ -21,24 +21,24 @@ Warning--empty number in Welle
 Warning--empty note in Welle
 You've used 22 entries,
             4793 wiz_defined-function locations,
-            1005 strings with 9207 characters,
-and the built_in function-call counts, 9460 in all, are:
-= -- 1041
-> -- 186
-< -- 212
-+ -- 241
-- -- 64
-* -- 559
-:= -- 1528
+            1005 strings with 9222 characters,
+and the built_in function-call counts, 9290 in all, are:
+= -- 1021
+> -- 175
+< -- 201
++ -- 226
+- -- 59
+* -- 546
+:= -- 1496
 add.period$ -- 22
 call.type$ -- 22
-change.case$ -- 98
+change.case$ -- 97
 chr.to.int$ -- 21
 cite$ -- 32
 duplicate$ -- 309
-empty$ -- 729
-format.name$ -- 116
-if$ -- 1972
+empty$ -- 728
+format.name$ -- 111
+if$ -- 1946
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 80
@@ -46,18 +46,18 @@ newline$ -- 126
 num.names$ -- 36
 pop$ -- 122
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 141
 quote$ -- 0
-skip$ -- 569
+skip$ -- 555
 stack$ -- 0
-substring$ -- 531
-swap$ -- 52
+substring$ -- 518
+swap$ -- 51
 text.length$ -- 35
-text.prefix$ -- 19
+text.prefix$ -- 20
 top$ -- 0
 type$ -- 231
 warning$ -- 10
-while$ -- 54
+while$ -- 52
 width$ -- 27
 write$ -- 271
 (There were 10 warnings)

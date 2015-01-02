@@ -13,46 +13,45 @@
 \BOOKMARK [2][-]{subsection.2.3.3}{Das Samsung Smart Bike}{section.2.3}% 13
 \BOOKMARK [2][-]{subsection.2.3.4}{Der COBI Fahrradcomputer}{section.2.3}% 14
 \BOOKMARK [1][-]{section.2.4}{Analyseergebnis}{chapter.2}% 15
-\BOOKMARK [0][-]{chapter.3}{Grundlagen}{}% 16
-\BOOKMARK [1][-]{section.3.1}{Mathematische Grundlagen}{chapter.3}% 17
-\BOOKMARK [2][-]{subsection.3.1.1}{Berechnung der Dauer der Ampelphase}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.2}{Berechnung zuer Ermittlung der Progressionsgeschwindigkeit}{section.3.1}% 19
-\BOOKMARK [1][-]{section.3.2}{Technische Grundlagen}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.2.1}{Arduino / Android-App}{section.3.2}% 21
-\BOOKMARK [3][-]{subsubsection.3.2.1.1}{Mobile Sensing}{subsection.3.2.1}% 22
-\BOOKMARK [2][-]{subsection.3.2.2}{Backend mit nodejs / socket.io und MongoDB}{section.3.2}% 23
-\BOOKMARK [2][-]{subsection.3.2.3}{Open-Street-Map}{section.3.2}% 24
-\BOOKMARK [0][-]{chapter.4}{Die Anforderungsanalyse}{}% 25
-\BOOKMARK [1][-]{section.4.1}{Personas}{chapter.4}% 26
-\BOOKMARK [1][-]{section.4.2}{Funktionalit\344t}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.3}{Diagramme}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.4}{Die graphische Oberfl\344che}{chapter.4}% 29
-\BOOKMARK [0][-]{chapter.5}{Konzeption}{}% 30
-\BOOKMARK [1][-]{section.5.1}{Architektur}{chapter.5}% 31
-\BOOKMARK [2][-]{subsection.5.1.1}{Technologien}{section.5.1}% 32
-\BOOKMARK [2][-]{subsection.5.1.2}{Navigation \(bei App\)}{section.5.1}% 33
-\BOOKMARK [1][-]{section.5.2}{Das Design}{chapter.5}% 34
-\BOOKMARK [2][-]{subsection.5.2.1}{Anzeigeelemente}{section.5.2}% 35
-\BOOKMARK [3][-]{subsubsection.5.2.1.1}{Geschwindigkeit}{subsection.5.2.1}% 36
-\BOOKMARK [3][-]{subsubsection.5.2.1.2}{Ampeln}{subsection.5.2.1}% 37
-\BOOKMARK [3][-]{subsubsection.5.2.1.3}{Informationen}{subsection.5.2.1}% 38
-\BOOKMARK [1][-]{section.5.3}{Ampeldatenanfrage und Auswertung}{chapter.5}% 39
-\BOOKMARK [2][-]{subsection.5.3.1}{Sensoren}{section.5.3}% 40
-\BOOKMARK [3][-]{subsubsection.5.3.1.1}{GPS}{subsection.5.3.1}% 41
-\BOOKMARK [1][-]{section.5.4}{Theorie}{chapter.5}% 42
-\BOOKMARK [2][-]{subsection.5.4.1}{Die Berechnung der Entferung}{section.5.4}% 43
-\BOOKMARK [2][-]{subsection.5.4.2}{Die Berechnung der Ankunft in Abh\344ngigkeit der Geschwindigkeit}{section.5.4}% 44
-\BOOKMARK [2][-]{subsection.5.4.3}{Die Berechnung der Dauer der Ampelphase?}{section.5.4}% 45
-\BOOKMARK [1][-]{section.5.5}{Funktionalit\344ten \205> Anforderungsanalyse?}{chapter.5}% 46
-\BOOKMARK [0][-]{chapter.6}{Der Prototyp}{}% 47
-\BOOKMARK [1][-]{subsection.6.0.1}{APIs}{chapter.6}% 48
-\BOOKMARK [2][-]{subsection.6.0.2}{Komponenten}{subsection.6.0.1}% 49
-\BOOKMARK [0][-]{chapter.7}{Evaluierung}{}% 50
-\BOOKMARK [1][-]{section.7.1}{Systemtest}{chapter.7}% 51
-\BOOKMARK [0][-]{chapter.8}{Ergebnis und Ausblick}{}% 52
-\BOOKMARK [1][-]{section.8.1}{Ampelhinweissystem}{chapter.8}% 53
-\BOOKMARK [1][-]{section.8.2}{Ausblick}{chapter.8}% 54
-\BOOKMARK [0][-]{section*.11}{Akronyme}{}% 55
-\BOOKMARK [0][-]{section*.13}{Glossar}{}% 56
-\BOOKMARK [0][-]{chapter*.14}{Abbildungsverzeichnis}{}% 57
-\BOOKMARK [0][-]{chapter*.15}{Literaturverzeichnis}{}% 58
+\BOOKMARK [0][-]{chapter.3}{L\366sungsans\344tze}{}% 16
+\BOOKMARK [0][-]{chapter.4}{Grundlagen}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Mathematische Grundlagen}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{Technische Grundlagen}{chapter.4}% 19
+\BOOKMARK [2][-]{subsection.4.2.1}{Arduino / Android-App}{section.4.2}% 20
+\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Mobile Sensing}{subsection.4.2.1}% 21
+\BOOKMARK [2][-]{subsection.4.2.2}{Backend mit nodejs / socket.io und MongoDB}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.3}{Open-Street-Map}{section.4.2}% 23
+\BOOKMARK [0][-]{chapter.5}{Die Anforderungsanalyse}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Personas}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{Funktionalit\344t}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.3}{Diagramme}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.4}{Die graphische Oberfl\344che}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{Konzeption}{}% 29
+\BOOKMARK [1][-]{section.6.1}{Architektur}{chapter.6}% 30
+\BOOKMARK [2][-]{subsection.6.1.1}{Technologien}{section.6.1}% 31
+\BOOKMARK [2][-]{subsection.6.1.2}{Navigation \(bei App\)}{section.6.1}% 32
+\BOOKMARK [1][-]{section.6.2}{Das Design}{chapter.6}% 33
+\BOOKMARK [2][-]{subsection.6.2.1}{Anzeigeelemente}{section.6.2}% 34
+\BOOKMARK [3][-]{subsubsection.6.2.1.1}{Geschwindigkeit}{subsection.6.2.1}% 35
+\BOOKMARK [3][-]{subsubsection.6.2.1.2}{Ampeln}{subsection.6.2.1}% 36
+\BOOKMARK [3][-]{subsubsection.6.2.1.3}{Informationen}{subsection.6.2.1}% 37
+\BOOKMARK [1][-]{section.6.3}{Ampeldatenanfrage und Auswertung}{chapter.6}% 38
+\BOOKMARK [2][-]{subsection.6.3.1}{Sensoren}{section.6.3}% 39
+\BOOKMARK [3][-]{subsubsection.6.3.1.1}{GPS}{subsection.6.3.1}% 40
+\BOOKMARK [1][-]{section.6.4}{Theorie}{chapter.6}% 41
+\BOOKMARK [2][-]{subsection.6.4.1}{Die Berechnung der Entferung}{section.6.4}% 42
+\BOOKMARK [2][-]{subsection.6.4.2}{Die Berechnung der Ankunft in Abh\344ngigkeit der Geschwindigkeit}{section.6.4}% 43
+\BOOKMARK [2][-]{subsection.6.4.3}{Die Berechnung der Dauer der Ampelphase?}{section.6.4}% 44
+\BOOKMARK [1][-]{section.6.5}{Funktionalit\344ten \205> Anforderungsanalyse?}{chapter.6}% 45
+\BOOKMARK [0][-]{chapter.7}{Der Prototyp}{}% 46
+\BOOKMARK [1][-]{subsection.7.0.1}{APIs}{chapter.7}% 47
+\BOOKMARK [2][-]{subsection.7.0.2}{Komponenten}{subsection.7.0.1}% 48
+\BOOKMARK [0][-]{chapter.8}{Evaluierung}{}% 49
+\BOOKMARK [1][-]{section.8.1}{Systemtest}{chapter.8}% 50
+\BOOKMARK [0][-]{chapter.9}{Ergebnis und Ausblick}{}% 51
+\BOOKMARK [1][-]{section.9.1}{Ampelhinweissystem}{chapter.9}% 52
+\BOOKMARK [1][-]{section.9.2}{Ausblick}{chapter.9}% 53
+\BOOKMARK [0][-]{section*.15}{Akronyme}{}% 54
+\BOOKMARK [0][-]{section*.17}{Glossar}{}% 55
+\BOOKMARK [0][-]{chapter*.18}{Abbildungsverzeichnis}{}% 56
+\BOOKMARK [0][-]{chapter*.19}{Literaturverzeichnis}{}% 57

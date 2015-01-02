@@ -1,0 +1,11 @@
+\chapter{Lösungsansätze}
+Zur Umsetzung der beschriebenen Ampelinformationsanwendung gibt es mehrere Möglichkeiten. In diesem Kapitel werden die Realisierung durch eine Smartphone App und die einer \gls{Arduino}-Anwendung gegenübergestellt. Zu beachten sind Komponenten wie \gls{GPS}, Internetverbindung, Sicherheit, Stromversorgung und Darstellung der Informationen.\\
+\begin{description}[leftmargin=1cm,style=nextline]
+  \item[\gls{GPS}-Empfänger] ~ Die Positionsbestimmung und somit auch der \gls{GPS} Empfänger ist obligatorisch. In einem Smartphone ist GPS für \gls{Arduino} extra Platine besorgen.\\
+  \item[Internetverbindung] ~ Ist im Smartphone enthalten, für \gls{Arduino} ebenfalls Ethernet-Adapter besorgen. Webservlet Implementierung ist bei beiden mit ungefähr gleichem Aufwand möglich.\\
+  \item[Stromversorgung] ~ Die Stromversorgung ist im Smartphone durch den integrierten Akku gegeben. Die Laufzeit ist vom Typ abhängig, genügt jedoch für die alltägliche Radstrecke. Für die \gls{Arduino}-Anwendung ist entweder eine 9-Volt Batterie notwendig oder man versorgt die Platine mit Strom der aus dem Nabendynamo gewonnen wird. Hierfür ist zusätzliche Arbeit notwendig. Außerdem muss der \gls{Arduino} in der Lage sein Strom zu speichern, sodass die Anwendung beim Halt an der Ampel nicht ausschaltet.\\
+  \item[Verkehrssicherheit] ~ Smartphone könnte für Ablenkung sorgen wenn Anrufe oder Nachrichten ankommen. Spiegelndes Display lässt Informationen gegebenenfalls nicht erkennen, so bleibt der Blick länger auf dem Display was zur Vernachlässigung des Straßenverkehrs führt.\\ 
+  \item[Darstellung] ~ Ein Darstellungskonzept muss bei beiden Möglichkeiten erstellt werden. Auf dem Smartphone ist besonders auf Erkennbarkeit bei schlechten Witterungsbedingungen, das spiegelnde Display berücksichtigend zu achten. Dafür sind aufgrund des vorhandenen Displays in gewisser Größe mehr Informationen darstellbar. Als \gls{Arduino}-Anwendung sind nur ein paar \glspl{LED} am bzw. im Lenker erforderlich. Ein kurzer Blick genügt, alle Informationen zu erfassen, wenn diese eindeutig sind. Das \gls{Arduino}-Board in den Lenker eingebaut ist wasserdicht und somit bei jedem Wetter ohne Weiteres nutzbar.\\
+\end{description}
+
+\subsection*{Ergebnis}  

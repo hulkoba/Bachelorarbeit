@@ -62,7 +62,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 
 \cleardoublepage 	
 \pagestyle{headings}	 	%%Ab hier die Kopf-/Fusszeilen: headings / fancy .
-%\hyphenation{MoMo} %trennt MoMo nie
+\hyphenation{JavaScript} %trennt JavaScript nie
 %
 % Kapitel / Hauptteil des Dokumentes 
 \input{chapter/Abstract}
