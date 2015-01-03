@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  2 JAN 2015 18:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  3 JAN 2015 18:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1133,7 +1133,7 @@ LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
 (Font)              scaled to size 11.39996pt on input line 8.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 8.
-<img/copenhagen.jpg, id=339, 64.65584pt x 40.13567pt>
+<img/copenhagen.jpg, id=342, 64.65584pt x 40.13567pt>
 File: img/copenhagen.jpg Graphic file (type jpg)
  <use img/copenhagen.jpg>
 Package pdftex.def Info: img/copenhagen.jpg used on input line 12.
@@ -1142,7 +1142,7 @@ Package pdftex.def Info: img/copenhagen.jpg used on input line 12.
 [7
 
  <./img/copenhagen.jpg>]
-<img/travolution.jpg, id=366, 521.0667pt x 267.399pt>
+<img/travolution.jpg, id=369, 521.0667pt x 267.399pt>
 File: img/travolution.jpg Graphic file (type jpg)
 
 <use img/travolution.jpg>
@@ -1157,7 +1157,7 @@ LaTeX Font Info:    Try loading font information for T1+txtt on input line 34.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-<img/kolibri.jpg, id=392, 767.86874pt x 364.36125pt>
+<img/kolibri.jpg, id=396, 767.86874pt x 364.36125pt>
 File: img/kolibri.jpg Graphic file (type jpg)
  <use img/kolibri.jpg>
 Package pdftex.def Info: img/kolibri.jpg used on input line 37.
@@ -1166,7 +1166,7 @@ Package pdftex.def Info: img/kolibri.jpg used on input line 37.
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [9 <./img/travolution.jpg> <./img/kolibri.jpg>]
-<img/telematik.png, id=411, 460.72125pt x 240.9pt>
+<img/telematik.png, id=416, 460.72125pt x 240.9pt>
 File: img/telematik.png Graphic file (type png)
  <use img/telematik.png>
 Package pdftex.def Info: img/telematik.png used on input line 46.
@@ -1174,7 +1174,7 @@ Package pdftex.def Info: img/telematik.png used on input line 46.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [10 <./img/telematik.png>] <img/SignalGuru.jpg, id=435, 255.95625pt x 153.5737
+ [10 <./img/telematik.png>] <img/SignalGuru.jpg, id=442, 255.95625pt x 153.5737
 5pt>
 File: img/SignalGuru.jpg Graphic file (type jpg)
 
@@ -1184,14 +1184,14 @@ Package pdftex.def Info: img/SignalGuru.jpg used on input line 65.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [11 <./img/SignalGuru.jpg>] <img/hammerhead.jpg, id=448, 134.60287pt x 49.3845
+ [11 <./img/SignalGuru.jpg>] <img/hammerhead.jpg, id=456, 134.60287pt x 49.3845
 pt>
 File: img/hammerhead.jpg Graphic file (type jpg)
 
 <use img/hammerhead.jpg>
 Package pdftex.def Info: img/hammerhead.jpg used on input line 75.
 (pdftex.def)             Requested size: 318.66948pt x 116.9239pt.
- <img/helios.jpg, id=457, 621.32124pt x 296.10625pt>
+ <img/helios.jpg, id=466, 621.32124pt x 296.10625pt>
 File: img/helios.jpg Graphic file (type jpg)
 
 <use img/helios.jpg>
@@ -1201,19 +1201,19 @@ Package pdftex.def Info: img/helios.jpg used on input line 85.
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [12 <./img/hammerhead.jpg> <./img/helios.jpg>]
-<img/samsung.jpg, id=475, 617.30624pt x 293.095pt>
+<img/samsung.jpg, id=487, 617.30624pt x 293.095pt>
 File: img/samsung.jpg Graphic file (type jpg)
  <use img/samsung.jpg>
 Package pdftex.def Info: img/samsung.jpg used on input line 96.
 (pdftex.def)             Requested size: 318.66948pt x 151.30562pt.
 
-<img/COBI_01.jpg, id=480, 1919.17pt x 1501.61pt>
+<img/COBI_01.jpg, id=495, 1919.17pt x 1501.61pt>
 File: img/COBI_01.jpg Graphic file (type jpg)
  <use img/COBI_01.jpg>
 Package pdftex.def Info: img/COBI_01.jpg used on input line 106.
 (pdftex.def)             Requested size: 223.07211pt x 174.52599pt.
 
-<img/COBI_02.jpg, id=481, 1935.23pt x 1495.5875pt>
+<img/COBI_02.jpg, id=496, 1935.23pt x 1495.5875pt>
 File: img/COBI_02.jpg Graphic file (type jpg)
  <use img/COBI_02.jpg>
 Package pdftex.def Info: img/COBI_02.jpg used on input line 113.
@@ -1232,27 +1232,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
@@ -1314,7 +1309,7 @@ Kapitel 9.
 
 
 ]
-Overfull \hbox (8.99199pt too wide) in paragraph at lines 5--5
+Overfull \hbox (8.99199pt too wide) in paragraph at lines 6--6
 \T1/txr/m/n/10.95 Die Arduino-Plattform ist ei-ne quel-lof-fe-ne, aus Soft- und
  Hard-wa-re be-ste-hen-de Physical-Computing-
  []
@@ -1390,13 +1385,13 @@ Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
 (\end occurred when \ifx on line 15 was incomplete)
 (\end occurred when \ifx on line 9 was incomplete) 
 Here is how much of TeX's memory you used:
- 14640 strings out of 493485
- 219042 string characters out of 3143525
- 360958 words of memory out of 3000000
- 17436 multiletter control sequences out of 15000+200000
+ 14671 strings out of 493485
+ 219684 string characters out of 3143525
+ 362037 words of memory out of 3000000
+ 17465 multiletter control sequences out of 15000+200000
  126097 words of font info for 168 fonts, out of 3000000 for 9000
  958 hyphenation exceptions out of 8191
- 40i,9n,74p,1449b,588s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,9n,74p,1449b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dis
 t/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public
 /txfonts/rtxi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtx
@@ -1409,10 +1404,10 @@ lvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (30 pages, 4583265 bytes).
+Output written on Bachelorarbeit.pdf (30 pages, 4585435 bytes).
 PDF statistics:
- 711 PDF objects out of 1000 (max. 8388607)
- 638 compressed objects within 7 object streams
- 151 named destinations out of 1000 (max. 500000)
+ 746 PDF objects out of 1000 (max. 8388607)
+ 673 compressed objects within 7 object streams
+ 153 named destinations out of 1000 (max. 500000)
  512 words of extra memory for PDF output out of 10000 (max. 10000000)
 
