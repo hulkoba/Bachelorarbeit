@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  5 JAN 2015 19:08
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  5 JAN 2015 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1306,9 +1306,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--28
 
 (./code/pageDatabaseobject.js)
 LaTeX Font Info:    Font shape `T1/txss/bx/sc' will be
-(Font)              scaled to size 10.40245pt on input line 32.
+(Font)              scaled to size 10.40245pt on input line 31.
 LaTeX Font Info:    Font shape `T1/txss/m/sc' will be
-(Font)              scaled to size 10.40245pt on input line 32.
+(Font)              scaled to size 10.40245pt on input line 31.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
@@ -1441,7 +1441,7 @@ Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
 Here is how much of TeX's memory you used:
  16499 strings out of 493485
  244264 string characters out of 3143525
- 405835 words of memory out of 3000000
+ 406326 words of memory out of 3000000
  19241 multiletter control sequences out of 15000+200000
  129468 words of font info for 172 fonts, out of 3000000 for 9000
  958 hyphenation exceptions out of 8191
@@ -1461,10 +1461,10 @@ onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (32 pages, 4598748 bytes).
+Output written on Bachelorarbeit.pdf (32 pages, 4599092 bytes).
 PDF statistics:
- 787 PDF objects out of 1000 (max. 8388607)
- 710 compressed objects within 8 object streams
+ 789 PDF objects out of 1000 (max. 8388607)
+ 712 compressed objects within 8 object streams
  174 named destinations out of 1000 (max. 500000)
  480 words of extra memory for PDF output out of 10000 (max. 10000000)
 
