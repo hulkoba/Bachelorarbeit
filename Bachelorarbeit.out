@@ -17,10 +17,10 @@
 \BOOKMARK [0][-]{chapter.4}{Grundlagen}{}% 17
 \BOOKMARK [1][-]{section.4.1}{Mathematische Grundlagen}{chapter.4}% 18
 \BOOKMARK [1][-]{section.4.2}{Technische Grundlagen}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.2.1}{Arduino / Android-App}{section.4.2}% 20
-\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Mobile Sensing}{subsection.4.2.1}% 21
-\BOOKMARK [2][-]{subsection.4.2.2}{Backend mit nodejs / socket.io und MongoDB}{section.4.2}% 22
-\BOOKMARK [2][-]{subsection.4.2.3}{Open-Street-Map}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.1}{Android-App}{section.4.2}% 20
+\BOOKMARK [2][-]{subsection.4.2.2}{NoSQL Datenbank MongoDB}{section.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.2.3}{Backend mit nodejs / socket.io und MongoDB}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.4}{Open-Street-Map}{section.4.2}% 23
 \BOOKMARK [0][-]{chapter.5}{Die Anforderungsanalyse}{}% 24
 \BOOKMARK [1][-]{section.5.1}{Personas}{chapter.5}% 25
 \BOOKMARK [1][-]{section.5.2}{Funktionalit\344t}{chapter.5}% 26

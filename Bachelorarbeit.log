@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  5 JAN 2015 12:42
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.20)  5 JAN 2015 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -454,9 +454,6 @@ Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count92
 \c@subtable=\count93
 )
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrhack.sty
-Package: scrhack 2012/05/15 v3.11 KOMA-Script package (hacking other packages)
-)
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count94
@@ -464,14 +461,6 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box27
 \@float@everytoks=\toks18
 \@floatcapt=\box28
-)
-Package scrhack Info: loading float hack on input line 18.
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/float.hak
-File: float.hak 2012/05/15 v3.11 KOMA-Script hacking package float
-Package scrhack Info: redefining \newfloat on input line 160.
-Package scrhack Info: redefining \listof on input line 160.
-Package scrhack Info: undefining \float@addtolists on input line 160.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
@@ -737,10 +726,6 @@ LaTeX Info: Redefining \pageref on input line 5847.
 \c@Item=\count112
 \c@Hfootnote=\count113
 )
-Package scrhack Info: hyperref hack deactivated because of
-(scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 27.
-
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
@@ -767,6 +752,19 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrhack.sty
+Package: scrhack 2012/05/15 v3.11 KOMA-Script package (hacking other packages)
+Package scrhack Info: hyperref hack deactivated because of
+(scrhack)             detection of hyperref version, that doesn't
+(scrhack)             need that hack, on input line 131.
+Package scrhack Info: loading float hack on input line 137.
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/float.hak
+File: float.hak 2012/05/15 v3.11 KOMA-Script hacking package float
+Package scrhack Info: redefining \newfloat on input line 160.
+Package scrhack Info: redefining \listof on input line 160.
+Package scrhack Info: undefining \float@addtolists on input line 160.
+))
 (/usr/share/texmf/tex/latex/beamer/base/translator/translator.sty
 Package: translator 2010/06/12 ver 1.10
 
@@ -869,12 +867,12 @@ Package: glossary-tree 2011/03/28 v3.0 (NLCT)
 \openout4 = `Bachelorarbeit.glo'.
 
 Package glossaries Info: Writing glossary file Bachelorarbeit.glo on input line
- 37.
+ 38.
 \glo@acronym@file=\write5
 \openout5 = `Bachelorarbeit.acn'.
 
 Package glossaries Info: Writing glossary file Bachelorarbeit.acn on input line
- 37.
+ 38.
 
 \@input{extra/Glossary.aux}
 \openout2 = `extra/Glossary.aux'.
@@ -885,44 +883,44 @@ Package csquotes Info: ... found 'babel' package.
  (./Bachelorarbeit.aux (./extra/Acronym.aux))
 \openout1 = `Bachelorarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 48.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 48.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 50.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 50.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 48.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 48.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 50.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 48.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 48.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 50.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 50.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 48.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 48.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 50.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Try loading font information for T1+txr on input line 48.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Try loading font information for T1+txr on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txr.fd
 File: t1txr.fd 2000/12/15 v3.1
@@ -1001,7 +999,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box37
-Package hyperref Info: Link coloring OFF on input line 48.
+Package hyperref Info: Link coloring OFF on input line 50.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -1010,9 +1008,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 48.
-LaTeX Info: Redefining \pageref on input line 48.
-LaTeX Info: Redefining \nameref on input line 48.
+LaTeX Info: Redefining \ref on input line 50.
+LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Info: Redefining \nameref on input line 50.
 
 (./Bachelorarbeit.out) (./Bachelorarbeit.out)
 \@outlinefile=\write6
@@ -1063,21 +1061,21 @@ File: utxsyc.fd 2000/12/15 v3.1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/beuth.jpg>])
-LaTeX Font Info:    Try loading font information for T1+txss on input line 61.
+LaTeX Font Info:    Try loading font information for T1+txss on input line 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txss.fd
 File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 61.
+(Font)              scaled to size 10.40245pt on input line 63.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 10.40245pt on input line 61.
+(Font)              scaled to size 10.40245pt on input line 63.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 19.70294pt on input line 61.
+(Font)              scaled to size 19.70294pt on input line 63.
 LaTeX Font Info:    Font shape `T1/txss/bx/sc' will be
-(Font)              scaled to size 19.70294pt on input line 61.
+(Font)              scaled to size 19.70294pt on input line 63.
 LaTeX Font Info:    Font shape `T1/txss/m/sc' will be
-(Font)              scaled to size 19.70294pt on input line 61.
+(Font)              scaled to size 19.70294pt on input line 63.
 
 (./Bachelorarbeit.toc [2
 
@@ -1133,7 +1131,7 @@ LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
 (Font)              scaled to size 11.39996pt on input line 8.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 8.
-<img/copenhagen.jpg, id=342, 64.65584pt x 40.13567pt>
+<img/copenhagen.jpg, id=344, 64.65584pt x 40.13567pt>
 File: img/copenhagen.jpg Graphic file (type jpg)
  <use img/copenhagen.jpg>
 Package pdftex.def Info: img/copenhagen.jpg used on input line 12.
@@ -1142,7 +1140,7 @@ Package pdftex.def Info: img/copenhagen.jpg used on input line 12.
 [7
 
  <./img/copenhagen.jpg>]
-<img/travolution.jpg, id=369, 521.0667pt x 267.399pt>
+<img/travolution.jpg, id=370, 521.0667pt x 267.399pt>
 File: img/travolution.jpg Graphic file (type jpg)
 
 <use img/travolution.jpg>
@@ -1157,7 +1155,7 @@ LaTeX Font Info:    Try loading font information for T1+txtt on input line 34.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-<img/kolibri.jpg, id=396, 767.86874pt x 364.36125pt>
+<img/kolibri.jpg, id=397, 767.86874pt x 364.36125pt>
 File: img/kolibri.jpg Graphic file (type jpg)
  <use img/kolibri.jpg>
 Package pdftex.def Info: img/kolibri.jpg used on input line 37.
@@ -1166,7 +1164,7 @@ Package pdftex.def Info: img/kolibri.jpg used on input line 37.
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [9 <./img/travolution.jpg> <./img/kolibri.jpg>]
-<img/telematik.png, id=416, 460.72125pt x 240.9pt>
+<img/telematik.png, id=417, 460.72125pt x 240.9pt>
 File: img/telematik.png Graphic file (type png)
  <use img/telematik.png>
 Package pdftex.def Info: img/telematik.png used on input line 46.
@@ -1174,7 +1172,7 @@ Package pdftex.def Info: img/telematik.png used on input line 46.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [10 <./img/telematik.png>] <img/SignalGuru.jpg, id=442, 255.95625pt x 153.5737
+ [10 <./img/telematik.png>] <img/SignalGuru.jpg, id=444, 255.95625pt x 153.5737
 5pt>
 File: img/SignalGuru.jpg Graphic file (type jpg)
 
@@ -1184,14 +1182,14 @@ Package pdftex.def Info: img/SignalGuru.jpg used on input line 65.
 
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [11 <./img/SignalGuru.jpg>] <img/hammerhead.jpg, id=456, 134.60287pt x 49.3845
+ [11 <./img/SignalGuru.jpg>] <img/hammerhead.jpg, id=458, 134.60287pt x 49.3845
 pt>
 File: img/hammerhead.jpg Graphic file (type jpg)
 
 <use img/hammerhead.jpg>
 Package pdftex.def Info: img/hammerhead.jpg used on input line 75.
 (pdftex.def)             Requested size: 318.66948pt x 116.9239pt.
- <img/helios.jpg, id=466, 621.32124pt x 296.10625pt>
+ <img/helios.jpg, id=468, 621.32124pt x 296.10625pt>
 File: img/helios.jpg Graphic file (type jpg)
 
 <use img/helios.jpg>
@@ -1201,19 +1199,19 @@ Package pdftex.def Info: img/helios.jpg used on input line 85.
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
  [12 <./img/hammerhead.jpg> <./img/helios.jpg>]
-<img/samsung.jpg, id=487, 617.30624pt x 293.095pt>
+<img/samsung.jpg, id=489, 617.30624pt x 293.095pt>
 File: img/samsung.jpg Graphic file (type jpg)
  <use img/samsung.jpg>
 Package pdftex.def Info: img/samsung.jpg used on input line 96.
 (pdftex.def)             Requested size: 318.66948pt x 151.30562pt.
 
-<img/COBI_01.jpg, id=495, 1919.17pt x 1501.61pt>
+<img/COBI_01.jpg, id=498, 1919.17pt x 1501.61pt>
 File: img/COBI_01.jpg Graphic file (type jpg)
  <use img/COBI_01.jpg>
 Package pdftex.def Info: img/COBI_01.jpg used on input line 106.
 (pdftex.def)             Requested size: 223.07211pt x 174.52599pt.
 
-<img/COBI_02.jpg, id=496, 1935.23pt x 1495.5875pt>
+<img/COBI_02.jpg, id=499, 1935.23pt x 1495.5875pt>
 File: img/COBI_02.jpg Graphic file (type jpg)
  <use img/COBI_02.jpg>
 Package pdftex.def Info: img/COBI_02.jpg used on input line 113.
@@ -1262,47 +1260,51 @@ Kapitel 4.
 
 ]
 LaTeX Font Info:    Font shape `T1/txss/bx/sc' will be
-(Font)              scaled to size 10.40245pt on input line 19.
+(Font)              scaled to size 10.40245pt on input line 34.
 LaTeX Font Info:    Font shape `T1/txss/m/sc' will be
-(Font)              scaled to size 10.40245pt on input line 19.
-) (./chapter/Anforderungen.tex
+(Font)              scaled to size 10.40245pt on input line 34.
+
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [18]
+ [18])
+(./chapter/Anforderungen.tex
+Overfull \vbox (1.9pt too high) has occurred while \output is active []
+
+ [19]
 Kapitel 5.
-[19
+[20
 
 ]) (./chapter/Entwurf.tex
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [20]
+ [21]
 Kapitel 6.
-[21
+[22
 
 ]) (./chapter/Implementierung.tex
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [22]
+ [23]
 Kapitel 7.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
 
-[23
+[24
 
 ]
 Kapitel 8.
-) (./chapter/Fazit.tex [24
+) (./chapter/Fazit.tex [25
 
 ]
 Kapitel 9.
-) [25
+) [26
 
 ]
 \openout2 = `extra/Acronym.aux'.
 
  (./extra/Acronym.tex) (./Bachelorarbeit.acr) (./Bachelorarbeit.gls
-[26
+[27
 
 
 
@@ -1314,7 +1316,7 @@ Overfull \hbox (8.99199pt too wide) in paragraph at lines 6--6
  Hard-wa-re be-ste-hen-de Physical-Computing-
  []
 
-) [27
+) [28
 
 
 
@@ -1322,7 +1324,7 @@ Overfull \hbox (8.99199pt too wide) in paragraph at lines 6--6
 \tf@lof=\write8
 \openout8 = `Bachelorarbeit.lof'.
 
- (./Bachelorarbeit.bbl [28
+ (./Bachelorarbeit.bbl [29
 
 
 ]
@@ -1338,33 +1340,33 @@ technik / content / 2014 / 06 /
  []
 
 
-Underfull \hbox (badness 7685) in paragraph at lines 51--56
+Underfull \hbox (badness 7685) in paragraph at lines 58--63
 []\T1/txr/m/it/10.95 CycleNav Smart Bi-ke Na-vi-ga-tor\T1/txr/m/n/10.95 .  []$\
 T1/txtt/m/n/10.95 http : / / www . schwinnbikes . com / usa / news /
  []
 
-[29
+[30
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 102--108
+Underfull \hbox (badness 10000) in paragraph at lines 114--120
 []\T1/txr/m/sc/10.95 Schoenebeck\T1/txr/m/n/10.95 , Gu-drun von:  \T1/txr/m/it/
 10.95 Ko-pen-ha-gen ver-wöhnt Rad-fah-rer mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--108
+Underfull \hbox (badness 10000) in paragraph at lines 114--120
 \T1/txr/m/it/10.95 Grü-nen Wel-len\T1/txr/m/n/10.95 .  []$\T1/txtt/m/n/10.95 ht
 tp : / / www . ingenieur . de / Themen / Fahrrad /
  []
 
 
-Underfull \hbox (badness 3138) in paragraph at lines 102--108
+Underfull \hbox (badness 3138) in paragraph at lines 114--120
 \T1/txtt/m/n/10.95 Kopenhagen-[]verwoehnt-[]Radfahrer-[]Gruenen-[]Wellen$[]\T1/
 txr/m/n/10.95 , Au-gust 2014. --  Zu-griff:
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 133--136
+Underfull \hbox (badness 2626) in paragraph at lines 145--148
 []\T1/txr/m/it/10.95 Verkehrsoptimierung mit Ge-ne-ti-schen Al-go-rith-men -- P
 o-jekt-part-ner\T1/txr/m/n/10.95 .  []$\T1/txtt/m/n/10.95 http : / / www .
  []
@@ -1372,24 +1374,24 @@ o-jekt-part-ner\T1/txr/m/n/10.95 .  []$\T1/txtt/m/n/10.95 http : / / www .
 )
 Overfull \vbox (1.9pt too high) has occurred while \output is active []
 
- [30]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
+ [31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
 
 (./Bachelorarbeit.aux (./extra/Acronym.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: BEF3B8F633545A121F013B7CB229ABA1;3867.
+(rerunfilecheck)             Checksum: 7C5D2BC0815D813AD2A45CFA7B55C114;3856.
  )
 (\end occurred when \ifx on line 15 was incomplete)
 (\end occurred when \ifx on line 9 was incomplete) 
 Here is how much of TeX's memory you used:
- 14671 strings out of 493485
- 219684 string characters out of 3143525
- 362037 words of memory out of 3000000
- 17465 multiletter control sequences out of 15000+200000
- 126097 words of font info for 168 fonts, out of 3000000 for 9000
+ 14715 strings out of 493485
+ 220292 string characters out of 3143525
+ 362469 words of memory out of 3000000
+ 17498 multiletter control sequences out of 15000+200000
+ 129146 words of font info for 171 fonts, out of 3000000 for 9000
  958 hyphenation exceptions out of 8191
  40i,9n,74p,1449b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dis
@@ -1400,14 +1402,15 @@ r.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr
 xlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
-lvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
+lvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Bachelorarbeit.pdf (30 pages, 4585890 bytes).
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on Bachelorarbeit.pdf (31 pages, 4596054 bytes).
 PDF statistics:
- 748 PDF objects out of 1000 (max. 8388607)
- 675 compressed objects within 7 object streams
- 153 named destinations out of 1000 (max. 500000)
+ 783 PDF objects out of 1000 (max. 8388607)
+ 707 compressed objects within 8 object streams
+ 161 named destinations out of 1000 (max. 500000)
  512 words of extra memory for PDF output out of 10000 (max. 10000000)
 

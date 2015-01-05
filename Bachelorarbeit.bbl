@@ -35,6 +35,13 @@
 \newblock Copenhagen Lighting the Way to Greener, More Efficient Cities.
 \newblock {In: }\emph{The New York Times}  (2014), Dezember
 
+\bibitem[Cho13]{mongoDef}
+\textsc{Chodorow}, Kristina:
+\newblock \emph{MongoDB: The Definitive Guide}.
+\newblock 2.
+\newblock O’Reilly Media, Inc., 2013. --
+\newblock ISBN 978--1--449--34468--9
+
 \bibitem[cob14a]{cobi}
 \emph{COBI. World's Smartest Connected Biking System}.
 \newblock
@@ -92,6 +99,11 @@
   Schedule Advisory / MIT and Princeton University.
 \newblock 2011. --
 \newblock Forschungsbericht
+
+\bibitem[mon]{mongodb}
+\emph{mongoDB}.
+\newblock \url{http://www.mongodb.org/}, . --
+\newblock Zugriff: 05.01.2015
 
 \bibitem[Neu14]{BZ}
 \textsc{Neumann}, Peter:

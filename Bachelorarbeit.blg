@@ -15,49 +15,50 @@ Warning--empty note in Telematik
 Warning--empty year in kolibri
 Warning--empty number in SignalGuruPaper
 Warning--empty note in SignalGuruPaper
+Warning--empty year in mongodb
 Warning--empty year in Travolution
 Warning--empty year in vanhawks
 Warning--empty number in Welle
 Warning--empty note in Welle
-You've used 23 entries,
+You've used 25 entries,
             4793 wiz_defined-function locations,
-            1011 strings with 9337 characters,
-and the built_in function-call counts, 9679 in all, are:
-= -- 1054
-> -- 183
-< -- 208
-+ -- 233
-- -- 61
-* -- 567
-:= -- 1565
-add.period$ -- 23
-call.type$ -- 23
-change.case$ -- 101
-chr.to.int$ -- 22
-cite$ -- 33
-duplicate$ -- 326
-empty$ -- 767
-format.name$ -- 117
-if$ -- 2027
+            1024 strings with 9515 characters,
+and the built_in function-call counts, 10546 in all, are:
+= -- 1149
+> -- 192
+< -- 220
++ -- 244
+- -- 63
+* -- 621
+:= -- 1691
+add.period$ -- 26
+call.type$ -- 25
+change.case$ -- 109
+chr.to.int$ -- 24
+cite$ -- 36
+duplicate$ -- 355
+empty$ -- 848
+format.name$ -- 123
+if$ -- 2223
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 84
-newline$ -- 131
-num.names$ -- 39
-pop$ -- 130
+missing$ -- 92
+newline$ -- 143
+num.names$ -- 42
+pop$ -- 142
 preamble$ -- 1
-purify$ -- 147
+purify$ -- 159
 quote$ -- 0
-skip$ -- 576
+skip$ -- 613
 stack$ -- 0
-substring$ -- 535
-swap$ -- 53
-text.length$ -- 37
-text.prefix$ -- 21
+substring$ -- 619
+swap$ -- 57
+text.length$ -- 40
+text.prefix$ -- 23
 top$ -- 0
-type$ -- 237
-warning$ -- 10
-while$ -- 55
-width$ -- 29
-write$ -- 282
-(There were 10 warnings)
+type$ -- 255
+warning$ -- 11
+while$ -- 59
+width$ -- 31
+write$ -- 308
+(There were 11 warnings)

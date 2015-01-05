@@ -16,9 +16,23 @@ Um die ensprechende \gls{LSA} während der Grünphase zu passieren, muss letzten
 %\subsection{Berechnung der Restrotanzeige}
 % TECHNISCHE GRUNDLAGEN
 \section{Technische Grundlagen}
-\subsection{Arduino / Android-App}
-\subsubsection{Mobile Sensing}
+Im folgenden Abschnitt werden Funktionsweise und Besonderheiten der verwendeten Tech-
+nologien beschrieben.
+\subsection{Android-App}
+% MONGODB NOSQL
+\subsection{NoSQL Datenbank MongoDB}
+Eine inzwischen weit verbreitete Alternative zu \gls{SQL} Datenbanken sind die \gls{NoSQL} Datenbanken. MongoDB\footnote{ Namensherkunft: hu\textbf{mongo}us, dt.: 'riesig', 'enorm', 'gigantisch'} ist eine dokumentenorientierte Open Sourche Datenbanktechnologie und eigener Aussage zufolge derzeit "'the leading NoSQL Database..."' \cite{mongodb}. \\
+Der Charakter dieser Datenbank wird durch mehrere Punkte bestimmt. Während relationale Datenbanksysteme auf Tabellen aufbauen, basiert MongoDB auf sogenannten Collections, einer Menge von Dokumenten\footnote{Vgl. \cite{mongoDef} S. 7}.  Dieser dokumentenorientierte Ansatz, ersetzt das Konzept einer "'Zeile"' in relationalen Datenbanken mit dem flexiblerem Dokumentenmodell und ermöglicht es so, in einem einzigen Datensatz komplexe hierarchische Beziehungen darzustellen. Das Datenformat für Dokumente ist BSON (Binaray JSON), eine Erweiterung von JSON um einige binäre Typen. Zu den unterstützten Datentypen gehören also neben \textit{Strings}, \textit{Numbers}, \textit{Objects}, \textit{Arrays}, \textit{Null}, \textit{Boolean} auch \textit{Date} Objekte, \textit{Reguläre Ausdrücke}, \textit{ObjectIDs} und \textit{eingebettete Dokumente}\footnote{Vgl. \cite{mongoDef} S. 17ff}. %Ein Dokument könnte demnach so aussehen: \\
+%\begin{listing}[H]
+%\centering
+%\inputminted[linenos, mathescape, numbersep=5pt,frame=lines, framesep=2mm,tabsize=4,fontsize=\small]{javascript}{./code/pageDatabaseobject.js}
+%\caption[Dokument]{MongoDB Dokument}
+%\label{fig:callback}
+%\end{listing} \\
+In relationalen Datenbanken haben Entitäten ein striktes Schema, was bedeutet dass alle Reihen einer Tabelle die selben Spalten besitzen muss. In MongoDB gibt es keine vordefinierten Schemata: Schlüssel und Werte eines Dokuments sind nicht von festen Typen oder Größen. Ohne festes Schema ist das, Hinzufügen oder Entfernen von Feldern einfacher und im Allgemeinen auch schneller.
+
+\subsubsection*{Mobile Sensing}
 \textit{Der Beschleunigungssensor ist ein Hardwaresensor, der dazu benutzt wird, Position, Bewegung, Neigung, Erschütterung, Vibration und natürlich Beschleunigung des Gerätes zu messen.Es gibt bis zu 3-Achsen Beschleunigungssensoren, die meistens zum Erkennen der Ausrichtung des \glspl{Smartphone} genutzt werden und somit das Display beim Anschauen von Bildern, Webbrowsern oder Musikplayern in die passende Richtung vom Portrait-Modus (senkrecht) zum Landscape-Modus (waagrecht) zu drehen. In Kombination mit \gls{GPS} kann das \gls{Smartphone} dank ihm sogar erkennen, welche Art Transportmittel (Fahrrad, Bus, U-Bahn) der Nutzer gerade benutzt und bestimmte Muster wie z.B. Rennen, Gehen oder Stehen unterscheiden.\\
-\gls{GPS} erlaubt dem \gls{Smartphone} sich selber zu lokalisieren und den exakten Standpunkt auf der Erde zu bestimmen. Es hilft locationbased\footnote{ ortsgebunden} Apps wie z.B Navigation, lokale Suche nach Shops, Restaurants etc. oder soziale Netzwerke wie Facebook oder Foursquare nötige Informationen zu ermitteln. Der Kompass erweitert die Möglichkeiten der Lokalisationsermittlung eines \gls{Smartphone}s. Er bestimmt den Winkel des Geräts relativ zum Nordpol der Erde. Der Kompass besitzt einen Magnet, der mit dem magnetischen Feld der Erde interagiert und sich entsprechend zu einem der Pole ausrichtet. Zusammen mit dem Gyroskop Sensor verbessern \gls{GPS} und Kompass die Präzision von locationbased Applikationen.Der Gyroskop Sensor bestimmt die Rotations- und Drehgeschwindigkeit des \gls{Smartphone}s auf seinen drei Achsen gegenüber dem Weltkoordinatensystem.}
+\gls{GPS} erlaubt dem \gls{Smartphone} sich selber zu lokalisieren und den exakten Standpunkt auf der Erde zu bestimmen. Es hilft locationbased\footnote{ ortsgebunden} \Glspl{App} wie z.B Navigation, lokale Suche nach Shops, Restaurants etc. oder soziale Netzwerke wie Facebook oder Foursquare nötige Informationen zu ermitteln. Der Kompass erweitert die Möglichkeiten der Lokalisationsermittlung eines \gls{Smartphone}s. Er bestimmt den Winkel des Geräts relativ zum Nordpol der Erde. Der Kompass besitzt einen Magnet, der mit dem magnetischen Feld der Erde interagiert und sich entsprechend zu einem der Pole ausrichtet. Zusammen mit dem Gyroskop Sensor verbessern \gls{GPS} und Kompass die Präzision von locationbased Applikationen.Der Gyroskop Sensor bestimmt die Rotations- und Drehgeschwindigkeit des \gls{Smartphone}s auf seinen drei Achsen gegenüber dem Weltkoordinatensystem.}
 \subsection{Backend mit nodejs / socket.io und MongoDB}
 \subsection{Open-Street-Map}

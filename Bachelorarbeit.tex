@@ -8,11 +8,11 @@ abstracton,
 \usepackage[utf8]{inputenc} % Umlaute für linux
 \usepackage[english, ngerman]{babel}
 \usepackage{lmodern}	 %Type1-Schriftart fuer nicht-englische Texte
+%\usepackage{listings} %dient der Darstellung von Quellcode
+%\usepackage{minted}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{scrhack}
-%\usepackage{listings} %dient der Darstellung von Quellcode
 \usepackage{float}
 % aller Bilder werden im Unterverzeichnis figures gesucht:
 \graphicspath{{img/}}
@@ -26,6 +26,7 @@ abstracton,
 \usepackage[pdfborder={ 0 0 0 }, breaklinks]{hyperref} % bricht links und macht die umrandung weiß
 \usepackage{enumitem}
 \usepackage{xspace} % setzt Leerzeichen, wenn welche hingehören 
+\usepackage{scrhack} %The package scrhack redefines macros of other packages. It should be loaded at the very end
 \linespread {1.25}\selectfont
 \usepackage[ngerman]{translator}
 \usepackage[
@@ -42,6 +43,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 \addtokomafont{subsection}{ \mdseries \color{gray}}
 \addtokomafont{subsubsection}{\scshape \mdseries}
 \setlength{\parindent}{0pt}  % keine Einrückungen nach Absätzen
+
 %------------------------------------------------------------------------
 % DOKUMENT
 %------------------------------------------------------------------------
