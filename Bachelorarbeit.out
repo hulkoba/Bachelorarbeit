@@ -32,26 +32,22 @@
 \BOOKMARK [2][-]{subsection.6.1.2}{Navigation \(bei App\)}{section.6.1}% 32
 \BOOKMARK [1][-]{section.6.2}{Das Design}{chapter.6}% 33
 \BOOKMARK [2][-]{subsection.6.2.1}{Anzeigeelemente}{section.6.2}% 34
-\BOOKMARK [3][-]{subsubsection.6.2.1.1}{Geschwindigkeit}{subsection.6.2.1}% 35
-\BOOKMARK [3][-]{subsubsection.6.2.1.2}{Ampeln}{subsection.6.2.1}% 36
-\BOOKMARK [3][-]{subsubsection.6.2.1.3}{Informationen}{subsection.6.2.1}% 37
-\BOOKMARK [1][-]{section.6.3}{Ampeldatenanfrage und Auswertung}{chapter.6}% 38
-\BOOKMARK [2][-]{subsection.6.3.1}{Sensoren}{section.6.3}% 39
-\BOOKMARK [3][-]{subsubsection.6.3.1.1}{GPS}{subsection.6.3.1}% 40
-\BOOKMARK [1][-]{section.6.4}{Theorie}{chapter.6}% 41
-\BOOKMARK [2][-]{subsection.6.4.1}{Die Berechnung der Entferung}{section.6.4}% 42
-\BOOKMARK [2][-]{subsection.6.4.2}{Die Berechnung der Ankunft in Abh\344ngigkeit der Geschwindigkeit}{section.6.4}% 43
-\BOOKMARK [2][-]{subsection.6.4.3}{Die Berechnung der Dauer der Ampelphase?}{section.6.4}% 44
-\BOOKMARK [1][-]{section.6.5}{Funktionalit\344ten \205> Anforderungsanalyse?}{chapter.6}% 45
-\BOOKMARK [0][-]{chapter.7}{Der Prototyp}{}% 46
-\BOOKMARK [1][-]{subsection.7.0.1}{APIs}{chapter.7}% 47
-\BOOKMARK [2][-]{subsection.7.0.2}{Komponenten}{subsection.7.0.1}% 48
-\BOOKMARK [0][-]{chapter.8}{Evaluierung}{}% 49
-\BOOKMARK [1][-]{section.8.1}{Systemtest}{chapter.8}% 50
-\BOOKMARK [0][-]{chapter.9}{Ergebnis und Ausblick}{}% 51
-\BOOKMARK [1][-]{section.9.1}{Ampelhinweissystem}{chapter.9}% 52
-\BOOKMARK [1][-]{section.9.2}{Ausblick}{chapter.9}% 53
-\BOOKMARK [0][-]{section*.15}{Akronyme}{}% 54
-\BOOKMARK [0][-]{section*.17}{Glossar}{}% 55
-\BOOKMARK [0][-]{chapter*.18}{Abbildungsverzeichnis}{}% 56
-\BOOKMARK [0][-]{chapter*.19}{Literaturverzeichnis}{}% 57
+\BOOKMARK [1][-]{section.6.3}{Ampeldatenanfrage und Auswertung}{chapter.6}% 35
+\BOOKMARK [2][-]{subsection.6.3.1}{Sensoren}{section.6.3}% 36
+\BOOKMARK [1][-]{section.6.4}{Theorie}{chapter.6}% 37
+\BOOKMARK [2][-]{subsection.6.4.1}{Die Berechnung der Entferung}{section.6.4}% 38
+\BOOKMARK [2][-]{subsection.6.4.2}{Die Berechnung der Ankunft in Abh\344ngigkeit der Geschwindigkeit}{section.6.4}% 39
+\BOOKMARK [2][-]{subsection.6.4.3}{Die Berechnung der Dauer der Ampelphase?}{section.6.4}% 40
+\BOOKMARK [1][-]{section.6.5}{Funktionalit\344ten \205> Anforderungsanalyse?}{chapter.6}% 41
+\BOOKMARK [0][-]{chapter.7}{Der Prototyp}{}% 42
+\BOOKMARK [1][-]{subsection.7.0.1}{APIs}{chapter.7}% 43
+\BOOKMARK [2][-]{subsection.7.0.2}{Komponenten}{subsection.7.0.1}% 44
+\BOOKMARK [0][-]{chapter.8}{Evaluierung}{}% 45
+\BOOKMARK [1][-]{section.8.1}{Systemtest}{chapter.8}% 46
+\BOOKMARK [0][-]{chapter.9}{Ergebnis und Ausblick}{}% 47
+\BOOKMARK [1][-]{section.9.1}{Ampelhinweissystem}{chapter.9}% 48
+\BOOKMARK [1][-]{section.9.2}{Ausblick}{chapter.9}% 49
+\BOOKMARK [0][-]{section*.19}{Akronyme}{}% 50
+\BOOKMARK [0][-]{section*.21}{Glossar}{}% 51
+\BOOKMARK [0][-]{chapter*.22}{Abbildungsverzeichnis}{}% 52
+\BOOKMARK [0][-]{chapter*.24}{Literaturverzeichnis}{}% 53
