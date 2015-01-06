@@ -26,42 +26,43 @@
 \contentsline {paragraph}{Reibungsloses Passieren durch Beschleunigung m\IeC {\"o}glich:}{17}{paragraph*.13}
 \contentsline {paragraph}{Reibungsloses Passieren duch Verlangsamen m\IeC {\"o}glich:}{17}{paragraph*.14}
 \contentsline {section}{\numberline {4.2}Technische Grundlagen}{18}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Android-App}{18}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}NoSQL Datenbank MongoDB}{18}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Backend mit nodejs / socket.io und MongoDB}{19}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Open-Street-Map}{19}{subsection.4.2.4}
-\contentsline {chapter}{\numberline {5}Die Anforderungsanalyse}{20}{chapter.5}
-\contentsline {section}{\numberline {5.1}Personas}{20}{section.5.1}
-\contentsline {section}{\numberline {5.2}Funktionalit\IeC {\"a}t}{20}{section.5.2}
-\contentsline {section}{\numberline {5.3}Diagramme}{20}{section.5.3}
-\contentsline {section}{\numberline {5.4}Die graphische Oberfl\IeC {\"a}che}{21}{section.5.4}
-\contentsline {chapter}{\numberline {6}Konzeption}{22}{chapter.6}
-\contentsline {section}{\numberline {6.1}Architektur}{22}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Technologien}{22}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Navigation (bei App)}{22}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Das Design}{22}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Anzeigeelemente}{22}{subsection.6.2.1}
-\contentsline {subsubsection}{Geschwindigkeit}{22}{subsubsection*.15}
-\contentsline {subsubsection}{Ampeln}{22}{subsubsection*.16}
-\contentsline {subsubsection}{Informationen}{22}{subsubsection*.17}
-\contentsline {section}{\numberline {6.3}Ampeldatenanfrage und Auswertung}{22}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Sensoren}{22}{subsection.6.3.1}
-\contentsline {subsubsection}{GPS}{22}{subsubsection*.18}
-\contentsline {section}{\numberline {6.4}Theorie}{22}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Die Berechnung der Entferung}{23}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Die Berechnung der Ankunft in Abh\IeC {\"a}ngigkeit der Geschwindigkeit}{23}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Die Berechnung der Dauer der Ampelphase?}{23}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}Funktionalit\IeC {\"a}ten --> Anforderungsanalyse?}{23}{section.6.5}
-\contentsline {chapter}{\numberline {7}Der Prototyp}{24}{chapter.7}
-\contentsline {subsection}{\numberline {7.0.1}APIs}{24}{subsection.7.0.1}
-\contentsline {subsection}{\numberline {7.0.2}Komponenten}{24}{subsection.7.0.2}
-\contentsline {chapter}{\numberline {8}Evaluierung}{25}{chapter.8}
-\contentsline {section}{\numberline {8.1}Systemtest}{25}{section.8.1}
-\contentsline {chapter}{\numberline {9}Ergebnis und Ausblick}{26}{chapter.9}
-\contentsline {section}{\numberline {9.1}Ampelhinweissystem}{26}{section.9.1}
-\contentsline {section}{\numberline {9.2}Ausblick}{26}{section.9.2}
+\contentsline {subsection}{\numberline {4.2.1}Hybride App mit AngularJS + Phonegap?}{18}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}JavaScript}{18}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Node.js}{18}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}NoSQL Datenbank MongoDB}{19}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Open-Street-Map}{20}{subsection.4.2.5}
+\contentsline {chapter}{\numberline {5}Die Anforderungsanalyse}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Personas}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Funktionalit\IeC {\"a}t}{21}{section.5.2}
+\contentsline {section}{\numberline {5.3}Diagramme}{21}{section.5.3}
+\contentsline {section}{\numberline {5.4}Die graphische Oberfl\IeC {\"a}che}{22}{section.5.4}
+\contentsline {chapter}{\numberline {6}Konzeption}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Architektur}{23}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Technologien}{23}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Navigation (bei App)}{23}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Das Design}{23}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Anzeigeelemente}{23}{subsection.6.2.1}
+\contentsline {subsubsection}{Geschwindigkeit}{23}{subsubsection*.16}
+\contentsline {subsubsection}{Ampeln}{23}{subsubsection*.17}
+\contentsline {subsubsection}{Informationen}{23}{subsubsection*.18}
+\contentsline {section}{\numberline {6.3}Ampeldatenanfrage und Auswertung}{23}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Sensoren}{23}{subsection.6.3.1}
+\contentsline {subsubsection}{GPS}{23}{subsubsection*.19}
+\contentsline {section}{\numberline {6.4}Theorie}{23}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Die Berechnung der Entferung}{24}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Die Berechnung der Ankunft in Abh\IeC {\"a}ngigkeit der Geschwindigkeit}{24}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Die Berechnung der Dauer der Ampelphase?}{24}{subsection.6.4.3}
+\contentsline {section}{\numberline {6.5}Funktionalit\IeC {\"a}ten --> Anforderungsanalyse?}{24}{section.6.5}
+\contentsline {chapter}{\numberline {7}Der Prototyp}{25}{chapter.7}
+\contentsline {subsection}{\numberline {7.0.1}APIs}{25}{subsection.7.0.1}
+\contentsline {subsection}{\numberline {7.0.2}Komponenten}{25}{subsection.7.0.2}
+\contentsline {chapter}{\numberline {8}Evaluierung}{26}{chapter.8}
+\contentsline {section}{\numberline {8.1}Systemtest}{26}{section.8.1}
+\contentsline {chapter}{\numberline {9}Ergebnis und Ausblick}{27}{chapter.9}
+\contentsline {section}{\numberline {9.1}Ampelhinweissystem}{27}{section.9.1}
+\contentsline {section}{\numberline {9.2}Ausblick}{27}{section.9.2}
 \vspace *{\baselineskip }
-\contentsline {chapter}{Akronyme}{27}{section*.19}
-\contentsline {chapter}{Glossar}{28}{section*.21}
-\contentsline {chapter}{Abbildungsverzeichnis}{29}{chapter*.22}
-\contentsline {chapter}{Literaturverzeichnis}{30}{chapter*.24}
+\contentsline {chapter}{Akronyme}{28}{section*.20}
+\contentsline {chapter}{Glossar}{29}{section*.22}
+\contentsline {chapter}{Abbildungsverzeichnis}{30}{chapter*.23}
+\contentsline {chapter}{Literaturverzeichnis}{31}{chapter*.25}

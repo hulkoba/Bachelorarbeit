@@ -17,37 +17,38 @@
 \BOOKMARK [0][-]{chapter.4}{Grundlagen}{}% 17
 \BOOKMARK [1][-]{section.4.1}{Mathematische Grundlagen}{chapter.4}% 18
 \BOOKMARK [1][-]{section.4.2}{Technische Grundlagen}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.2.1}{Android-App}{section.4.2}% 20
-\BOOKMARK [2][-]{subsection.4.2.2}{NoSQL Datenbank MongoDB}{section.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.2.3}{Backend mit nodejs / socket.io und MongoDB}{section.4.2}% 22
-\BOOKMARK [2][-]{subsection.4.2.4}{Open-Street-Map}{section.4.2}% 23
-\BOOKMARK [0][-]{chapter.5}{Die Anforderungsanalyse}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Personas}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.2}{Funktionalit\344t}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.3}{Diagramme}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.4}{Die graphische Oberfl\344che}{chapter.5}% 28
-\BOOKMARK [0][-]{chapter.6}{Konzeption}{}% 29
-\BOOKMARK [1][-]{section.6.1}{Architektur}{chapter.6}% 30
-\BOOKMARK [2][-]{subsection.6.1.1}{Technologien}{section.6.1}% 31
-\BOOKMARK [2][-]{subsection.6.1.2}{Navigation \(bei App\)}{section.6.1}% 32
-\BOOKMARK [1][-]{section.6.2}{Das Design}{chapter.6}% 33
-\BOOKMARK [2][-]{subsection.6.2.1}{Anzeigeelemente}{section.6.2}% 34
-\BOOKMARK [1][-]{section.6.3}{Ampeldatenanfrage und Auswertung}{chapter.6}% 35
-\BOOKMARK [2][-]{subsection.6.3.1}{Sensoren}{section.6.3}% 36
-\BOOKMARK [1][-]{section.6.4}{Theorie}{chapter.6}% 37
-\BOOKMARK [2][-]{subsection.6.4.1}{Die Berechnung der Entferung}{section.6.4}% 38
-\BOOKMARK [2][-]{subsection.6.4.2}{Die Berechnung der Ankunft in Abh\344ngigkeit der Geschwindigkeit}{section.6.4}% 39
-\BOOKMARK [2][-]{subsection.6.4.3}{Die Berechnung der Dauer der Ampelphase?}{section.6.4}% 40
-\BOOKMARK [1][-]{section.6.5}{Funktionalit\344ten \205> Anforderungsanalyse?}{chapter.6}% 41
-\BOOKMARK [0][-]{chapter.7}{Der Prototyp}{}% 42
-\BOOKMARK [1][-]{subsection.7.0.1}{APIs}{chapter.7}% 43
-\BOOKMARK [2][-]{subsection.7.0.2}{Komponenten}{subsection.7.0.1}% 44
-\BOOKMARK [0][-]{chapter.8}{Evaluierung}{}% 45
-\BOOKMARK [1][-]{section.8.1}{Systemtest}{chapter.8}% 46
-\BOOKMARK [0][-]{chapter.9}{Ergebnis und Ausblick}{}% 47
-\BOOKMARK [1][-]{section.9.1}{Ampelhinweissystem}{chapter.9}% 48
-\BOOKMARK [1][-]{section.9.2}{Ausblick}{chapter.9}% 49
-\BOOKMARK [0][-]{section*.19}{Akronyme}{}% 50
-\BOOKMARK [0][-]{section*.21}{Glossar}{}% 51
-\BOOKMARK [0][-]{chapter*.22}{Abbildungsverzeichnis}{}% 52
-\BOOKMARK [0][-]{chapter*.24}{Literaturverzeichnis}{}% 53
+\BOOKMARK [2][-]{subsection.4.2.1}{Hybride App mit AngularJS + Phonegap?}{section.4.2}% 20
+\BOOKMARK [2][-]{subsection.4.2.2}{JavaScript}{section.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.2.3}{Node.js}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.4}{NoSQL Datenbank MongoDB}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.5}{Open-Street-Map}{section.4.2}% 24
+\BOOKMARK [0][-]{chapter.5}{Die Anforderungsanalyse}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Personas}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.2}{Funktionalit\344t}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.3}{Diagramme}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.4}{Die graphische Oberfl\344che}{chapter.5}% 29
+\BOOKMARK [0][-]{chapter.6}{Konzeption}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Architektur}{chapter.6}% 31
+\BOOKMARK [2][-]{subsection.6.1.1}{Technologien}{section.6.1}% 32
+\BOOKMARK [2][-]{subsection.6.1.2}{Navigation \(bei App\)}{section.6.1}% 33
+\BOOKMARK [1][-]{section.6.2}{Das Design}{chapter.6}% 34
+\BOOKMARK [2][-]{subsection.6.2.1}{Anzeigeelemente}{section.6.2}% 35
+\BOOKMARK [1][-]{section.6.3}{Ampeldatenanfrage und Auswertung}{chapter.6}% 36
+\BOOKMARK [2][-]{subsection.6.3.1}{Sensoren}{section.6.3}% 37
+\BOOKMARK [1][-]{section.6.4}{Theorie}{chapter.6}% 38
+\BOOKMARK [2][-]{subsection.6.4.1}{Die Berechnung der Entferung}{section.6.4}% 39
+\BOOKMARK [2][-]{subsection.6.4.2}{Die Berechnung der Ankunft in Abh\344ngigkeit der Geschwindigkeit}{section.6.4}% 40
+\BOOKMARK [2][-]{subsection.6.4.3}{Die Berechnung der Dauer der Ampelphase?}{section.6.4}% 41
+\BOOKMARK [1][-]{section.6.5}{Funktionalit\344ten \205> Anforderungsanalyse?}{chapter.6}% 42
+\BOOKMARK [0][-]{chapter.7}{Der Prototyp}{}% 43
+\BOOKMARK [1][-]{subsection.7.0.1}{APIs}{chapter.7}% 44
+\BOOKMARK [2][-]{subsection.7.0.2}{Komponenten}{subsection.7.0.1}% 45
+\BOOKMARK [0][-]{chapter.8}{Evaluierung}{}% 46
+\BOOKMARK [1][-]{section.8.1}{Systemtest}{chapter.8}% 47
+\BOOKMARK [0][-]{chapter.9}{Ergebnis und Ausblick}{}% 48
+\BOOKMARK [1][-]{section.9.1}{Ampelhinweissystem}{chapter.9}% 49
+\BOOKMARK [1][-]{section.9.2}{Ausblick}{chapter.9}% 50
+\BOOKMARK [0][-]{section*.20}{Akronyme}{}% 51
+\BOOKMARK [0][-]{section*.22}{Glossar}{}% 52
+\BOOKMARK [0][-]{chapter*.23}{Abbildungsverzeichnis}{}% 53
+\BOOKMARK [0][-]{chapter*.25}{Literaturverzeichnis}{}% 54

@@ -14,22 +14,47 @@ Um die ensprechende \gls{LSA} während der Grünphase zu passieren, muss letzten
 \paragraph{Reibungsloses Passieren duch Verlangsamen möglich:} Zeigt die Ampel im Moment Rot und ist die empfohlene Geschwindigkeit niedriger als die aktuelle, ist ein reibungsloses Passieren durch Verlangsamung zu erreichen.
 \textit{Umgesetzte Anzeigevariante: \textbf{grün}}
 %\subsection{Berechnung der Restrotanzeige}
+% ist aber trivial
+% -------------------------------------------------
 % TECHNISCHE GRUNDLAGEN
+% -------------------------------------------------
 \section{Technische Grundlagen}
 Im folgenden Abschnitt werden Funktionsweise und Besonderheiten der verwendeten Technologien beschrieben.
-\subsection{Android-App}
+% ANGULAR
+\subsection{Hybride App mit AngularJS + Phonegap?}
+% JavaScript
+\subsection{JavaScript}
+% NODEJS
+\subsection{\label{Node.js}Node.js}
+Node.js ist ein Framework zur Entwicklung serverseitiger Netzwerkanwendungen und basiert auf dem JavaScript Interpreter V8 des Chrome Browsers -- verfügt daher über eine überaus hohe Performance. Darüber hinaus können durch die fundamentalen Konzepte Streaming und Websockets\footnote{hiuhdsiuqw} echtzeitfähige Webanwendungen entwickelt werden\footnote{\cite{nodeCo} S. 7}. \\\\
+Eine Besonderheit stellt die Handhabung von Threads in Node.js dar:
+Anders als bei klassische Webservern, deren Threads die meiste Zeit mit Warten auf die Beendigung einer I/O-Operation beschäftigt sind, verwendet Node.js hierfür eine interne Threadimplementierung, die sogenannte Event-Loop. 
+\begin{figure}[H]
+ \centering
+    \includegraphics[width=0.7\textwidth]{eventloop}
+\caption[Node.js Event-Loop]{Node.js Event-Loop Quelle: \cite{nodeWay} S. 3}
+\label{fig:Nodejs_eventloop}
+\end{figure}
+Der Begriff "'Event-Loop"' in Node.js impliziert die asynchrone Ausführung von unter anderem I/O-Operationen, die Verwaltung der Callback-Funktionen, welche beim Aufruf dieser Operationen übergeben werden und den Aufruf einer Callback-Funktion, sobald das Ergebnis der Operation vorliegt\footnote{\cite{nodeCo} S. 11f}.
+\begin{quote}
+"' Node simply enters the event loop after executing the input script. Node exits the event loop when there are no more callbacks to perform."' (\cite{node})
+\end{quote}
+
+Neben den Modulen die dazu dienen Algorithmen und Funktionalitäten zu bündeln, gibt es auch Frameworks die genutzt werden können, um Webanwendungen zu entwickeln. 
+
+Mit dem minimal gehaltenen Framework, lassen sich Funktionalitäten schnell ergänzen oder gar ersetzen. Eine Charaktereigenschaft ist vor allem der Einsatz sogenannter \textit{Middlewares}. Diese dienen den Entwicklern Funktionalitäten, die sich auf den HTTP Request-Response Zyklus beziehen, zu kapseln. Dies bedeutet, dass man über Middlewares, Zugriff auf das Request und Response Objekt hat. Des Weiteren kann im Anschluss die unmittelbar folgende Middleware aufgerufen werden. Unter dem Einsatz von Middlewares und anderer Bestandteile des Express-Frameworks lassen sich so mit wenig Aufwand \gls{REST}-\glspl{API} entwerfen.
+
 % MONGODB NOSQL
 \subsection{NoSQL Datenbank MongoDB}
 Eine inzwischen weit verbreitete Alternative zu \gls{SQL} Datenbanken sind die \gls{NoSQL} Datenbanken. MongoDB\footnote{ Namensherkunft: hu\textbf{mongo}us, dt.: 'riesig', 'enorm', 'gigantisch'} ist eine dokumentenorientierte Open Sourche Datenbanktechnologie und eigener Aussage zufolge derzeit "'the leading NoSQL Database..."' (\cite{mongodb}). \\
-Eine dokumentenorientierte \gls{NoSQL}-Datenbank übernimmt beispielsweise die Daten, die gespeichert werden sollen und aggregiert sie in Dokumente im \gls{JSON}-Format, welches wiederum als Objekt betrachtet werden kann. Dieser Ansatz ermöglicht es in einem einzigen Datensatz komplexe hierarchische Beziehungen darzustellen. Dadurch können die Dokumente effizienter und einfacher verteilt werden und der Lese-und Schreibzugriff wird performanter. Während also relationale Datenbanksysteme auf Tabellen aufbauen, basiert MongoDB auf sogenannten Collections, einer Menge von Dokumenten\footnote{Vgl. \cite{mongoDef} S. 7}. Das Datenformat für Dokumente in MongoDB ist BSON (Binaray JSON), eine Erweiterung von \gls{JSON} um einige binäre Typen. Zu den unterstützten Datentypen gehören also neben \textit{Strings}, \textit{Numbers}, \textit{Objects}, \textit{Arrays}, \textit{Null}, \textit{Boolean} auch \textit{Date} Objekte, \textit{Reguläre Ausdrücke}, \textit{ObjectIDs} und \textit{eingebettete Dokumente}\footnote{Vgl. \cite{mongoDef} S. 17ff}. Ein Dokument könnte demnach so aussehen: \\
+Eine dokumentenorientierte \gls{NoSQL}-Datenbank übernimmt beispielsweise die Daten, die gespeichert werden sollen und aggregiert sie in Dokumente im \gls{JSON}-Format, welches wiederum als Objekt betrachtet werden kann. Dieser Ansatz ermöglicht es in einem einzigen Datensatz komplexe hierarchische Beziehungen darzustellen. Dadurch können die Dokumente effizienter und einfacher verteilt werden und der Lese-und Schreibzugriff wird performanter. Während also relationale Datenbanksysteme auf Tabellen aufbauen, basiert MongoDB auf sogenannten Collections, einer Menge von Dokumenten\footnote{ \cite{mongoDef} S. 7}. Das Datenformat für Dokumente in MongoDB ist BSON (Binaray JSON), eine Erweiterung von \gls{JSON} um einige binäre Typen. Zu den unterstützten Datentypen gehören also neben \textit{Strings}, \textit{Numbers}, \textit{Objects}, \textit{Arrays}, \textit{Null}, \textit{Boolean} auch \textit{Date} Objekte, \textit{Reguläre Ausdrücke}, \textit{ObjectIDs} und \textit{eingebettete Dokumente}\footnote{\cite{mongoDef} S. 17ff}. Ein Dokument könnte demnach so aussehen: \\
 \lstinputlisting
 	[caption={Ein MongoDB Dokument}
 	\label{code:mongo}, captionpos=b, language=XML]{code/mongoDoc.js}
-%\end{lstlisting}
 In relationalen Datenbanken haben Entitäten ein striktes Schema, was bedeutet dass alle Reihen einer Tabelle die selben Spalten besitzen muss. In MongoDB gibt es keine vordefinierten Schemata: Schlüssel und Werte eines Dokuments sind nicht von festen Typen oder Größen. Ohne festes Schema ist das Hinzufügen oder Entfernen von Feldern jederzeit möglich ohne die Anwendung zu beeinträchtigen.\\
 \textbf{\large TODO: mongoose auch?}
-\subsubsection*{Mobile Sensing}
-\textit{Der Beschleunigungssensor ist ein Hardwaresensor, der dazu benutzt wird, Position, Bewegung, Neigung, Erschütterung, Vibration und natürlich Beschleunigung des Gerätes zu messen.Es gibt bis zu 3-Achsen Beschleunigungssensoren, die meistens zum Erkennen der Ausrichtung des \glspl{Smartphone} genutzt werden und somit das Display beim Anschauen von Bildern, Webbrowsern oder Musikplayern in die passende Richtung vom Portrait-Modus (senkrecht) zum Landscape-Modus (waagrecht) zu drehen. In Kombination mit \gls{GPS} kann das \gls{Smartphone} dank ihm sogar erkennen, welche Art Transportmittel (Fahrrad, Bus, U-Bahn) der Nutzer gerade benutzt und bestimmte Muster wie z.B. Rennen, Gehen oder Stehen unterscheiden.\\
+stellt einen objektrelationalen Mapper einschließlich einer anpass und erweiterbaren middleware zur verfügung
+% BLABLABLA
+\subsubsection*{Mobile Sensing} \textit{Der Beschleunigungssensor ist ein Hardwaresensor, der dazu benutzt wird, Position, Bewegung, Neigung, Erschütterung, Vibration und natürlich Beschleunigung des Gerätes zu messen.Es gibt bis zu 3-Achsen Beschleunigungssensoren, die meistens zum Erkennen der Ausrichtung des \glspl{Smartphone} genutzt werden und somit das Display beim Anschauen von Bildern, Webbrowsern oder Musikplayern in die passende Richtung vom Portrait-Modus (senkrecht) zum Landscape-Modus (waagrecht) zu drehen. In Kombination mit \gls{GPS} kann das \gls{Smartphone} dank ihm sogar erkennen, welche Art Transportmittel (Fahrrad, Bus, U-Bahn) der Nutzer gerade benutzt und bestimmte Muster wie z.B. Rennen, Gehen oder Stehen unterscheiden.\\
 \gls{GPS} erlaubt dem \gls{Smartphone} sich selber zu lokalisieren und den exakten Standpunkt auf der Erde zu bestimmen. Es hilft locationbased\footnote{ ortsgebunden} \Glspl{App} wie z.B Navigation, lokale Suche nach Shops, Restaurants etc. oder soziale Netzwerke wie Facebook oder Foursquare nötige Informationen zu ermitteln. Der Kompass erweitert die Möglichkeiten der Lokalisationsermittlung eines \gls{Smartphone}s. Er bestimmt den Winkel des Geräts relativ zum Nordpol der Erde. Der Kompass besitzt einen Magnet, der mit dem magnetischen Feld der Erde interagiert und sich entsprechend zu einem der Pole ausrichtet. Zusammen mit dem Gyroskop Sensor verbessern \gls{GPS} und Kompass die Präzision von locationbased Applikationen.Der Gyroskop Sensor bestimmt die Rotations- und Drehgeschwindigkeit des \gls{Smartphone}s auf seinen drei Achsen gegenüber dem Weltkoordinatensystem.}
-\subsection{Backend mit nodejs / socket.io und MongoDB}
 \subsection{Open-Street-Map}

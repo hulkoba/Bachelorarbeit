@@ -8,7 +8,7 @@ abstracton,
 \usepackage[utf8]{inputenc} % Umlaute für linux
 \usepackage[english, ngerman]{babel}
 \usepackage{lmodern}	 %Type1-Schriftart fuer nicht-englische Texte
-%\usepackage{listings} %dient der Darstellung von Quellcode
+\usepackage{listings} %dient der Darstellung von Quellcode
 %\usepackage{minted}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -26,6 +26,7 @@ abstracton,
 \usepackage[pdfborder={ 0 0 0 }, breaklinks]{hyperref} % bricht links und macht die umrandung weiß
 \usepackage{enumitem}
 \usepackage{xspace} % setzt Leerzeichen, wenn welche hingehören 
+\usepackage{scrhack} %The package scrhack redefines macros of other packages. It should be loaded at the very end
 \linespread {1.25}\selectfont
 \usepackage[ngerman]{translator}
 \usepackage[
@@ -43,7 +44,37 @@ toc]            %Einträge im Inhaltsverzeichnis
 \addtokomafont{subsubsection}{\scshape \mdseries}
 \setlength{\parindent}{0pt}  % keine Einrückungen nach Absätzen
 
-\usepackage{scrhack} %The package scrhack redefines macros of other packages. It should be loaded at the very end
+%------------------------------------------------------------------------
+% CODE
+%------------------------------------------------------------------------
+ \lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  sensitive=true
+}
+\lstset{
+   basicstyle=\scriptsize\ttfamily,
+   keywordstyle=\bfseries\ttfamily\color{orange},
+   stringstyle=\color{purple}\ttfamily,
+   commentstyle=\color{middlegray}\ttfamily,
+   emph={square}, 
+   emphstyle=\color{blue}\texttt,
+   emph={[2]root,base},
+   emphstyle={[2]\color{yac}\texttt},
+   showstringspaces=false,
+   flexiblecolumns=false,
+   tabsize=4,
+   numbers=left,
+   numberstyle=\tiny,
+   numberblanklines=false,
+   stepnumber=1,
+   numbersep=10pt,
+   xleftmargin=15pt
+ }
+
 %------------------------------------------------------------------------
 % DOKUMENT
 %------------------------------------------------------------------------
@@ -57,8 +88,8 @@ toc]            %Einträge im Inhaltsverzeichnis
 %
 %Inhaltsverzeichnis
 %
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
 \renewcommand{\contentsname}{Inhalt} %Inhaltsverzeichnistitel = Inhalt
 \tableofcontents 		
 
@@ -90,6 +121,8 @@ toc]            %Einträge im Inhaltsverzeichnis
 \clearpage
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
 \listoffigures
+ \renewcommand\lstlistlistingname{Quellcodeverzeichnis} %Inhaltsverzeichnistitel = Inhalt
+\lstlistoflistings%quellcodeverzeichnis
 % Literaturverzeichnis
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 %\nocite{*} 		%Auch nicht-zitierte BibTeX-Eintraege werden angezeigt.

@@ -110,6 +110,19 @@
 \newblock Berlin bekommt zweite grüne Welle für Radler.
 \newblock {In: }\emph{Berliner Zeitung}  (2014), September
 
+\bibitem[nod]{node}
+\emph{node.js}.
+\newblock \url{http://nodejs.org/}, . --
+\newblock Zugriff: 06.01.2015
+
+\bibitem[Rod12]{nodeCo}
+\textsc{Roden}, Golo:
+\newblock \emph{Node.js und Co. Skalierbare, hochperformante und
+  echtzeitfähige Webanwendungen professionell in JavaScript entwickeln}.
+\newblock iX.
+\newblock Heidelberg : dpunkt.verlag GmbH, 2012. --
+\newblock ISBN 978--3--89864--829--5
+
 \bibitem[Sch14]{KopIng}
 \textsc{Schoenebeck}, Gudrun von:
 \newblock \emph{Kopenhagen verwöhnt Radfahrer mit Grünen Wellen}.
@@ -150,6 +163,13 @@
 \emph{Vanhawks}.
 \newblock \url{https://www.vanhawks.com/}, . --
 \newblock Zugriff: 28.12.2014
+
+\bibitem[Wil13]{nodeWay}
+\textsc{Wilson}, Jim~R.:
+\newblock \emph{Node.js the Right Way Praktical, Server-Side JavaScript That
+  Scales}.
+\newblock Dallas and Raleigh : The Pragmatic Bookshelf, 2013. --
+\newblock ISBN 978--1--937785--73--4
 
 \bibitem[Zim84]{Welle}
 \textsc{Zimdahl}, Walter:
