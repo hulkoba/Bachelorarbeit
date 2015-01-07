@@ -1,7 +1,7 @@
 This is makeindex, version 2.15 [TeX Live 2012] (kpathsea + Thai support).
 Scanning style file ./Bachelorarbeit.ist...........................done (27 attributes redefined, 0 ignored).
-Scanning input file Bachelorarbeit.glo....done (35 entries accepted, 0 rejected).
-Sorting entries....done (197 comparisons).
-Generating output file Bachelorarbeit.gls....done (20 lines written, 0 warnings).
+Scanning input file Bachelorarbeit.glo....done (41 entries accepted, 0 rejected).
+Sorting entries....done (255 comparisons).
+Generating output file Bachelorarbeit.gls....done (24 lines written, 0 warnings).
 Output written in Bachelorarbeit.gls.
 Transcript written in Bachelorarbeit.glg.

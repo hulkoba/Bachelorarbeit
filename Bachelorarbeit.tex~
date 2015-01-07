@@ -71,7 +71,7 @@ toc]            %Einträge im Inhaltsverzeichnis
    numberstyle=\tiny,
    numberblanklines=false,
    stepnumber=1,
-   numbersep=10pt,
+   numbersep=5pt,
    xleftmargin=15pt
  }
 
