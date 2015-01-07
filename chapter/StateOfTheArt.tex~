@@ -100,7 +100,7 @@ Auf der Mailänder Designwoche hat Samsung ein Smartbike vorgestellt, das mit ve
 Natürlich ist auch dieses Fahrrad mit dem \gls{Smartphone} verbunden, das sich dank eines Magneten einfach am Lenker anbringen lässt. Darüber kann man die Laserprojektoren ein- und ausschalten, dafür einen Timer bestimmen und über die eingebaute Kamera unter dem Sattel den Verkehr hinter sich im Auge behalten. Das \gls{Smartphone} fungiert außerdem als Navigationsgerät und durch den eingebauten \gls{GPS}-Empfänger lassen eigene und Routen von anderen Nutzern speichern und intelligent verarbeiten\cite{smartbike}. Wenn also viele Menschen mit einem Samsung Smartbike unterwegs sind, erkennt das Rad die Route als angenehm und navigiert dort entlang. 
 \subsection{Der COBI Fahrradcomputer}
 Ein Kickstarterprojekt aus Frankfurt am Main entwickelt das System \textsc{COBI} (Connected Biking), das alle standardisierten Fahrradsysteme wie Lampen, Navigation, Tachometer etc. vereinen soll. \textsc{COBI} ist ein Modul mit inegrierter Frontleuchte in das man das \gls{Smartphone}, welches dann mit der installierten \textsc{COBI}-\Gls{App} als Fahhradcomputer dient, legt. Durch eine wasser- und stoßfeste Hülle ist es vor Umwelteinflüssen geschützt. Zu dem Lenkersystem gibt es auch Rückstrahler die beim Bremsen intensiver leuchten und eine Blinkfunktion haben.
-\begin{figure}
+\begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{COBI_01}
@@ -121,4 +121,4 @@ Möchte man das \gls{Smartphone} trotzdem nicht am Lenker haben, bleibt die Verb
 Das Projekt ist bereits voll finanziert und der Versand der vorbestellten Systeme beginnt vorrausichtlich im Frühjahr 2015\cite{cobi}.
 %%% ERGIBNIS %%%
 \section{Analyseergebnis}
-Diese Beispiele zeigen deutlich, dass sowohl die Nachfrage nach Ampelassistenten -- mobil oder statisch -- als auch an Fahrraderweiterungen steigt und auf dem Markt Anklang findet. Auch die EntwicklerInnen solcher Systeme werden kreativer, wodurch immer mehr Produkte mit erweiterten Funktionen entstehen. Das begeistert wiederum mehr Menschen für das Radfahren und so ist der Verkehr flüssiger, die Teilnehmer entspannter, die Luft sauberer. AutofahrerInnen sind schon lange nicht mehr allein auf der Straße und so gilt es, dieses erfolgreiche Konzept für alle VerkehrsteilnehmerInnen zu erweitern.
+Diese Beispiele zeigen deutlich, dass sowohl die Nachfrage nach Ampelassistenten als auch an Fahrraderweiterungen steigt und auf dem Markt Anklang findet. Auch die EntwicklerInnen solcher Systeme werden kreativer, wodurch immer mehr Produkte mit erweiterten Funktionen entstehen. Das begeistert wiederum mehr Menschen für das Radfahren und so ist der Verkehr flüssiger, die Teilnehmer entspannter, die Luft sauberer. AutofahrerInnen sind schon lange nicht mehr allein auf der Straße und so gilt es, dieses erfolgreiche Konzept für alle VerkehrsteilnehmerInnen zu erweitern.
