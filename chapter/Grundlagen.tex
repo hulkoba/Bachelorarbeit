@@ -39,13 +39,8 @@ Der Begriff "'Event-Loop"' in Node.js impliziert die asynchrone Ausführung von 
 \begin{quote}
 "' Node simply enters the event loop after executing the input script. Node exits the event loop when there are no more callbacks to perform."' (\cite{node})
 \end{quote}
-Um die Fähigkeiten von Node.js zu steigern, können Module ergänzt werden. Einige, wie zum Beispiel das \textit{http}-Modul in dem Funktionen zum Implementieren von Webservern und -clients enthalten sind, sind bereits in der Standardinstallation enthalten. Andere können selbst entwickelt oder aus dem Internet heruntergeladen werden.
-
-
- 
-
-Mit dem minimal gehaltenen Framework, lassen sich Funktionalitäten schnell ergänzen oder gar ersetzen. Eine Charaktereigenschaft ist vor allem der Einsatz sogenannter \textit{Middlewares}. Diese dienen den Entwicklern Funktionalitäten, die sich auf den HTTP Request-Response Zyklus beziehen, zu kapseln. Dies bedeutet, dass man über Middlewares, Zugriff auf das Request und Response Objekt hat. Des Weiteren kann im Anschluss die unmittelbar folgende Middleware aufgerufen werden. Unter dem Einsatz von Middlewares und anderer Bestandteile des Express-Frameworks lassen sich so mit wenig Aufwand \gls{RESTg}-\glspl{API} entwerfen.
-
+Um die Fähigkeiten von Node.js zu steigern, können Module ergänzt werden. Einige, wie zum Beispiel das \textit{http}-Modul in dem Funktionen zur Implementierung von Webservern enthalten sind, sind bereits in der Standardinstallation enthalten. 
+Eine weitere Eigenschaft ist der Einsatz sogenannter \textit{Middlewares}. Diese dienen der Kapselung von eingehenden Requests und der verarbeitenden Webanwendung. So durchläuft die Anfrage erst jedes einzelne Modul\footnote{zum Beispiel Internationalisierung und Authentifizierung} der Middleware bevor sie die Webanwendung erreicht\footnote{\cite{nodeCo} S. 145ff}. Unter dem Einsatz von Middlewares und anderer Bestandteile lassen sich mit wenig Aufwand \gls{RESTg}-\glspl{API} entwerfen.
 % MONGODB NOSQL
 \subsection{NoSQL Datenbank MongoDB}
 Eine inzwischen weit verbreitete Alternative zu \gls{SQL} Datenbanken sind die \gls{NoSQL} Datenbanken. MongoDB\footnote{ Namensherkunft: hu\textbf{mongo}us, dt.: 'riesig', 'enorm', 'gigantisch'} ist eine dokumentenorientierte Open Sourche Datenbanktechnologie und eigener Aussage zufolge derzeit "'the leading NoSQL Database..."' (\cite{mongodb}). \\
