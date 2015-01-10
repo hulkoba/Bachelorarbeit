@@ -2,15 +2,11 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{A}\relax \glsresetentrylist %
 \glossaryentryfield{API}{\glsnamefont{API}}{Application Programming Interface}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{19}}}%
+		\setentrycounter[]{page}\glsnumberformat{28}}}%
 \glossaryentryfield{App}{\glsnamefont{App}}{Applikation}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{6\delimN 7}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{11}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{14\delimN 15}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{20}}}\glsgroupskip
-\glsgroupheading{B}\relax \glsresetentrylist %
-\glossaryentryfield{BMW}{\glsnamefont{BMW}}{Bayerische Motoren Werke}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{10}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{14\delimN 15}}}\glsgroupskip
 \glsgroupheading{C}\relax \glsresetentrylist %
 \glossaryentryfield{C2I}{\glsnamefont{C2X}}{Car-to-Infrastructure oder Vehicle-to-Infrastructure}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{8}\delimN 
@@ -21,46 +17,36 @@
 \glsgroupheading{D}\relax \glsresetentrylist %
 \glossaryentryfield{DSRC}{\glsnamefont{DSRC}}{Dedicated Short Range Communication}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{11}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{29}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{28}\delimN 
 		\glsseeformat[Glossary:]{DSRCg}{Z}}}\glsgroupskip
 \glsgroupheading{G}\relax \glsresetentrylist %
 \glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{10\delimR 13}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{10\delimN 11}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{13}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{15}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{20}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{29}}}\glsgroupskip
-\glsgroupheading{J}\relax \glsresetentrylist %
-\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{19}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{18}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{28}}}\glsgroupskip
 \glsgroupheading{L}\relax \glsresetentrylist %
 \glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{12\delimN 13}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{15\delimN 16}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{30}}}%
+		\setentrycounter[]{page}\glsnumberformat{16}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{29}}}%
 \glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{5}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{8}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{11}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{17}}}\glsgroupskip
-\glsgroupheading{M}\relax \glsresetentrylist %
-\glossaryentryfield{MIT}{\glsnamefont{MIT}}{Massachusetts Institute of Technology}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{11}}}\glsgroupskip
-\glsgroupheading{N}\relax \glsresetentrylist %
-\glossaryentryfield{NoSQL}{\glsnamefont{NoSQL}}{Not only \gls {SQL}}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{19}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{18}}}\glsgroupskip
 \glsgroupheading{R}\relax \glsresetentrylist %
 \glossaryentryfield{REST}{\glsnamefont{REST}}{REpresentational State Transfer}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{28}\delimN 
 		\glsseeformat[Glossary:]{RESTg}{Z}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossaryentryfield{SQL}{\glsnamefont{SQL}}{Structured Query Language}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{19}}}\glsgroupskip
-\glsgroupheading{V}\relax \glsresetentrylist %
-\glossaryentryfield{VW}{\glsnamefont{VW}}{Volkswagen}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{8}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{27}}}\glsgroupskip
 \glsgroupheading{W}\relax \glsresetentrylist %
 \glossaryentryfield{WLAN}{\glsnamefont{WLAN}}{Wireless Local Area Network}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{8}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{15}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{29}}}%
+		\setentrycounter[]{page}\glsnumberformat{28}}}%
 \end{theglossary}\glossarypostamble

@@ -14,11 +14,11 @@
 		\setentrycounter[]{page}\glsnumberformat{11}}}\glsgroupskip
 \glsgroupheading{R}\relax \glsresetentrylist %
 \glossaryentryfield{RESTg}{\glsnamefont{REST}}{beschreibt eine zustandslose Verbindung. Web-Dienste, welche alle nötigen Anforderungen besitzen, können als \gls {REST}ful beschrieben werden. \gls {REST} \glspl {API} stellen also eine einheitliche uniforme Schnittstelle dar. Durch die HTTP-Operationen \textsc {GET},\textsc {POST},\textsc {PUT} und \textsc {DELETE}, können alle CRUD-Methoden (Create, Read, Update, Delete) abgebildet werden und so beispielsweise Datenbankzugriffe gesteuert werden}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{19}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{28}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossaryentryfield{Smartphone}{\glsnamefont{Smartphone}}{ Mobiltelefon, das sich von einem klassischen Mobiltelefon durch einen größeren berührungsempfindlichen Bildschirm (Touchscreen) und diverse Sensoren, wie dem \gls {GPS} unterscheidet. So ist eine Interaktion mit der Umgebung und den AnwenderInnen möglich}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{5}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{9\delimR 16}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{20}}}%
+		\setentrycounter[]{page}\glsnumberformat{18}}}%
 \end{theglossary}\glossarypostamble
