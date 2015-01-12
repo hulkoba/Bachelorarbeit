@@ -1,22 +1,20 @@
 \select@language {ngerman}
-\select@language {ngerman}
-\select@language {english}
-\select@language {ngerman}
-\select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Gr\IeC {\"u}ne Welle durch \glspl {LED}}}{7}{figure.caption.2}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Projekt Travolution}}{9}{figure.caption.3}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Projekt Kolibri}}{9}{figure.caption.4}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Projekt Testfeld-Telematik Ampelinformation}}{10}{figure.caption.5}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Signal Guru}}{11}{figure.caption.6}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Hammerhead}}{12}{figure.caption.7}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Helios-Lenker}}{12}{figure.caption.8}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Samsung Smart Bike}}{13}{figure.caption.9}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces COBI}}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Gr\IeC {\"u}ne Welle durch \glspl {LED}}}{6}{figure.caption.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Projekt Travolution}}{8}{figure.caption.3}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Projekt Kolibri}}{8}{figure.caption.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Projekt Testfeld-Telematik Ampelinformation}}{9}{figure.caption.5}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Signal Guru}}{10}{figure.caption.6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Hammerhead}}{11}{figure.caption.7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Helios-Lenker}}{11}{figure.caption.8}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Samsung Smart Bike}}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces COBI}}{13}{figure.caption.10}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Node.js Event-Loop}}{18}{figure.caption.15}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Szenarien}}{16}{figure.caption.11}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Berechnung Progressionsgeschwindigkeit}}{20}{figure.caption.26}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
