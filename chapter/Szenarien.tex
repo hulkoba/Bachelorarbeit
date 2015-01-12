@@ -6,10 +6,16 @@ Alle in Kapitel \ref{chap:state} angeführten Studien zu Ampelinformationssystem
     \caption[Szenarien]{Szenarien im Ampelbereich}
     \label{fig:szenarien}
 \end{figure}
-
-\paragraph{Szenario 1:} Die Ampelschaltung erlaubt momentan kein reibungsloses Passieren. 
-\paragraph{Szenario 2:} Konstante Weiterfahrt möglich Ist die empfohlene Geschwindigkeit gleich der aktuellen, ist ein reibungsloses Passieren bei beibehaltenem Tempo möglich. Es besteht kein Handlungsbedarf. 
-\paragraph{Szenario 3:} Reibungsloses Passieren durch Beschleunigung möglich Zeigt die Ampel im Moment Grün und ist die empfohlene Geschwindigkeit höher als die aktuelle, ist ein reibungsloses Passieren durch Beschleunigung zu erreichen. Bei der Anzeige der Progressionsgeschwindigkeit ist selbstverständlich die geltende Höchstgeschwindigkeitsbegrenzung zu beachten. 
-\paragraph{Szenario 4:} Reibungsloses Passieren duch Verlangsamen möglich Zeigt die Ampel im Moment Rot und ist die empfohlene Geschwindigkeit niedriger als die aktuelle, ist ein reibungsloses Passieren durch Verlangsamung zu erreichen.
-\paragraph{Szenario 5:} Reibungsloses Passieren durch Beschleunigung möglich Zeigt die Ampel im Moment Grün und ist die empfohlene Geschwindigkeit höher als die aktuelle, ist ein reibungsloses Passieren durch Beschleunigung zu erreichen. Bei der Anzeige der Progressionsgeschwindigkeit ist selbstverständlich die geltende Höchstgeschwindigkeitsbegrenzung zu beachten. 
-\paragraph{Szenario 6:} Reibungsloses Passieren duch Verlangsamen möglich Zeigt die Ampel im Moment Rot und ist die empfohlene Geschwindigkeit niedriger als die aktuelle, ist ein reibungsloses Passieren durch Verlangsamung zu erreichen.
+\begin{description}[leftmargin=0.7cm,style=nextline]
+\item[Szenario R1:] 
+Zeigt die Ampel im Moment auf Rot, jedoch mit einer langen Restrotzeit. Je nach Distanz zwischen Ampel und Fahrrad ist ein reibungsloses Passieren der Ampel durch Beschleunigung oder ohne Änderung der Geschwindigkeit zu erreichen.\\
+\item[Szenario R2:] 
+Die Ampel zeigt im Moment auf Rot, aber nicht mehr lang (kurze Restrotzeit). Auch hier gilt: Je nach Entfernung zwischen Fahrrad und \gls{LSA}, ist ein reibungsloses Passieren der Ampel durch Verlangsamung oder ohne Änderung des Tempos zu erreichen.\\
+\item[Szenario R3:] 
+Zeigt die Ampel im Moment Rot, die Restrotzeit ist lang, doch die Entfernung zwischen Fahrrad und \gls{LSA} hoch, so ist keine Weiterfahrt ohne Unterbrechung möglich.\\
+\item[Szenario G1:] Ist die empfohlene Geschwindigkeit gleich der aktuellen, ist ein reibungsloses Passieren bei beibehaltenem Tempo möglich. Es besteht kein Aktionsbedarf.\\
+\item[Szenario G2:] 
+Zeigt die Ampel im Moment Grün und ist die empfohlene Geschwindigkeit höher als die aktuelle, ist ein reibungsloses Passieren durch Beschleunigung zu erreichen. Bei der Anzeige der Progressionsgeschwindigkeit ist selbstverständlich die geltende Höchstgeschwindigkeitsbegrenzung oder die eingestellte Höchsteschwindigkeit zu beachten.\\ 
+\item[Szenario G3:] 
+Zeigt die Ampel im Moment Grün und ist die empfohlene Geschwindigkeit höher als die aktuelle und gleichzeitig auch höher als die zugelassene, bzw. eingestellte Höchstgeschwindigkeit, ist die Distanz zur Ampel zu groß und ein reibungsloses Passieren nicht möglich.
+\end{description}
