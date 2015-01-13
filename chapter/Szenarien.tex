@@ -10,7 +10,7 @@ Alle in Kapitel \ref{chap:state} angeführten Studien zu Ampelinformationssystem
 \item[Szenario R1:] 
 Zeigt die Ampel im Moment und noch eine ganze Weile auf Rot ist je nach Distanz zwischen Ampel und Fahrrad ist ein reibungsloses Passieren der Ampel durch Beschleunigung oder ohne Änderung der Geschwindigkeit zu erreichen.\\
 \item[Szenario R2:] 
-Die Ampel zeigt im Moment auf Rot, aber die Restrotzeit ist kurz. Auch hier gilt: Je nach Entfernung zwischen Fahrrad und \gls{LSA}, ist ein reibungsloses Passieren der Ampel durch Verlangsamung oder ohne Änderung des Tempos zu erreichen.\\
+Die Ampel zeigt im Moment auf Rot, aber die Restrotzeit ist kurz. Auch hier gilt: Je nach Entfernung zwischen Fahrrad und \gls{LSA}, ist ein reibungsloses Passieren der Ampel durch Verzögerung oder ohne Änderung des Tempos zu erreichen.\\
 \item[Szenario R3:] 
 Zeigt die Ampel im Moment Rot, die Restrotzeit ist lang, doch die Entfernung zwischen Fahrrad und \gls{LSA} hoch, so ist keine Weiterfahrt ohne Unterbrechung möglich.\\
 \item[Szenario G1:] Ist die empfohlene Geschwindigkeit gleich der aktuellen, ist ein reibungsloses Passieren bei beibehaltenem Tempo möglich. Es besteht kein Aktionsbedarf.\\
@@ -20,4 +20,10 @@ Zeigt die Ampel im Moment Grün und ist die empfohlene Geschwindigkeit höher al
 Zeigt die Ampel im Moment Grün und ist die empfohlene Geschwindigkeit höher als die aktuelle und gleichzeitig auch höher als die zugelassene, bzw. eingestellte Höchstgeschwindigkeit, ist die Distanz zur Ampel zu groß und ein reibungsloses Passieren nicht möglich.
 \end{description}
 Resultierend aus den Szenarien im Ampelbereich ergeben sich die folgenden Systemzustände.
-Weiterfahrt ohne Aktion möglich, Weiterfahrt durch Beschleunigung möglich, Weiterfahrt duch Verlangsamung möglich und keine Weiterfahrt ohne Unterbrechung möglich. Im weiteren Verlauf wird beschrieben wie diese Systemzustände in ein Designkonzept eingebunden werden.
+\begin{itemize}
+	\item Zustand a: Weiterfahrt durch Verlangsamung möglich
+	\item Zustand b: Weiterfahrt durch Beschleunigung möglich
+	\item Zustand c: Kein Aktionsbedarf
+	\item Zustand d: Keine Weiterfahrt ohne Unterbrechung möglich
+\end{itemize}
+Im weiteren Verlauf wird unter anderem beschrieben wie diese Systemzustände in den Designprozess eingebunden werden.
