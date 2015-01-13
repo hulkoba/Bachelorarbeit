@@ -1,21 +1,6 @@
 \chapter{\label{chap:grundlagen}Grundlagen}
 Dieses Kapitel befasst sich mit sowohl den mathematischen als auch den technischen Grundlagen der zu behandelnden Thematik, welche für das weitere Verständnis der Arbeit beitragen.
 % -------------------------------------------------
-% MATHEMATISCHE GRUNDLAGEN
-% -------------------------------------------------
-\section{\label{sec:mathGrundlagen}Berechnung der Geschwindigkeitsempfehlung}
-Präsentiert das System während der Anwendung eine Geschwindigkeitsempfehlung, ist diese abhängig von der Fahrtgeschwindigkeit und vom Abstand zur Ampel. Angenommen die Progressionsgeschwindigkeit $v$ wird zum Zeitpunkt $t_{1}$ ermittelt, die \gls {LSA} schaltet zum Zeitpunt $t_{2}$ auf Rot und Abstand zur Ampel beträgt $s$, dann gilt: \\
-\[ v = \frac{s}{t_{2} - t_{1}} \] \\
-Der Abstand zur Ampel wird also durch die verbleibende Zeit dividiert. 
-Die von der Berliner Verkehrsleitzentrale zur Verfügung gestellten Ampelschaltpläne und Position der angesteuerten Ampel dienen als Grundlage dieser Berechnung und sind aus der Datenbank zu holen. Die aktuelle Position des Fahrrads wird vom \gls{GPS} Sensor des \glspl{Smartphone} ermittelt und daraus der Abstand zur Ampel errechnet. Die Abbildung \ref{fig:vst} soll die Berechnungsgrundlagen veranschaulichen: 
-\begin{figure}[H]  
-    \centering  
-    \includegraphics[width=1\textwidth]{vst}     
-    \caption[Berechnung Progressionsgeschwindigkeit]{Veranschaulichung der Berechnung}
-    \label{fig:vst}
-\end{figure}
-Um die ensprechende \gls{LSA} während der Grünphase zu passieren, muss letztendlich die empfohlene Geschwindigkeit $v$ eingehalten werden.
-% -------------------------------------------------
 % TECHNISCHE GRUNDLAGEN
 % -------------------------------------------------
 \section{\label{sec:technGrundlagen}Technische Grundlagen}
@@ -48,3 +33,19 @@ Die Folgende Abbildung zeige einen Überblick über die komplexe Androis-Systema
 \subsubsection{Geolokation mittels \gls{GPS}}
 \subsubsection{G-Sensor}
 Blabla Beschleunigungssensor...
+\clearpage
+% -------------------------------------------------
+% MATHEMATISCHE GRUNDLAGEN
+% -------------------------------------------------
+\section{\label{sec:mathGrundlagen}Berechnung der Geschwindigkeitsempfehlung}
+Präsentiert das System während der Anwendung eine Geschwindigkeitsempfehlung, ist diese abhängig von der Fahrtgeschwindigkeit und vom Abstand zur Ampel. Angenommen die Progressionsgeschwindigkeit $v$ wird zum Zeitpunkt $t_{1}$ ermittelt, die \gls {LSA} schaltet zum Zeitpunt $t_{2}$ auf Rot und Abstand zur Ampel beträgt $s$, dann gilt: \\
+\[ v = \frac{s}{t_{2} - t_{1}} \] \\
+Der Abstand zur Ampel wird also durch die verbleibende Zeit dividiert. 
+Die von der Berliner Verkehrsleitzentrale zur Verfügung gestellten Ampelschaltpläne und Position der angesteuerten Ampel dienen als Grundlage dieser Berechnung und sind aus der Datenbank zu holen. Die aktuelle Position des Fahrrads wird vom \gls{GPS} Sensor des \glspl{Smartphone} ermittelt und daraus der Abstand zur Ampel errechnet. Die Abbildung \ref{fig:vst} soll die Berechnungsgrundlagen veranschaulichen: 
+\begin{figure}[H]  
+    \centering  
+    \includegraphics[width=1\textwidth]{vst}     
+    \caption[Berechnung Progressionsgeschwindigkeit]{Veranschaulichung der Berechnung}
+    \label{fig:vst}
+\end{figure}
+Um die ensprechende \gls{LSA} während der Grünphase zu passieren, muss letztendlich die empfohlene Geschwindigkeit $v$ eingehalten werden.
