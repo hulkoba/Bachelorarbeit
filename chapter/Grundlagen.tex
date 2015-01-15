@@ -4,29 +4,44 @@ Dieses Kapitel befasst sich mit sowohl den mathematischen als auch den technisch
 % TECHNISCHE GRUNDLAGEN
 % -------------------------------------------------
 \section{\label{sec:technGrundlagen}Technische Grundlagen}
-Im folgenden Abschnitt werden Funktionsweise und Besonderheiten der verwendeten Technologien beschrieben. Es wird eine Smartphone Anwendung erstellt, deren Grundlage für die Implementierung die Software-Plattform Android ist.
+Erstellt wird eine Smartphone Anwendung, deren Grundlage für die Implementierung die Software-Plattform Android ist. Im folgenden Abschnitt werden Funktionsweise und Besonderheiten der verwendeten Technologien beschrieben. 
 % ANDROID
 \subsection{Android}
-Die Open-Source-Plattform Android umfasst das Betriebssystem, die Middleware sowie die wichtigsten Anwendungen(z.B. E-Mail-Client, SMS-Programm, Karten-Anwendung). Das Android \gls{SDK} stellt die Tools und \gls{API} zur Verfügung die erforderlich sind, Anwendungen auf der Android-Plattform implementieren zu können \cite{androidwww}\\
-Mit dem Android \gls{SDK} können Android-Anwendungen mit der Programmiersprache Java entwickelt werden. Das \gls{SDK} enthält eine Reihe von Core-Bibliotheken, die die meisten Funktionen der Java-Core-Bibliotheken zur Verfügung stellen. Jede Android-Applikation läuft als ein eigener Prozess, eine eigene Instanz der sogenannten Dalvik Virtual Machine. Diese virtuelle Maschine (Dalvik VM) wurde so implementiert, dass auf einem Gerät mehrere Dalvik VMs effizient nebeneinander ausgeführt werden können. Das dazugehörige Dalvik Excecutable-Format wurde für geringeren Speicherverbrauch konzipiert. \footnote{https://developer.android.com/sdk/index.html}\cite{androidwww} \\ 
-Mit dem Android \gls{NDK} existiert auch ein Werkzeug, mit dem Teile von ANwendungen in den Programmiersprachen C oder C++ implementiert werden können. Die Verwendung beider Sprachen bietet sich im Besonderen bei CPU-intensiven Operationnen wie zum Beispiel Signalverarbeitung oder Physik-Simulationen an. \footnote{https://developer.android.com/tools/sdk/ndk/index.html}
-Die Folgende Abbildung zeige einen Überblick über die komplexe Androis-Systemarchitektur, welche nachfolgend nach \cite{android} kurz beschrieben werden.
-%grafik
+Die umfassende Open-Source-Plattform Android stellt eine vollständige Ausstattung für Mobilgeräte dar. Android-Anwendungen werden mit der Programmiersprache Java und der Auszeichnungssprache \gls{XML} entwickelt. Mit dem Android \gls{SDK}\footnote{ Das Android \gls{SDK} steht unter \url{https://developer.android.com/sdk/index.html} zum Download bereit} werden die Werkzeuge und \gls{API} zur Verfügung gestellt, die erforderlich sind Mobilanwendungen auf der Android-Plattform erzeugen zu können.\\ 
+Zu den wichtigsten \gls{SDK} Werkzeugen gehören der Android \gls{SDK}-Manager\footnote{ Der \gls{SDK}-Manager verwaltet die \gls{SDK}-Pakete, sowie die installierten Pakete imd System-Images}, der AVD-Manager\footnote{ Der AVD-Manager bietet eine grafische Oberfläche in der Android Virtuell Devices verwaltet und im Emulator ausgeführt werden können.}, der Emulator und der Dalvik Debug Monitor Server\footnote{ Mithilfe des Ddms können Android Anwendungen auf Fehler untersucht werden} (Ddms). Die Virtuelle Maschine Dalvik wurde unter Berücksichtigung von Rechenleistung und der Lebensdauer von Batterien speziell von Google für Android entworfen. \cite{android_sdk} Ab Android 4.4 wird die Android Runtime (ART) als alternative zur Dalvik \gls{VM} angeboten. Diese bietet eine Reihe von neuen Funktionen die die Laufzeit verbessern. \cite{android:art}\\
+Mit dem Android \gls{NDK}\footnote{ Das Android \gls{NDK} steht unter \url{https://developer.android.com/tools/sdk/ndk/index.html} zum Download bereit} existiert auch ein Tool, mit dem Teile einer Anwendung in systemeigenen Programmiersprachen wie C oder C++ implementiert werden können. Programmcode, der in solchen Sprachen eignet, ist zum Beispiel bei CPU-intensiven Operationen wie Signalverarbeitungen oder Physik-Simulationen. Hier ist sicherzustellen, ob die erforderlichen Bibliotheken in dem \gls{SDK} auch verfügbar sind. \cite{android_ndk} \\
+Einen Überblick über die komplexe Android-Systemarchitektur, welche nachfolgend (nach \cite{android} S. 3ff) kurz beschrieben wird, zeigt die folgende Abbildung \ref{fig:android}.
+\begin{figure}[H]  
+    \centering  
+    \includegraphics[width=0.7\textwidth]{Android-System-Architecture} 
+    \caption[Android-Systemarchitektur]{Die Android-Systemarchitektur Quelle: \url{http://en.wikipedia.org/wiki/File:Android-System-Architecture.svg}}
+    \label{fig:android}
+\end{figure}
 \paragraph{Linux Kernel: }
+Android basiert auf dem Linux 3.1-Kernel. Dieser eine bewährte Betriebssystemgrundlage indem er die erforderlichen Hardware-Treiber zur Verfügung stellt.
 \paragraph{Bibliotheken: }
-\paragraph{Android Runtime: }
-\paragraph{Application Framework: }
-\paragraph{Application Layer: }
-\begin{itemize}
-	\item Activity Manager und Fragment Manager
-	\item Views
-	\item Notification Manager
-	\item Resource Manager
-	\item Intents
+Systemeigenen Bibliotheken sind C/C++ Bibliotheken und vorinstalliert. Dazu gehören alle Bibliotheken im grünen Bereich von Abbildung \ref{fig:android}:
+\begin{itemize}[leftmargin=0.7cm]
+\renewcommand\labelitemi{--}
+	\item \textsc{Surface Manager} ~ Der für das individuelle Display Verwaltung verantwortliche Oberflächen-Manager
+	\item \textsc{OpenGL/ES} ~ Eine 2D und 3D Grafikbibliothek
+	\item \textsc{SGL} ~ Eine 2D Grafikbibliothek
+ 	\item \textsc{Media-Framework} ~ eine Medien-Bibliothek zur Wiedergabe von Audio- und Video-Daten 	
+ 	\item \textsc{FreeType} ~ eine Bibliothek zur Darstellung von Computerschriften als Rastergrafik
+ 	\item \textsc{SSL} ~ Das Secure-Socket-Layer für die Internet-Sicherheit
+	\item \textsc{SQLite} ~ Ist eine ausgereifte Datenbank die den internen Speicher nutzt 
+	\item \textsc{Webkit} ~ WebKit ist die Standard-Browser-Engine und erlaubt das schnelle Rendern und Anzeigen von HTML Seiten
+	\item \textsc{libc} ~ C-Bibliothek
 \end{itemize}
-
-% SQLite
-\subsection{Die Datenbank SQLite}
+\paragraph{Android Runtime: }
+Die Android Laufzeitumgebung nutzt die Java-Core-Bibliotheken und die Dalvik \gls{VM}. 
+Die Dalvik \gls{VM} ist Googles Implementation von Java, zur Anwendung auf mobilen Geräten optimiert. Jede gestartete Android-Anwendung läuft in einem eigene Prozess und bekommt darüber hinaus seine eigene Dalvik \gls{VM}. Da die Anwendungen über keinen gemeinsamen Speicher verfügen erhöht das die Sicherheit und Verfügbarkeit und ist somit optimaler, obwohl mehr Ressourcen benötigt werden. Denn ein sterbender Prozess nimmt so nur seine "'eigene"' Anwendung mit. \\ 
+Die Anwendungen werden zunächst von einem normalen Java-Compiler in Java-Bytecode übersetzt und dann von dem Dex-Compiler in den Dalvik-Bytecode, welcher schließlich von der Dalvik \gls{VM} ausgeführt wird.
+\paragraph{Application Framework: }
+Androids Application-Framework ist eine Umgebung die unterschiedliche DIenste zur Verfügung stellt. Sie bietet EntwicklerInnen Zugriff auf die im Kern verwendeten \glspl{API} sowie auf die Java-Bibliotheken die für Android erstellt wurden. 
+\paragraph{Applications: }
+Auf der obersten Ebene in Abbildung \ref{fig:android} befinden sich die Anwendungen die den täglichen Telefon-Bedarfs wie Adressbuch, Messenger, E-Mail, Internet-Browser etc. decken. Zusätzlich unterstützt Android verschiedene Anwendungen von Drittanbietern. Diese sind hauptsächlich in Java geschrieben und werden am häufigsten über den Google Play Store verteilt.
+\subsection{Die native Datenbank SQLite}
 % MOBILE SENSING
 \subsection{Mobile Sensorik} 
 \subsubsection{Mobile Sensorik unter Android}
