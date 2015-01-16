@@ -37,11 +37,8 @@
 \newacronym[longplural={Licht-emittierende Dioden}]{LED}{LED}{Licht-emittierende Diode}
 \newacronym{SDK}{SDK}{Software Development Kit}
 \newacronym{NDK}{NDK}{Native Development Kit}
-\newacronym{OSM}{OSM}{Open Street Map}
+\newacronym{VM}{VM}{Virtual Maschine}
+\newacronym{XML}{XML}{Extensible Markup Language}
 \newacronym{SQL}{SQL}{Structured Query Language}
-\newacronym{JSON}{JSON}{JavaScript Object Notation}
 \newacronym{UI}{UI}{User Interface}
 \newacronym{GUI}{GUI}{Graphical User Interface}
-\newacronym{HTML}{HTML}{HyperText Markup Language}
-\newacronym{CSS}{CSS}{Cascading Style Sheet}
-\newacronym{XML}{XML}{Extensible Markup Language}
