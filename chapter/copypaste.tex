@@ -1,2 +1,30 @@
  \textit{Der Beschleunigungssensor ist ein Hardwaresensor, der dazu benutzt wird, Position, Bewegung, Neigung, Erschütterung, Vibration und natürlich Beschleunigung des Gerätes zu messen.Es gibt bis zu 3-Achsen Beschleunigungssensoren, die meistens zum Erkennen der Ausrichtung des \glspl{Smartphone} genutzt werden und somit das Display beim Anschauen von Bildern, Webbrowsern oder Musikplayern in die passende Richtung vom Portrait-Modus (senkrecht) zum Landscape-Modus (waagrecht) zu drehen. In Kombination mit \gls{GPS} kann das \gls{Smartphone} dank ihm sogar erkennen, welche Art Transportmittel (Fahrrad, Bus, U-Bahn) der Nutzer gerade benutzt und bestimmte Muster wie z.B. Rennen, Gehen oder Stehen unterscheiden.\\
 \gls{GPS} erlaubt dem \gls{Smartphone} sich selber zu lokalisieren und den exakten Standpunkt auf der Erde zu bestimmen. Es hilft locationbased\footnote{ ortsgebunden} \Glspl{App} wie z.B Navigation, lokale Suche nach Shops, Restaurants etc. oder soziale Netzwerke wie Facebook oder Foursquare nötige Informationen zu ermitteln. Der Kompass erweitert die Möglichkeiten der Lokalisationsermittlung eines \gls{Smartphone}s. Er bestimmt den Winkel des Geräts relativ zum Nordpol der Erde. Der Kompass besitzt einen Magnet, der mit dem magnetischen Feld der Erde interagiert und sich entsprechend zu einem der Pole ausrichtet. Zusammen mit dem Gyroskop Sensor verbessern \gls{GPS} und Kompass die Präzision von locationbased Applikationen.}
+
+\section{SQLite}
+SQLite ist eine Programmbibliothek, die ein relationales DBS enthält.
+Dieses DBS wird bei Android-Betriebssystemen mitgeliefert. Viele
+Entwickler von Android-Applikationen verwenden dieses DBS um
+Daten ihrer Anwendung persistent zu halten. Auch wird SQLite bei
+Webbrowsern wie Mozilla Firefox verwendet um Lesezeichen oder
+Cookies zu speichern. SQLite unterstützt einen Großteil der dritten
+Überarbeitung der SQL-Sprachbefehle (SQL-92). Für das DBS wird
+kein Server benötigt. Die Datenbank wird als Datei in der Anwendung
+abgelegt. Dadurch erübrigen sich Abfragen zu externen Servern, die
+eine Verbindung mit einem Netzwerk voraussetzen. Bibliotheken, die
+SQLite anbieten, stellen Datenbankfunktionen zur Verfügung.
+Vorteile:\\
+Verbraucht wenige Ressourcen\\
+Zuverlässiges System durch Erweiterungen und jahrelange Nutzung\\
+Klare, strukturierte, effiziente Abfragen\\
+Kein separater Server\\\\
+Nachteile: \\
+Schreiboperationen unterschiedlicher Prozesse in derselben Datenbankdatei können nur nacheinander ausgeführt werden\\
+Bei zu großen Graphenstrukturen gibt es Performanceprobleme durch viele Join Statements\\
+Dadurch müssen Abfragen über viele Tabellen ausgeführt werden, was die Abfragezeit erhöht\\\\
+SQLite ist eine zuverlässige relationale Datenbank. Sie verbraucht wenige Ressourcen und wird direkt von Android angeboten. Dennoch wird die SQLite für diese Arbeit nicht genutzt, da das Abfragen über mehrere Tabellen bei einer großen Graphenstruktur zu beträchtlichen Abfragezeiten führt. Außerdem kann der Code durch viele Join-Abfragen unübersichtlich werden, was zu Fehlern in der Programmierung führen könnte, die erst durch Ausführung der Anwendung sichtbar werden.
+
+
+
+
+

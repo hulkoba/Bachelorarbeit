@@ -2,12 +2,42 @@
 % ### Achitektur ###
 \section{Architektur}
 Klassenstruktur..
-\subsection{Technologien}
-Für die Entwicklung des Prototyps fiel die Wahl der zu verwendeten Technologien zunächst auf
-das AngularJS Framework, da bereits Vertrautheit mit Web Technologien vorlag.
-\subsection{Navigation (bei App)}
+\subsection{Navigation}
 % ### Design ###
 \section{Das Design}
+Hohe Kontraste wegen Wetter.\\
+einfache UI .\\
+Minimalistisch sodass ein Blick genügt und man nicht abgelenkt wird.\\
+Angezeigt wird: Geschwindigkeit schneller oder langsamer, 
+Restrotanzeige, grüne Welle.
+\begin{figure}[H]
+        \centering
+           \begin{subfigure}[t]{0.23\textwidth}
+                \includegraphics[width=\textwidth]{stop1}
+                \caption[Systemzustand d]{keine Weiterfahrt möglich}
+                \label{fig:schneller}
+        \end{subfigure}
+           \hfill 
+              \begin{subfigure}[t]{0.23\textwidth}
+                \includegraphics[width=\textwidth]{yeah1}
+                \caption[Systemzustand c]{Kein Aktionsbedarf}
+                \label{fig:langsamer}
+        \end{subfigure}
+           \hfill
+        \begin{subfigure}[t]{0.23\textwidth}
+                \includegraphics[width=\textwidth]{langsamer}
+                \caption[Systemzustand a]{Weiterfahrt durch Verlangsamung möglich}
+                \label{fig:langsamer}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[t]{0.23\textwidth}
+                \includegraphics[width=\textwidth]{schneller}
+                \caption[Systemzustand b]{Weiterfahrt durch Beschleunigung möglich}
+                \label{fig:schneller}
+        \end{subfigure}     
+        \caption[Systemzustände im Ampelbereich]{Umsetzung des Designs anhand der Systemzustände}
+        \label{fig:mockup}
+\end{figure} 
 \subsection{Anzeigeelemente}
 \subsubsection{Geschwindigkeit}
 \subsubsection{Ampeln}
@@ -21,8 +51,4 @@ Theorien und Hintergründe diesen betreffend betrachtet werden.
 grundlegendes Wissen über geographische Koordinaten sowie mathematische Voraussetzungen im Umgang mit diesen, müssen zur Ideenverwirklichung berücksichtigt werden.
 \subsection{Die Berechnung der Entferung}
 \subsection{Die Berechnung der Ankunft in Abhängigkeit der Geschwindigkeit}
-\subsection{Die Berechnung der Dauer der Ampelphase?}
-% ### Funktionalität ###
-\section{Funktionalitäten --> Anforderungsanalyse?}
-\subsection*{Sensorik (GPS)}
-\subsection*{Open Street Map}
+\subsection{Die Anzeige der Restrotanzeige}
