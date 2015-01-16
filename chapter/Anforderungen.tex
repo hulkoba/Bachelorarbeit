@@ -1,44 +1,22 @@
 \chapter{Die Anforderungsdefinition}
-Dieses Kapitel soll durch Untersuchung helfen, Vorstellung für die Anforderungen an Ampelhinweissystem -App zu bekommen. 
-Im heutigen High-Technologie Zeitalter ist gerade die Benutzbarkeit bei der Entwicklung eines Produktes ein wichtiger Faktor, der von Software-Entwicklern beachtet werden muss. Die Anforderungen der Nutzer stehen dabei im Mittelpunkt. Es geht in erster Linie darum, jene zufrieden zu stellen und nicht nur Interesse, sondern auch Begeisterung beim potentiellen Kunden zu wecken. Verschiedene Methoden, diese Anforderungen besser zu identifizieren und erfüllen zu können, haben sich bereits verbreitet und basieren meistens auf einer präzisen Darstellung der NutzerInnen.
+Dieses Kapitel soll helfen eine Vorstellung für die Anforderungen an die Ampelhinweissystem -App zu bekommen. Im heutigen High-Technologie Zeitalter spielt die Benutzbarkeit und Funktionalität des Produkts eine große Rolle. Es geht nicht nur darum, Interesse zu wecken, sondern auch die NutzerInnen für das Produkt zu begeistern. \\
+Aus den oben genannten Szenarien werden im Folgenden die Anforderungen hergeleitet, die die zu entwickelnde \gls{Smartphone}-Anwendung erfüllen soll. Für die Umsetzung einer solchen Applikation ist die Positions- und Geschwindigkeitsbestimmung obligatorisch. Im Zusammenhang mit den Ampeldaten, bestehend aus Lage- und Schaltplan sollen die notwendigen Berechnungen durchgeführt und deren Ergebnisse als Empfehlung ausgesprochen.
+\section{Funktionalität}
+Die Bestimmung der Position, Fahrtrichtung und Geschwindigkeit des Fahrrads ist die zentrale Voraussetzung für eine zeitgerechte Empfehlungsaussprechung. Sie sollte schnell erfolgen, sodass es keine Verzögerung der berechneten Ergebnisanzeige gibt und die Informationen eine hohe Genauigkeit betragen. \\
+
+\begin{itemize}
+	\item Genau, schnell
+	\item Strecke muss später genauer erechnet werden. Luftlinie. Kartennavigation.
+	\item Zugriff schnell (Datenbank)
+	\item UML
+	\item 
+\end{itemize}
+
 \section{Die graphische Oberfläche}
-
-Hohe Kontraste wegen Wetter
-einfache UI 
-Minimalistisch sodass ein Blick genügt und man nicht abgelenkt wird.
-Angezeigt wird: Geschwindigkeit schneller oder langsamer, 
-Restrotanzeige.
-\begin{figure}[H]
-        \centering
-        \begin{subfigure}[t]{0.23\textwidth}
-                \includegraphics[width=\textwidth]{langsamer}
-                \caption[Systemzustand a]{Weiterfahrt durch Verlangsamung möglich}
-                \label{fig:langsamer}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[t]{0.23\textwidth}
-                \includegraphics[width=\textwidth]{schneller}
-                \caption[Systemzustand b]{Weiterfahrt durch Beschleunigung möglich}
-                \label{fig:schneller}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[t]{0.23\textwidth}
-                \includegraphics[width=\textwidth]{yeah1}
-                \caption[Systemzustand c]{Kein Aktionsbedarf}
-                \label{fig:langsamer}
-        \end{subfigure}
-        \hfill 
-        \begin{subfigure}[t]{0.23\textwidth}
-                \includegraphics[width=\textwidth]{stop1}
-                \caption[Systemzustand d]{keine Weiterfahrt möglich}
-                \label{fig:schneller}
-        \end{subfigure}
-        \caption[Systemzustände im Ampelbereich]{Umsetzung des Designs anhand der Systemzustände}
-        \label{fig:szenario_mockup}
-\end{figure} 
-
-\section{Funktionalität} 
-\section{Diagramme}
-\subsection*{Sequenzdiagramm}
-\subsection*{Ablaufdiagramm}
-\subsection*{UML -- Diagramm}
+Ebenso wie die Bestimmung der Position spielt auch die graphische Darstellung eine große Rolle. Gerade bei dem Gebrauch im Verkehr ist die Eindeutigkeit und schnelle Erfassbarkeit der zu übermittelnden Informationen bedeutend.  \\
+Um nicht von dem Verkehr abzulenken und diesen somit zu gefährden muss die Information, sowohl in Bedeutung als auch in Darstellung auf einen kurzen Blick erkennbar sein. Demnach sollte die Oberfläche möglichst einfach gehalten werden.\\
+Da die Anwendung während der Fahrt nicht bedienbar sein muss -- denn auch das würde vom Verkehr ablenken -- besteht mehr Raum für die Informationsanzeige. 
+Es ist davon auszugehen, dass die Anwendung ausschließlich im Freien Gebrauch findet. Dies und die dort herrschenden wechselnden Helligkeiten, zum Beispiel bei der Fahrt durch Schatten, setzen eine Verwendung von hohen Kontrasten voraus.
+\subsubsection{Empfehlungsanzeige??? <-- Frau Görlitz fragen}
+Im Allgemeinen sollte die Anwendung in der Lage sein die sich aus Kapitel \ref{chap:szenarien} resultierenden vier Systemzustände zu visualisieren und gegebenenfalls eine entsprechende Empfehlung auszusprechen.\\
+Zur Verdeutlichung und einfacher Erfassbarkeit bietet es sich an, die entsprechenden Farben zu nehmen. Also ist für die Zustände \textit{b},\textit{c} und \textit{d}, die das Erreichen der Grünen Welle mit oder ohne Veränderung der eigenen Geschwindigkeit Grün und für den Zustand \textit{a}, der ausdrückt dass keine Weiterfahrt ohne Absteigen möglich ist, Rot zu verwenden.
