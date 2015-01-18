@@ -13,6 +13,7 @@ kein Server benötigt. Die Datenbank wird als Datei in der Anwendung
 abgelegt. Dadurch erübrigen sich Abfragen zu externen Servern, die
 eine Verbindung mit einem Netzwerk voraussetzen. Bibliotheken, die
 SQLite anbieten, stellen Datenbankfunktionen zur Verfügung.
+
 Vorteile:\\
 Verbraucht wenige Ressourcen\\
 Zuverlässiges System durch Erweiterungen und jahrelange Nutzung\\
@@ -23,7 +24,6 @@ Schreiboperationen unterschiedlicher Prozesse in derselben Datenbankdatei könne
 Bei zu großen Graphenstrukturen gibt es Performanceprobleme durch viele Join Statements\\
 Dadurch müssen Abfragen über viele Tabellen ausgeführt werden, was die Abfragezeit erhöht\\\\
 SQLite ist eine zuverlässige relationale Datenbank. Sie verbraucht wenige Ressourcen und wird direkt von Android angeboten. Dennoch wird die SQLite für diese Arbeit nicht genutzt, da das Abfragen über mehrere Tabellen bei einer großen Graphenstruktur zu beträchtlichen Abfragezeiten führt. Außerdem kann der Code durch viele Join-Abfragen unübersichtlich werden, was zu Fehlern in der Programmierung führen könnte, die erst durch Ausführung der Anwendung sichtbar werden.
-
 
 
 
