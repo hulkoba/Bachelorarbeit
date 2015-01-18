@@ -4,12 +4,8 @@ Aus den oben genannten Szenarien werden im Folgenden die Anforderungen hergeleit
 \section{Funktionalität}
 Die Bestimmung der Position, Fahrtrichtung und Geschwindigkeit des Fahrrads ist die zentrale Voraussetzung für eine zeitgerechte Empfehlungsaussprechung. Sie sollte ebenso schnell wie präzise erfolgen, sodass es keine Verzögerung der berechneten Ergebnisanzeige gibt und die Informationen eine hohe Genauigkeit betragen. \\
 Von ebenso hoher Relevanz sind die Ampeldaten bestehend aus der genauen Position der \gls{LSA} und deren Schaltpläne. Es muss ermittelt werden, welche Ampel die am nächsten Passierte und daraus die Entfernung zu eben solcher. Die Prognose findet statt, sobald die Ampel circa 300 Meter voraus liegt. Bei einer größeren Entfernung von zum Beispiel einem Kilometer kann die Gefahr der Ablenkung bestehen. Sollte die Anwendung auf der Strecke durchgängig vorschlagen schneller zu fahren, könnte die Person dies als Ansporn sehen und so nicht mehr auf den Verkehr achten. Bei dieser doch recht kurzen Entfernung genügt für den zu entwickelnden Prototyp der Abstand als Berechnungsbestandteil in Luftlinie. Bei Optimierungsbedarf bietet es sich hierfrür an, Kartenmaterial einzubinden, um den genauen Abstand ermitteln zu können. Hierbei werden dann beeinflussende Elemente wie Hügel oder Kurven berücksichtigt.\\
-
-\begin{itemize}
-	\item Zugriff schnell (Datenbank)
-	\item 
-\end{itemize}
-
+Die Positionsdaten und Schaltpläne, im Uhrzeit- oder Datumsformat befinden sich in einer Datenbank. Diese sollte allein aus Performancegründen keinen Internetzugriff voraussetzen (nativ sein). Auch unter Berücksichtigung des erhöhten Akkuverbrauchs bei der Verwendung von \gls{GPS} ist es von Vorteil auf die \gls{WLAN}-Netzsuche oder mobile Breitbandverbingung zu verzichten. Ist das Datenvolumen nämlich aufgebraucht, ist die Verbindung zu langsam die benötigsten Daten zeitnah anzufragen und zu erhalten.\\ 
+Die von Android bereitgestellte systemeigene Datenbank \gls{SQLite} nutzt den internen Speicher des Geräts und ermöglicht so einen schnellen Zugriff auf diese Daten.
 \section{Die graphische Oberfläche}
 Ebenso wie die Bestimmung der Position und Geschwindigkeit spielt auch die graphische Darstellung eine große Rolle. Gerade bei dem Gebrauch im Verkehr ist die Eindeutigkeit und schnelle Erfassbarkeit der zu übermittelnden Informationen bedeutend.  \\
 Um nicht von dem Verkehr abzulenken und diesen somit zu gefährden muss die Information, sowohl in Bedeutung als auch in Darstellung auf einen kurzen Blick erkennbar sein. Demnach sollte die Oberfläche möglichst einfach gehalten werden.\\
