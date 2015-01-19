@@ -1,8 +1,4 @@
 \chapter{\label{chap:entwurf}Konzeption}
-% ### Achitektur ###
-\section{Architektur}
-Klassenstruktur..
-\subsection{Navigation}
 % ### Design ###
 \section{Das Design}
 Hohe Kontraste wegen Wetter.\\
@@ -13,23 +9,23 @@ Restrotanzeige, grüne Welle.
 \begin{figure}[H]
         \centering
            \begin{subfigure}[t]{0.23\textwidth}
-                \includegraphics[width=\textwidth]{stop1}
+                \includegraphics[width=\textwidth]{stop}
                 \caption[Systemzustand d]{keine Weiterfahrt möglich}
                 \label{fig:stop}
         \end{subfigure}
-           \hfill 
+           ~ 
               \begin{subfigure}[t]{0.23\textwidth}
-                \includegraphics[width=\textwidth]{yeah1}
+                \includegraphics[width=\textwidth]{yeah}
                 \caption[Systemzustand c]{Kein Aktionsbedarf}
                 \label{fig:yeah}
         \end{subfigure}
-           \hfill
+           ~
         \begin{subfigure}[t]{0.23\textwidth}
                 \includegraphics[width=\textwidth]{langsamer}
-                \caption[Systemzustand a]{Weiterfahrt durch Verlangsamung möglich}
+                \caption[Systemzustand a]{Weiterfahrt durch Verlangsamung  möglich}
                 \label{fig:langsamer}
         \end{subfigure}
-        \hfill
+        ~
         \begin{subfigure}[t]{0.23\textwidth}
                 \includegraphics[width=\textwidth]{schneller}
                 \caption[Systemzustand b]{Weiterfahrt durch Beschleunigung möglich}
@@ -42,9 +38,11 @@ Restrotanzeige, grüne Welle.
 \subsubsection{Geschwindigkeit}
 \subsubsection{Ampeln}
 \subsubsection{Informationen}
+% ### Achitektur ###
+\section{Architektur}
+Klassenstruktur..
+\subsection{Navigation}
 \section{Ampeldatenanfrage und Auswertung}
-\subsection{Sensoren}
-\subsubsection{GPS} wird gebraucht für...
 \section{Theorie}
 Um die korrekte Umsetzung des Prototyps zu ermöglichen, müssen zunächst einmal prinzipielle
 Theorien und Hintergründe diesen betreffend betrachtet werden.
