@@ -48,7 +48,7 @@ Auf der obersten Ebene in Abbildung \ref{fig:android} befinden sich die Anwendun
 
 % SQLITE
 \subsection{SQLite}
-SQLite ist eine eingebettete Datenbank-Engine die auch bei Android sehr beliebt ist. Der Code ist Open Source und frei für den privaten oder gewerblichen Einsatz.\\
+SQLite ist eine weitgehend in sich abgeschlossene Datenbank-Engine die auch bei Android sehr beliebt ist. Es benötigt nur minimale Unterstützung von externen Bibliotheken oder vom Betriebssystem. So eignet es sich gut für den Einsatz in Systemen, denen die Infrastruktur eines Desktop-Computers fehlt. Der Code ist Open Source und frei für den privaten oder gewerblichen Einsatz.\\
 Im Gegensatz zu den meisten anderen \gls{SQL}-Datenbanken ist keine Client-Server-Architektur vorhanden. Um in die Datenbank zu schreiben oder daraus zu lesen greift der Prozess auf die interne Festplatte, und nicht auf einen Server zu. Es ist also keine Netzwerverbindung vonnöten. \\
 Der Hauptvorteil, keinen separaten Serverprozess zu installieren, einzurichten, zu konfigurieren und zu verwalten, macht SQLite zu einem konfigurationsfreien Datenbanksystem. Es besteht keine administrative Notwendigkeit um eine neue Datanbankinstanz zu erstellen oder Zugriffsrechte zuzuweisen. 
 \begin{center}
@@ -56,7 +56,6 @@ Der Hauptvorteil, keinen separaten Serverprozess zu installieren, einzurichten, 
 \end{center}
 Als Transaktionsdatenbank implementiert SQLite serialisierbare Transaktionen die auch bei einem Programm- oder Betriebssystemabsturz atomar, konsistent, isoliert und dauerhaft sind. Wird also die Transaktion durch z.B. einen Programmabsturz unterbrochen, werden alle Änderungen entweder gar nicht oder komplett angezeigt.\\ 
 SQLite ist außerdem eine Ein-Datei-Datenbank. Das bedeutet die vollständige \gls{SQL}-Datenbank mit mehreren Tabellen, Indizes und Ansichten wird in nur einer Datei gespeichert. So kann jedes Programm, das in der Lage ist auf die Festplatte zuzugreifen, die SQLite-Datenbank verwenden. \cite{sqlite} Aufgrund eben dieser Eigenschaften eignet sich SQLite ausgezeichnet für die Entwicklung von Android-\glspl{App}.   
-
 \subsubsection{Relationale Datenbanken}
 \subsubsection{SQLite unter Android}
 
