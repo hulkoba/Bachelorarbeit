@@ -31,9 +31,9 @@ Systemeigenen Bibliotheken sind C/C++ Bibliotheken und vorinstalliert. Dazu geh�
  	\item \textsc{Media-Framework} ~ eine Medien-Bibliothek zur Wiedergabe von Audio- und Video-Daten 	
  	\item \textsc{FreeType} ~ eine Bibliothek zur Darstellung von Computerschriften als Rastergrafik
  	\item \textsc{SSL} ~ Das Secure-Socket-Layer für die Internet-Sicherheit
-	\item \textsc{SQLite} ~ Ist eine ausgereifte Datenbank die den internen Speicher nutzt 
+	\item \textsc{SQLite} ~ Ist eine ausgereifte Datenbank die den internen Gerätespeicher nutzt 
 	\item \textsc{Webkit} ~ WebKit ist die Standard-Browser-Engine und erlaubt das schnelle Rendern und Anzeigen von HTML Seiten
-	\item \textsc{libc} ~ C-Bibliothek
+	\item \textsc{libc} ~ Eine C-Bibliothek
 \end{itemize}
 \paragraph{Android Runtime: }
 Die Android Laufzeitumgebung nutzt die Java-Core-Bibliotheken und bis zur Version 5.0 auch die Dalvik \gls{VM}, weswegen diese noch auf der Grafik abgebildet ist.  
@@ -43,7 +43,24 @@ Die Anwendungen werden zunächst von einem normalen Java-Compiler in Java-Byteco
 Androids Application-Framework ist eine Umgebung die unterschiedliche Dienste zur Verfügung stellt. Sie bietet EntwicklerInnen Zugriff auf die im Kern verwendeten \glspl{API} sowie auf die Java-Bibliotheken die für Android erstellt wurden. 
 \paragraph{Applications: }
 Auf der obersten Ebene in Abbildung \ref{fig:android} befinden sich die Anwendungen die den täglichen Telefon-Bedarfs wie Adressbuch, Messenger, E-Mail, Internet-Browser etc. decken. Zusätzlich unterstützt Android verschiedene Anwendungen von Drittanbietern. Diese sind hauptsächlich in Java geschrieben und werden am häufigsten über den Google Play Store verteilt.
-\subsection{Die native Datenbank SQLite}
+
+
+
+% SQLITE
+\subsection{SQLite}
+SQLite ist eine eingebettete Datenbank-Engine die auch bei Android sehr beliebt ist. Der Code ist Open Source und frei für den privaten oder gewerblichen Einsatz.\\
+Im Gegensatz zu den meisten anderen \gls{SQL}-Datenbanken ist keine Client-Server-Architektur vorhanden. Um in die Datenbank zu schreiben oder daraus zu lesen greift der Prozess auf die interne Festplatte, und nicht auf einen Server zu. Es ist also keine Netzwerverbindung vonnöten. \\
+Der Hauptvorteil, keinen separaten Serverprozess zu installieren, einzurichten, zu konfigurieren und zu verwalten, macht SQLite zu einem konfigurationsfreien Datenbanksystem. Es besteht keine administrative Notwendigkeit um eine neue Datanbankinstanz zu erstellen oder Zugriffsrechte zuzuweisen. 
+\begin{center}
+\textit{\color{darkgray}"'SQLite just works."'}\hspace{9pt}\cite{sqlitea}
+\end{center}
+Als Transaktionsdatenbank implementiert SQLite serialisierbare Transaktionen die auch bei einem Programm- oder Betriebssystemabsturz atomar, konsistent, isoliert und dauerhaft sind. Wird also die Transaktion durch z.B. einen Programmabsturz unterbrochen, werden alle Änderungen entweder gar nicht oder komplett angezeigt.\\ 
+SQLite ist außerdem eine Ein-Datei-Datenbank. Das bedeutet die vollständige \gls{SQL}-Datenbank mit mehreren Tabellen, Indizes und Ansichten wird in nur einer Datei gespeichert. So kann jedes Programm, das in der Lage ist auf die Festplatte zuzugreifen, die SQLite-Datenbank verwenden. \cite{sqlite} Aufgrund eben dieser Eigenschaften eignet sich SQLite ausgezeichnet für die Entwicklung von Android-\glspl{App}.   
+
+\subsubsection{Relationale Datenbanken}
+\subsubsection{SQLite unter Android}
+
+
 % MOBILE SENSING
 \subsection{Mobile Sensorik <-- Ich benutze nur GPS?} 
 Ein Sensor\footnote{ aus dem Lateinischen, deutsch: "'\textit{fühlen}"'} ist ein Bauelement, das physikalische Eigenschaften wie Helligkeit, Temperatur oder Beschleunigung sowohl quantitativ als auch qualitativ erfassen kann.
@@ -51,7 +68,7 @@ Die \gls{GPS}-Sensoren in \glspl{Smartphone} sind kostengünstiger, kleiner und 
 \subsubsection{Mobile Sensorik unter Android}
 Die meisten Android-Mobilgeräte verfügen über integrierte Sensoren, die die Bewegung, Ausrichtung und verschiedene Umgebungsbedingungen messen. Diese Sensoren sind praktisch wenn man dreidimensionale Gerätbewegungen, Positionierungen oder Änderungen in der Umgebung des Gerätes überwachen möchte. So können zum Beispiel Spieleanwendungen den Beschleunigungssensor nutzen, um komplexe BenutzerInnengesten und Bewegungen wie Neigung, Erschütterung, Drehung oder Schwenkung erfassen.\\
 Die Android-Plattform unterstützt Bewegungssensoren zum Messen von Beschleunigungen und Drehungen in drei Achsen, Umgebungssensoren zur Ermittlung verschiedener Umweltparameter wie Luftdruck und -feuchtigkeit, oder Beleuchtung und Temperatur, und Positionssensoren zum Messen der physikalischen Position des Gerätes. Android bietet mit dem Android Sensor Framework eine Sammlung von Klassen und Schnittstellen an mithilfe dessen man diese Sensoren zugreifen und deren Daten erfassen kann. \cite{android_sensor} 
-\subsubsection{Geolokation mittels \gls{GPS}}
+\subsection{Geolokation mittels \gls{GPS}}
 Die satellitengestützte Positionsbestimmung \gls{GPS} gewährleistet die Bestimmung des exakten Standpunktes und ist so wesentlicher Bestandteil ortsgebundener Anwendungen wie zum Beispiel die in Kapitel \ref{chap:state} beschriebenen. \\
 \gls{GPS} wurde ursprünglich vom US-Militär entwickelt und dann Mitte der 90er Jahre der Öffentlichkeit zur Verfügung gestellt. Noch heute bleibt es mit einer Genauigkeit von bis zu vier Metern die genaueste Lokalisierungstechnologie. Das Globale Positionsbestimmungssystem bestimmt mittels 31 Satelliten die die Erde umkreisen und ihre aktuelle Position mit der genauen Uhrzeit ausstrahlen. Daraus errechnet ein \gls{GPS}-Empfänger die eigene Position. Daten von einem einzigen Satelliten lässt die Position des \gls{GPS}-Empfängers auf deinen großen Bereich der Erde einschränken. Das Hinzufügen eines zweiten engt die Position auf den Bereich, in dem sich die zwei Bereiche überlappen ein. Mit den Daten eines dritten Satelliten bekommt man bereits eine relativ genaue Positionierung. Mit jedem weiteren Satelliten wird die Präzision erhöht. \gls{GPS}-Empfänger benutzen regelmäßig vier bis sieben, oder gar mehr Satelliten. Trotzdem hat \gls{GPS} einige Nachteile. Es verbraucht viel Energie, was die Akkulaufzeit des Mobiltelefons beeinträchtigt und benötigt nach dem Kaltstart eine Weile, den ersten Satelliten zu erreichen. (\cite{gps} S. 24ff ) \\
 Android unterstützt mit dem \texttt{android.location} Paket den Zugriff auf die Ortungsdienste. Als zentrale Komponente des Location Frameworks stellt der \texttt{LocationManager} \glspl{API} zur Lokalisierung des Geräts bereit. Mit dem \texttt{LocationManager} ist die Anwendung in der Lage alle Location Provider\footnote{ deutsch: Standortanbieter. Ein Standortanbieter bietet regelmäßige Berichte über die geographische Lage des Gerätes} des letzten bekannten Standortes abzufragen, sich für regelmäßige Updates zur Position des Gerätes anzumelden und sich wieder abzumelden wenn sich das Gerät außerhalb gegebener Parameter befindet. \cite{android_gps} \\
