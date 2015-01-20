@@ -9,9 +9,8 @@ abstracton,
 \usepackage[english, ngerman]{babel}
 \usepackage{lmodern}	 %Type1-Schriftart fuer nicht-englische Texte
 \usepackage{listings} %dient der Darstellung von Quellcode
-%\usepackage{minted}
 \usepackage{graphicx}
-\usepackage[justification=RaggedRight, format=hang,labelsep=quad]{caption}
+\usepackage[justification=raggedright, format=hang,labelsep=quad]{caption}
 \usepackage{subcaption}
 \usepackage{float}
 % aller Bilder werden im Unterverzeichnis figures gesucht:
@@ -23,7 +22,7 @@ abstracton,
 \usepackage{titlesec} % formatiert titel-absätze
 \usepackage{xcolor}
 \usepackage[left=30mm,right=25mm,top=25mm,bottom=25mm]{geometry} %Seitenränder
-\usepackage[pdfborder={ 0 0 0 }, breaklinks]{hyperref} % bricht links und macht die umrandung weiß
+\usepackage[pdfborder={ 0 0 0 }, breaklinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{xspace} % setzt Leerzeichen, wenn welche hingehören 
 \usepackage{scrhack} %The package scrhack redefines macros of other packages. It should be loaded at the very end
@@ -47,17 +46,9 @@ toc]            %Einträge im Inhaltsverzeichnis
 %------------------------------------------------------------------------
 % CODE
 %------------------------------------------------------------------------
- \lstdefinelanguage{JavaScript}{
-  keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with},
-  morecomment=[l]{//},
-  morecomment=[s]{/*}{*/},
-  morestring=[b]',
-  morestring=[b]",
-  sensitive=true
-}
 \lstset{
    basicstyle=\scriptsize\ttfamily,
-   keywordstyle=\bfseries\ttfamily\color{orange},
+   keywordstyle=\bfseries\ttfamily\color{blue},
    stringstyle=\color{purple}\ttfamily,
    commentstyle=\color{middlegray}\ttfamily,
    emph={square}, 
@@ -88,8 +79,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 %
 %Inhaltsverzeichnis
 %
-%\setcounter{secnumdepth}{3}
-%\setcounter{tocdepth}{3}
+%\setcounter{secnumdepth}{3} %\setcounter{tocdepth}{3}
 \renewcommand{\contentsname}{Inhalt} %Inhaltsverzeichnistitel = Inhalt
 \tableofcontents 		
 
@@ -97,17 +87,17 @@ toc]            %Einträge im Inhaltsverzeichnis
 \pagestyle{headings}	 	%%Ab hier die Kopf-/Fusszeilen: headings / fancy .
 %\hyphenation{JavaScript} %trennt JavaScript nie
 %
-% Kapitel / Hauptteil des Dokumentes 
+% Kapitel
 %\input{chapter/Abstract}
-%\input{chapter/Einleitung}
-%\input{chapter/StateOfTheArt}
-%\input{chapter/Entscheidung}
+\input{chapter/Einleitung}
+\input{chapter/StateOfTheArt}
+\input{chapter/Entscheidung}
 \input{chapter/Grundlagen}
 \input{chapter/Szenarien}
 \input{chapter/Anforderungen}   %Anforderungsanalyse
 \input{chapter/Entwurf}         %Konzeption
-\input{chapter/Implementierung} %Umsetzung Prototyp
-\input{chapter/Fazit}
+%\input{chapter/Implementierung} %Umsetzung Prototyp
+%\input{chapter/Fazit}
 %
 % Verzeichnisse
 %
