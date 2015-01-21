@@ -52,6 +52,7 @@ Auch Toyota hat ein System entwickelt, welches eine spezielle Infrastruktur an K
 %
 %%% Apps %%% 
 %
+\clearpage
 \section{Ampelinformationssysteme als mobile Applikation}
 Ampelassistenten als mobile Anwendung sind recht einfach umzusetzen. \glspl{Smartphone} sind bereits mit einem \gls{GPS}-Empfänger ausgestattet und haben Internetzugang. Die hier vorgestellten mobilen Anwendungen existieren bereits oder befinden sich in der Testphase.
 %%% ENLIGHTEN %%%
@@ -62,7 +63,7 @@ Ampelassistenten als mobile Anwendung sind recht einfach umzusetzen. \glspl{Smar
 Signal Guru wurde von den Wissenschaftlern des MIT\footnote{Massachusetts Institute of Technology} und der Universität von Princeton entwickelt. Unter den vorgestellten Projekten hebt sich Signal Guru insofern ab, dass die Informationen nicht direkt von einer Vermittlung (Server oder \gls{LSA}) kommt,sondern von der Anwendung selbst errechnet wird. Die \Gls{App} errechnet über die \glspl{Smartphone} vieler Nutzer - welche miteinander kommunizieren -  die Wahrscheinlichkeit, wann eine Ampel grün wird und errechnen ein daraus ein Zeitmuster zur Vorhersage. Wie in Abbildung \ref{fig:AppSignalGuru} ist zu sehen ist, muss die eingebaute Kamera durch die Windschutzscheibe die Ampel registrieren. Bei Testläufen im Straßenverkehr vielen die Ergebnise bei statisch geschalteten Ampeln deutlich besser aus als bei angepassten Ampelschaltungen \cite{SignalGuruPaper} 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{SignalGuru}
+    \includegraphics[width=0.7\textwidth]{guru}
     \caption[Signal Guru]{Signal Guru muss in der Lage sein die Ampel zu 'sehen'.  Quelle: \cite{SignalGuruPaper}} \label{fig:AppSignalGuru}
 \end{figure}
 Dieser Ansatz ist für Fahrräder jedoch nicht umsetzbar, da das \gls{Smartphone} in der Halterung am Lenker die \gls{LSA} nicht erfassen kann.
@@ -76,7 +77,7 @@ Das \textsc{Hammerhead} ist ein "'Hammer"', oder einfach ein "'T"', an den Lenke
     \caption[Hammerhead]{Hammerhead -- \glspl{LED} zeigen den Weg.  Quelle: \cite{Hammerhead}} 
     \label{fig:hammerhead}
 \end{figure}
-Via Bluetooth ist \textsc{Hammerhead} an das \gls{Smartphone} gekoppelt, auf dem die zugehörige Navigationsanwendung läuft mit der man Routen eingeben, teilen und speichern kann\cite{Hammerhead}.\\
+Via Bluetooth ist \textsc{Hammerhead} an das \gls{Smartphone} gekoppelt, auf dem die zugehörige Navigationsanwendung läuft mit der man Routen eingeben, teilen und speichern kann\cite{Hammerhead}.\\\\
 Ein sehr ähnliches Prinzip verfolgt das \textsc{CycleNav} von der Firma Schwinn. Untersiede findet man hier im Design und einem integriertem Lautsprecher, der Abbiegehinweise ausgibt und auf Wunsch wiederholt\cite{CycleNav}.
 \subsection{Intelligente Fahrradlenker}
 Mehr High-Tech, aber auch umfangreichere Funktionen bietet der vom amerikanischen Startup \textsc{Helios-Bikes} entwickelte \textsc{Helios}-Lenker. Neben dem Frontlicht hat der Lenker wie in Abbildung \ref{fig:helios} zu sehen, an den Enden \glspl{LED} die einen zum gewünschten Standort leiten. 
@@ -86,7 +87,7 @@ Mehr High-Tech, aber auch umfangreichere Funktionen bietet der vom amerikanische
     \caption[Helios-Lenker]{Helios-Lenker  Quelle: \cite{Helios}} 		
     \label{fig:helios}
 \end{figure}
-Sie passen ihre Farbe der Geschwindigkeit an und haben auf Wunsch auch eine Blinkfunktion. Verbindet man den Lenker mit einem \gls{Smartphone}, lässt sich die Farbe der \glspl{LED} individualisieren. Die Verbindung zum Handy hat weitere Vorteile: dank des eingebauten \gls{GPS}-Trackers und eingesteckter SIM-Karte lässt sich das Fahrrad per SMS über den derzeitigen Standort abfragen\cite{Helios}, was im Falle eines Diebstahl sehr hilfreich sein kann.\\
+Sie passen ihre Farbe der Geschwindigkeit an und haben auf Wunsch auch eine Blinkfunktion. Verbindet man den Lenker mit einem \gls{Smartphone}, lässt sich die Farbe der \glspl{LED} individualisieren. Die Verbindung zum Handy hat weitere Vorteile: dank des eingebauten \gls{GPS}-Trackers und eingesteckter SIM-Karte lässt sich das Fahrrad per SMS über den derzeitigen Standort abfragen\cite{Helios}, was im Falle eines Diebstahl sehr hilfreich sein kann.\\\\
 \textsc{Vanhawks Valour} heißt das Rad, das ab April 2015 lieferbar ist. Wie im \textsc{Helios}-Lenker steckt auch hier ein über das \gls{Smartphone} steuerbares Navigationssystem, das die Abbiegehinweise per \gls{LED} signalisiert, im Lenker. Auf den gefahrenen Routen merkt sich das Rad durch einen Erschütterungssensor erfasste Hindernisse wie Unebenheiten in der Fahrbahn und ermittelt beim nächsten Mal darauf rücksicht nehmend eine andere Route. Es ist darüber hinaus in der Lage mit anderen \textsc{Vanhawks valour}-Rädern zu kommunizieren und dessen Routenbegebenheiten ebenfalls zu berücksichtigen. Mittels Radarsensoren registriert das Fahrrad Autos im toten Winkel und benachrichtig die FahrerInnen durch ein vibrierenden Lenker\cite{vanhawks}.
 %bluetooth kommunikation ... Akku im Rad wird mit Hilfe des Nabendynamos aufgeladen. yeah! App hat auch fitnesstrainer
 \subsection{Das Samsung Smart Bike}
@@ -122,5 +123,5 @@ Das Projekt ist bereits voll finanziert und der Versand der vorbestellten System
 %%% ERGIBNIS %%%
 \section{Analyseergebnis}
 Das Thema der Geschwindigkeitsempfehlung zum Erreichen der Grünen Welle ist sehr interessant und wird in den nächsten Jahren weiter untersucht werden. Auch die Nachfrage an Fahrraderweiterungen steigt und die EntwicklerInnen solcher Systeme werden kreativer, wodurch immer mehr Produkte mit erweiternden Funktionen entstehen. \\
-Es existieren noch andere Studien und Produkte zu diesem Gebiet, doch um den Rahmen dieser Arbeit nicht zu sprengen, werden nicht alle aufgezählt. Sie haben zur Realisierung dieser Arbeit beigetragen indem sie deutlich zeigen, dass sich Forschung zu diesem Thema lohnt.
+Es existieren noch andere Studien und Produkte zu diesem Gebiet, doch um den Rahmen dieser Arbeit nicht zu sprengen, werden nicht alle aufgezählt. Sie haben zur Realisierung dieser Arbeit beigetragen indem sie deutlich zeigen, dass sich Forschung zu diesem Thema lohnt.\\
 Gerade eine Ampelassistents für das Fahrrad bewegt Menschen dazu, sich für das Radfahren zu begeistern. So wird der Verkehr flüssiger, die Teilnehmer entspannter und die Luft sauberer. AutofahrerInnen sind schon lange nicht mehr allein auf der Straße und so gilt es, dieses erfolgreiche Konzept für alle VerkehrsteilnehmerInnen zu erweitern.
