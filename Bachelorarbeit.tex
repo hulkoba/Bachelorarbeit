@@ -13,6 +13,7 @@ abstracton,
 \usepackage[justification=raggedright, format=hang,labelsep=quad]{caption}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage{titleref}
 % aller Bilder werden im Unterverzeichnis figures gesucht:
 \graphicspath{{img/}}
 \usepackage{cite}
@@ -89,12 +90,12 @@ toc]            %Einträge im Inhaltsverzeichnis
 %
 % Kapitel
 %\input{chapter/Abstract}
-\input{chapter/Einleitung}
+%\input{chapter/Einleitung}
 \input{chapter/StateOfTheArt}
-\input{chapter/Entscheidung}
-\input{chapter/Grundlagen}
+%\input{chapter/Entscheidung}
+%\input{chapter/Grundlagen}
 \input{chapter/Szenarien}
-\input{chapter/Anforderungen}   %Anforderungsanalyse
+%\input{chapter/Anforderungen}   %Anforderungsanalyse
 \input{chapter/Entwurf}         %Konzeption
 %\input{chapter/Implementierung} %Umsetzung Prototyp
 %\input{chapter/Fazit}
@@ -104,7 +105,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 %% Ein kleiner Abstand zu den Kapiteln im Inhaltsverzeichnis (toc)
 \addtocontents{toc}{\protect\vspace*{\baselineskip}}
 \include{extra/Acronym}
-\printglossary[type=\acronymtype, title=Abkürzungen, style=long]
+\printglossary[type=\acronymtype, title=Abkürzungen, style=super]
 \printglossary[type=main,style=altlist]
 % 
 %Abbildungsverzeichnis
