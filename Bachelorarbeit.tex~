@@ -90,14 +90,14 @@ toc]            %Einträge im Inhaltsverzeichnis
 %
 % Kapitel
 %\input{chapter/Abstract}
-%\input{chapter/Einleitung}
+\input{chapter/Einleitung}
 \input{chapter/StateOfTheArt}
-%\input{chapter/Entscheidung}
-%\input{chapter/Grundlagen}
+\input{chapter/Entscheidung}
+\input{chapter/Grundlagen}
 \input{chapter/Szenarien}
-%\input{chapter/Anforderungen}   %Anforderungsanalyse
+\input{chapter/Anforderungen}   %Anforderungsanalyse
 \input{chapter/Entwurf}         %Konzeption
-%\input{chapter/Implementierung} %Umsetzung Prototyp
+\input{chapter/Implementierung} %Umsetzung Prototyp
 %\input{chapter/Fazit}
 %
 % Verzeichnisse
