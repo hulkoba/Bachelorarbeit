@@ -8,9 +8,7 @@ Im Zuge dieser Arbeit wird eine Smartphone Anwendung erstellt, deren Grundlage f
 % ANDROID
 \subsection{Android}
 Die umfassende Open-Source-Plattform Android stellt eine vollständige Ausstattung für Mobilgeräte dar. Android-Anwendungen werden mit der Programmiersprache Java und der Auszeichnungssprache \gls{XML} entwickelt. Mit dem Android \gls{SDK}\footnote{ Das Android \gls{SDK} steht unter \url{https://developer.android.com/sdk/index.html} zum Download bereit} werden die Werkzeuge und \gls{API} zur Verfügung gestellt, die erforderlich sind Mobilanwendungen auf der Android-Plattform erzeugen zu können.\\ 
-Zu den wichtigsten \gls{SDK} Werkzeugen gehören der Android \gls{SDK}-Manager, der AVD-Manager, der Emulator und der Dalvik Debug Monitor Server(Ddms). Der \gls{SDK}-Manager verwaltet die \gls{SDK}-Pakete, sowie die installierten Pakete und System-Images. Der AVD-Manager bietet eine grafische Oberfläche in der Android Virtuell Devices verwaltet, und im Emulator ausgeführt werden können. Mithilfe des Ddms können Android Anwendungen auf Fehler untersucht werden. \cite{android_sdk} \\
-Ursprünglich gab es die  Virtuelle Maschine Dalvik, die unter Berücksichtigung von Rechenleistung und der Lebensdauer von Batterien speziell für Android entworfen wurde. [\textsc{Quelle}]
-Diese wurde mit Android 5.0 von der Android Runtime (ART) als effizientere Laufzeit komplett ersetzt. \cite{android_5}\\\\
+Zu den wichtigsten \gls{SDK} Werkzeugen gehören der Android \gls{SDK}-Manager, der AVD-Manager, der Emulator und der Dalvik Debug Monitor Server(Ddms). Der \gls{SDK}-Manager verwaltet die \gls{SDK}-Pakete, sowie die installierten Pakete und System-Images. Der AVD-Manager bietet eine grafische Oberfläche in der Android Virtuell Devices verwaltet, und im Emulator ausgeführt werden können. Mithilfe des Ddms können Android Anwendungen auf Fehler untersucht werden. \cite{android_sdk} \\\\
 Mit dem Android \gls{NDK}\footnote{ Das Android \gls{NDK} steht unter \url{https://developer.android.com/tools/sdk/ndk/index.html} zum Download bereit} existiert auch ein Tool, mit dem Teile einer Anwendung in systemeigenen Programmiersprachen wie C oder C++ implementiert werden können. Programmcode der in solchen Sprachen geschrieben ist, eignet sich zum Beispiel bei CPU-intensiven Operationen wie Signalverarbeitungen oder Physik-Simulationen besonders gut. Hier ist allerdings sicherzustellen, ob die erforderlichen Bibliotheken in dem \gls{SDK} auch verfügbar sind. \cite{android_ndk} \\
 Einen Überblick über die komplexe Android-Systemarchitektur, welche nachfolgend (nach \cite{android} S. 3ff) kurz beschrieben wird, zeigt die folgende Abbildung.
 \begin{figure}[H]  
@@ -36,27 +34,27 @@ Systemeigenen Bibliotheken sind C/C++ Bibliotheken und vorinstalliert. Dazu geh�
 	\item \textsc{libc} ~ Eine C-Bibliothek
 \end{itemize}
 \paragraph{Android Runtime: }
-Die Android Laufzeitumgebung nutzt die Java-Core-Bibliotheken und bis zur Version 5.0 auch die Dalvik \gls{VM}, weswegen diese noch auf der Grafik abgebildet ist. \textit{Danach wurde die Android Runtime eingesetzt}\cite{android_art}
+Die Android Laufzeitumgebung nutzt die Java-Core-Bibliotheken und die Dalvik \gls{VM}, welche noch auf der Grafik abgebildet ist. Diese wurde mit der Version 5.0 durch die Android Runtime (ART) ersetzt\cite{android_5}
 \paragraph{Application Framework: }
 Androids Application-Framework ist eine Umgebung die unterschiedliche Dienste zur Verfügung stellt. Sie bietet EntwicklerInnen Zugriff auf die im Kern verwendeten \glspl{API} sowie auf die Java-Bibliotheken die für Android erstellt wurden. 
 \paragraph{Applications: }
 Auf der obersten Ebene in Abbildung \ref{fig:android} befinden sich die Anwendungen die den täglichen Telefon-Bedarfs wie Adressbuch, Messenger, E-Mail, Internet-Browser etc. decken. Zusätzlich unterstützt Android verschiedene Anwendungen von Drittanbietern. Diese sind hauptsächlich in Java geschrieben und werden am häufigsten über den Google Play Store verteilt.
 % RELATIONALE DATENBANKEN
 \subsection{Relationale Datenbanken}
-\textit{Eine relationale Datenbank dient Ablegen von Daten. Die Organisation der Daten erfolgt in Form von Tabellen, also Datenstrukturen mit Zeilen und Spalten. Die Daten
-in verschiedenen Tabellen können sich gegenseitig referenzieren (über IDs, die man Schlüssel nennt) und dadurch Beziehungen (Relationen) aufweisen. Jede Zeile einer Tabelle bildet einen sogenannten Datensatz und setzt sich aus den Werten mehrerer Felder (Spalten) zusammen.\\
-Für die Kommunikation mit relationalen Datenbanken wie SQLite gibt es eine spezielle Kommandosprache namens \gls{SQL}. Im Falle von SQLite können via \gls{SQL} folgende Operationen durchgeführt werden:
+Eine relationale Datenbank dient der elektronischen Verwaltung von Daten. Die Organisation der Daten ist tabellenbasiert, erfolgt also in Form von Datenstrukturen mit Zeilen (Tupel) und Spalten (Attribute). Jedes Tupel einer Tabelle bildet den sogenannten Datensatz und setzt sich aus den Werten mehrerer Attribute zusammen. Ein Tupel ist über einen oder mehrere Schlüssel eindeutig identifizierbar. Die Daten in einzelnen Tabellen lassen sich über die Schlüssel verknüpfen und weisen dadurch Relationen, also Beziehungen der Attribute zum Tupel, auf. \\
+Für die Kommunikation mit relationalen Datenbanken wie SQLite gibt es die Datenbanksprache \gls{SQL}. Mit SQLite können via \gls{SQL} folgende Operationen durchgeführt werden:
 \begin{itemize}[leftmargin=0.7cm]
 \renewcommand\labelitemi{--}
-	\item Definition der Tabellenstruktur (Tabellenname, Spaltenanzahl, Datentyp pro Spalte)
+	\item Definition der Datenstruktur
 	\item Anlegen und Löschen einer Tabelle
-	\item Einfügen, Ändern, Löschen von Datensätzen
+	\item Bearbeiten (Einfügen, Verändern, Löschen) von Tupeln
 	\item Suchen von Daten aus einer oder mehreren Tabellen
 \end{itemize}
-Die meisten dieser Operationen lassen sich aber auch ohne Rückgriff auf \gls{SQL}ausführen. }  
+%Die meisten dieser Operationen lassen sich allerdings auch ohne Rückgriff auf \gls{SQL} umsetzen. 
 % SQLITE %
 \subsubsection{SQLite}
-SQLite ist eine \textbf{weitgehend in sich abgeschlossene} Datenbank-Engine die auch bei Android sehr beliebt ist. Es benötigt nur minimale Unterstützung von externen Bibliotheken oder vom Betriebssystem. So eignet es sich gut für den Einsatz in Systemen, denen die Infrastruktur eines Desktop-Computers fehlt. Der Code ist Open Source und frei für den privaten oder gewerblichen Einsatz.\\
+SQLite ist eine Datenbank-Engine die auch bei Android sehr beliebt ist. Es benötigt nur minimale Unterstützung von externen Bibliotheken oder vom Betriebssystem. So eignet es sich gut für den Einsatz in Systemen, denen die Infrastruktur eines Desktop-Computers fehlt. Der Code ist Open Source und frei für den privaten oder gewerblichen Einsatz.\\
+Als sehr kompakte Bibliothek ist sie mit allen aktivierten Funktionen immernoch kleiner als 500 kB. Mit der Weglassung optionaler Merkmale kann die Größe auf circa 300 kB reduziert werden, was jedoch SQLite verlangsamt. Denn es ist umso schneller je mehr Speicherplatz zur Verfügung steht.
 Im Gegensatz zu den meisten anderen \gls{SQL}-Datenbanken ist keine Client-Server-Architektur vorhanden. Um in die Datenbank zu schreiben oder daraus zu lesen greift der Prozess auf die interne Festplatte, und nicht auf einen Server zu. Es ist also keine Netzwerverbindung vonnöten. \\
 Der Hauptvorteil, keinen separaten Serverprozess zu installieren, einzurichten, zu konfigurieren und zu verwalten, macht SQLite zu einem konfigurationsfreien Datenbanksystem. Es besteht keine administrative Notwendigkeit um eine neue Datanbankinstanz zu erstellen oder Zugriffsrechte zuzuweisen. 
 \begin{center}
@@ -82,7 +80,8 @@ Die \gls{GPS}-Sensoren in \glspl{Smartphone} sind kostengünstiger, kleiner und 
 \subsubsection{Mobile Sensorik unter Android}
 Die meisten Android-Mobilgeräte verfügen über integrierte Sensoren, die die Bewegung, Ausrichtung und verschiedene Umgebungsbedingungen messen. Diese Sensoren sind praktisch wenn man dreidimensionale Gerätbewegungen, Positionierungen oder Änderungen in der Umgebung des Gerätes überwachen möchte. So können zum Beispiel Spieleanwendungen den Beschleunigungssensor nutzen, um komplexe BenutzerInnengesten und Bewegungen wie Neigung, Erschütterung, Drehung oder Schwenkung erfassen.\\
 Die Android-Plattform unterstützt Bewegungssensoren zum Messen von Beschleunigungen und Drehungen in drei Achsen, Umgebungssensoren zur Ermittlung verschiedener Umweltparameter wie Luftdruck und -feuchtigkeit, oder Beleuchtung und Temperatur, und Positionssensoren zum Messen der physikalischen Position des Gerätes. Android bietet mit dem Android Sensor Framework eine Sammlung von Klassen und Schnittstellen an mithilfe dessen man auf diese Sensoren zugreifen und deren Daten erfassen kann. \cite{android_sensor} 
-\subsection{Bluetooth, NFC, }
+% GEOLOKATION BLUETOOTH NFC
+\subsection{Geolokation mittels Network Porvider}
 % GEOLIKATION GPS %
 \subsection{Geolokation mittels \gls{GPS}}
 Die satellitengestützte Positionsbestimmung \gls{GPS} gewährleistet die Bestimmung des exakten Standpunktes und ist so wesentlicher Bestandteil ortsgebundener Anwendungen wie zum Beispiel die in Kapitel \ref{chap:state} beschriebenen. \\
