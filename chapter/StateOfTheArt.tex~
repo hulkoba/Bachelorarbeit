@@ -71,7 +71,7 @@ Signal Guru wurde von den Wissenschaftlern des MIT\footnote{ Massachusetts Insti
 Dieser Ansatz ist für Fahrräder jedoch nicht umsetzbar, da das \gls{Smartphone} in der Halterung am Lenker die \gls{LSA} nicht erfassen kann.
 % FAHRRADERWEITERUNGEN %
 \section{Fahrraderweiterungen}
-Als Schnittstelle das Smarthone nutzend gibt es ausgeklügelte Systeme mit zahlreichen Funktionen. Das einfache Navigationssystem für Fahrräder ist kaum noch notwendig, wo doch zum Beispiel die hier aufgeführten um einiges umfangreicher sind.
+Als Schnittstelle das Smarthone nutzend gibt es ausgeklügelte Systeme mit zahlreichen Funktionen. Das einfache Navigationssystem für Fahrräder ist kaum noch notwendig, wo doch zum Beispiel die hier aufgeführten neben Navigationsmöglichkeiten jede Menge zusätzliche Funktionalitäten aufweisen.
 \subsection{Displaylose Fahrradnavigation}
 Das \textsc{Hammerhead} ist ein "'Hammer"', oder einfach ein "'T"', an den Lenker angebracht. Gespickt mit verschiedenfarbigen \glspl{LED} zeigt es den Weg zeigen, warnt vor Hindernissen und ersetzt die vorderen Scheinwerfer.
 \begin{figure}[H]

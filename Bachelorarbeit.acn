@@ -2,7 +2,6 @@
 \glossaryentry{C2I?\glossaryentryfield{C2I}{\glsnamefont{C2I}}{Car-to-Infrastructure oder Vehicle-to-Infrastructure}{\relax }|glsseeformat[Glossary:]{C2Ig}}{Z}
 \glossaryentry{DSRC?\glossaryentryfield{DSRC}{\glsnamefont{DSRC}}{Dedicated Short Range Communication}{\relax }|glsseeformat[Glossary:]{DSRCg}}{Z}
 \glossaryentry{REST?\glossaryentryfield{REST}{\glsnamefont{REST}}{REpresentational State Transfer}{\relax }|glsseeformat[Glossary:]{RESTg}}{Z}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{App?\glossaryentryfield{App}{\glsnamefont{App}}{Applikation}{\relax }|setentrycounter[]{page}\glsnumberformat}{5}
@@ -55,8 +54,7 @@
 \glossaryentry{SQL?\glossaryentryfield{SQL}{\glsnamefont{SQL}}{Structured Query Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{SQL?\glossaryentryfield{SQL}{\glsnamefont{SQL}}{Structured Query Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{SQL?\glossaryentryfield{SQL}{\glsnamefont{SQL}}{Structured Query Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{SQL?\glossaryentryfield{SQL}{\glsnamefont{SQL}}{Structured Query Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{SQL?\glossaryentryfield{SQL}{\glsnamefont{SQL}}{Structured Query Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{SQL?\glossaryentryfield{SQL}{\glsnamefont{SQL}}{Structured Query Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
 \glossaryentry{App?\glossaryentryfield{App}{\glsnamefont{App}}{Applikation}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
 \glossaryentry{API?\glossaryentryfield{API}{\glsnamefont{API}}{Application Programming Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
 \glossaryentry{SQL?\glossaryentryfield{SQL}{\glsnamefont{SQL}}{Structured Query Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
@@ -76,7 +74,7 @@
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{26}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{26}
 \glossaryentry{WLAN?\glossaryentryfield{WLAN}{\glsnamefont{WLAN}}{Wireless Local Area Network}{\relax }|setentrycounter[]{page}\glsnumberformat}{26}
