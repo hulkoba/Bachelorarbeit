@@ -82,14 +82,38 @@ Ein Sensor\footnote{ aus dem Lateinischen, deutsch: "'\textit{fühlen}"'} ist ei
 % MOBILE SENSORIK UNTER ANDROID %
 \subsubsection{Mobile Sensorik unter Android}
 Die meisten Android-Mobilgeräte verfügen über integrierte Sensoren, die die Bewegung, Ausrichtung und verschiedene Umgebungsbedingungen messen. Diese Sensoren sind praktisch wenn man dreidimensionale Gerätbewegungen, Positionierungen oder Änderungen in der Umgebung des Gerätes überwachen möchte. So können zum Beispiel Spieleanwendungen den Beschleunigungssensor nutzen, um komplexe BenutzerInnengesten und Bewegungen wie Neigung, Erschütterung, Drehung oder Schwenkung erfassen.\\
-Die Android-Plattform unterstützt Bewegungssensoren zum Messen von Beschleunigungen und Drehungen in drei Achsen, Umgebungssensoren zur Ermittlung verschiedener Umweltparameter wie Luftdruck und -feuchtigkeit, oder Beleuchtung und Temperatur, und Positionssensoren zum Messen der physikalischen Position des Gerätes. Android bietet mit dem Android Sensor Framework eine Sammlung von Klassen und Schnittstellen an mithilfe dessen man auf diese Sensoren zugreifen und deren Daten erfassen kann. \cite{android_sensor} 
-
-
+Die Android-Plattform unterstützt Bewegungssensoren zum Messen von Beschleunigungen und Drehungen in drei Achsen, Umgebungssensoren zur Ermittlung verschiedener Umweltparameter wie Luftdruck und -feuchtigkeit, oder Beleuchtung und Temperatur, und Positionssensoren zum Messen der physikalischen Position des Gerätes. Android bietet mit dem Android Sensor Framework eine Sammlung von Klassen und Schnittstellen an mithilfe dessen man auf diese Sensoren zugreifen und deren Daten erfassen kann. \cite{android_sensor}  
 % GEOLOKATION NETWORK PROVIDER %
 \subsubsection{Geolokation via Netzwerk}
 Netzwerkgestützte Standortbestimmung basiert auf Informationen des \gls{WLAN} oder der Funkzellen des Mobilfunknetzes. \gls{WLAN}-basierte Standorterkennung funktioniert durch \gls{WLAN}-Access Points\footnote{ Drahtloser Zugangspunkt der als Schnittstelle für kabellose Kommunikationsgeräte dient}, die das Gerät verfolgen. Das Gerät stellt dann eine Anfrage an den Google location service der die Ortungsdaten bestehend aus der MAC-Adresse der Access Points in der Nähe und deren Signalstärke, auf Basis der \gls{WLAN}-Information liefert. \\
-Ähnlich der \gls{WLAN}-basierten Standorterkennung funktioniert die funkzellenbastierte. Das Mobilgerät muss mit einem Funkturm in Verbindung stehen. Bewegt sich das Gerät, verbindet es sich mit einem anderen Turm und die Signalstärke des sich nähernden Turms wird stärker. Unter Kenntnis der einzigartigen ID und der Position des Funkturms mit dem das Gerät verbunden ist und ggf. derer, mit denen das Gerät zuletzt verbunden war, lässt sich der eigene Standort ermitteln. (\cite{location} S. 8f) \\
-\textbf{Triangulation??? Google || Android location service??}\\
+
+% MOBILFUNK %
+Ähnlich der \gls{WLAN}-basierten Standorterkennung funktioniert die funkzellenbastierte. Funkzellentriangulierung verwendet die bekannte Geschwindigkeit von Funksignalen, um den Abstand zum Empfangsgerät zu berechnen. Das Mobilgerät muss mit einem Funkturm in Verbindung stehen. Bewegt sich das Gerät, verbindet es sich mit einem anderen Turm und die Signalstärke des sich nähernden Turms wird stärker. Unter Kenntnis der einzigartigen ID und der Position des Funkturms mit dem das Gerät verbunden ist und ggf. derer, mit denen das Gerät zuletzt verbunden war, lässt sich der eigene Standort ermitteln. (\cite{location} S. 8f) \\
+Für eine gute Lokalisierung braucht es mindestens drei, vorzugsweise vier Mobilfunkmasten oder Antennen. In Städten, wenn sich mehr Signale der Mobilfunkmasten überlappen kann eine Genauigkeit von bis zu 200 Metern erreicht werden -- bei einer geringen Funkturmdichte sinkt diese auf bis zu mehreren Kilometern, wie in Abbildung \ref{fig:cell3} illustriert. 
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[t]{0.32\textwidth}
+                \includegraphics[width=\textwidth]{triangulation1}
+                \caption{Überlappung von drei Funktürmen}
+                \label{fig:cell1}
+        \end{subfigure}%
+        ~ 
+        \begin{subfigure}[t]{0.32\textwidth}
+                \includegraphics[width=\textwidth]{triangulation2}
+                \caption{Überlappung von zwei Funktürmen mit Richtantennen}
+                \label{fig:cell2}
+        \end{subfigure}
+         ~ 
+        \begin{subfigure}[t]{0.32\textwidth}
+                \includegraphics[width=\textwidth]{triangulation3}
+                \caption{Keine Überlappung von Funkturmsignalen}
+                \label{fig:cell3}
+        \end{subfigure}
+        \rule{35em}{0.5pt}
+        \caption[Funkzellentriangulierung]{Funkzellentriangulierung Quelle: \cite{fig:cell}}
+        \label{fig:cell}
+\end{figure}
+So eine Überlappung von drei Funktürmen ist in Abbildung \ref{fig:cell1} veranschaulicht. Diese Genauigkeit kann, wie in Abbildung \ref{fig:cell2} demonstriert, erhöht werden wenn Richtantennen auf dem Funkturm installiert sind. So kann zusätzlich die Richtung des Mobiltelefonsignals ermittelt werden.  (\cite{gps} S. 23) \\
 Es ist schont zwar im Gegensatz zu \gls{GPS} den Akku und ist innerhalb von Gebäuden nutzbar, liefert jedoch wesentlich ungenauere Ergebnisse als \gls{GPS}. Da höchstens die Tatsache der batterieschonenden Verwendung für die Fahrrad-\gls{App} relevant ist, ist diese Methode nicht brauchbar.  
 % GEOLIKATION GPS %
 \subsubsection{Geolokation via \gls{GPS}}
@@ -100,11 +124,12 @@ Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Er
     \centering  
     \includegraphics[width=0.4\textwidth]{gps} 
     \rule{35em}{0.5pt}
-    \caption[GPS Satelliten Konstellation]{GPS Satelliten Konstellation  Quelle: \url{http://www.gps.gov/multimedia/images/constellation.jpg}}
+    \caption[GPS Satelliten Konstellation]{GPS Satelliten Konstellation  Quelle: \cite{fig:gps}}
     \label{fig:gps}
 \end{figure}
 Mittels Triangulation errechnet daraus ein \gls{GPS}-Empfänger die eigene Position. Daten von einem einzigen Satelliten lässt die Position des \gls{GPS}-Empfängers auf deinen großen Bereich der Erde einschränken. Das Hinzufügen eines zweiten engt die Position auf den Bereich, in dem sich die zwei Bereiche überlappen ein. Mit den Daten eines dritten Satelliten bekommt man bereits eine relativ genaue Positionierung. Mit jedem weiteren Satelliten wird die Präzision erhöht und durch zusätzliche Positionsinformation wie Höhe erweitert. \gls{GPS}-Empfänger benutzen regelmäßig vier bis sieben, oder gar mehr Satelliten. (\cite{gps} S. 25f)\\
-Trotzdem hat \gls{GPS}, insbesondere für mobile Plattformen einige Nachteile. Es verbraucht viel Energie, was die Akkulaufzeit des Mobiltelefons beeinträchtigt. Bevor der Standort berechnet werden kann, müssen mehrere Satelliten ermittelt werden, was nach dem Kaltstart einige Zeit in Anspruch nehmen kann. (\cite{location} S. 5)
+Trotzdem hat \gls{GPS}, insbesondere für mobile Plattformen einige Nachteile. Es verbraucht viel Energie, was die Akkulaufzeit des Mobiltelefons beeinträchtigt. Bevor der Standort berechnet werden kann müssen mehrere Satelliten ermittelt werden, was nach dem Kaltstart einige Zeit in Anspruch nehmen kann. (\cite{location} S. 5)
+% GEOLOLATION UNTER ANDROID %
 \subsubsection{Geolokation unter Android}
 Android unterstützt mit dem \texttt{android.location} Paket den Zugriff auf die Ortungsdienste. Als zentrale Komponente des Location Frameworks stellt der \texttt{LocationManager} \glspl{API} zur Lokalisierung des Geräts bereit. Mit dem \texttt{LocationManager} ist die Anwendung in der Lage alle Location Provider\footnote{ deutsch: Standortanbieter. Ein Standortanbieter bietet regelmäßige Berichte über die geographische Lage des Gerätes} des letzten bekannten Standortes abzufragen, sich für regelmäßige Updates zur Position des Gerätes anzumelden und sich wieder abzumelden wenn sich das Gerät außerhalb gegebener Parameter befindet. \cite{android_gps} \\
 Die geographische Positionsangabe besteht aus Längengrad (Langitude) und Breitengrad (Lotitude). Beide werden unter anderem vom \texttt{LocationManager}-Objekt als Gleitkommawert geliefert. Daneben auch Informationen wie die Höhe in Metern über der Mehreshöhe, Peilung, Zeitstempel und die Geschwindigkeit.
