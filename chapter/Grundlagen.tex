@@ -14,6 +14,7 @@ Einen Überblick über die komplexe Android-Systemarchitektur, welche nachfolgen
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.7\textwidth]{Android-System-Architecture} 
+    \rule{35em}{0.5pt}
     \caption[Android-Systemarchitektur]{Die Android-Systemarchitektur Quelle: \url{http://en.wikipedia.org/wiki/File:Android-System-Architecture.svg}}
     \label{fig:android}
 \end{figure}
@@ -67,9 +68,11 @@ SQLite ist außerdem eine Ein-Datei-Datenbank. Das bedeutet die vollständige \g
 Android stellt mit dem Paket \texttt{android.database.sqlite} eine \gls{API} zur Verfügung, die den effektiven Einsatz von SQLite ermöglicht. Dort findet sich die Hilfsklasse \texttt{SQLiteOpener}, welche eine Instanz von \texttt{SQLiteDataBase} liefert. Der Konstruktor der Hilfsklasse erwartet ein Context-Objekt und den Namen der Datenbank. Beim Aufruf der geerbten Methoden \texttt{getReadableDatabase()} zum Datenauslesen oder \texttt{getWritableDatabase()} zum Verändern oder auslesen der Daten wird geprüft, ob eine Datenbank mit diesem Namen bereits existiert. Ist das der Fall erhält man eine Referenz auf Datenbankobjekt, wenn nicht wird eines erstellt.\\
 Wird eine Datenbank neu angelegt, geschieht das durch den Aufruf der \texttt{onCreate()} Methode. Hier wird ein \gls{SQL}-String erstellt, der den Tabellennamen und die enthaltenden Spalten angibt. Dieser String wird via \texttt{execSQL()} dem \texttt{SQLite-Database}-Objekt gegeben, in Folge dessen eine Tabellenstruktur angelegt wird.\\
 % --------------------------CODE ----------------------------------------------------%
+\rule{35em}{0.5pt}
 \lstinputlisting
 [caption={Anlegen einer Tabellenstruktur}
 \label{code:onCreate}, captionpos=b, language=JAVA]{code/onCreate.java}
+\rule{35em}{0.5pt}\\
 % --------------------------CODE ----------------------------------------------------%
  Im obigen Codebeispiel soll eine Tabelle namens \textit{schiffe} mit den vier Spalten \textit{id}, \textit{bezeichnung}, \textit{captain} und \textit{geburtstatum} mit den entsprechenden Datentypen angelegt werden. Die Spalte \textit{id} fungiert hier als Primärschlüssel, kann also zur eindeutigen Referenzierung der Datensätze verwendet werden. Mit der Angabe von \textsc{autoincrement} setzt SQLite automatisch die nächste verfügbare ID als Wert ein. Die Datensätze ohne den Zusatz \textsc{not null} sind nicht obligatorisch.\\
 Jede SQLite-Datenbank die in einer \gls{App} erzeugt wird, wird auch dort abgelegt. So ist sie auch nur für die Anwendung zugreifbar, die sie angelegt hat. Zu erwähnen ist noch, dass der Umfang der Datenbank die interne Speicherkapazität nicht überschreiten kann. Hat man die Datenbank erfolgreich erstellt, lassen sich die vier CRUD\footnote{ Create, Read, Update, Delete} Operationen darauf anwenden. Hierfür wird die entsprechende Methode mit den gewünschten Kriterien auf die Instanz der Datenbank angewandt.
@@ -96,6 +99,7 @@ Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Er
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.4\textwidth]{gps} 
+    \rule{35em}{0.5pt}
     \caption[GPS Satelliten Konstellation]{GPS Satelliten Konstellation  Quelle: \url{http://www.gps.gov/multimedia/images/constellation.jpg}}
     \label{fig:gps}
 \end{figure}
@@ -116,7 +120,8 @@ Der Abstand zur Ampel wird also durch die verbleibende Zeit dividiert.
 Die von der Berliner Verkehrsleitzentrale zur Verfügung gestellten Ampelsignalpläne und Position der angesteuerten Ampel dienen als Grundlage dieser Berechnung und sind aus der Datenbank zu holen. Die aktuelle Position des Fahrrads wird vom \gls{GPS} Sensor des \glspl{Smartphone} ermittelt und daraus der Abstand zur Ampel errechnet. Die Abbildung \ref{fig:vst} soll die Berechnungsgrundlagen veranschaulichen: 
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=1\textwidth]{vst}     
+    \includegraphics[width=1\textwidth]{vst}  
+    \rule{35em}{0.5pt}   
     \caption[Berechnung Progressionsgeschwindigkeit]{Veranschaulichung der Berechnung}
     \label{fig:vst}
 \end{figure}
