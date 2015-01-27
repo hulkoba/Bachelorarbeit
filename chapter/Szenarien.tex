@@ -8,18 +8,21 @@ Alle in Kapitel \ref{chap:state} angeführten Studien zu Ampelinformationssystem
     \label{fig:szenarien}
 \end{figure}
 \begin{description}[leftmargin=0.7cm,style=nextline]
+% ROT
 \item[Szenario R1:] 
-Zeigt die Ampel im Moment und noch eine ganze Weile auf Rot ist je nach Distanz zwischen Ampel und Fahrrad ist ein reibungsloses Passieren der Ampel durch Beschleunigung oder ohne Änderung der Geschwindigkeit zu erreichen.\\
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer roten Ampel. Die Anwendung zeigt den Countdown der Restrotzeit an und empfieht langsamer zu fahren, um die Ampel ohne anzuhalten passieren zu können.  \\
 \item[Szenario R2:] 
-Die Ampel zeigt im Moment auf Rot, aber die Restrotzeit ist kurz. Auch hier gilt: Je nach Entfernung zwischen Fahrrad und \gls{LSA}, ist ein reibungsloses Passieren der Ampel durch Verzögerung oder ohne Änderung des Tempos zu erreichen.\\
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer roten Ampel. Die Anwendung zeigt an, es besteht kein Aktionsbedarf und eine Weiterfahrt bei gleichbleibender Geschwindigkeit ist gewährleistet. \\
 \item[Szenario R3:] 
-Zeigt die Ampel im Moment Rot, die Restrotzeit ist lang, doch die Entfernung zwischen Fahrrad und \gls{LSA} hoch, so ist keine Weiterfahrt ohne Unterbrechung möglich.\\
-\item[Szenario G1:] Ist die empfohlene Geschwindigkeit gleich der aktuellen, ist ein reibungsloses Passieren bei beibehaltenem Tempo möglich. Es besteht kein Aktionsbedarf.\\
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer roten Ampel. Die Anwendung meldet, das Anhalten bei roter Ampel ist in jedem Fall erforderlich.\\
+% GRÜN 
+\item[Szenario G1:] 
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer grünen Ampel. Die Anwendung zeigt den Countdown der Restgrünzeit an und empfieht schneller zu fahren, um die Ampel ohne anzuhalten passieren zu können.\\
 \item[Szenario G2:] 
-Zeigt die Ampel im Moment Grün und ist die empfohlene Geschwindigkeit höher als die aktuelle, ist ein reibungsloses Passieren durch Beschleunigung zu erreichen. Bei der Anzeige der Progressionsgeschwindigkeit ist selbstverständlich die geltende Höchstgeschwindigkeitsbegrenzung oder die eingestellte Höchsteschwindigkeit zu beachten.\\ 
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer grünen Ampel. Die Anwendung zeigt an, es besteht kein Aktionsbedarf und eine Weiterfahrt bei gleichbleibender Geschwindigkeit ist gewährleistet.\\ 
 \item[Szenario G3:] 
-Zeigt die Ampel im Moment Grün und ist die empfohlene Geschwindigkeit höher als die aktuelle und gleichzeitig auch höher als die zugelassene, bzw. eingestellte Höchstgeschwindigkeit, ist die Distanz zur Ampel zu groß und ein reibungsloses Passieren nicht möglich.
-\end{description}
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer grünen Ampel. Die Anwendung meldet, das Anhalten bei roter Ampel ist in jedem Fall erforderlich.
+\end{description} \vspace{27pt}
 Resultierend aus den Szenarien im Ampelbereich ergeben sich die folgenden Systemzustände.
 \begin{itemize}
 	\item Zustand a: Anhalten bei Rot erforderlich
@@ -27,4 +30,4 @@ Resultierend aus den Szenarien im Ampelbereich ergeben sich die folgenden System
 	\item Zustand c: Weiterfahrt durch Verlangsamung möglich
 	\item Zustand d: Weiterfahrt durch Beschleunigung möglich
 \end{itemize}
-Im weiteren Verlauf wird unter anderem beschrieben wie diese Systemzustände in den Designprozess eingebunden werden.
+Im weiteren Verlauf dieser Arbeit wird unter anderem beschrieben wie diese Systemzustände in den Designprozess eingebunden werden.
