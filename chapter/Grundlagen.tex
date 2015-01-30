@@ -64,7 +64,7 @@ Der Hauptvorteil, keinen separaten Serverprozess zu installieren, einzurichten, 
 Als Transaktionsdatenbank implementiert SQLite serialisierbare Transaktionen die auch bei einem Programm- oder Betriebssystemabsturz atomar, konsistent, isoliert und dauerhaft sind. Wird also die Transaktion durch z.B. einen Programmabsturz unterbrochen, werden alle Änderungen entweder gar nicht oder komplett angezeigt.\\ 
 SQLite ist außerdem eine Ein-Datei-Datenbank. Das bedeutet die vollständige \gls{SQL}-Datenbank mit mehreren Tabellen, Indizes und Ansichten wird in nur einer Datei gespeichert. So kann jedes Programm, das in der Lage ist auf die Festplatte zuzugreifen, die SQLite-Datenbank verwenden. \cite{sqlite} Aufgrund eben dieser Eigenschaften eignet sich SQLite ausgezeichnet für die Entwicklung von Android-\glspl{App}.
 \subsubsection{SpatiaLite}
-Aufsatz für SQLite ...
+SpatiaLite ist eine Erweiterung um georgrafische Objekte und Funktionen für SQLite. Es besteht aus Kommandozeilen-Befehl und einer Programmbibliothek. 
 % SQLITE ANDROID %
 \subsubsection{SQLite unter Android}
 Android stellt mit dem Paket \texttt{android.database.sqlite} eine \gls{API} zur Verfügung, die den effektiven Einsatz von SQLite ermöglicht. Dort findet sich die Hilfsklasse \texttt{SQLiteOpener}, welche eine Instanz von \texttt{SQLiteDataBase} liefert. Der Konstruktor der Hilfsklasse erwartet ein Context-Objekt und den Namen der Datenbank. Beim Aufruf der geerbten Methoden \texttt{getReadableDatabase()} zum Datenauslesen oder \texttt{getWritableDatabase()} zum Verändern oder auslesen der Daten wird geprüft, ob eine Datenbank mit diesem Namen bereits existiert. Ist das der Fall erhält man eine Referenz auf Datenbankobjekt, wenn nicht wird eines erstellt.\\
