@@ -1,7 +1,19 @@
 \chapter{\label{chap:implementierung}Der Prototyp}
 Prototyp zeit, wie mittels GPS ... realisiert werden kann.
 Design und Funktionalitäten werden ebenfalls vorgestellt
-\section{Android-Manifest}
+\section{Die Manifestdatei}
+Das Android-Manifest dient der Festlegung wichtiger Eigenschaften der Anwendung und gehört zu jedem Android-Projekt. Die \gls{XML}-Datei (\texttt{AndroidManifest.xml}) ist im Hauptverzeichnis des Projekts zu finden und legt folgende Parameter fest: \\
+Den Paketnamen des Programms:
+\lstinputlisting[language=JAVA, firstline=3, lastline=3]{code/manifest.xml}
+Für welche Android Versionen die Anwendung geschrieben wurde (\texttt{targetSdkVersion}) und das minimale \gls{API}-Level der Anwendung, also unter welcher Version die App noch ausgeführt werden kann:
+\lstinputlisting[language=XML, firstline=4, lastline=6]{code/manifest.xml}
+Die Berechtigung des \gls{GPS}-Zugriffs der Applikation, um Standortdaten des Endgeräts zu beziehen:
+\lstinputlisting[language=XML, firstline=7, lastline=8]{code/manifest.xml}
+Im \texttt{application}-Tag werden Variablen gesetzt, die das in der ActionBar dargestellte Icon und den Namen der Anwendung definieren. \textit{android:theme? + android:allowBackup?}
+\lstinputlisting[language=XML, firstline=10, lastline=13]{code/manifest.xml}
+Die \glspl{Activity} der Anwendung:
+\lstinputlisting[language=XML, firstline=14, lastline=21]{code/manifest.xml}
+Hier wird der Name der \gls{Activity}-Klasse gesetzt und im \texttt{intent-filter}-Tag festgelegt, dass diese \gls{Activity} als \texttt{MainActivity} beim Start der Anwendung ausgeführt wird. \textit{label}
 \section{Verwendete Bibliotheken?}
 \subsection{googlebla}
 \section{MainActivity}
