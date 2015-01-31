@@ -17,8 +17,8 @@ SpatiaLite ?
 \subsection{Positionsdaten + Geschwindigkeit}
 % ### Achitektur ###
 \section{Anwendungsfälle}
-Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den in Kapitel \ref{chap:szenarien} erarbeiteten Szenarien ergeben sich folgende Anwendungsfälle, die von der Anwendung erfüllt werden sollen.\\
-\begin{table}[h]
+Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den in Kapitel \ref{chap:szenarien} erarbeiteten Szenarien ergeben sich folgende Anwendungsfälle, die von der Anwendung erfüllt werden sollen.
+\begin{table}[H]
 %\resizebox{\textwidth}{!}{%
 	\begin{tabular}{@{}>{\columncolor[HTML]{ECF4FF}}l ll@{} p{0.1\textwidth}p{0.4\textwidth}p{0.4\textwidth}} \toprule	
 	\multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{ID}} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Anwendungsfall}} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Beschreibung}} \\ \hline
@@ -48,7 +48,7 @@ Aus den Anforderungen an die graphische Oberfläche in Kapitel \ref{chap:anforde
 Abbildung \ref{fig:stop} zeigt die grapfische Umsetzung des Zustands \textit{a}, in dem die Ampelschaltung keine Weiterfahrt ermöglicht. Es wird ein großer roter Kreis mit einem schwarzen Kreuz verwendet. Rot ist eine Signalfarbe und steht auch bei Ampeln für "'Halt"' oder "'Stop"'. Auch das Kreuz wird häufig als \textit{verweigerndes} Symbol eingesetzt und ist somit intuitiv als solches erkennbar.\\
 Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, bei dem man mit der aktuellen Geschwindigkeit in der Grünen Welle mitschwimmt, um. Hier wird ist ein großer grüner Kreis verwendet, in der Mitte steht "'ok"'. Durch die nicht alleinige Benutzung der Ampelfarben Rot und Grün ist die Ansicht auch für Menschen mit einer Rot-Grün-Sehschwäche eindeutig interpretierbar.\\
 Die Abbildungen \ref{fig:langsamer} und \ref{fig:schneller} für die Zustände \textit{c} und \textit{d} sind in der Anordnung der Elemente identisch. Mittig im Bild ist eine eingekreiste rote Zahl die den Countdown der Restrotanzeige darstellt. Sie wird also mit jeder Sekunde aktualisiert. Ober- und unterhalb des Countdowns befinden sich jeweils zwei hellblaue Pfeile. Je nach Differenz der aktuellen zur berechneten Geschwindigkeit sind ein oder zwei Pfeile ausgefüllt. Wird also empfohlen viel schneller zu fahren, sind die oberen Pfeile aktiv, bei der Aufforderung etwas das Tempo zu drosseln der untere. Es sind immer alle Pfeile zu sehen. Durch die Anzeige "'ein von zwei"' ist die Bedeutung der Geschwindigkeitsstufen klarer. Als Farbe für die Pfeile wurde Hellblau gewählt. Sie unterscheidet sich sowohl farblich als auch in der Helligkeitsstufe zu den anderen Farben und steht im hohen Kontrast zu dem Hintergrund. Auf schwarzem Hintergrund wirken die Farben intensiver und sind so auch aus dem Augenwinkel leichter zu erkennen und unterscheiden. 
-\begin{figure}[H]
+\begin{figure}[h]
         \centering
            \begin{subfigure}[t]{0.23\textwidth}
                 \includegraphics[width=\textwidth]{stop}
