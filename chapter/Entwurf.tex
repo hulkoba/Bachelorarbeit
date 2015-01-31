@@ -4,7 +4,43 @@ Die erarbeiteten Anforderungen an ein Ampelinformationssystem für Fahrradfahrer
 Die Anwendungsarchitektur verwendet die Vorgaben für Android-Applikationen. So wird die Hauptkomponente mit Hilfe sogenannter \glspl{Activity} realisiert. Als Basisklasse definiert eine \gls{Activity} das \gls{UI} einer mobilen Anwendung, stellt also die Ansicht mit der BenutzerInnen interagieren können bereit.\\
 Eine \gls{Activity} wird von der Bibliotheksklasse \texttt{android.app.Activity} abgeleitet, als Klasse implementiert und muss ind er Manifestdatei der \gls{App} aufgeführt werden. \cite{android_activity} \\
 In der zu entwickelnden Fahrraapplikation wird keine Navigation innerhalb der Anwendung vonnöten sein, weshalb nur eine \gls{Activity} implementiert wird.\\
-\textit{Action Bar / Einstellungen? / DatenbankBib? \\}
+\textit{Action Bar / Einstellungen?}
+% DATENGRUNDLAGE
+\section{Datengrundlage}
+\subsection{Ampeldaten}
+Von der Verkehrsleitzentrale zur Verfügung gestellt.\\
+Strecke: Bornholmer Straße/Björnsonstraße bis zur Ecke Prenzlauer Allee/Ostseestraße und zurück. 
+Eine verkehrsabhängige \gls{LSA} ist dabei, diese wird nicht beachtet, da Genauigkeit nicht hoch genug sein kann.
+Position und Signalpläne\\
+Sind ggf. umzuwandeln, bzw Datenbankformat anzupassen + manuell zu übernehmen da Format = .pdf.\\
+SpatiaLite ?
+\subsection{Positionsdaten + Geschwindigkeit}
+% ### Achitektur ###
+\section{Anwendungsfälle}
+Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den in Kapitel \ref{chap:szenarien} erarbeiteten Szenarien ergeben sich folgende Anwendungsfälle, die von der Anwendung erfüllt werden sollen.\\
+\begin{table}[h]
+%\resizebox{\textwidth}{!}{%
+	\begin{tabular}{@{}>{\columncolor[HTML]{ECF4FF}}l ll@{} p{0.1\textwidth}p{0.4\textwidth}p{0.4\textwidth}} \toprule	
+	\multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{ID}} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Anwendungsfall}} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Beschreibung}} \\ \hline
+	
+	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC1}} & \multicolumn{1}{p{0.35\textwidth}}{Weiterfahrt durch Beschleunigung möglich} 
+	& \multicolumn{1}{p{0.55\textwidth}}{Der Countdown der aktuellen Ampelphasendauer wird sekündlich aktualisiert und zusätzlich zur Beschleunigungsaufforderung angezeigt} \\ \midrule
+	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC2}} & \multicolumn{1}{p{0.35\textwidth}}{Weiterfahrt durch Verlangsamung möglich}  
+	& \multicolumn{1}{p{0.55\textwidth}}{Der Countdown der aktuellen Ampelphasendauer wird sekündlich aktualisiert und zusätzlich zur Aufforderung langsamer zu fahren angezeigt} \\ \midrule
+	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC3}} & \multicolumn{1}{p{0.35\textwidth}}{ Weiterfahrt bei gleichbleibender Geschwindigkeit möglich} 
+	& \multicolumn{1}{p{0.55\textwidth}}{Die aktuelle Geschwindigkeit ist genauso hoch wie die berechnete Empfehlungsgeschwindigkeit. Es wird angeiezgt, dass kein Handlungsbedarf besteht.}\\ \midrule
+	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC4}} & \multicolumn{1}{p{0.35\textwidth}}{Anhalten bei Rot ist in jedem Fall erforderlich}           
+	& \multicolumn{1}{p{0.55\textwidth}}{Die berechnete Empfehlungsanzeige übersteigt die Höchstgeschwindigkeit, also ist die Distanz zur Ampel zu lang. Eine Anzeige mit dem Signal, keine Weiterfahrt ist möglich, erscheint.}\\ \midrule
+	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC5}} & \multicolumn{1}{p{0.35\textwidth}}{Verkehrsabhängige Ampel}                                 	
+	& \multicolumn{1}{p{0.55\textwidth}}{Eine verkehsrabhängige Ampel mit individueller Steuerung nähert sich. Es ist nicht möglich eine Vorhersage zu treffen. Das wird auch angezeigt. kacke.}\\ \bottomrule
+	\end{tabular}
+%	}
+	\caption{Anwendungsfälle}
+	\label{tab:uc}
+\end{table} 
+\section{Sequenzdiagramm?}
+\section{Klassenarchitektur}
+\texttt{MainActivity},  \texttt{util} = Hilfsklassen --> \texttt{GPSTracker}, \texttt{SpeedAdvisory}
 % ### Design ###
 \section{Das Design}
 Aus den Anforderungen an die graphische Oberfläche in Kapitel \ref{chap:anforderungen} entsteht das Design. Durch die überschaubare Anzahl an Funktionalitäten kann der Aufbau einfach gehalten werden. Aus den Empfehlungsanzeigen, welche den Systemzuständen entsprechen sind vier Fenster abzuleiten. Die folgende Abbildung zeigt den Entwurf der Benutzeroberfläche. \\
@@ -40,18 +76,6 @@ Die Abbildungen \ref{fig:langsamer} und \ref{fig:schneller} für die Zustände \
         \label{fig:mockup}
 \end{figure} 
 Die aktuelle Geschwindigkeit wird bewusst nicht angezeigt. Auch nicht die Progressionsgeschwindigkeit. Die Differenz ist beim Fahrrad nicht so hoch wie bspw. im Auto. Bei einer Varianz von wenigen km/h genügt die Anzeigevariante "'schneller"' und "'noch schneller"'.
-\section{Datengrundlage}
-\subsection{Ampeldaten}
-Von der Verkehrsleitzentrale zur Verfügung gestellt.\\
-Position und Signalpläne\\
-Sind ggf. umzuwandeln, bzw Datenbankformat anzupassen + manuell zu übernehmen da Format = .pdf.\\
-\subsection{Positionsdaten + Geschwindigkeit}
-% ### Achitektur ###
-\section{Architektur}
-\subsection{Use-Cases}
-\subsection{Aktivitäten}
-\subsection{Klassenstruktur UML}
-\texttt{MainActivity},  \texttt{util} = Hilfsklassen --> \texttt{GPSTracker}, \texttt{SpeedAdvisory}
 \section{Theorie ?}
 \section{Entwicklungsumgebung ?}
 Für die Erstellung wird Folgendes verwendet:
