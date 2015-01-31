@@ -21,7 +21,7 @@ abstracton,
 \usepackage{txfonts} %Schriftart Times New Roman
 \usepackage{titlesec} % formatiert titel-absätze
 \usepackage{booktabs}
-\usepackage[table,xcdraw]{xcolor}
+\usepackage[table,xcdraw,dvipsnames ]{xcolor}
 \usepackage{float}
 \usepackage[left=30mm,right=25mm,top=25mm,bottom=25mm]{geometry} %Seitenränder
 \usepackage[pdfborder={ 0 0 0 }, breaklinks]{hyperref}
@@ -49,6 +49,15 @@ toc]            %Einträge im Inhaltsverzeichnis
 % CODE
 %------------------------------------------------------------------------
 \definecolor{lightgray}{gray}{0.95}
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morecomment=[s]{<?}{?>}{>}{<},
+  stringstyle=\color{purple},
+  identifierstyle=\color{violet},
+  commentstyle=\color{OliveGreen}\ttfamily,
+  morekeywords={xmlns,version,type}% list your attributes here
+}
 \lstset{
    basicstyle=\scriptsize\ttfamily,
    keywordstyle=\bfseries\ttfamily\color{violet},
