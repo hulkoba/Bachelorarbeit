@@ -52,7 +52,9 @@ Für die Kommunikation mit relationalen Datenbanken wie SQLite gibt es die Daten
 	\item Suchen von Daten aus einer oder mehreren Tabellen
 \end{itemize}
 %Die meisten dieser Operationen lassen sich allerdings auch ohne Rückgriff auf \gls{SQL} umsetzen. 
+%
 % SQLITE %
+%
 \subsubsection{SQLite}
 SQLite ist eine Datenbank-Engine die auch bei Android sehr beliebt ist. Es benötigt nur minimale Unterstützung von externen Bibliotheken oder vom Betriebssystem. So eignet es sich gut für den Einsatz in Systemen, denen die Infrastruktur eines Desktop-Computers fehlt. Der Code ist Open Source und frei für den privaten oder gewerblichen Einsatz.\\
 Als sehr kompakte Bibliothek ist sie mit allen aktivierten Funktionen immernoch kleiner als 500 kB. Mit der Weglassung optionaler Merkmale kann die Größe auf circa 300 kB Speicherplatz reduziert werden, was jedoch SQLite verlangsamt. Denn es ist umso schneller je mehr Speicherkapazität zur Verfügung steht.
@@ -78,15 +80,22 @@ Wird eine Datenbank neu angelegt, geschieht das durch den Aufruf der \texttt{onC
 % --------------------------CODE ----------------------------------------------------%
  Im obigen Codebeispiel soll eine Tabelle namens \textit{schiffe} mit den vier Spalten \textit{id}, \textit{bezeichnung}, \textit{captain} und \textit{geburtstatum} mit den entsprechenden Datentypen angelegt werden. Die Spalte \textit{id} fungiert hier als Primärschlüssel, kann also zur eindeutigen Referenzierung der Datensätze verwendet werden. Mit der Angabe von \textsc{autoincrement} setzt SQLite automatisch die nächste verfügbare ID als Wert ein. Die Datensätze ohne den Zusatz \textsc{not null} sind nicht obligatorisch.\\
 Jede SQLite-Datenbank die in einer \gls{App} erzeugt wird, wird auch dort abgelegt. So ist sie auch nur für die Anwendung zugreifbar, die sie angelegt hat. Zu erwähnen ist noch, dass der Umfang der Datenbank die interne Speicherkapazität nicht überschreiten kann. Hat man die Datenbank erfolgreich erstellt, lassen sich die vier CRUD\footnote{ Create, Read, Update, Delete} Operationen darauf anwenden. Hierfür wird die entsprechende Methode mit den gewünschten Kriterien auf die Instanz der Datenbank angewandt.
+%
 % MOBILE SENSING
+%
 \subsection{Mobile Sensorik} 
 Ein Sensor\footnote{ aus dem Lateinischen, deutsch: "'\textit{fühlen}"'} ist ein Bauelement, das physikalische Eigenschaften wie Helligkeit, Temperatur oder Beschleunigung sowohl quantitativ als auch qualitativ erfassen kann. Die \gls{GPS}-Sensoren in \glspl{Smartphone} sind kostengünstiger, kleiner und haben einen geringeren Stromverbrauch. Dafür allerdings eine geringere Messgenauigkeit. In der zu entwickelnden Anwendung kommt es auf jeden Meter an. Ob die Genauigkeit des integrierten \gls{GPS}-Sensors genügt, muss ergo im Rahmen dieser Arbeit getestet werden. 
 % MOBILE SENSORIK UNTER ANDROID %
 \subsubsection{Mobile Sensorik unter Android}
 Die meisten Android-Mobilgeräte verfügen über integrierte Sensoren, die die Bewegung, Ausrichtung und verschiedene Umgebungsbedingungen messen. Diese Sensoren sind praktisch wenn man dreidimensionale Gerätbewegungen, Positionierungen oder Änderungen in der Umgebung des Gerätes überwachen möchte. So können zum Beispiel Spieleanwendungen den Beschleunigungssensor nutzen, um komplexe BenutzerInnengesten und Bewegungen wie Neigung, Erschütterung, Drehung oder Schwenkung erfassen.\\
 Die Android-Plattform unterstützt Bewegungssensoren zum Messen von Beschleunigungen und Drehungen in drei Achsen, Umgebungssensoren zur Ermittlung verschiedener Umweltparameter wie Luftdruck und -feuchtigkeit, oder Beleuchtung und Temperatur, und Positionssensoren zum Messen der physikalischen Position des Gerätes. Android bietet mit dem Android Sensor Framework eine Sammlung von Klassen und Schnittstellen an mithilfe dessen man auf diese Sensoren zugreifen und deren Daten erfassen kann. \cite{android_sensor}  
-\subsection{Standortbestimmung via NFC/Bluetooth/Sensorik}
-
+%
+% LOCATION BASED SERVICE
+%
+\subsection{Standortbezogene Dienste}
+Standortbezogene Dienste (auch \gls{LBS}) sind Informationsdienste, die die geographische Position des Endgeräts nutzen, um für die NutzerInnen einen Mehrwert bereitzustellen. Sie ermöglichen den NutzerInnen den eigenen Standort zu bestimmen, zu erfahren was sich in der Nähe befindet und das (z.B. in sozialen Netzwerken) zu bewerten. Für die Bereitstellung von \gls{LBS} sind die vier Schlüsselkomponenten Mobilgerät, Content-Provider, Kommunikationsnetzwerke und Lokalisierungstechniken erforderlich. (Vgl. \cite{gps} S. 4f)\\
+Zur Bestimmung von Standortdaten gibt es mehrere Techniken. Einige davon werden im Folgenden erklärt. 
+\textit{via NFC/Bluetooth/Sensorik}
 %
 % GEOLOKATION NETWORK PROVIDER %
 %
