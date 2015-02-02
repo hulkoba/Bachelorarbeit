@@ -125,7 +125,7 @@ Effektiv werden die gleichen Prinzipien der Funkzellentriangulation übernommen.
 Netzwerkgestützte Standortbestimmung schont zwar im Gegensatz zu \gls{GPS} den Akku und ist innerhalb von Gebäuden nutzbar, liefert jedoch wesentlich ungenauere Ergebnisse.
 % GEOLIKATION GPS %
 \subsubsection{Standortbestimmung via \gls{GPS}}
-\textit{\LARGE GPS übersetzen? }
+\textit{GPS übersetzen? }
 Die satellitengestützte Positionsbestimmung \gls{GPS} gewährleistet die Bestimmung des exakten Standpunktes und ist so wesentlicher Bestandteil ortsgebundener Anwendungen wie zum Beispiel der in Kapitel \ref{chap:state} beschriebenen. \\
 \gls{GPS} wurde ursprünglich vom US-Militär entwickelt und dann Mitte der 90er Jahre der Öffentlichkeit zur Verfügung gestellt. Noch heute bleibt es mit einer Genauigkeit von bis zu vier Metern die genaueste Lokalisierungstechnologie. (Vgl. \cite{gps} S. 24f)\\
 Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Erde umkreisen und dabei kontinuierlich ihre eigene, aktuelle Position und Almanach-Daten aussenden. Almanach-Daten enthalten Daten über jeden Satelliten in der Konstellation. Abbildung \ref{fig:gps} zeigt eine Darstellung der GPS-Satellitenkonstellation. Jeder Satellit folgt einer definierten Bahn, sodass mindestens vier Satelliten von jedem Standpunkt auf der Erde aus "'sichtbar"' sind. (Vgl. \cite{location} S. 4f)
@@ -137,9 +137,11 @@ Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Er
     \label{fig:gps}
 \end{figure}
 Mittels Triangulation errechnet daraus ein \gls{GPS}-Empfänger die eigene Position. Daten von einem einzigen Satelliten lässt die Position des \gls{GPS}-Empfängers auf deinen großen Bereich der Erde einschränken. Das Hinzufügen eines zweiten engt die Position auf den Bereich, in dem sich die zwei Bereiche überlappen ein. Mit den Daten eines dritten Satelliten bekommt man bereits eine relativ genaue Positionierung. Mit jedem weiteren Satelliten wird die Präzision erhöht und durch zusätzliche Positionsinformation wie Höhe erweitert. \gls{GPS}-Empfänger benutzen regelmäßig vier bis sieben, oder gar mehr Satelliten. (Vgl. \cite{gps} S. 25f)\\
-Trotzdem hat \gls{GPS}, insbesondere für mobile Plattformen einige Nachteile. Es verbraucht viel Energie, was die Akkulaufzeit des Mobiltelefons beeinträchtigt. Bevor der Standort berechnet werden kann müssen mehrere Satelliten ermittelt werden, was nach dem Kaltstart einige Zeit in Anspruch nehmen kann. (Vgl. \cite{location} S. 5)
+Trotzdem hat \gls{GPS}, insbesondere für mobile Plattformen einige Nachteile. Es verbraucht viel Energie, was die Akkulaufzeit des Mobiltelefons beeinträchtigt. Bevor der Standort berechnet werden kann müssen mehrere Satelliten ermittelt werden, was nach dem Kaltstart einige Zeit in Anspruch nehmen kann. (Vgl. \cite{location} S. 5)\\\\
+Inzwischen wird auf etlichen Mobiltelefonen zusätzlich das russische System names Global Navigation Satellite System (GLONASS\footnote{ GLONASS, russisch Globalnaja nawigazionnaja sputnikowaja sistema, dt. Globales Satellitennavigationssystem}) eingesetzt\footnote{ \url{http://en.wikipedia.org/wiki/List_of_smartphones_supporting_GLONASS_navigation}}.
+Die europäische Alternative mit ähnlichem Aufbau heißt Galileo, die chinesische Satellitennavigation heißt BeiDou\footnote{ BeiDou, dt. Großer Bär}. (Vgl. \cite{gps} S. 24)
 % A-GPS
-\subsubsection[\gls{A-GPS}]{\gls{A-GPS}\footnote{ A-GPS, dt. unterstütztes Globales Positionierungssystem}}
+\subsubsection{\gls{A-GPS}}
 Viele moderne \glspl{Smartphone} sind heutzutage mit der \gls{GPS}-Variante \gls{A-GPS} ausgestattet. Hierbei werden Zusatzinformationen über die nächstgelegenen Satelliten via Mobilfunk bezogen, sodass sowohl die Bestimmung der Erstposition sehr viel schneller ablaufen kann. Mobilfunktürme sind oft mit einem \gls{GPS}-Empfänger ausgestattet, welche kontinuierlich die Satellitenpositionen beziehen. Diese Daten werden, sobald angefordert, an das Mobiltelefon gesendet. (Vgl. \cite{gps} S. 26f) \\
 \gls{A-GPS} benötigt daher nur die Sicht auf einen Satelliten was auch genauere Ergebnisse in der Ortsbestimmung erzielt. Diese ist durch die Assistenzinformationen auch empfindlicher und somit in Städten, in denen hohe Gebäude die Sicht auf die Satelliten verdecken können, präziser.   
 % GEOLOLATION UNTER ANDROID %
