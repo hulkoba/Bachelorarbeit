@@ -40,47 +40,6 @@ Die Android Laufzeitumgebung nutzt die Java-Core-Bibliotheken und die Dalvik \gl
 Androids Application-Framework ist eine Umgebung die unterschiedliche Dienste zur Verfügung stellt. Sie bietet EntwicklerInnen Zugriff auf die im Kern verwendeten \glspl{API} sowie auf die Java-Bibliotheken die für Android erstellt wurden. 
 \paragraph{Applications: }
 Auf der obersten Ebene in Abbildung \ref{fig:android} befinden sich die Anwendungen die den täglichen Telefon-Bedarfs wie Adressbuch, Messenger, E-Mail, Internet-Browser etc. decken. Zusätzlich unterstützt Android verschiedene Anwendungen von Drittanbietern. Diese sind hauptsächlich in Java geschrieben und werden am häufigsten über den Google Play Store verteilt.
-% RELATIONALE DATENBANKEN
-\subsection{Relationale Datenbanken}
-Eine relationale Datenbank dient der elektronischen Verwaltung von Daten. Die Organisation der Daten ist tabellenbasiert, erfolgt also in Form von Datenstrukturen mit Zeilen (Tupel) und Spalten (Attribute). Jedes Tupel einer Tabelle bildet den sogenannten Datensatz und setzt sich aus den Werten mehrerer Attribute zusammen. Ein Tupel ist über einen oder mehrere Schlüssel eindeutig identifizierbar. Die Daten in einzelnen Tabellen lassen sich über die Schlüssel verknüpfen und weisen dadurch Relationen, also Beziehungen der Attribute zum Tupel, auf. \\
-Für die Kommunikation mit relationalen Datenbanken wie SQLite gibt es die Datenbanksprache \gls{SQL}. Mit SQLite können via \gls{SQL} folgende Operationen durchgeführt werden:
-\begin{itemize}[leftmargin=0.7cm]
-\renewcommand\labelitemi{--}
-	\item Definition der Datenstruktur
-	\item Anlegen und Löschen einer Tabelle
-	\item Bearbeiten (Einfügen, Verändern, Löschen) von Tupeln
-	\item Suchen von Daten aus einer oder mehreren Tabellen
-\end{itemize}
-%Die meisten dieser Operationen lassen sich allerdings auch ohne Rückgriff auf \gls{SQL} umsetzen. 
-%
-% SQLITE %
-%
-\subsubsection{SQLite}
-SQLite ist eine Datenbank-Engine die auch bei Android sehr beliebt ist. Es benötigt nur minimale Unterstützung von externen Bibliotheken oder vom Betriebssystem. So eignet es sich gut für den Einsatz in Systemen, denen die Infrastruktur eines Desktop-Computers fehlt. Der Code ist Open Source und frei für den privaten oder gewerblichen Einsatz.\\
-Als sehr kompakte Bibliothek ist sie mit allen aktivierten Funktionen immernoch kleiner als 500 kB. Mit der Weglassung optionaler Merkmale kann die Größe auf circa 300 kB Speicherplatz reduziert werden, was jedoch SQLite verlangsamt. Denn es ist umso schneller je mehr Speicherkapazität zur Verfügung steht.
-Im Gegensatz zu den meisten anderen \gls{SQL}-Datenbanken ist keine Client-Server-Architektur vorhanden. Um in die Datenbank zu schreiben oder daraus zu lesen greift der Prozess auf die interne Festplatte, und nicht auf einen Server zu. Es ist also keine Netzwerverbindung vonnöten. \\
-Der Hauptvorteil, keinen separaten Serverprozess zu installieren, einzurichten, zu konfigurieren und zu verwalten, macht SQLite zu einem konfigurationsfreien Datenbanksystem. Es besteht keine administrative Notwendigkeit um eine neue Datanbankinstanz zu erstellen oder Zugriffsrechte zuzuweisen. 
-\begin{center}
-\textit{\color{gray}"'SQLite just works."'}\hspace{9pt}\cite{sqlitea}
-\end{center}
-Als Transaktionsdatenbank implementiert SQLite serialisierbare Transaktionen die auch bei einem Programm- oder Betriebssystemabsturz atomar, konsistent, isoliert und dauerhaft sind. Wird also die Transaktion durch z.B. einen Programmabsturz unterbrochen, werden alle Änderungen entweder gar nicht oder komplett angezeigt.\\ 
-SQLite ist außerdem eine Ein-Datei-Datenbank. Das bedeutet die vollständige \gls{SQL}-Datenbank mit mehreren Tabellen, Indizes und Ansichten wird in nur einer Datei gespeichert. So kann jedes Programm, das in der Lage ist auf die Festplatte zuzugreifen, die SQLite-Datenbank verwenden. \cite{sqlite} Aufgrund eben dieser Eigenschaften eignet sich SQLite ausgezeichnet für die Entwicklung von Android-\glspl{App}.
-\subsubsection{SpatiaLite}
-SpatiaLite ist eine Erweiterung um georgrafische Objekte und Funktionen für SQLite. Es besteht aus Kommandozeilen-Befehl und einer Programmbibliothek. 
-% SQLITE ANDROID %
-\subsubsection{SQLite unter Android}
-Android stellt mit dem Paket \texttt{android.database.sqlite} eine \gls{API} zur Verfügung, die den effektiven Einsatz von SQLite ermöglicht. Dort findet sich die Hilfsklasse \texttt{SQLiteOpener}, welche eine Instanz von \texttt{SQLiteDataBase} liefert. Der Konstruktor der Hilfsklasse erwartet ein Context-Objekt und den Namen der Datenbank. Beim Aufruf der geerbten Methoden \texttt{getReadableDatabase()} zum Datenauslesen oder \texttt{getWritableDatabase()} zum Verändern oder auslesen der Daten wird geprüft, ob eine Datenbank mit diesem Namen bereits existiert. Ist das der Fall erhält man eine Referenz auf Datenbankobjekt, wenn nicht wird eines erstellt.\\
-Wird eine Datenbank neu angelegt, geschieht das durch den Aufruf der \texttt{onCreate()} Methode. Hier wird ein \gls{SQL}-String erstellt, der den Tabellennamen und die enthaltenden Spalten angibt. Dieser String wird via \texttt{execSQL()} dem \texttt{SQLite-Database}-Objekt gegeben, in Folge dessen eine Tabellenstruktur angelegt wird.\\
-% --------------------------CODE ----------------------------------------------------%
-\rule{35em}{0.5pt}
-\lstinputlisting
-[caption={Anlegen einer Tabellenstruktur}
-\label{code:onCreate}, captionpos=b, language=JAVA]{code/onCreate.java}
-\rule{35em}{0.5pt}\\
-% --------------------------CODE ----------------------------------------------------%
- Im obigen Codebeispiel soll eine Tabelle namens \textit{schiffe} mit den vier Spalten \textit{id}, \textit{bezeichnung}, \textit{captain} und \textit{geburtstatum} mit den entsprechenden Datentypen angelegt werden. Die Spalte \textit{id} fungiert hier als Primärschlüssel, kann also zur eindeutigen Referenzierung der Datensätze verwendet werden. Mit der Angabe von \textsc{autoincrement} setzt SQLite automatisch die nächste verfügbare ID als Wert ein. Die Datensätze ohne den Zusatz \textsc{not null} sind nicht obligatorisch.\\
-Jede SQLite-Datenbank die in einer \gls{App} erzeugt wird, wird auch dort abgelegt. So ist sie auch nur für die Anwendung zugreifbar, die sie angelegt hat. Zu erwähnen ist noch, dass der Umfang der Datenbank die interne Speicherkapazität nicht überschreiten kann. Hat man die Datenbank erfolgreich erstellt, lassen sich die vier CRUD\footnote{ Create, Read, Update, Delete} Operationen darauf anwenden. Hierfür wird die entsprechende Methode mit den gewünschten Kriterien auf die Instanz der Datenbank angewandt.
-%
 % MOBILE SENSING
 %
 \subsection{Mobile Sensorik} 
@@ -130,11 +89,10 @@ Für eine gute Lokalisierung braucht es mindestens drei, vorzugsweise vier Mobil
 So eine Überlappung von drei Funktürmen ist in Abbildung \ref{fig:cell1} veranschaulicht. Diese Genauigkeit kann, wie in Abbildung \ref{fig:cell2} demonstriert, erhöht werden wenn Richtantennen auf dem Funkturm installiert sind. So kann zusätzlich die Richtung des Mobiltelefonsignals ermittelt werden. (Vgl. \cite{gps} S. 23) \\\\
 %Ähnlich der funkzellenbastierten Standorterkennung funktioniert die \gls{WLAN}-basierte.
 \gls{WLAN}-basierte Standorterkennung funktioniert durch Funksignale, von \gls{WLAN}-Access Points\footnote{ Drahtloser Zugangspunkt der als Schnittstelle für kabellose Kommunikationsgeräte dient} ausgesendet, um den genauen Standort eines jeden Wi-Fi-fähigen Gerätes zu ermitteln. Bei Aktivierung scannt die Software die Umgebung nach \gls{WLAN}-Access Points und berechnet die Position des Gerätes indem sie die empfangenen Signale mit der Referenzdatenbank vergleicht. Wie bei der funkzellenbastierten Standorterkennung erhöht sich auch hier die Genauigkeit (auf 20 bis 40 Meter in Europa) mit wachsender Signaldichte. \\
-Effektiv werden die gleichen Prinzipien der Funkzellentriangulation übernommen. Nur werden \textbf{Wireless-Router Übetragungssignale statt Funkübertragungen verwendet}. (Vgl. \cite{gps} S. 32ff) \\
+Effektiv werden die gleichen Prinzipien der Funkzellentriangulation übernommen. Nur werden WiFi-SSIDs\footnote{ Basic Service Set Identification (BSSID), entspricht der MAC-Adresse des Wireless Access Points oder wird als Zufallszahl erzeugt} statt Funzellenidentifikationsnummern zum Feststellen der Sendequellen verwendet. (Vgl. \cite{gps} S. 32ff) \\
 Netzwerkgestützte Standortbestimmung schont zwar im Gegensatz zu \gls{GPS} den Akku und ist innerhalb von Gebäuden nutzbar, liefert jedoch wesentlich ungenauere Ergebnisse.
 % GEOLIKATION GPS %
 \subsubsection{Standortbestimmung via \gls{GPS}}
-\textit{GPS übersetzen? }
 Die satellitengestützte Positionsbestimmung \gls{GPS} gewährleistet die Bestimmung des exakten Standpunktes und ist so wesentlicher Bestandteil ortsgebundener Anwendungen wie zum Beispiel der in Kapitel \ref{chap:state} beschriebenen. \\
 \gls{GPS} wurde ursprünglich vom US-Militär entwickelt und dann Mitte der 90er Jahre der Öffentlichkeit zur Verfügung gestellt. Noch heute bleibt es mit einer Genauigkeit von bis zu vier Metern die genaueste Lokalisierungstechnologie. (Vgl. \cite{gps} S. 24f)\\
 Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Erde umkreisen und dabei kontinuierlich ihre eigene, aktuelle Position und Almanach-Daten aussenden. Almanach-Daten enthalten Daten über jeden Satelliten in der Konstellation. Abbildung \ref{fig:gps} zeigt eine Darstellung der GPS-Satellitenkonstellation. Jeder Satellit folgt einer definierten Bahn, sodass mindestens vier Satelliten von jedem Standpunkt auf der Erde aus "'sichtbar"' sind. (Vgl. \cite{location} S. 4f)
@@ -148,7 +106,7 @@ Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Er
 Mittels Triangulation errechnet daraus ein \gls{GPS}-Empfänger die eigene Position. Daten von einem einzigen Satelliten lässt die Position des \gls{GPS}-Empfängers auf deinen großen Bereich der Erde einschränken. Das Hinzufügen eines zweiten engt die Position auf den Bereich, in dem sich die zwei Bereiche überlappen ein. Mit den Daten eines dritten Satelliten bekommt man bereits eine relativ genaue Positionierung. Mit jedem weiteren Satelliten wird die Präzision erhöht und durch zusätzliche Positionsinformation wie Höhe erweitert. \gls{GPS}-Empfänger benutzen regelmäßig vier bis sieben, oder gar mehr Satelliten. (Vgl. \cite{gps} S. 25f)\\
 Trotzdem hat \gls{GPS}, insbesondere für mobile Plattformen einige Nachteile. Es verbraucht viel Energie, was die Akkulaufzeit des Mobiltelefons beeinträchtigt. Bevor der Standort berechnet werden kann müssen mehrere Satelliten ermittelt werden, was nach dem Kaltstart einige Zeit in Anspruch nehmen kann. (Vgl. \cite{location} S. 5)\\\\
 Inzwischen wird auf etlichen Mobiltelefonen zusätzlich das russische System names Global Navigation Satellite System (GLONASS\footnote{ GLONASS, russisch Globalnaja nawigazionnaja sputnikowaja sistema, dt. Globales Satellitennavigationssystem}) eingesetzt\footnote{ \url{http://en.wikipedia.org/wiki/List_of_smartphones_supporting_GLONASS_navigation}}.
-Die europäische Alternative mit ähnlichem Aufbau heißt Galileo, die chinesische Satellitennavigation heißt BeiDou\footnote{ BeiDou, dt. Großer Bär}. (Vgl. \cite{gps} S. 24)
+Die europäische Variante in der Testphase mit ähnlichem Aufbau heißt Galileo, die chinesische, ausschließlich inländisch genutzte, Satellitennavigation heißt BeiDou\footnote{ BeiDou, dt. Großer Bär}. (Vgl. \cite{gps} S. 24)
 % A-GPS
 \subsubsection{\gls{A-GPS}}
 Viele moderne \glspl{Smartphone} sind heutzutage mit der \gls{GPS}-Variante \gls{A-GPS} ausgestattet. Hierbei werden Zusatzinformationen über die nächstgelegenen Satelliten via Mobilfunk bezogen, sodass sowohl die Bestimmung der Erstposition sehr viel schneller ablaufen kann. Mobilfunktürme sind oft mit einem \gls{GPS}-Empfänger ausgestattet, welche kontinuierlich die Satellitenpositionen beziehen. Diese Daten werden, sobald angefordert, an das Mobiltelefon gesendet. (Vgl. \cite{gps} S. 26f) \\
@@ -156,7 +114,7 @@ Viele moderne \glspl{Smartphone} sind heutzutage mit der \gls{GPS}-Variante \gls
 % GEOLOLATION UNTER ANDROID %
 \subsubsection{Standortbestimmung unter Android}
 Android unterstützt mit dem \texttt{android.location} Paket den Zugriff auf die Ortungsdienste. Als zentrale Komponente des Location Frameworks stellt der \texttt{LocationManager} \glspl{API} zur Lokalisierung des Geräts bereit. Mit dem \texttt{LocationManager} ist die Anwendung in der Lage alle Location Provider\footnote{ Location Provider, dt. Standortanbieter. Ein Standortanbieter bietet regelmäßige Berichte über die geographische Lage des Gerätes} des letzten bekannten Standortes abzufragen, sich für regelmäßige Updates zur Position des Gerätes anzumelden und sich wieder abzumelden wenn sich das Gerät außerhalb gegebener Parameter befindet. \cite{android_gps} \\
-Die geographische Positionsangabe besteht aus Längengrad (Langitude) und Breitengrad (Lotitude). Beide werden unter anderem vom \texttt{LocationManager}-Objekt als Gleitkommawert geliefert. Daneben auch Informationen wie die Höhe in Metern über der Mehreshöhe, Peilung, Zeitstempel und die Geschwindigkeit.\\
+Die geographische Positionsangabe besteht aus Längengrad (Langitude) und Breitengrad (Lotitude). Beide werden unter anderem vom \texttt{LocationManager}-Objekt als Gleitkommawert geliefert. Daneben auch Informationen wie die Höhe in Metern über der Mehreshöhe, Peilung, Zeitstempel und die Geschwindigkeit.
 \clearpage
 % -------------------------------------------------
 % MATHEMATISCHE GRUNDLAGEN
@@ -166,7 +124,7 @@ Präsentiert das System während der Anwendung eine Geschwindigkeitsempfehlung, 
 Angenommen die Progressionsgeschwindigkeit $v$ wird zum Zeitpunkt $t_{1}$ ermittelt, die \gls {LSA} schaltet zum Zeitpunt $t_{2}$ auf Rot und Abstand zur Ampel beträgt $s$, dann gilt: \\
 \[ v = \frac{s}{t_{2} - t_{1}} \] \\
 Der Abstand zur Ampel wird also durch die verbleibende Zeit dividiert. 
-Die von der Berliner Verkehrsleitzentrale zur Verfügung gestellten Ampelsignalpläne und Position der angesteuerten Ampel dienen als Grundlage dieser Berechnung und sind aus der Datenbank zu holen. Die aktuelle Position des Fahrrads wird vom \gls{GPS} Sensor des \glspl{Smartphone} ermittelt und daraus der Abstand zur Ampel errechnet. Die Abbildung \ref{fig:vst} soll die Berechnungsgrundlagen veranschaulichen: 
+Die von der Berliner Verkehrsleitzentrale zur Verfügung gestellten Ampelsignalpläne und Position der angesteuerten Ampel sind die Basis dieser Berechnung. Die aktuelle Position des Fahrrads wird vom \gls{GPS} Sensor des \glspl{Smartphone} ermittelt und daraus der Abstand zur Ampel errechnet. Die Abbildung \ref{fig:vst} soll die Berechnungsgrundlagen veranschaulichen: 
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=1\textwidth]{vst}  
