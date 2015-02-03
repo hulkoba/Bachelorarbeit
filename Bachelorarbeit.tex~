@@ -12,7 +12,6 @@ abstracton,
 \usepackage{graphicx}
 \usepackage[justification=raggedright, format=hang,labelsep=quad]{caption}
 \usepackage{subcaption}
-\usepackage{float}
 \usepackage{titleref}
 % aller Bilder werden im Unterverzeichnis figures gesucht:
 \graphicspath{{img/}}
@@ -21,7 +20,9 @@ abstracton,
 \usepackage[babel, german=swiss]{csquotes}
 \usepackage{txfonts} %Schriftart Times New Roman
 \usepackage{titlesec} % formatiert titel-absätze
-\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage[table,xcdraw,dvipsnames ]{xcolor}
+\usepackage{float}
 \usepackage[left=30mm,right=25mm,top=25mm,bottom=25mm]{geometry} %Seitenränder
 \usepackage[pdfborder={ 0 0 0 }, breaklinks]{hyperref}
 \usepackage{enumitem}
@@ -40,18 +41,29 @@ toc]            %Einträge im Inhaltsverzeichnis
 \include{extra/Glossary}
 \addtokomafont{chapter}{\huge \scshape \mdseries}
 \addtokomafont{section}{\LARGE \scshape \mdseries \color{darkgray}} 
-\addtokomafont{subsection}{ \mdseries \color{gray}}
+\addtokomafont{subsection}{\scshape \mdseries \color{gray}}
 \addtokomafont{subsubsection}{\scshape \mdseries}
 \setlength{\parindent}{0pt}  % keine Einrückungen nach Absätzen
 
 %------------------------------------------------------------------------
 % CODE
 %------------------------------------------------------------------------
+\definecolor{lightgray}{gray}{0.95}
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morecomment=[s]{<?}{?>}{>}{<},
+  stringstyle=\color{purple},
+  identifierstyle=\color{violet},
+  commentstyle=\color{OliveGreen}\ttfamily,
+  morekeywords={xmlns,version,type}% list your attributes here
+}
 \lstset{
    basicstyle=\scriptsize\ttfamily,
-   keywordstyle=\bfseries\ttfamily\color{blue},
+   keywordstyle=\bfseries\ttfamily\color{violet},
    stringstyle=\color{purple}\ttfamily,
-   commentstyle=\color{middlegray}\ttfamily,
+   commentstyle=\color{OliveGreen}\ttfamily,
+   backgroundcolor=\color{lightgray},
    emph={square}, 
    emphstyle=\color{blue}\texttt,
    emph={[2]root,base},
@@ -117,7 +129,6 @@ toc]            %Einträge im Inhaltsverzeichnis
 \lstlistoflistings%quellcodeverzeichnis
 % Literaturverzeichnis
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
-%\nocite{*} 		%Auch nicht-zitierte BibTeX-Eintraege werden angezeigt.
 \bibliographystyle{alphadin} %Art der Ausgabe alphadin
 \bibliography{extra/literatur}
 \nocite{stvo}
