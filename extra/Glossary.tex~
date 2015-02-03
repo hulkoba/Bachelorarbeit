@@ -30,6 +30,7 @@
 }
 \newacronym{GPS}{GPS}{Global Positioning System}
 \newacronym{A-GPS}{A-GPS}{Assisted Global Positioning System}
+\newacronym{GIS}{GIS}{Geoinformationssystem}
 \newacronym{API}{API}{Application Programming Interface}
 \newacronym{App}{App}{Applikation}
 \newacronym{WLAN}{WLAN}{Wireless Local Area Network}
