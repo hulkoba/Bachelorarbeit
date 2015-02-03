@@ -8,18 +8,13 @@
     name={C2I}, 
     description={ direkter, drahtloser Datenaustausch zwischen Fahrzeugen jeglicher Art und infrastrukturellen Einrichtungen wie Funkbaken und Lichtsignalanlagen auf Basis von \gls{WLAN}, Bluetooth oder \gls{DSRC}}
 }
-\newglossaryentry{C2I}{type=\acronymtype, name={C2X}, description={Car-to-Infrastructure oder Vehicle-to-Infrastructure}, first={Car-to-Infrastructure (C2I)\glsadd{C2Ig}}, see=[Glossary:]{C2Ig}
+\newglossaryentry{C2I}{type=\acronymtype, name={C2I}, description={Car-to-Infrastructure oder Vehicle-to-Infrastructure}, first={Car-to-Infrastructure (C2I)\glsadd{C2Ig}}, see=[Glossary:]{C2Ig}
 }
 \newglossaryentry{DSRCg}{
     name={DSRC}, 
     description={ funkgestützte sicherheitsrelevante und private Dienste, die in der Automotive-Technik von mobilen Stationen ausgeführt werden können}}
 \newglossaryentry{DSRC}{type=\acronymtype, name={DSRC}, description={Dedicated Short Range Communication}, first={Dedicated Short Range Communication (DSRC)\glsadd{DSRCg}}, see=[Glossary:]{DSRCg}
 }
-
-\newglossaryentry{RESTg}{
-    name={REST}, 
-    description={beschreibt eine zustandslose Verbindung. Web-Dienste, welche alle nötigen Anforderungen besitzen, können als \gls{REST}ful beschrieben werden. \gls{REST} \glspl{API} stellen also eine einheitliche uniforme Schnittstelle dar. Durch die HTTP-Operationen \textsc{GET},\textsc{POST},\textsc{PUT} und \textsc{DELETE}, können alle CRUD-Methoden (Create, Read, Update, Delete) abgebildet werden und so beispielsweise Datenbankzugriffe gesteuert werden}}
-\newglossaryentry{REST}{type=\acronymtype, name={REST}, description={REpresentational State Transfer}, first={\glsadd{RESTg}}, see=[Glossary:]{RESTg}}
 \newglossaryentry{Smartphone}{
     name={Smartphone}, 
     description={ Mobiltelefon, das sich von einem klassischen Mobiltelefon durch einen größeren berührungsempfindlichen Bildschirm (Touchscreen) und diverse Sensoren, wie dem \gls{GPS} unterscheidet. So ist eine Interaktion mit der Umgebung und den AnwenderInnen möglich}
@@ -28,7 +23,13 @@
     name={Arduino}, 
     description={ Die Arduino-Plattform ist eine quelloffene, aus Soft- und Hardware bestehende Physical-Computing-Plattform. Die Hardware besteht aus einem einfachen I/O-Board mit einem Mikrocontroller und analogen und digitalen Ein- und Ausgängen. Die Entwicklungsumgebung basiert auf Processing, die auch technisch weniger Versierten den Zugang zur Programmierung und zu Mikrocontrollern erleichtern soll}
 }
+\newglossaryentry{Activity}{
+    name={Activity}, 
+    description={ Eine Activity ist eine Android-Anwendungskomponente, welche die Bildschirm, beziehungsweise eine Ansicht zur Interaktion bereitstellt},
+    plural={Activities}
+}
 \newacronym{GPS}{GPS}{Global Positioning System}
+\newacronym{A-GPS}{A-GPS}{Assisted Global Positioning System}
 \newacronym{API}{API}{Application Programming Interface}
 \newacronym{App}{App}{Applikation}
 \newacronym{WLAN}{WLAN}{Wireless Local Area Network}
