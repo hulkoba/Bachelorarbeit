@@ -22,12 +22,15 @@ Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer grünen Ampel. Die
 Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer grünen Ampel. Die Anwendung zeigt an, es besteht kein Aktionsbedarf und eine Weiterfahrt bei gleichbleibender Geschwindigkeit ist gewährleistet.\\ 
 \item[Szenario G3:] 
 Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer grünen Ampel. Die Anwendung meldet, das Anhalten bei roter Ampel ist in jedem Fall erforderlich.
+\item[Szenario V1:] 
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer verkehrsabhängigen Ampel. Das bedeutet, die Schaltung ist unregelmäßig und die Wahrscheinlichkeit des Zutreffens der Vorhersage zu gering, eine treffen zu können. Die Anwendung zeigt also an, dass es ihr nicht möglich ist eine Vorhersage zu treffen.\\ 
 \end{description} \vspace{27pt}
 Resultierend aus den Szenarien im Ampelbereich ergeben sich die folgenden Systemzustände.
 \begin{itemize}
-	\item Zustand a: Anhalten bei Rot erforderlich
+	\item Zustand a: Anhalten bei Rot in jedem Fall erforderlich
 	\item Zustand b: Weiterfahrt mit gleichbleibender Geschwindigkeit möglich. Kein Aktionsbedarf
 	\item Zustand c: Weiterfahrt durch Verlangsamung möglich
 	\item Zustand d: Weiterfahrt durch Beschleunigung möglich
+	\item Zustand d: Keine Vorhersage möglich
 \end{itemize}
 Im weiteren Verlauf dieser Arbeit wird unter anderem beschrieben wie diese Systemzustände in den Designprozess eingebunden werden.
