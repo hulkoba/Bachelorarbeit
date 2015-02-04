@@ -3,8 +3,7 @@ Die erarbeiteten Anforderungen an ein Ampelinformationssystem für Fahrradfahrer
 \section{Anwendungsaufbau}
 Die Anwendungsarchitektur verwendet die Vorgaben für Android-Applikationen. So wird die Hauptkomponente mit Hilfe sogenannter \glspl{Activity} realisiert. Als Basisklasse definiert eine \gls{Activity} das \gls{UI} einer mobilen Anwendung, stellt also die Ansicht mit der BenutzerInnen interagieren können bereit.\\
 Eine \gls{Activity} wird von der Bibliotheksklasse \texttt{android.app.Activity} abgeleitet, als Klasse implementiert und muss ind er Manifestdatei der \gls{App} aufgeführt werden. \cite{android_activity} \\
-In der zu entwickelnden Fahrraapplikation wird keine Navigation innerhalb der Anwendung vonnöten sein, weshalb nur eine \gls{Activity} implementiert wird.\\
-\textit{Action Bar / Einstellungen?}
+In der zu entwickelnden Fahrradapplikation wird keine Navigation innerhalb der Anwendung vonnöten sein, weshalb nur eine \gls{Activity} implementiert wird.
 % DATENGRUNDLAGE
 \section{Datengrundlage}
 \subsection{Ampeldaten}
@@ -15,33 +14,34 @@ Position und Signalpläne\\
 Sind ggf. umzuwandeln, bzw anzupassen + manuell zu übernehmen da Format = .pdf.\\
 SpatiaLite ?
 \subsection{Positionsdaten + Geschwindigkeit}
-% ### Achitektur ###
+% ### USE CASES ###
 \section{Anwendungsfälle}
-Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den in Kapitel \ref{chap:szenarien} erarbeiteten Szenarien ergeben sich folgende Anwendungsfälle, die von der Anwendung erfüllt werden sollen.
+Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen 
+und den in Kapitel \ref{chap:szenarien} erarbeiteten Szenarien 
+ergeben sich folgende Anwendungsfälle, die von der Anwendung erfüllt werden sollen.
 \begin{table}[H]
-%\resizebox{\textwidth}{!}{%
-	\begin{tabular}{@{}>{\columncolor[HTML]{ECF4FF}}l ll@{} p{0.1\textwidth}p{0.4\textwidth}p{0.4\textwidth}} \toprule	
+\centering
+	\begin{tabular}{@{}>{\columncolor[HTML]{ECF4FF}}l ll@{} p{0.1\textwidth}p{0.4\textwidth}p{0.5\textwidth}} \toprule	
 	\multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{ID}} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Anwendungsfall}} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Beschreibung}} \\ \hline
-	
-	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC1}} & \multicolumn{1}{p{0.35\textwidth}}{Weiterfahrt durch Beschleunigung möglich} 
-	& \multicolumn{1}{p{0.55\textwidth}}{Der Countdown der aktuellen Ampelphasendauer wird sekündlich aktualisiert und zusätzlich zur Beschleunigungsaufforderung angezeigt} \\ \midrule
-	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC2}} & \multicolumn{1}{p{0.35\textwidth}}{Weiterfahrt durch Verlangsamung möglich}  
-	& \multicolumn{1}{p{0.55\textwidth}}{Der Countdown der aktuellen Ampelphasendauer wird sekündlich aktualisiert und zusätzlich zur Aufforderung langsamer zu fahren angezeigt} \\ \midrule
-	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC3}} & \multicolumn{1}{p{0.35\textwidth}}{ Weiterfahrt bei gleichbleibender Geschwindigkeit möglich} 
-	& \multicolumn{1}{p{0.55\textwidth}}{Die aktuelle Geschwindigkeit ist genauso hoch wie die berechnete Empfehlungsgeschwindigkeit. Es wird angeiezgt, dass kein Handlungsbedarf besteht.}\\ \midrule
-	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC4}} & \multicolumn{1}{p{0.35\textwidth}}{Anhalten bei Rot ist in jedem Fall erforderlich}           
-	& \multicolumn{1}{p{0.55\textwidth}}{Die berechnete Empfehlungsanzeige übersteigt die Höchstgeschwindigkeit, also ist die Distanz zur Ampel zu lang. Eine Anzeige mit dem Signal, keine Weiterfahrt ist möglich, erscheint.}\\ \midrule
-	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC5}} & \multicolumn{1}{p{0.35\textwidth}}{Verkehrsabhängige Ampel}                                 	
-	& \multicolumn{1}{p{0.55\textwidth}}{Eine verkehsrabhängige Ampel mit individueller Steuerung nähert sich. Es ist nicht möglich eine Vorhersage zu treffen. Das wird auch angezeigt. kacke.}\\ \bottomrule
+		
+	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC1}} & \multicolumn{1}{p{0.4\textwidth}}{Ich möchte schnell ans Ziel kommen} 
+	& \multicolumn{1}{p{0.5\textwidth}}{Als FahrradfahrerIn möchte ich möglichst rote Ampel vermeiden, um schneller ans Ziel zu gelangen.} \\ \midrule
+	\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC2}} & \multicolumn{1}{p{0.4\textwidth}}{Ich möchte Energie sparen}  
+	& \multicolumn{1}{p{0.5\textwidth}}{Als RadfahrerIn bedarf es einen körperlichen Kraftaufwand beim Start, aber auch bei der Beschleunigung. Als E-Bike-NutzerIn bedarf dies Strom. Beides möchte ich vermeiden, indem ich nicht anhalten oder unnötig beschleunigen muss.} \\ \bottomrule
 	\end{tabular}
-%	}
 	\caption{Anwendungsfälle}
 	\label{tab:uc}
 \end{table}
-Das in Abbildung \ldots gezeigte Use-Case-Diagramm veranschaulicht die in der Tabelle \ref{tab:uc} aufgeführten Anwendungsfälle.  
-\section{Sequenzdiagramm? Akktivitäten gibt's ja nicht wirklich?}
+Das in Abbildung \ref{fig:uc} gezeigte Use-Case-Diagramm veranschaulicht die in der Tabelle \ref{tab:uc} aufgeführten Anwendungsfälle.  
+\begin{figure}[H]  
+    \centering  
+    \includegraphics[width=0.7\textwidth]{uc} 
+    \rule{35em}{0.5pt}
+    \caption{Use-Case-Diagramm}
+    \label{fig:uc}
+\end{figure}
 \section{Klassenarchitektur}
-Die einzelnen Klassen der Anwendung werden ihrer Aufgeban entsprechend in Pakete gegliedert?\\
+Die einzelnen Klassen der Anwendung werden ihrer Aufgaben entsprechend in Pakete gegliedert?\\
 Die zu erstellende Anwendung erhält den Namen AIS, das Hauptpaket den Namen \texttt{de.jacoba.ais}. AIS steht für Ampel-Informationssystem und ist der vorläufige Name der Anwendung. \\\\
 In dem Paket befindet sich die \texttt{MainActivity}, die Hauptklasse der Android-Applikation. Sie definiert die grafische Oberfläche der Anwendung und stellt die notwendigen Methoden bereit. \\
 \texttt{GPSTracker} trackt kontinuierlich die Position des Endgeräts.\\
