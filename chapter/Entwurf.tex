@@ -6,26 +6,38 @@ Eine \gls{Activity} wird von der Bibliotheksklasse \texttt{android.app.Activity}
 In der zu entwickelnden Fahrradapplikation wird keine Navigation innerhalb der Anwendung vonnöten sein, weshalb nur eine \gls{Activity} implementiert wird.
 % DATENGRUNDLAGE
 \section{Datengrundlage}
+Aus den von der verkehrszentrale gegebenen Daten werden JSON erstellt. eigene positionsdaten werden ermittelt,... 
 \subsection{Ampeldaten}
 Die technischen Unterlagen sowie Lagepläne angefragter Ampeln wurden freundlicherweise von der Berliner Verkehrsleitzentrale für die Teststrecke zwischen der Ecke Bornholmer Straße/Björnsonstraße und zur Ecke Prenzlauer Allee/Ostseestraße zur Verfügung gestellt. Aus Datenschutzrechtlichen Gründen kann das Material hier nicht abgebildet werden. Um einen Überblick zu gewähren werden jedoch die wichtigsten Komponenten skizziert.\\ 
 Jede Kreuzung hat bis zu vier Schaltplänen, die zu festgelegten Tageszeitabschnitten greifen. Tabelle \ref{tab:zeitplan} zeigt, wie der Tagesplan einer Kreuzung aussehen kann, wobei an anderen Tagen die Uhrzeiten sowie die Reihenfolge und Quantität der Zeitschaltprogramme variieren können:
-\begin{table}[H]
-	\centering
-	\begin{tabular}{@{}cc@{}}
-		\toprule
-		\rowcolor[HTML]{ECF4FF} 
-		\multicolumn{2}{l}{\cellcolor[HTML]{ECF4FF}\textsc{\centering \large Kreuzung}}                                                                  \\ \midrule
-		\rowcolor[HTML]{EFEFEF} 
-		\multicolumn{1}{l}{\cellcolor[HTML]{EFEFEF}\textbf{Uhrzeit}} & \multicolumn{1}{l}{\cellcolor[HTML]{EFEFEF}\textbf{Schaltprogramm}} \\ \midrule
+\begin{figure}[H]
+\centering
+	\begin{minipage}[b]{0.29\textwidth}	
+		\raisebox{\depth}{\begin{tabular}{@{}cc@{}}
+			\toprule
+			\rowcolor[HTML]{ECF4FF} 
+			\multicolumn{2}{l}{\cellcolor[HTML]{ECF4FF}\textsc{\centering \large Bezeichnung der Kreuzung}}                                                                  \\ \midrule
+			\rowcolor[HTML]{EFEFEF} 
+			\multicolumn{1}{l}{\cellcolor[HTML]{EFEFEF}\textbf{Uhrzeit}} & \multicolumn{1}{l}{\cellcolor[HTML]{EFEFEF}\textbf{Schaltprogramm}} \\ \midrule
 05:00 & Tag   \\ \midrule
 08:30 & Früh  \\ \midrule
 14:00 & Spät  \\ \midrule
 19:00 & Tag   \\ \midrule
 00:01 & Nacht \\ \bottomrule
-	\end{tabular}
-	\caption{Zeitschaltplan einer Kreuzung}	
-	\label{tab:zeitplan}
-\end{table}
+		\end{tabular}}
+		\captionof{table}{Zeitschaltplan}	
+		\label{tab:zeitplan}
+	\end{minipage} \hfill
+%
+	\begin{minipage}[b]{0.6\textwidth}
+		\includegraphics[width=\textwidth]{szpl}
+		\subcaption{Signalschaltplan}
+		\label{fig:plan}
+	\end{minipage}
+	\rule{35em}{0.5pt}
+	\caption{Beispielschaltpläne vierer Ampeln einer Kreuzung}
+	
+\end{figure}
 Für jedes Schaltzeitprogramm existieren ein Schaltzeit- und für einige Kreuzungen ein bis zwei Alternativschaltzeitpläne die in Intervallen von 60 bis 90 Sekunden die Rot-, Grün, Gelb, Rotgelb und Dunkelphasen zeigen. In den Dunkelphasen ist die \gls{LSA} ausgeschaltet -- zur Anschaltung gibt es dann den entsprechenden Einschaltplan. Abbildung \ref{fig:plan} zeigt auf, wie so ein Schaltzeitplan für eine Kreuzung aussehen kann. Um die Ampel dem entsprechenden Schaltplan zuzuordnen, liegen Lagepläne als \gls{PDF}-Datei bei, die eine genaue Darstellung der Kreuzung mit all ihren Komponenten zeigt. \textit{Phasenübergänge! Weiter gibt es Listen mit Parametern, einer Feindlichkeitsmatrix, eine Signalgruppenliste,...}\\
 Aufgrund ihrer hohen Komplexität wird die Kreuzung Prenzlauer Allee/Ostseestraße nicht in die Prototypenentwicklung mit einbezogen. Hier existieren mehrere Alternativschaltpläne, die zu beachten es mehr \textbf{Recherche?} bedarf. Ebenfalls unbeachtet bleiben Ampeln, die sich nicht auf der vorgegebenen Strecke befinden. Diese sind in Abbildung \ref{fig:lageplan}, die die Kreuzung Schönhauser Allee/Bornholmer Straße skizziert, markiert.\\
 Da sie Position der Ampeln als Lageplan vorliegen, sind diese manuell in Geokoordinaten konvertiert und in das gewählte \gls{JSON}-Format gebracht werden.
