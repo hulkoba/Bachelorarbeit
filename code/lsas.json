@@ -1,0 +1,22 @@
+{ 
+    "name" : "Bornholmer/Neumann_R1",
+    "lat": "52.554155",
+    "lon": "13.408758",
+    "dependsOnTraffic": false,
+    "timetable" : [
+    {
+        "days": ["Mo", "Di", "Mi"] ,
+        "timeFrom": 1400,
+        "timeTo": 2000,
+        "duration": 90,
+        "redFrom": 22,
+        "redTo": 27
+    }
+  ]    
+},
+{ 
+    "name" : "Wisbyer/Neumann_K18",
+    "lat": "52.552418",
+    "lon": "13.425184",
+    "dependsOnTraffic": true
+}

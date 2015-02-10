@@ -7,13 +7,35 @@ In der zu entwickelnden Fahrradapplikation wird keine Navigation innerhalb der A
 % DATENGRUNDLAGE
 \section{Datengrundlage}
 \subsection{Ampeldaten}
-Von der Verkehrsleitzentrale freundlicherweise zur Verfügung gestellt.\\
-Strecke: Bornholmer Straße/Björnsonstraße bis zur Ecke Prenzlauer Allee/Ostseestraße und zurück. Prenzlauer Allee aufgrund zu hoher Komplexität nicht verwenden. 
+Die technischen Unterlagen sowie Lagepläne angefragter Ampeln wurden freundlicherweise von der Berliner Verkehrsleitzentrale für die Teststrecke zwischen der Ecke Bornholmer Straße/Björnsonstraße und zur Ecke Prenzlauer Allee/Ostseestraße zur Verfügung gestellt. Aus Datenschutzrechtlichen Gründen kann das Material hier nicht abgebildet werden. Um einen Überblick zu gewähren werden jedoch die wichtigsten Komponenten skizziert.\\ 
+Jede Kreuzung hat bis zu vier Schaltplänen, die zu festgelegten Tageszeitabschnitten greifen. Tabelle \ref{tab:zeitplan} zeigt, wie der Tagesplan einer Kreuzung aussehen kann, wobei an anderen Tagen die Uhrzeiten sowie die Reihenfolge und Quantität der Zeitschaltprogramme variieren können:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{@{}cc@{}}
+		\toprule
+		\rowcolor[HTML]{ECF4FF} 
+		\multicolumn{2}{l}{\cellcolor[HTML]{ECF4FF}\textsc{\centering \large Kreuzung}}                                                                  \\ \midrule
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{1}{l}{\cellcolor[HTML]{EFEFEF}\textbf{Uhrzeit}} & \multicolumn{1}{l}{\cellcolor[HTML]{EFEFEF}\textbf{Schaltprogramm}} \\ \midrule
+05:00 & Tag   \\ \midrule
+08:30 & Früh  \\ \midrule
+14:00 & Spät  \\ \midrule
+19:00 & Tag   \\ \midrule
+00:01 & Nacht \\ \bottomrule
+	\end{tabular}
+	\caption{Zeitschaltplan einer Kreuzung}
+	\label{tab:zeitplan}
+\end{table}
+Für jedes Schaltzeitprogramm existieren ein Schaltzeit- und für einige Kreuzungen ein bis zwei Alternativschaltzeitpläne die in Intervallen von 60 bis 90 Sekunden die Rot-, Grün, Gelb, Rotgelb und Dunkelphasen zeigen. In den Dunkelphasen ist die \gls{LSA} ausgeschaltet -- zur Anschaltung gibt es dann den entsprechenden Einschaltplan. Abbildung \ref{fig:plan} zeigt auf, wie so ein Schaltzeitplan für eine Kreuzung aussehen kann. Um die Ampel dem entsprechenden Schaltplan zuzuordnen, liegen Lagepläne im Pdf-Format bei, die eine genaue Darstellung der Kreuzung mit all ihren Komponenten zeigt.  \textit{Phasenübergänge! Weiter gibt es Listen mit Parametern, einer Feindlichkeitsmatrix, eine Signalgruppenliste,...}
+
+ Prenzlauer Allee aufgrund zu hoher Komplexität (pro Zeitabschnitt bis zu zwei Alternativschaltpläne) nicht verwenden. 
 Beispiel Kreuzung Schönhauser Allee (Lageplan anzeigen)
 Eine verkehrsabhängige \gls{LSA} ist dabei, diese wird nicht beachtet, da Genauigkeit nicht hoch genug sein kann.
 Position und Signalpläne\\
 Sind manuell einzutragen und anzupassen, da Lagepläne im Pdf-Format vorliegen, ohne genaue Ortsangabe. Nur als Zeichnung.\\
 Nicht alle LSA nehmen (welche die nicht auf der abgefahrenen Strecke liegen, oder Abbiegeampeln die den vorgegebenen Weg nicht beeinflussen.
+\subsection{JSON}
+\lstinputlisting[language=JSON]{code/lsas.json}
 \subsection{Positionsdaten + Geschwindigkeit}
 % ### USE CASES ###
 \section{Anwendungsfälle}
@@ -44,7 +66,7 @@ Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den 
 Das in Abbildung \ref{fig:uc} gezeigte Use-Case-Diagramm veranschaulicht die in der obigen Tabelle \ref{tab:uc} aufgeführten Anwendungsfälle.  
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=\textwidth]{uc} 
+    \includegraphics[width=0.8\textwidth]{uc} 
     \rule{35em}{0.5pt}
     \caption{Use-Case-Diagramm}
     \label{fig:uc}

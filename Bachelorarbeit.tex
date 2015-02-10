@@ -58,6 +58,17 @@ toc]            %Einträge im Inhaltsverzeichnis
   commentstyle=\color{OliveGreen}\ttfamily,
   morekeywords={xmlns,version,type}% list your attributes here
 }
+\lstdefinelanguage{JSON}{
+	stringstyle=\color{purple},
+    literate=
+     *{:}{{{\color{OliveGreen}{:}}}}{1}
+      {,}{{{\color{OliveGreen}{,}}}}{1}
+      {"?}{{{\color{violet}{?"}}}}{1}
+      {\{}{{{\color{OliveGreen}{\{}}}}{1}
+      {\}}{{{\color{OliveGreen}{\}}}}}{1}
+      {[}{{{\color{OliveGreen}{[}}}}{1}
+      {]}{{{\color{OliveGreen}{]}}}}{1},
+}
 \lstset{
    basicstyle=\scriptsize\ttfamily,
    keywordstyle=\bfseries\ttfamily\color{violet},

@@ -30,9 +30,10 @@
 }
 \newacronym{GPS}{GPS}{Global Positioning System}
 \newacronym{A-GPS}{A-GPS}{Assisted Global Positioning System}
-\newacronym{GIS}{GIS}{Geoinformationssystem}
+\newacronym{LBS}{LBS}{Location Based Service}
 \newacronym{API}{API}{Application Programming Interface}
 \newacronym{App}{App}{Applikation}
+\newacronym{JSON}{JSON}{JavaScript Object Notation}
 \newacronym{WLAN}{WLAN}{Wireless Local Area Network}
 \newacronym{UMTS}{UMTS}{Universal Mobile Telecommunications System}
 \newacronym[longplural={Lichtsignalanlagen}]{LSA}{LSA}{Lichtsignalanlage}

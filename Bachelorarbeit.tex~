@@ -58,6 +58,16 @@ toc]            %Einträge im Inhaltsverzeichnis
   commentstyle=\color{OliveGreen}\ttfamily,
   morekeywords={xmlns,version,type}% list your attributes here
 }
+\lstdefinelanguage{JSON}{
+	stringstyle=\color{purple},
+    literate=
+     *{:}{{{\color{violet}{:}}}}{1}
+      {,}{{{\color{violet}{,}}}}{1}
+      {\{}{{{\color{OliveGreen}{\{}}}}{1}
+      {\}}{{{\color{OliveGreen}{\}}}}}{1}
+      {[}{{{\color{OliveGreen}{[}}}}{1}
+      {]}{{{\color{OliveGreen}{]}}}}{1},
+}
 \lstset{
    basicstyle=\scriptsize\ttfamily,
    keywordstyle=\bfseries\ttfamily\color{violet},
@@ -110,7 +120,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 \input{chapter/Anforderungen}   %Anforderungsanalyse
 \input{chapter/Entwurf}         %Konzeption
 \input{chapter/Implementierung} %Umsetzung Prototyp
-%\input{chapter/Fazit}
+\input{chapter/Fazit}
 %
 % Verzeichnisse
 %
