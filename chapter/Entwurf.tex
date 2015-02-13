@@ -2,14 +2,14 @@
 Die erarbeiteten Anforderungen an ein Ampelinformationssystem für FahrradfahrerInnen werden in diesem Kapitel für die Konzeption angewendet. Beginnend mit dem Aufbau der Anwendung werden in den folgenden Abschnitten das Design, die von der Anwendung genutzten Daten, Anwendungsfälle, die Architektur und schließlich die Komponenten der Entwicklumgsumgebung, welche eingesetzt werden aufgeführt. 
 \section{Anwendungsaufbau}
 Die Anwendungsarchitektur verwendet die Vorgaben für Android-Applikationen. So wird die Hauptkomponente mit Hilfe sogenannter \glspl{Activity} realisiert. Als Basisklasse definiert eine \gls{Activity} das \gls{UI} einer mobilen Anwendung, stellt also die Ansicht mit der BenutzerInnen interagieren können bereit.\\
-Eine \gls{Activity} wird von der Bibliotheksklasse \texttt{android.app.Activity} abgeleitet, als Klasse implementiert und muss ind er Manifestdatei der \gls{App} aufgeführt werden. \cite{android_activity} \\
+Eine \gls{Activity} wird von der Bibliotheksklasse \texttt{android.app.Activity} abgeleitet, als Klasse implementiert und muss in der Manifestdatei der \gls{App} aufgeführt werden. \cite{android_activity} \\
 In der zu entwickelnden Fahrradapplikation wird keine Navigation innerhalb der Anwendung vonnöten sein, weshalb nur eine \gls{Activity} implementiert wird.
 % DATENGRUNDLAGE
 \section{Datengrundlage}
 Aus den von der verkehrszentrale gegebenen Daten werden JSON erstellt. eigene positionsdaten werden ermittelt,... 
 \subsection{Ampeldaten}
-Die technischen Unterlagen sowie Lagepläne angefragter Ampeln wurden freundlicherweise von der Berliner Verkehrsleitzentrale für die Teststrecke zwischen der Ecke Bornholmer Straße/Björnsonstraße und zur Ecke Prenzlauer Allee/Ostseestraße zur Verfügung gestellt. Aus Datenschutzrechtlichen Gründen kann das Material hier nicht abgebildet werden. Um einen Überblick zu gewähren werden jedoch die wichtigsten Komponenten skizziert.\\ 
-Jede Kreuzung hat bis zu vier Schaltplänen, die zu festgelegten Tageszeitabschnitten greifen. Tabelle \ref{tab:zeitplan} zeigt, wie der Tagesplan einer Kreuzung aussehen kann, wobei an anderen Tagen die Uhrzeiten sowie die Reihenfolge und Quantität der Zeitschaltprogramme variieren können:
+Die technischen Unterlagen sowie Lagepläne angefragter Ampeln wurden von der Berliner Verkehrsleitzentrale für die Teststrecke zwischen der Ecke Bornholmer Straße/Björnsonstraße und zur Ecke Prenzlauer Allee/Ostseestraße zur Verfügung gestellt. Aus datenschutzrechtlichen Gründen kann das Material hier nicht abgebildet werden. Um einen Überblick zu gewähren, werden jedoch die wichtigsten Komponenten skizziert.\\ 
+Jede Kreuzung hat bis zu vier Schaltpläne, die zu festgelegten Tageszeitabschnitten greifen. Tabelle \ref{tab:zeitplan} zeigt, wie der Tagesplan einer Kreuzung aussehen kann, wobei an anderen Tagen die Uhrzeiten sowie die Reihenfolge und Quantität der Zeitschaltprogramme variieren können:
 \begin{figure}[H]
 \centering
 	\begin{minipage}[b]{0.29\textwidth}	
@@ -48,12 +48,12 @@ Für jedes Schaltzeitprogramm existieren ein Schaltzeit- und für einige Kreuzun
 \end{figure}
 \textit{Phasenübergänge! Weiter gibt es Listen mit Parametern, einer Feindlichkeitsmatrix, eine Signalgruppenliste,...}\\
 Aufgrund ihrer hohen Komplexität wird die Kreuzung Prenzlauer Allee/Ostseestraße nicht in die Prototypenentwicklung mit einbezogen. Hier existieren mehrere Alternativschaltpläne, die zu beachten es mehr \textbf{Recherche?} bedarf. Ebenfalls unbeachtet bleiben Ampeln, die sich nicht auf der vorgegebenen Strecke befinden. Diese sind in Abbildung \ref{fig:kreuzung}, die die Kreuzung Schönhauser Allee/Bornholmer Straße skizziert, markiert.\\
-Da sie Position der Ampeln als Lageplan vorliegen, sind diese manuell in Geokoordinaten konvertiert und in das gewählte \gls{JSON}-Format gebracht werden.
+Da die Position der Ampeln als Lageplan vorliegen, sind diese manuell in Geokoordinaten konvertiert und in das gewählte \gls{JSON}-Format gebracht werden.
 Als Referenzzeit ist die Zeit zwischen 14 und 20 Uhr von Montag bis Freitag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt bis vervollständigt werden.
 \subsection[JSON]{\gls{JSON}}
-\gls{JSON} ist ein leichtgewichtiges, auf JavaScript basierendes, Datenaustauschformat, das für Menschen gut les- und schreibbar, für Maschinen einfach analysier- und generierbar ist. Ein \gls{JSON}-Objekt ist auf zwei Strukturen aufgebaut. Eine Auflistung von Schlüssel/Wert Paaren oder eine geordnete Liste von Werten, als Array realisiert. Der folgende Codeabschnitt zeigt beispielhaft ein \gls{JSON}-Ampelobjekt:  
+\gls{JSON} ist ein leichtgewichtiges, auf JavaScript basierendes, Datenaustauschformat, das für Menschen gut les- und schreibbar und für Maschinen einfach analysier- und generierbar ist. Ein \gls{JSON}-Objekt ist auf zwei Strukturen aufgebaut. Eine Auflistung von Schlüssel/Wert Paaren oder eine geordnete Liste von Werten, als Array realisiert. Der folgende Codeabschnitt zeigt beispielhaft ein \gls{JSON}-Ampelobjekt:  
 \lstinputlisting[language=JSON]{code/lsas.json}
-\rule{35em}{0.5pt}
+\rule{35em}{0.5pt}\\
 Das hier aufgeführte Ampelobjekt hat den Namen \texttt{BornholmerR1}, der auf die Kreuzung auf der sich die Ampel befindet schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten an denen diese gelten. Der Wert \texttt{duration}   \texttt{greenFrom} \texttt{greenTo}
 \subsection{Positionsdaten + Geschwindigkeit}
 % ### USE CASES ###

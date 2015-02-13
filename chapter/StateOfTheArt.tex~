@@ -9,7 +9,9 @@ Unter dem Prinzip "'Grüne Welle"' wird die Abstimmung der Ampelschaltzustände,
 In Kopenhagen unterstützen grüne \glspl{LED} auf Radwegen die RadfahrerInnen indem sie wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der Grünen Welle befinden. 
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=0.7\textwidth]{copenhagen} \label{fig:copenhagen}
+    \includegraphics[width=0.7\textwidth]{copenhagen} 
+    \rule{35em}{0.5pt}
+    \label{fig:copenhagen}
     \caption[Grüne Welle durch \glspl{LED}]{Kopenhagen: \glspl{LED} signalisieren die Grüne Welle bei 20 km/h  Quelle: \cite{NYT}}
 \end{figure}
 Zusätzlich erkennen Sensoren im Radweg Fahrradgruppen und veranlassen dann die Ampel zu einer längeren Grünphase. In einem anderen Stadtteil sind Leuchttafeln, die die verbleibende Zeit der Ampelphase anzeigen, am Radwegrand installiert\cite{KopIng}.\\
@@ -24,7 +26,8 @@ Im Sommer 2008 wurde das Projekt \textsc{Travolution} (TRAffic \& eVOLUTION), vo
 Die Vorhersage der Schaltbilder ist aufgrund der verkehrsabhängigen Logik bei nicht festzeitgesteuerten \gls{LSA} nur mit einer gewissen Wahrscheinlichkeit möglich. So werden sekündlich die Grünwahrscheinlichkeiten vom \gls{LSA}-Kommunikationsmodul aktualisiert und an das Fahrzeugmodul gesendet, welches diese in Relation zu eigener Position, Geschwindigkeit und Richtung setzt und die entsprechende Empfehlung ausgibt.
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=0.7\textwidth]{travolution}      
+    \includegraphics[width=0.7\textwidth]{travolution}   
+    \rule{35em}{0.5pt}   
     \caption[Projekt Travolution]{Der Bordcomputer zeigt die optimale Geschwindigkeit an. Quelle: \cite{Travolution}}
     \label{fig:travolution}
 \end{figure} 
@@ -34,7 +37,8 @@ Fundierend auf \textsc{Travolution} sind Folgeprojekte wie zum Beispiel das eben
 In Bayern wurde im April 2011 das Pilot-Projekt \textsc{kolibri}\footnote{ Kooperative Lichtsignaloptimierung -- Bayrisches Pilotprojekt} mit den Teststrecken der B13 bei München mit sieben und der St2145 in der Nähe von Regensburg mit acht ampelgeregelten Kreuzungen gestartet. Gemeinsam untersuchten die Projektpartner\footnote{ \url{http://www.kolibri-projekt.de/Sites/kolibri3.html}} die Funktionen und Auswirkungen eines Ampelassistenten außerhalb von Ortschaften (\cite{kolibri}). "'Per Mobilfunk übertragen die Ampeln ihre Daten an die Zentrale der TRANSVER GmbH. Dort wertet sie ein Computer aus und sendet die Ergebnisse an die Fahrzeuge. Ein Anzeigefeld im Bordcomputer oder eine Applikation auf dem \gls{Smartphone} zeigt an, ob sich das Fahrzeug in der Grünen Welle bewegt."' (\cite{kolibriTUM} ) 
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=0.7\textwidth]{kolibri}      
+    \includegraphics[width=0.7\textwidth]{kolibri}   
+    \rule{35em}{0.5pt}   
     \caption[Projekt Kolibri]{Anzeige der Geschwindigkeitsempfehlung. Quelle: \cite{kolibri}}
     \label{fig:kolibri}
 \end{figure}
@@ -43,7 +47,9 @@ Die FahrerInnen wurden sowohl fahrzeugintegriert\footnote{ On-Board-Computer} al
 Ende des Jahres 2013 wurde in Wien das Projekt \textsc{Testfeld Telematik} -- Feldversuch zur Stärkung österreichischen Know-Hows im Bereich umweltverträglicher Mobilität erfolgreich abgeschlossen. Per \gls{C2X}-Kommunikation bringt das Projekt Kooperative Dienste wie Ampelinformationen direkt ins Auto. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{telematik} \label{fig:telematik}
+    \includegraphics[width=0.7\textwidth]{telematik} 
+    \rule{35em}{0.5pt}
+    \label{fig:telematik}
     \caption[Projekt Testfeld-Telematik Ampelinformation]{Mobile Anwendung des Projekts Testfeld-Telematik Quelle: \cite{Telematik}}
 \end{figure} 
 Über Navigationssysteme, integrierte Systeme, Nachrüst-Plattformen oder mobile Endgeräte erreicht die FahrerInnen die Information der optimalen Geschwindigkeit sowie die Dauer der jeweiligen Ampelphase\cite{Telematik}. Um an die Informationen zu kommen wurden unter anderem Kameras und Sensoren, beispielsweise als Induktionsschleife in die Fahrbahn eingelassen. Andere Autohersteller wie BMW, Volvo und Volkswagen kooperieren als Forschungsprojekt "'Car 2 Car Communication Consortium"' mit \textsc{Testfeld Telematik}, ebenfalls mit dem Ziel die Sicherheit an Kreuzungen zu verbessern. Im Auto installierte Sensoren kommunizieren mit Kameras und Scanner in der Ampel. Allerdings funktioniert das System nur mit dem ambitionierten Ziel, wenn alle Autohersteller zusammenarbeiten und sich auf den gleichen Standard einigen. \cite{Siemens}
@@ -53,23 +59,34 @@ Auch Toyota hat ein System entwickelt, welches eine spezielle Infrastruktur an K
 %%% Apps %%% 
 %
 \clearpage
-\section{Ampelinformationssystem als mobile Applikation}
-\glspl{Smartphone} sind bereits mit einem \gls{GPS}-Empfänger ausgestattet und haben Internetzugang, was unter anderem die Entwicklung von mobilen Ampelassistenten ermöglicht. Die nachfolgenden mobilen Anwendungen existieren bereits oder befinden sich in der Testphase.
+\subsection{Ampelinformationssystem als mobile Applikation}
+\glspl{Smartphone} sind bereits mit einem \gls{GPS}-Empfänger ausgestattet und haben Internetzugang, was unter anderem die Entwicklung von mobilen Ampelassistenten ermöglicht. Die nachfolgenden Applikationen existieren bereits oder befinden sich in der Testphase.
 %%% ENLIGHTEN %%%
 \subsection*{Mobile Applikation EnLighten}
-\textsc{EnLighten} erkennt \textbf{Wie?} rote Ampeln und visualisiert die Dauer dieser Phase. Die mobile Anwendung nutzt \gls{GPS} zur Lokalisierung des Autos und verwendet die \gls{DSRC}-Kommunikation zu Ampelphasenprognose. 
-An Autos und Verkehrsinfrastruktur wie Ampeln wird entsprechende Hardware installiert, die gesammelten Daten an die Verkehrszentrale gesendet. Dort wird die  
-Dafür werden Komponenten wie Höchstgeschwindigkeit, Ampelschaltpläne, Tageszeit und Fahrtrichtung beachtet. Mit der Verkehrszentrale verbunden, visualisiert \textsc{EnLighten} die Restrotdauer.\\ Aufgrund von hohen Installationskosten und -Aufwand ist \textsc{EnLighten} erst in einigen amerikanischen Städten funktionstüchtig und verfügbar\footnote{\cite{EnLighten}}.
+Connected Signals ist ein Startup, 2014 gegründet, aus Eugene in Oregon (USA), das Echtzeit--Verkehrssignalinformationen sammelt und so Modelle zur Vorhersage von Ampelsignalen entwickelt. Die von Connected Signals erstellte Smartphone Applikation \textsc{EnLighten} bietet Treiber mit Vorhersagen, wie lange man an einer roten Ampel stehen wird. \cite{connectedSignals} \\
+Connected Signals verbindet sich mit dem Verkehrmanagementsystem der jeweiligen Stadt, um Informationen über Signal- und Sensorzustände zu erhalten. Diese Informationen werden mit der Karte als auch den Geschwindigkeitsbegrenzungen kombiniert und in ein herstellerunabhängiges Format umgewandelt. Dann wendet Connected Signals die proprietäre Technologie an, um den Status der \gls{LSA} abzubilden und eine entsprechende Vorhersage über zukünftiges Verhalten zu treffen. \cite{signals} 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Portland_live} 
+    \rule{35em}{0.5pt}
+    \label{fig:enlighten}
+    \caption[Connected Signals live Vorhersage]{Live Ampelsignalvorhersage in Portland Quelle: \cite{signals}}
+\end{figure}
+\textsc{EnLighten} verwendet Informationen über den aktuellen Ampelstatus, Tages- und Stoßzeit und bereits gespeicherte Daten, um eine Vorhersage und dessen Wahrscheinlichkeit zu treffen. Nur bei der Wahrscheinlichkeit die hoch genug ist, folglich einer genauen Vorhersage entspricht, visualisiert \textsc{EnLighten} die Restrotdauer. Für eine ungenaue Vorhersage können zum Beispiel Variationen in den Zeitplänen (Stoßzeiten) verantwortlich sein.\\  
+Connected Signals nutzt \gls{GPS}, kombiniert mit Auskünften der Fahrzeugsystemen wie den Blinker, Geschwindigkeitsmesser und den Bremspedal-status zur genauen Lokalisierung des Autos. Um präzise Ampelinformationen zu liefern werden Werkzeuge von der automatischen Erkennung von Lücken in digitalen Stadtplänen, bis hin zur Bestimmung der Ampelphasenpläne und Zeitplänen basierend auf dem Verkehr an Kreuzungen eingesetzt. \cite{EnLighten} \\
+\textsc{EnLighten} steht in einer kleinen, aber wachsenden Zahl von Städten in den Vereinigten Staaten zur Verfügung. 
 %%% SIGNAL GURU %%%
 \subsection*{Mobile Applikation Signal Guru}
 Signal Guru wurde von den Wissenschaftlern des MIT\footnote{ Massachusetts Institute of Technology} und der Universität von Princeton entwickelt. Unter den vorgestellten Projekten hebt sich Signal Guru insofern ab, dass die Informationen nicht direkt von einer Vermittlung (Server oder \gls{LSA}) kommt, sondern von der Anwendung selbst ermittelt wird. Die \Gls{App} errechnet über die \glspl{Smartphone} vieler Nutzer -- welche miteinander kommunizieren -- die Wahrscheinlichkeit, wann eine Ampel grün wird und errechnen ein daraus ein Zeitmuster zur Vorhersage. Wie in Abbildung \ref{fig:AppSignalGuru} ist zu sehen ist, muss die eingebaute Kamera durch die Windschutzscheibe die Ampel registrieren. Bei Testläufen im Straßenverkehr vielen die Ergebnise bei statisch geschalteten Ampeln deutlich besser aus als bei angepassten Ampelschaltungen \cite{SignalGuruPaper} 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{guru}
+    \rule{35em}{0.5pt}
     \caption[Signal Guru]{Signal Guru muss in der Lage sein die Ampel zu 'sehen'.  Quelle: \cite{SignalGuruPaper}} \label{fig:AppSignalGuru}
 \end{figure}
 Dieser Ansatz ist für Fahrräder jedoch nicht umsetzbar, da das \gls{Smartphone} in der Halterung am Lenker die \gls{LSA} nicht erfassen kann.
 % FAHRRADERWEITERUNGEN %
+\clearpage
 \section{Fahrraderweiterungen}
 Als Schnittstelle das Smarthone nutzend gibt es ausgeklügelte Systeme mit zahlreichen Funktionen. Das einfache Navigationssystem für Fahrräder ist kaum noch notwendig, wo doch zum Beispiel die hier aufgeführten neben Navigationsmöglichkeiten jede Menge zusätzliche Funktionalitäten aufweisen.
 \subsection{Displaylose Fahrradnavigation}
@@ -77,26 +94,28 @@ Das \textsc{Hammerhead} ist ein "'Hammer"', oder einfach ein "'T"', an den Lenke
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{hammerhead}
+    \rule{35em}{0.5pt}
     \caption[Hammerhead]{Hammerhead -- \glspl{LED} zeigen den Weg.  Quelle: \cite{Hammerhead}} 
     \label{fig:hammerhead}
 \end{figure}
 Via Bluetooth ist \textsc{Hammerhead} an das \gls{Smartphone} gekoppelt, auf dem die zugehörige Navigationsanwendung läuft mit der man Routen eingeben, teilen und speichern kann\cite{Hammerhead}.\\\\
 Ein sehr ähnliches Prinzip verfolgt das \textsc{CycleNav} von der Firma Schwinn. Untersiede findet man hier im Design und einem integriertem Lautsprecher, der Abbiegehinweise ausgibt und auf Wunsch wiederholt\cite{CycleNav}.
 \subsection{Intelligente Fahrradlenker}
-Mehr High-Tech, aber auch umfangreichere Funktionen bietet der vom amerikanischen Startup \textsc{Helios-Bikes} entwickelte \textsc{Helios}-Lenker. Neben dem Frontlicht hat der Lenker wie in Abbildung \ref{fig:helios} zu sehen, an den Enden \glspl{LED} die einen zum gewünschten Standort leiten. 
+Mehr High-Tech, aber auch umfangreichere Funktionen bietet der vom amerikanischen Startup \textsc{Helios-Bikes} entwickelte \textsc{Helios}-Lenker. Neben dem Frontlicht hat der Lenker wie in Abbildung \ref{fig:helios} zu sehen, an den Enden \glspl{LED} die einen zum gewünschten Standort leiten. Sie passen ihre Farbe der Geschwindigkeit an und haben auf Wunsch auch eine Blinkfunktion. Verbindet man den Lenker mit einem \gls{Smartphone}, lässt sich die Farbe der \glspl{LED} individualisieren. Die Verbindung zum Handy hat weitere Vorteile: dank des eingebauten \gls{GPS}-Trackers und eingesteckter SIM-Karte lässt sich das Fahrrad per SMS über den derzeitigen Standort abfragen\cite{Helios}, was im Falle eines Diebstahl sehr hilfreich sein kann. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{helios}
+    \rule{35em}{0.5pt}
     \caption[Helios-Lenker]{Helios-Lenker  Quelle: \cite{Helios}} 		
     \label{fig:helios}
 \end{figure}
-Sie passen ihre Farbe der Geschwindigkeit an und haben auf Wunsch auch eine Blinkfunktion. Verbindet man den Lenker mit einem \gls{Smartphone}, lässt sich die Farbe der \glspl{LED} individualisieren. Die Verbindung zum Handy hat weitere Vorteile: dank des eingebauten \gls{GPS}-Trackers und eingesteckter SIM-Karte lässt sich das Fahrrad per SMS über den derzeitigen Standort abfragen\cite{Helios}, was im Falle eines Diebstahl sehr hilfreich sein kann.\\\\
 \textsc{Vanhawks Valour} heißt das Rad, das ab April 2015 lieferbar ist. Wie im \textsc{Helios}-Lenker steckt auch hier ein über das \gls{Smartphone} steuerbares Navigationssystem, das die Abbiegehinweise per \gls{LED} signalisiert, im Lenker. Auf den gefahrenen Routen merkt sich das Rad durch einen Erschütterungssensor erfasste Hindernisse wie Unebenheiten in der Fahrbahn und ermittelt beim nächsten Mal darauf rücksicht nehmend eine andere Route. Es ist darüber hinaus in der Lage mit anderen \textsc{Vanhawks valour}-Rädern zu kommunizieren und dessen Routenbegebenheiten ebenfalls zu berücksichtigen. Mittels Radarsensoren registriert das Fahrrad Autos im toten Winkel und benachrichtig die FahrerInnen durch ein vibrierenden Lenker\cite{vanhawks}.
 \subsection{Das Samsung Smart Bike}
 Auf der Mailänder Designwoche hat Samsung ein Smartbike vorgestellt, das mit verschiedenen intelligenten Komponenten wie Bluetooth, einer Kamera und Laserprojektoren ausgestattet. Der Rahmen ist aus Aluminium und leicht geschwungen, was Vibrationen abfangen soll. Wie Abbildung \ref{fig:samsung} zeigt, zeichnen vier Laserprojektoren den eigenen, begleitenden Fahrradweg auf die Straße und sollen so die Sicherheit erhöhen, indem sie den Sicherheitsabstand markieren und aus dem toten Winkel sichtbar sind. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{samsung}
+    \rule{35em}{0.5pt}
     \caption[Samsung Smart Bike]{Samsung Smart Bike  Quelle: \cite{smartbike}} 
     \label{fig:samsung}
 \end{figure}
@@ -110,13 +129,13 @@ Ein Kickstarterprojekt aus Frankfurt am Main entwickelt das System \textsc{COBI}
                 \caption{Frontlicht und Smartphonehalterung}
                 \label{fig:cobi1}
         \end{subfigure}%
-        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-          %(or a blank line to force the subfigure onto a new line)
+        ~ %add desired spacing between images (~, \quad, \qquad, \hfill)
         \begin{subfigure}[b]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{COBI_02}
                 \caption{Bremslicht und Blinker}
                 \label{fig:cobi2}
         \end{subfigure}
+        \rule{35em}{0.5pt}
         \caption[COBI]{COBI -- Das smarte Fahrradsystem. Quelle: \cite{cobi_pic}}
         \label{fig:cobi}
 \end{figure}
