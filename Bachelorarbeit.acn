@@ -40,16 +40,19 @@
 \glossaryentry{API?\glossaryentryfield{API}{\glsnamefont{API}}{Application Programming Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{SDK?\glossaryentryfield{SDK}{\glsnamefont{SDK}}{Software Development Kit}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{SDK?\glossaryentryfield{SDK}{\glsnamefont{SDK}}{Software Development Kit}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{DDMS?\glossaryentryfield{DDMS}{\glsnamefont{DDMS}}{Dalvik Debug Monitor Server}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{SDK?\glossaryentryfield{SDK}{\glsnamefont{SDK}}{Software Development Kit}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{SDK?\glossaryentryfield{SDK}{\glsnamefont{SDK}}{Software Development Kit}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{DDMS?\glossaryentryfield{DDMS}{\glsnamefont{DDMS}}{Dalvik Debug Monitor Server}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{NDK?\glossaryentryfield{NDK}{\glsnamefont{NDK}}{Native Development Kit}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{SDK?\glossaryentryfield{SDK}{\glsnamefont{SDK}}{Software Development Kit}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{SDK?\glossaryentryfield{SDK}{\glsnamefont{SDK}}{Software Development Kit}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{NDK?\glossaryentryfield{NDK}{\glsnamefont{NDK}}{Native Development Kit}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{VM?\glossaryentryfield{VM}{\glsnamefont{VM}}{Virtual Maschine}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{HAL?\glossaryentryfield{HAL}{\glsnamefont{HAL}}{Hardware Abstraction Layer}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{HAL?\glossaryentryfield{HAL}{\glsnamefont{HAL}}{Hardware Abstraction Layer}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{API?\glossaryentryfield{API}{\glsnamefont{API}}{Application Programming Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
 \glossaryentry{LBS?\glossaryentryfield{LBS}{\glsnamefont{LBS}}{Location Based Service}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
 \glossaryentry{LBS?\glossaryentryfield{LBS}{\glsnamefont{LBS}}{Location Based Service}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
 \glossaryentry{WLAN?\glossaryentryfield{WLAN}{\glsnamefont{WLAN}}{Wireless Local Area Network}{\relax }|setentrycounter[]{page}\glsnumberformat}{21}
@@ -63,41 +66,44 @@
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{22}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{22}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{22}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
+\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{22}
+\glossaryentry{GNSS?\glossaryentryfield{GNSS}{\glsnamefont{GNSS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
+\glossaryentry{GLONASS?\glossaryentryfield{GLONASS}{\glsnamefont{GLONASS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
+\glossaryentry{GNSS?\glossaryentryfield{GNSS}{\glsnamefont{GNSS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{A-GPS?\glossaryentryfield{A-GPS}{\glsnamefont{A-GPS}}{Assisted Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{A-GPS?\glossaryentryfield{A-GPS}{\glsnamefont{A-GPS}}{Assisted Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{A-GPS?\glossaryentryfield{A-GPS}{\glsnamefont{A-GPS}}{Assisted Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{API?\glossaryentryfield{API}{\glsnamefont{API}}{Application Programming Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
-\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{App?\glossaryentryfield{App}{\glsnamefont{App}}{Applikation}{\relax }|setentrycounter[]{page}\glsnumberformat}{27}
-\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{27}
-\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{27}
-\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
-\glossaryentry{PDF?\glossaryentryfield{PDF}{\glsnamefont{PDF}}{Portable Document Format}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{App?\glossaryentryfield{App}{\glsnamefont{App}}{Applikation}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{PDF?\glossaryentryfield{PDF}{\glsnamefont{PDF}}{Portable Document Format}{\relax }|setentrycounter[]{page}\glsnumberformat}{29}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{29}
-\glossaryentry{UI?\glossaryentryfield{UI}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{30}
-\glossaryentry{App?\glossaryentryfield{App}{\glsnamefont{App}}{Applikation}{\relax }|setentrycounter[]{page}\glsnumberformat}{30}
-\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
-\glossaryentry{PDF?\glossaryentryfield{PDF}{\glsnamefont{PDF}}{Portable Document Format}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
-\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
-\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
-\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
-\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
-\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
+\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{30}
+\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{30}
+\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{30}
+\glossaryentry{UI?\glossaryentryfield{UI}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
+\glossaryentry{App?\glossaryentryfield{App}{\glsnamefont{App}}{Applikation}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
 \glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{32}
-\glossaryentry{XML?\glossaryentryfield{XML}{\glsnamefont{XML}}{Extensible Markup Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{37}
-\glossaryentry{API?\glossaryentryfield{API}{\glsnamefont{API}}{Application Programming Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{37}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{37}
-\glossaryentry{PDF?\glossaryentryfield{PDF}{\glsnamefont{PDF}}{Portable Document Format}{\relax }|setentrycounter[]{page}\glsnumberformat}{40}
-\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{40}
-\glossaryentry{WLAN?\glossaryentryfield{WLAN}{\glsnamefont{WLAN}}{Wireless Local Area Network}{\relax }|setentrycounter[]{page}\glsnumberformat}{42}
-\glossaryentry{DSRC?\glossaryentryfield{DSRC}{\glsnamefont{DSRC}}{Dedicated Short Range Communication}{\relax }|setentrycounter[]{page}\glsnumberformat}{42}
-\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{42}
-\glossaryentry{LED?\glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode}{\relax }|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{PDF?\glossaryentryfield{PDF}{\glsnamefont{PDF}}{Portable Document Format}{\relax }|setentrycounter[]{page}\glsnumberformat}{32}
+\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{XML?\glossaryentryfield{XML}{\glsnamefont{XML}}{Extensible Markup Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{38}
+\glossaryentry{API?\glossaryentryfield{API}{\glsnamefont{API}}{Application Programming Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{38}
+\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{38}
+\glossaryentry{PDF?\glossaryentryfield{PDF}{\glsnamefont{PDF}}{Portable Document Format}{\relax }|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{WLAN?\glossaryentryfield{WLAN}{\glsnamefont{WLAN}}{Wireless Local Area Network}{\relax }|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DSRC?\glossaryentryfield{DSRC}{\glsnamefont{DSRC}}{Dedicated Short Range Communication}{\relax }|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{LED?\glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode}{\relax }|setentrycounter[]{page}\glsnumberformat}{44}
