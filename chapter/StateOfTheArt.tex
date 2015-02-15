@@ -3,18 +3,18 @@ Die Verkehrsstrategie des Senats sieht vor, dass die Fahrradnutzung bis zum Jahr
 Sowohl in Radwegen integriert, als auch für den Einsatz in Kraftfahrzeugen gibt es bereits Projekte zu Ampelassistenten in Bordcomputern, Navigationssystemen, oder aber auch als mobile Applikation. Solche Anwendungen erkennen rote Ampeln und ermitteln die optimale Fahrgeschwindigkeit für die Grüne Welle. Auch Erweiterungen für Fahrräder werden immer vielfältiger --- vom einfachen Navigationssystem bis hin zu intelligenten Aufsätzen, die an das \gls{Smartphone} gekoppelt sind.
 % ### Grüne Welle ###
 \section{Ampelinformationssysteme}
-Unter dem Prinzip "'Grüne Welle"' wird die Abstimmung der Ampelschaltzustände, sodass ein Fahrzeug in einer bestimmten Geschwindigkeit mehrere Ampeln passieren kann ohne anzuhalten, verstanden. Der folgende Abschnitt soll die existierenden Lösungen und Ansätze für Ampelinformationssysteme darstellen.
+Unter dem Prinzip "'Grüne Welle"' wird die Abstimmung der Ampelschaltzustände, sodass ein Fahrzeug in einer bestimmten Geschwindigkeit mehrere Ampeln passieren kann ohne anzuhalten, verstanden. Im folgenden Abschnitt werden die existierenden Lösungen und Ansätze für Ampelinformationssysteme dargestellt.
 \subsection{Grüne Welle auf Radwegen}
-In Kopenhagen unterstützen grüne \glspl{LED} auf Radwegen die RadfahrerInnen indem sie wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der Grünen Welle befinden. 
+In Kopenhagen unterstützen grüne \glspl{LED} auf Radwegen die RadfahrerInnen indem sie wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der Grünen Welle befinden. Abbildung \ref{fig:copenhagen} zeigt einen solchen Radweg mit einem Fahrradfahrer, der sich im grünen Bereich befindet. Zusätzlich erkennen Sensoren im Radweg Fahrradgruppen und veranlassen dann die Ampel zu einer längeren Grünphase. In einem anderen Stadtteil sind Leuchttafeln, die die verbleibende Zeit der Ampelphase anzeigen, am Radwegrand installiert\cite{KopIng}. \\\\
+Kopenhagen als Vorbild nehmend hat Berlin mit vier Ampeln in Schöneberg eine Grüne Welle für RadfahrerInnen umgesetzt und plant bereits die zweite\cite{BZ}. Auch hier möchte man die Benutzung des Rades attraktiver machen und den Fahrradverkehr beschleunigen.
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=0.7\textwidth]{copenhagen} 
-    \rule{35em}{0.5pt}
-    \label{fig:copenhagen}
+    \includegraphics[width=0.6\textwidth]{copenhagen} 
+    \rule{35em}{0.5pt}   
     \caption[Grüne Welle durch \glspl{LED}]{Kopenhagen: \glspl{LED} signalisieren die Grüne Welle bei 20 km/h  Quelle: \cite{NYT}}
+     \label{fig:copenhagen}
 \end{figure}
-Zusätzlich erkennen Sensoren im Radweg Fahrradgruppen und veranlassen dann die Ampel zu einer längeren Grünphase. In einem anderen Stadtteil sind Leuchttafeln, die die verbleibende Zeit der Ampelphase anzeigen, am Radwegrand installiert\cite{KopIng}.\\
-Kopenhagen als Vorbild nehmend hat Berlin mit vier Ampeln in Schöneberg eine Grüne Welle für RadfahrerInnen umgesetzt und plant bereits die zweite\cite{BZ}. Auch hier möchte man die Benutzung des Rades attraktiver machen und den Fahrradverkehr beschleunigen.
+
 % ### AUTO ###
 \subsection{Ampelinformationssysteme im Auto}
 In den letzten Jahrzehnten gab es immer wieder Intentionen, eine Anzeige von Geschwindigkeitsempfehlungen im Fahrzeug umzusetzen. Der folgende Abschnitt stellt existierende Lösungen und Ansätze für Ampelinformationssysteme im Auto vor.
@@ -36,7 +36,7 @@ Fundierend auf \textsc{Travolution} sind Folgeprojekte wie zum Beispiel das eben
 %%% KOLIBRI %%%
 \subsection*{\label{sec:kolibri}Projekt Kolibri}
 In Bayern wurde im April 2011 das Pilot-Projekt \textsc{kolibri}\footnote{ Kooperative Lichtsignaloptimierung -- Bayrisches Pilotprojekt} mit den Teststrecken der B13 bei München mit sieben und der St2145 in der Nähe von Regensburg mit acht ampelgeregelten Kreuzungen gestartet. Gemeinsam untersuchten die Projektpartner\footnote{ \url{http://www.kolibri-projekt.de/Sites/kolibri3.html}} die Funktionen und Auswirkungen eines Ampelassistenten außerhalb von Ortschaften (\cite{kolibri}). "'Per Mobilfunk übertragen die Ampeln ihre Daten an die Zentrale der TRANSVER GmbH. Dort wertet sie ein Computer aus und sendet die Ergebnisse an die Fahrzeuge. Ein Anzeigefeld im Bordcomputer oder eine Applikation auf dem \gls{Smartphone} zeigt an, ob sich das Fahrzeug in der Grünen Welle bewegt."' (\cite{kolibriTUM} ) 
-\begin{figure}[H]  
+\begin{figure}[t]  
     \centering  
     \includegraphics[width=0.7\textwidth]{kolibri}   
     \rule{35em}{0.5pt}   
@@ -45,28 +45,27 @@ In Bayern wurde im April 2011 das Pilot-Projekt \textsc{kolibri}\footnote{ Koope
 \end{figure}
 Die FahrerInnen wurden sowohl fahrzeugintegriert\footnote{ On-Board-Computer} als auch via \gls{Smartphone}, wie Abbildung \ref{fig:kolibri} zeigt, über die Schaltung der nächsten Ampel informiert und erhielten Empfehlungen über die aktuelle Progressionsgeschwindigkeit. Nach zwei Jahren erfolgreicher Arbeit war das Pilotprojekt abgeschlossen 
 \subsection*{Projekt Testfeld Telematik}
-Ende des Jahres 2013 wurde in Wien das Projekt \textsc{Testfeld Telematik} -- Feldversuch zur Stärkung österreichischen Know-Hows im Bereich umweltverträglicher Mobilität erfolgreich abgeschlossen. Per \gls{C2X}-Kommunikation bringt das Projekt Kooperative Dienste wie Ampelinformationen direkt ins Auto. 
+Ende des Jahres 2013 wurde in Wien das Projekt \textsc{Testfeld Telematik} -- Feldversuch zur Stärkung österreichischen Know-Hows im Bereich umweltverträglicher Mobilität erfolgreich abgeschlossen. Per \gls{C2X}-Kommunikation bringt das Projekt Kooperative Dienste wie Ampelinformationen direkt ins Auto. Über Navigationssysteme, integrierte Systeme, Nachrüst-Plattformen oder mobile Endgeräte erreicht die FahrerInnen die Information der optimalen Geschwindigkeit sowie die Dauer der jeweiligen Ampelphase\cite{Telematik}. Abbildung \ref{fig:telematik} zeigt die mobile Anwendung auf einem Tablet mit der Anzeige von einer Grünen Welle bei 50 km/h. Um an die Informationen zu kommen wurden unter anderem Kameras und Sensoren, beispielsweise als Induktionsschleife in die Fahrbahn eingelassen. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{telematik} 
-    \rule{35em}{0.5pt}
-    \label{fig:telematik}
+    \rule{35em}{0.5pt}    
     \caption[Projekt Testfeld-Telematik Ampelinformation]{Mobile Anwendung des Projekts Testfeld-Telematik Quelle: \cite{Telematik}}
+    \label{fig:telematik}
 \end{figure} 
-Über Navigationssysteme, integrierte Systeme, Nachrüst-Plattformen oder mobile Endgeräte erreicht die FahrerInnen die Information der optimalen Geschwindigkeit sowie die Dauer der jeweiligen Ampelphase\cite{Telematik}. Um an die Informationen zu kommen wurden unter anderem Kameras und Sensoren, beispielsweise als Induktionsschleife in die Fahrbahn eingelassen. Andere Autohersteller wie BMW, Volvo und Volkswagen kooperieren als Forschungsprojekt "'Car 2 Car Communication Consortium"' mit \textsc{Testfeld Telematik}, ebenfalls mit dem Ziel die Sicherheit an Kreuzungen zu verbessern. Im Auto installierte Sensoren kommunizieren mit Kameras und Scanner in der Ampel. Allerdings funktioniert das System nur mit dem ambitionierten Ziel, wenn alle Autohersteller zusammenarbeiten und sich auf den gleichen Standard einigen. \cite{Siemens}
+Andere Autohersteller wie BMW, Volvo und Volkswagen kooperieren als Forschungsprojekt "'Car 2 Car Communication Consortium"' mit \textsc{Testfeld Telematik}, ebenfalls mit dem Ziel die Sicherheit an Kreuzungen zu verbessern. Im Auto installierte Sensoren kommunizieren mit Kameras und Scanner in der Ampel. Allerdings funktioniert das System nur mit dem ambitionierten Ziel, wenn alle Autohersteller zusammenarbeiten und sich auf den gleichen Standard einigen. \cite{Siemens}
 \subsection*{Toyota}
 Auch Toyota hat ein System entwickelt, welches eine spezielle Infrastruktur an Kreuzungen, die Installation von Infrarot-Sendern, die mit dem Toyota-Navigationssystem kommunizieren erfordert. An roter Ampel werden die Fahrer über die verbleibende Wartezeit informiert. Die ausgestatteten Navigationssysteme wurden bis jetzt jedoch ausschließlich in Japan getestet. \cite{Toyota}
 %
 %%% Apps %%% 
 %
-\clearpage
 \subsection{Ampelinformationssysteme als mobile Applikation}
 \glspl{Smartphone} sind bereits mit einem \gls{GPS}-Empfänger ausgestattet und haben Internetzugang, was unter anderem die Entwicklung von mobilen Ampelassistenten ermöglicht. Die nachfolgenden Applikationen existieren bereits oder befinden sich in der Testphase.
 %%% ENLIGHTEN %%%
 \subsection*{Mobile Applikation EnLighten}
 Connected Signals ist ein Startup, 2014 gegründet, aus Eugene in Oregon (USA), das Echtzeit--Verkehrssignalinformationen sammelt und so Modelle zur Vorhersage von Ampelsignalen entwickelt. Die von Connected Signals erstellte Smartphone Applikation \textsc{EnLighten} bietet Treiber mit Vorhersagen, wie lange man an einer roten Ampel stehen wird. \cite{connectedSignals} \\
 Connected Signals verbindet sich mit dem Verkehrmanagementsystem der jeweiligen Stadt, um Informationen über Signal- und Sensorzustände zu erhalten. Diese Informationen werden mit der Karte als auch den Geschwindigkeitsbegrenzungen kombiniert und in ein herstellerunabhängiges Format umgewandelt. Dann wendet Connected Signals die proprietäre Technologie an, um den Status der \gls{LSA} abzubilden und eine entsprechende Vorhersage über zukünftiges Verhalten zu treffen. \cite{signals} 
-\begin{figure}[H]
+\begin{figure}[t]
     \centering
     \includegraphics[width=0.7\textwidth]{Portland_live} 
     \rule{35em}{0.5pt}

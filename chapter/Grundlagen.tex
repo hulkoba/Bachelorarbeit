@@ -47,12 +47,10 @@ Auf der obersten Ebene in Abbildung \ref{fig:android} befinden sich die Anwendun
 % MOBILE SENSING
 %
 \subsection{Mobile Sensorik} 
-Ein Sensor\footnote{ aus dem Lateinischen, deutsch: "'\textit{fühlen}"'} ist ein Bauelement, das physikalische Eigenschaften wie Helligkeit, Temperatur oder Beschleunigung sowohl quantitativ als auch qualitativ erfassen und in ein analoges Signal umwandeln kann. \cite{sensor} 
+Ein Sensor\footnote{ aus dem Lateinischen, deutsch: "'\textit{fühlen}"'} ist ein Bauelement, das physikalische Eigenschaften wie Helligkeit, Temperatur oder Beschleunigung sowohl quantitativ als auch qualitativ erfassen und in ein analoges Signal umwandeln kann. \cite{sensor} \\\\
 %\textit{Nahezu alle aktuellen \glspl{Smartphone} enthalten einen \gls{GPS}-Sensor, über denn der jeweilige Standort ermittelt wird. Im nächsten Abschnitt wird auch darauf eingegangen, wie Weiterhin können zur Ortsbestimmung Daten aus Funkzellen und naheliegender kabelloser Netzwerke hinzugezogen werden.}
-
- In der zu entwickelnden Anwendung kommt es auf jeden Meter an. Ob die Genauigkeit des integrierten \gls{GPS}-Sensors genügt, muss ergo im Rahmen dieser Arbeit getestet werden. 
-% MOBILE SENSORIK UNTER ANDROID %
-\subsubsection{Mobile Sensorik unter Android}
+% % MOBILE SENSORIK UNTER ANDROID %
+%\subsubsection{Mobile Sensorik unter Android}
 Die meisten Android-Mobilgeräte verfügen über integrierte Sensoren, die die Bewegung, Ausrichtung und verschiedene Umgebungsbedingungen messen. Diese Sensoren sind nützlich wenn man dreidimensionale Gerätbewegungen, Positionierungen oder Änderungen in der Umgebung des Gerätes überwachen möchte. So können zum Beispiel Spieleanwendungen den Beschleunigungssensor nutzen, um komplexe BenutzerInnengesten und Bewegungen wie Neigung, Erschütterung, Drehung oder Schwenkung erfassen.\\
 Die Android-Plattform unterstützt Bewegungssensoren zum Messen von Beschleunigungen und Drehungen in drei Achsen, Umgebungssensoren zur Ermittlung verschiedener Umweltparameter wie Luftdruck und -feuchtigkeit, oder Beleuchtung und Temperatur, und Positionssensoren zum Messen der physikalischen Position des Gerätes. Android bietet mit dem Android Sensor Framework eine Sammlung von Klassen und Schnittstellen an mithilfe dessen man auf diese Sensoren zugreifen und deren Daten erfassen kann. \cite{android_sensor}  
 %
@@ -126,7 +124,7 @@ Der Abstand zwischen zwei Punkten wird mit \texttt{Location.distanceBetween()} a
 ( Vgl. \cite{location} S.43) 
 \\\\
 Der Fused Location Provider verwaltet die zugrunde liegenden Ortungstechnologie. Er ermöglicht zum Beispiel den Zugriff auf letzte Position und minimiert den Energieverbrauch der Anwendung indem er auf Grundlage aller eingehenden Standortanfragen und verfügbaren Sensoren die effizientesten auswählt. \cite{android_fused}
-\clearpage
+%\clearpage
 % -------------------------------------------------
 % MATHEMATISCHE GRUNDLAGEN
 % -------------------------------------------------
