@@ -7,7 +7,6 @@ Dieses Kapitel befasst sich mit sowohl den mathematischen als auch den technisch
 Im Zuge dieser Arbeit wird eine \gls{Smartphone}-Anwendung erstellt, deren Grundlage für die Implementierung die Software-Plattform Android und der im \gls{Smartphone} integrierte \gls{GPS}-Sensor ist. Die eigene Position und Geschwindigkeit wird mittels \gls{GPS} ermittelt, um in Verbindung mit der festen Position der nächsten \gls{LSA} die optimale Geschwindigkeit für das Erreichen der "'Grünen Welle"' zu errechnen. Im folgenden Abschnitt werden Funktionsweise und Besonderheiten der verwendeten Technologien beschrieben. 
 % ANDROID
 \subsection{Android}
-
 Android ist ein von Google entwickeltes Linux-basiertes Betriebssystem für Mobilgeräte. 
 Android-Anwendungen werden mit der Programmiersprache Java und der Auszeichnungssprache \gls{XML} entwickelt. Mit dem Android \gls{SDK}\footnote{ Das Android \gls{SDK} steht unter \url{https://developer.android.com/sdk/index.html} zum Download bereit} werden die Werkzeuge und \glspl{API} zur Verfügung gestellt, die erforderlich sind, um Mobilanwendungen auf der Android-Plattform erzeugen zu können.\\ 
 Zu den wichtigsten \gls{SDK}-Werkzeugen gehören der Android\gls{SDK} Manager, der AVD-Manager, der Emulator und der \gls{DDMS}. Der \gls{SDK} Manager verwaltet die \gls{SDK}-Pakete, sowie die installierten Pakete und System-Images. Der AVD-Manager bietet eine grafische Oberfläche in der Android Virtuell Devices verwaltet, und im Emulator ausgeführt werden können. Mithilfe des \gls{DDMS} können Android Anwendungen auf Fehler untersucht werden. \cite{android_sdk} \\\\
@@ -21,7 +20,7 @@ Einen Überblick über die komplexe Android-Systemarchitektur, welche nachfolgen
     \label{fig:android}
 \end{figure}
 \paragraph{Linux Kernel: }
-Android basiert auf dem Linux 3.14-Kernel. Dieser stellt eine bewährte Betriebssystemgrundlage dar indem er die erforderlichen Hardware-Treiber zur Verfügung stellt.
+Android basiert auf dem Linux \textit{3.14-}Kernel. Dieser stellt eine bewährte Betriebssystemgrundlage dar indem er die erforderlichen Hardware-Treiber zur Verfügung stellt.
 \paragraph{Android Runtime: }
 Die Android Laufzeitumgebung nutzt die nachimplementierten Java-Schnittstellen \textit{aus Apache Harmony} und die Dalvik \gls{VM}. Diese wurde mit der Version 5.0 durch die Android Runtime (ART) ersetzt. \cite{android_5} 
 \paragraph{\gls{HAL}: }
