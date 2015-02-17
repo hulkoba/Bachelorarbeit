@@ -35,8 +35,7 @@ Jede Kreuzung hat bis zu vier Schaltpläne, die zu festgelegten Tageszeitabschni
 		\label{fig:plan}
 	\end{minipage}
 	\rule{35em}{0.5pt}
-	\caption{Beispielschaltpläne vierer Ampeln einer Kreuzung}
-	
+	\caption{Beispielschaltpläne vierer Ampeln einer Kreuzung}	
 \end{figure}
 Für jedes Schaltzeitprogramm existieren ein Schaltzeit- und für einige Kreuzungen ein bis zwei Alternativschaltzeitpläne die in Intervallen von 60 bis 90 Sekunden die Rot-, Grün, Gelb, Rotgelb und Dunkelphasen zeigen. In den Dunkelphasen ist die \gls{LSA} ausgeschaltet -- zur Anschaltung gibt es dann den entsprechenden Einschaltplan. Abbildung \ref{fig:plan} zeigt auf, wie so ein Schaltzeitplan für eine Kreuzung aussehen kann. Um die Ampel dem entsprechenden Schaltplan zuzuordnen, liegen Lagepläne als \gls{PDF}-Datei bei, die eine genaue Darstellung der Kreuzung mit all ihren Komponenten zeigt. 
 \begin{figure}[H]  
@@ -50,10 +49,13 @@ Für jedes Schaltzeitprogramm existieren ein Schaltzeit- und für einige Kreuzun
 Aufgrund ihrer hohen Komplexität wird die Kreuzung Prenzlauer Allee/Ostseestraße nicht in die Prototypenentwicklung mit einbezogen. Hier existieren mehrere Alternativschaltpläne, die zu beachten es mehr \textbf{Recherche?} bedarf. Ebenfalls unbeachtet bleiben Ampeln, die sich nicht auf der vorgegebenen Strecke befinden. Diese sind in Abbildung \ref{fig:kreuzung}, die die Kreuzung Schönhauser Allee/Bornholmer Straße skizziert, markiert.\\
 Da die Position der Ampeln als Lageplan vorliegen, sind diese manuell in das WGS84-Format konvertiert und in das gewählte \gls{JSON}-Format gebracht werden.
 Als Referenzzeit ist die Zeit zwischen 14 und 20 Uhr von Montag bis Freitag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt bis vervollständigt werden.
-\subsection[JSON]{\gls{JSON}}
+\subsubsection[Ampelobjekt im JSON-Format]{Ampelobjekt im \gls{JSON}-Format}
 \gls{JSON} ist ein leichtgewichtiges, auf JavaScript basierendes, Datenaustauschformat, das für Menschen gut les- und schreibbar und für Maschinen einfach analysier- und generierbar ist. Ein \gls{JSON}-Objekt besteht aus einer von zwei Grundstrukturen. Eine Auflistung von Schlüssel/Wert Paaren oder eine geordnete Liste von Werten, als Array realisiert. Der folgende Codeabschnitt zeigt beispielhaft ein \gls{JSON}-Ampelobjekt:  
-\lstinputlisting[language=JSON]{code/lsas.json}
-\rule{35em}{0.5pt}\\\\
+\begin{center}
+\rule{35em}{0.5pt}
+\lstinputlisting[language=JSON, caption=JSON-Ampelobjekt]{code/lsas.json}
+\rule{35em}{0.5pt}
+\end{center}
 Das hier aufgeführte Ampelobjekt hat den Namen \texttt{BornholmerR1}, der auf die Kreuzung auf der sich die Ampel befindet schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten an denen diese gelten. Der Wert \texttt{duration}   \texttt{greenFrom} \texttt{greenTo}
 \subsection{Positionsdaten + Geschwindigkeit}
 % ### USE CASES ###
