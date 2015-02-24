@@ -59,17 +59,30 @@ toc]            %Einträge im Inhaltsverzeichnis
   morekeywords={xmlns,version,type}% list your attributes here
 }
 \lstdefinelanguage{JSON}{
-	stringstyle=\color{purple},
+	morestring=[b]",
+	stringstyle=\color{darkgray},
     literate=
-     *{:}{{{\color{OliveGreen}{:}}}}{1}
-      {,}{{{\color{OliveGreen}{,}}}}{1}
-      {"?}{{{\color{violet}{?"}}}}{1}
-      {\{}{{{\color{OliveGreen}{\{}}}}{1}
-      {\}}{{{\color{OliveGreen}{\}}}}}{1}
-      {[}{{{\color{OliveGreen}{[}}}}{1}
-      {]}{{{\color{OliveGreen}{]}}}}{1},
+     *{0}{{{\color{violet}0}}}{1}
+      {1}{{{\color{violet}1}}}{1}
+      {2}{{{\color{violet}2}}}{1}
+      {3}{{{\color{violet}3}}}{1}
+      {4}{{{\color{violet}4}}}{1}
+      {5}{{{\color{violet}5}}}{1}
+      {6}{{{\color{violet}6}}}{1}
+      {7}{{{\color{violet}7}}}{1}
+      {8}{{{\color{violet}8}}}{1}
+      {9}{{{\color{violet}9}}}{1}
+      {false}{{{\color{violet}false}}}{1}      
+      {true}{{{\color{violet}true}}}{1}
+      {:}{{{\color{blue}{:}}}}{1}
+      {,}{{{\color{blue}{,}}}}{1}
+      {\{}{{{\color{blue}{\{}}}}{1}
+      {\}}{{{\color{blue}{\}}}}}{1}
+      {[}{{{\color{blue}{[}}}}{1}
+      {]}{{{\color{blue}{]}}}}{1},     ,
 }
 \lstset{
+   captionpos=b,
    basicstyle=\scriptsize\ttfamily,
    keywordstyle=\bfseries\ttfamily\color{violet},
    stringstyle=\color{purple}\ttfamily,

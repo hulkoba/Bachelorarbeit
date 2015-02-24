@@ -1,54 +1,13 @@
-Für die Kommunikation mit relationalen Datenbanken wie SQLite gibt es die Datenbanksprache \gls{SQL}. Mit SQLite können via \gls{SQL} folgende Operationen durchgeführt werden:
-\begin{itemize}[leftmargin=0.7cm]
-\renewcommand\labelitemi{--}
-	\item Definition der Datenstruktur
-	\item Anlegen und Löschen einer Tabelle
-	\item Bearbeiten (Einfügen, Verändern, Löschen) von Tupeln
-	\item Suchen von Daten aus einer oder mehreren Tabellen
-\end{itemize}
-%Die meisten dieser Operationen lassen sich allerdings auch ohne Rückgriff auf \gls{SQL} umsetzen. 
+Im Lauf des Tages ändert das Verkehrsaufkommen seine Richtung. Deshalb koordiniert Berlin die Ampeln auf vielen Ausfallstraßen mit der Tageszeit. Wer morgens Richtung Innenstadt unterwegs ist, hat häufiger Grün, als der, der stadtauswärts fährt. Am frühen Abend ist es dafür umgekehrt. Weil morgens mehr Menschen in die Stadt und abends mehr aus der Stadt fahren.
 
-\subsubsection{SpatiaLite}
-SpatiaLite ist eine Open-Source Erweiterung um georgrafische Objekte und Funktionen zur Verwaltung von Geodaten für SQLite.
+http://www.stadtentwicklung.berlin.de/verkehr/lenkung/ampeln/sicherheit/de/gruene_welle.shtml\\\\
+
+Auf vielen Straßen und Kreuzungen sollen Busse und Straßenbahnen Vorfahrt haben.
 
 
-Aufgrund eben dieser Eigenschaften eignet sich SQLite ausgezeichnet für die Entwicklung von Android-\glspl{App}.
-
-
-% SQLITE ANDROID %
-\subsubsubsection{SQLite unter Android}
-Android stellt mit dem Paket \texttt{android.database.sqlite} eine \gls{API} zur Verfügung, die den effektiven Einsatz von SQLite ermöglicht. Dort findet sich die Hilfsklasse \texttt{SQLiteOpener}, welche eine Instanz von \texttt{SQLiteDataBase} liefert. Der Konstruktor der Hilfsklasse erwartet ein Context-Objekt und den Namen der Datenbank. Beim Aufruf der geerbten Methoden \texttt{getReadableDatabase()} zum Datenauslesen oder \texttt{getWritableDatabase()} zum Verändern oder auslesen der Daten wird geprüft, ob eine Datenbank mit diesem Namen bereits existiert. Ist das der Fall erhält man eine Referenz auf Datenbankobjekt, wenn nicht wird eines erstellt.\\
-Wird eine Datenbank neu angelegt, geschieht das durch den Aufruf der \texttt{onCreate()} Methode. Hier wird ein \gls{SQL}-String erstellt, der den Tabellennamen und die enthaltenden Spalten angibt. Dieser String wird via \texttt{execSQL()} dem \texttt{SQLite-Database}-Objekt gegeben, in Folge dessen eine Tabellenstruktur angelegt wird.\\
-% --------------------------CODE ----------------------------------------------------%
-\rule{35em}{0.5pt}
-\lstinputlisting
-[caption={Anlegen einer Tabellenstruktur}
-\label{code:onCreate}, captionpos=b, language=JAVA]{code/onCreate.java}
-\rule{35em}{0.5pt}\\
-% --------------------------CODE ----------------------------------------------------%
- Im obigen Codebeispiel soll eine Tabelle namens \textit{schiffe} mit den vier Spalten \textit{id}, \textit{bezeichnung}, \textit{captain} und \textit{geburtstatum} mit den entsprechenden Datentypen angelegt werden. Die Spalte \textit{id} fungiert hier als Primärschlüssel, kann also zur eindeutigen Referenzierung der Datensätze verwendet werden. Mit der Angabe von \textsc{autoincrement} setzt SQLite automatisch die nächste verfügbare ID als Wert ein. Die Datensätze ohne den Zusatz \textsc{not null} sind nicht obligatorisch.\\
-Jede SQLite-Datenbank die in einer \gls{App} erzeugt wird, wird auch dort abgelegt. So ist sie auch nur für die Anwendung zugreifbar, die sie angelegt hat. Zu erwähnen ist noch, dass der Umfang der Datenbank die interne Speicherkapazität nicht überschreiten kann. Hat man die Datenbank erfolgreich erstellt, lassen sich die vier CRUD\footnote{ Create, Read, Update, Delete} Operationen darauf anwenden. Hierfür wird die entsprechende Methode mit den gewünschten Kriterien auf die Instanz der Datenbank angewandt.
-
-% ANFORDERUNGEN
-\subsection{Datengrundlagen}
-Die Positionsdaten und Schaltpläne, \textit{im Uhrzeit- oder Datumsformat} befinden sich in einer Datenbank. Die von Android bereitgestellte systemeigene Datenbank SQLite nutzt den internen Speicher des Geräts und ermöglicht so einen schnellen Zugriff auf diese Daten. Die Datenbank wird als Datei in der Anwendung abgelegt, wodurch sich Abfragen zu externen Servern, die eine Verbindung mit einem Netzwerk voraussetzen erübrigen. Diese sollte allein aus Performancegründen keinen Internetzugriff voraussetzen, da ein direkter Zugriff auf den internen Speicher nicht den Umweg über einen Server gehen muss. Ist das Datenvolumen aufgebraucht, ist die Netzwerkverbindung zu langsam die benötigsten Daten zeitnah anzufragen und zu erhalten.\\\\
-
-%
-% DATA STORAGE
-%
-\subsection{Datenspeicherung}
-Android bietet verschiedene Optionen für die persistente Anwendungsdatenspeicherung. Den internen Gerätespeicher nutzend gibt es die Möglichkeit die Daten in der systemeigenen SQLite Datenbank oder als Datei abzulegen.  
-% RELATIONALE DATENBANKEN
-\subsubsection{Relationale Datenbank SQLite}
-Eine relationale Datenbank dient der elektronischen Verwaltung von Daten. Die Organisation der Daten ist tabellenbasiert, erfolgt also in Form von Datenstrukturen mit Zeilen (Tupel) und Spalten (Attribute). Jedes Tupel einer Tabelle bildet den sogenannten Datensatz und setzt sich aus den Werten mehrerer Attribute zusammen. Ein Tupel ist über einen oder mehrere Schlüssel eindeutig identifizierbar. Die Daten in einzelnen Tabellen lassen sich über die Schlüssel verknüpfen und weisen dadurch Relationen, also Beziehungen der Attribute zum Tupel, auf.\\SQLite ist eine Datenbank-Engine die auch bei Android sehr beliebt ist. Es benötigt nur minimale Unterstützung von externen Bibliotheken oder vom Betriebssystem. So eignet es sich gut für den Einsatz in Systemen, denen die Infrastruktur eines Desktop-Computers fehlt. Der Code ist Open Source und frei für den privaten oder gewerblichen Einsatz.\\
-Als sehr kompakte Bibliothek ist sie mit allen aktivierten Funktionen immernoch kleiner als 500 kB. Mit der Weglassung optionaler Merkmale kann die Größe auf circa 300 kB Speicherplatz reduziert werden, was jedoch SQLite verlangsamt. Denn es ist umso schneller je mehr Speicherkapazität zur Verfügung steht.Im Gegensatz zu den meisten anderen \gls{SQL}-Datenbanken ist keine Client-Server-Architektur vorhanden. Um in die Datenbank zu schreiben oder daraus zu lesen greift der Prozess auf die interne Festplatte, und nicht auf einen Server zu. Es ist also keine Netzwerverbindung vonnöten. \\
-Der Hauptvorteil, keinen separaten Serverprozess zu installieren, einzurichten, zu konfigurieren und zu verwalten, macht SQLite zu einem konfigurationsfreien Datenbanksystem. Es besteht keine administrative Notwendigkeit um eine neue Datanbankinstanz zu erstellen oder Zugriffsrechte zuzuweisen. 
-\begin{center}
-\textit{\color{gray}"'SQLite just works."'}\hspace{9pt}\cite{sqlitea}
-\end{center}
-Als Transaktionsdatenbank implementiert SQLite serialisierbare Transaktionen die auch bei einem Programm- oder Betriebssystemabsturz atomar, konsistent, isoliert und dauerhaft sind. Wird also die Transaktion durch z.B. einen Programmabsturz unterbrochen, werden alle Änderungen entweder gar nicht oder komplett angezeigt.\\ SQLite ist außerdem eine Ein-Datei-Datenbank. Das bedeutet die vollständige \gls{SQL}-Datenbank mit mehreren Tabellen, Indizes und Ansichten wird in nur einer Datei gespeichert. So kann jedes Programm, das in der Lage ist auf die Festplatte zuzugreifen, die SQLite-Datenbank verwenden. \cite{sqlite} 
-%
-% DATEI
-%
-\subsubsection{Datei im internen Speicher}
-Statt einer Datenbank besteht auch die Möglichkeit, Dateien im internen Speicher abzulegen. Andere Applikationen können nicht darauf zugreifen und bei der Deinstallation werden sie mit entfernt.
+An vielen Berliner Kreuzungen können Fahrzeuge des ÖPNV über ein Funksignal die Signalfarbe Grün anfordern. An besonders prekären Verkehrsknotenpunkten hat der ÖPNV-Verkehr außerdem eigene, weiß leuchtende Bus- und Bahnampeln.
+Etwa 600 Meter vor der Ampel sendet der Bus oder die Straßenbahn ein Voranmeldesignal über Funk. Daraufhin prüft das Steuergerät der Ampel, welches Signal die Ampel derzeit zeigt, und bereitet entsprechende Reaktionen vor.\\
+Etwa 200 Meter vor der Haltlinie folgt die Hauptanmeldung. Jetzt entscheidet das Steuergerät, ob die Ampel umspringt oder das bestehende Signal verlängert wird, um der Bahn oder dem Bus Vorrang zu gewähren.\\
+Haben Bahn oder Bus die Ampel passiert, sorgt ein Abmeldesignal dafür, dass diese wieder ihren Normalbetrieb aufnimmt.
+Bis Mitte 2009 wurden bereits rund 800 Ampeln mit Beeinflussungsmöglichkeiten durch Busse und Straßenbahnen ausgerüstet. Das entspricht gut 60\% aller Ampeln mit ÖPNV-Verkehr. Die Straßenbahn hat schon heute an nahezu allen Ampeln Beeinflussungsmöglichkeiten. Derzeit befindet sich das Beschleunigungsprogramm für die Busse in der Umsetzung. Das Ziel ist es, in den nächsten Jahren linienweise weitere Busstrecken zu beschleunigen und entsprechend weitere rund 500 Ampeln auszurüsten.\\
+http://www.stadtentwicklung.berlin.de/verkehr/lenkung/ampeln/bus_bahn/index.shtml
