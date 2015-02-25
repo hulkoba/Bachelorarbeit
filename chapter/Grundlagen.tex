@@ -11,7 +11,7 @@ Android ist ein von Google entwickeltes Linux-basiertes Betriebssystem für Mobi
 Android-Anwendungen werden mit der Programmiersprache Java und der Auszeichnungssprache \gls{XML} entwickelt. Mit dem Android \gls{SDK}\footnote{ Das Android \gls{SDK} steht unter \url{https://developer.android.com/sdk/index.html} zum Download bereit} werden die Werkzeuge und \glspl{API} zur Verfügung gestellt, die erforderlich sind, um Mobilanwendungen auf der Android-Plattform erzeugen zu können.\\ 
 Zu den wichtigsten \gls{SDK}-Werkzeugen gehören der Android\gls{SDK} Manager, der AVD-Manager, der Emulator und der \gls{DDMS}. Der \gls{SDK} Manager verwaltet die \gls{SDK}-Pakete, sowie die installierten Pakete und System-Images. Der AVD-Manager bietet eine grafische Oberfläche in der Android Virtuell Devices verwaltet, und im Emulator ausgeführt werden können. Mithilfe des \gls{DDMS} können Android Anwendungen auf Fehler untersucht werden. \cite{android_sdk} \\\\
 Mit dem Android \gls{NDK}\footnote{ Das Android \gls{NDK} steht unter \url{https://developer.android.com/tools/sdk/ndk/index.html} zum Download bereit} existiert auch eine Möglichkeit, mit dem Teile einer Anwendung in hardwarenahen Programmiersprachen wie C oder C++ implementiert werden können. Programmcode der in solchen Sprachen geschrieben ist, eignet sich zum Beispiel bei CPU-intensiven Operationen wie Signalverarbeitungen oder Physik-Simulationen besonders gut. Hier ist allerdings sicherzustellen, ob die erforderlichen Bibliotheken in dem \gls{SDK} auch verfügbar sind. \cite{android_ndk} \\
-Einen Überblick über die komplexe Android-Systemarchitektur, welche nachfolgend (nach \cite{android} S. 2ff) kurz beschrieben wird, zeigt die folgende Abbildung.
+Einen Überblick über die komplexe Android-Systemarchitektur, welche nachfolgend (nach \cite{android} S. 2ff und \cite{androidVM} S.63ff) kurz beschrieben wird, zeigt die folgende Abbildung.
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.8\textwidth]{android_framework_details} 
@@ -20,9 +20,11 @@ Einen Überblick über die komplexe Android-Systemarchitektur, welche nachfolgen
     \label{fig:android}
 \end{figure}
 \paragraph{Linux Kernel: }
-Android basiert auf dem Linux \textit{3.14-}Kernel. Dieser stellt eine bewährte Betriebssystemgrundlage dar indem er die erforderlichen Hardware-Treiber zur Verfügung stellt.
+Android basiert auf dem Linux-Kernel. Wie in jedem Unix-System, stellt der Kernel-Treiber für Hardware, Netzwerk, Dateisystemzugriff und Prozessmanagement bereit.
 \paragraph{Android Runtime: }
-Die Android Laufzeitumgebung nutzt die nachimplementierten Java-Schnittstellen \textit{aus Apache Harmony} und die Dalvik \gls{VM}. Diese wurde mit der Version 5.0 durch die Android Runtime (ART) ersetzt. \cite{android_5} 
+Die Android Laufzeitumgebung nutzt die aus dem Apache-Harmony-Projekt nachimplementierten Java-Schnittstellen, die Dalvik \gls{VM} und die mit der Version 5.0 eingeführten Android Runtime (ART). \cite{android_5}\\
+Der Großteil von Android ist in Java implementiert und wird von einer Java \gls{JVM} ausgeführt. Androids aktuelle Umsetzung der \gls{JVM} heißt Dalvik. Dalvik wurde speziell auf mobile Geräte zugeschnitten und kann den Java-Bytecode nicht direkt ausführen. So wird der kompilierte Java-Bytecode vom erneut in Dalvik-Bytecode kompiliert und von der Dalvik-\gls{VM}, oder ab der Version 5.0 von der ART ausgeführt.\\
+Der Hauptunterschied der beiden \glspl{VM} besteht darin, dass ART die binäre Maschinensprache bei der \gls{App}-Installation, und nicht wie die Dalvik-\gls{VM}, bei der Ausführung erstellt.
 \paragraph{\gls{HAL}: }
 Der \gls{HAL} bietet die Möglichkeit eigene Gerätespezifikationen und deren benötigte Treiber, verbunden über eine Software-Schnittstelle zwischen dem Android-Stack und der Hardware, zu implementieren. \cite{android_hal}
 \paragraph{Bibliotheken: }
@@ -42,7 +44,8 @@ Systemeigene Bibliotheken sind C/C++ Bibliotheken und sind vorinstalliert. Dazu 
 \paragraph{Application Framework: }
 Androids Application-Framework ist eine Umgebung die unterschiedliche Dienste zur Verfügung stellt. Sie bietet EntwicklerInnen Zugriff auf die im Kern verwendeten \glspl{API} sowie auf die Java-Bibliotheken die für Android erstellt wurden. 
 \paragraph{Applications: }
-Auf der obersten Ebene in Abbildung \ref{fig:android} befinden sich die Anwendungen die den täglichen Telefon-Bedarf wie Adressbuch, Messenger, E-Mail, Internet-Browser etc. decken. Zusätzlich unterstützt Android verschiedene Anwendungen von Drittanbietern. Diese sind hauptsächlich in Java geschrieben und werden am häufigsten über den Google Play Store verteilt.
+Auf der obersten Ebene in Abbildung \ref{fig:android} befinden sich die Anwendungen die den täglichen Telefon-Bedarf wie Adressbuch, Media-Player, E-Mail, Internet-Browser etc. decken. Zusätzlich unterstützt Android verschiedene Anwendungen von Drittanbietern.
+%
 % MOBILE SENSING
 %
 \subsection{Mobile Sensorik} 
