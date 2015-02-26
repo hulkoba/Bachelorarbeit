@@ -69,7 +69,7 @@ Zur Bestimmung von Standortdaten gibt es mehrere Techniken. Einige davon werden 
 Netzwerkgestützte Standortbestimmung basiert auf Informationen des \glspl{WLAN} oder der Funkzellen des Mobilfunknetzes.\\ 
 % MOBILFUNK %
 Funkzellentriangulierung verwendet die bekannte Geschwindigkeit von Funksignalen, um den Abstand zum Empfangsgerät zu berechnen. Das Mobilgerät muss mit einem Funkturm in Verbindung stehen. Bewegt sich das Gerät, verbindet es sich mit einem anderen Turm und die Signalstärke des sich nähernden Turms wird stärker. Unter Kenntnis der einzigartigen ID und der Position des Funkturms mit dem das Gerät verbunden ist und ggf. derer, mit denen das Gerät zuletzt verbunden war, lässt sich der eigene Standort ermitteln. (Vgl. \cite{location} S. 8f) \\
-Für eine gute Lokalisierung braucht es mindestens drei, vorzugsweise vier Mobilfunkmasten oder Antennen. In Städten, wenn sich mehr Signale der Mobilfunkmasten überlappen kann eine Genauigkeit von bis zu 200 Metern erreicht werden -- bei einer geringen Funkturmdichte sinkt diese auf bis zu mehreren Kilometern, wie in Abbildung \ref{fig:cell3} illustriert. 
+Für eine gute Lokalisierung braucht es mindestens drei, vorzugsweise vier Mobilfunkmasten oder Antennen. In Städten, wenn sich mehr Signale der Mobilfunkmasten überlappen kann eine Genauigkeit von bis zu 200 Metern erreicht werden -- bei einer geringen Funkturmdichte sinkt diese auf bis zu mehreren Kilometern, wie in Abbildung \ref{fig:cell3} illustriert. \\
 \begin{figure}[H]
         \centering
         \begin{subfigure}[t]{0.23\textwidth}
@@ -102,7 +102,7 @@ Netzwerkgestützte Standortbestimmung schont zwar im Gegensatz zu \gls{GPS} den 
 \subsubsection{Standortbestimmung via \gls{GPS}}
 Die satellitengestützte Positionsbestimmung \gls{GPS} gewährleistet die Bestimmung des exakten Standpunktes und ist so wesentlicher Bestandteil ortsgebundener Anwendungen wie zum Beispiel der in Kapitel \ref{chap:state} beschriebenen. \\
 \gls{GPS} wurde ursprünglich vom US-Militär entwickelt und dann Mitte der 90er Jahre der Öffentlichkeit zur Verfügung gestellt. Noch heute bleibt es mit einer Genauigkeit von bis zu drei Metern die genaueste Lokalisierungstechnologie. (Vgl. \cite{gps} S. 24f)\\
-Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Erde umkreisen und dabei kontinuierlich ihre eigene, aktuelle Position und Almanach-Daten aussenden. Almanach-Daten enthalten Daten über jeden Satelliten in der Konstellation. Abbildung \ref{fig:gps} zeigt eine Darstellung der GPS-Satellitenkonstellation. Jeder Satellit folgt einer definierten Bahn, sodass mindestens vier Satelliten von jedem Standpunkt auf der Erde aus "'sichtbar"' sind. (Vgl. \cite{location} S. 4f)
+Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Erde umkreisen und dabei kontinuierlich ihre eigene, aktuelle Position und Almanach-Daten aussenden. Almanach-Daten enthalten Daten über jeden Satelliten in der Konstellation. Abbildung \ref{fig:gps} zeigt eine Darstellung der GPS-Satellitenkonstellation. Jeder Satellit folgt einer definierten Bahn, sodass mindestens vier Satelliten von jedem Standpunkt auf der Erde aus "'sichtbar"' sind. (Vgl. \cite{location} S. 4f)\\
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.4\textwidth]{gps} 
@@ -126,7 +126,7 @@ Der Abstand zwischen zwei Punkten wird mit \texttt{Location.distanceBetween()} a
 ( Vgl. \cite{location} S.43) 
 \\\\
 Der Fused Location Provider verwaltet die zugrunde liegenden Ortungstechnologie. Er ermöglicht zum Beispiel den Zugriff auf letzte Position und minimiert den Energieverbrauch der Anwendung indem er auf Grundlage aller eingehenden Standortanfragen und verfügbaren Sensoren die effizientesten auswählt. \cite{android_fused}
-%\clearpage
+\clearpage
 % -------------------------------------------------
 % MATHEMATISCHE GRUNDLAGEN
 % -------------------------------------------------
