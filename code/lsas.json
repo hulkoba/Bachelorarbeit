@@ -1,22 +1,20 @@
 { 
-    "name" : "BornholmerR1",
+    "name" : "Steinstr_A1",
     "lat": 52.552918,
     "lon": 13.423992,
     "dependsOnTraffic": false,
     "timetable" : [
     {
         "days": ["Mo", "Di", "Mi"] ,
-        "timeFrom": 1400,
-        "timeTo": 2000,
-        "duration": 90,
+        "timeFrom": 14,
+        "timeTo": 20,       
         "greenFrom": 22,
         "greenTo": 27
     },
     {
         "days": ["Do", "Fr"] , 
-        "timeFrom": 1300,
-        "timeTo": 2100,
-        "duration": 9,
+        "timeFrom": 13,
+        "timeTo": 21,
         "greenFrom": 2,
         "greenTo": 27
     }

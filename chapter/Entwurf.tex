@@ -6,10 +6,11 @@ Eine \gls{Activity} wird von der Bibliotheksklasse \texttt{android.app.Activity}
 In der zu entwickelnden Fahrradapplikation wird keine Navigation innerhalb der Anwendung vonnöten sein, weshalb nur eine \gls{Activity} implementiert wird.
 % DATENGRUNDLAGE
 \section{Datengrundlage}
-Aus den von der verkehrszentrale gegebenen Daten werden JSON erstellt. eigene positionsdaten werden ermittelt,... 
+%Ampeldaten werden erstellt. eigene Positionsdaten werden ermittelt,... 
+Zur Umsetzung der Anwendung werden die Ampeldaten benötigt, welche dann im \gls{JSON}-Format als Datei auf dem Mobilgerät abgelegt werden müssen.
 \subsection{Ampeldaten}
-Die technischen Unterlagen sowie Lagepläne angefragter Ampeln wurden von der Berliner Verkehrsleitzentrale für die Teststrecke zwischen der Ecke Bornholmer Straße/Björnsonstraße und zur Ecke Prenzlauer Allee/Ostseestraße zur Verfügung gestellt. Aufgrund der Geheimhaltungsverpflichtung gegenüber der Alliander AG\footnote{ im Auftrag der Stadt Berlin verantwortlich für die Planung und den Bau von Ampeln} kann das gegebene Material hier nicht abgebildet werden. Um einen Überblick zu gewähren, werden jedoch die wichtigsten Komponenten skizziert.\\ 
-Jede Kreuzung hat bis zu vier Schaltpläne, die zu festgelegten Tageszeitabschnitten greifen. Tabelle \ref{tab:zeitplan} zeigt, wie der Tagesplan einer Kreuzung aussehen kann, wobei an anderen Tagen die Uhrzeiten sowie die Reihenfolge und Quantität der Zeitschaltprogramme variieren können:
+\textit{... Um einen Überblick zu gewähren, werden jedoch die wichtigsten Komponenten skizziert.\\ 
+Jede Kreuzung hat bis zu vier Schaltpläne, die zu festgelegten Tageszeitabschnitten greifen. Tabelle \ref{tab:zeitplan} zeigt, wie der Tagesplan einer Kreuzung aussehen kann, wobei an anderen Tagen die Uhrzeiten sowie die Reihenfolge und Quantität der Zeitschaltprogramme variieren können:}
 \begin{figure}[H]
 \centering
 	\begin{minipage}[b]{0.29\textwidth}	
@@ -37,28 +38,32 @@ Jede Kreuzung hat bis zu vier Schaltpläne, die zu festgelegten Tageszeitabschni
 	\rule{35em}{0.5pt}
 	\caption{Beispielschaltpläne vierer Ampeln einer Kreuzung}	
 \end{figure}
-Für jedes Schaltzeitprogramm existieren ein Schaltzeit- und für einige Kreuzungen ein bis zwei Alternativschaltzeitpläne die in Intervallen von 60 bis 90 Sekunden die Rot-, Grün, Gelb, Rotgelb und Dunkelphasen zeigen. In den Dunkelphasen ist die \gls{LSA} ausgeschaltet -- zur Anschaltung gibt es dann den entsprechenden Einschaltplan. Abbildung \ref{fig:plan} zeigt auf, wie so ein Schaltzeitplan für eine Kreuzung aussehen kann. Um die Ampel dem entsprechenden Schaltplan zuzuordnen, liegen Lagepläne als \gls{PDF}-Datei bei, die eine genaue Darstellung der Kreuzung mit all ihren Komponenten zeigt. 
+\textit{Für jedes Schaltzeitprogramm existieren ein Schaltzeit- und für einige Kreuzungen ein bis zwei Alternativschaltzeitpläne die in Intervallen von 60 bis 90 Sekunden die Rot-, Grün, Gelb, Rotgelb und Dunkelphasen zeigen. In den Dunkelphasen ist die \gls{LSA} ausgeschaltet -- zur Anschaltung gibt es dann den entsprechenden Einschaltplan. Abbildung \ref{fig:plan} zeigt auf, wie so ein Schaltzeitplan für eine Kreuzung aussehen kann. Um die Ampel dem entsprechenden Schaltplan zuzuordnen, liegen Lagepläne als \gls{PDF}-Datei bei, die eine genaue Darstellung der Kreuzung mit all ihren Komponenten zeigt. }
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.7\textwidth]{kreuzung} 
     \rule{35em}{0.5pt}
-    \caption{Lageplan Schönhauser Allee/Wisbyer Straße}
+    \caption{Lageplan}
     \label{fig:kreuzung}
 \end{figure}
-\textit{Phasenübergänge! Weiter gibt es Listen mit Parametern, einer Feindlichkeitsmatrix, eine Signalgruppenliste,...}\\
-Aufgrund ihrer hohen Komplexität wird die Kreuzung Prenzlauer Allee/Ostseestraße nicht in die Prototypenentwicklung mit einbezogen. Hier existieren mehrere Alternativschaltpläne, die zu beachten es mehr \textbf{Recherche?} bedarf. Ebenfalls unbeachtet bleiben Ampeln, die sich nicht auf der vorgegebenen Strecke befinden. Diese sind in Abbildung \ref{fig:kreuzung}, die die Kreuzung Schönhauser Allee/Bornholmer Straße skizziert, markiert.\\
-Da die Position der Ampeln als Lageplan vorliegen, sind diese manuell in das WGS84-Format konvertiert und in das gewählte \gls{JSON}-Format gebracht werden.
+\textit{Da die Position der Ampeln als Lageplan vorliegen, }sind diese manuell in das WGS84-Format konvertiert und in das gewählte \gls{JSON}-Format gebracht werden.
 Als Referenzzeit ist die Zeit zwischen 14 und 20 Uhr von Montag bis Freitag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt bis vervollständigt werden.
-\subsubsection[Ampelobjekt im JSON-Format]{Ampelobjekt im \gls{JSON}-Format}
+%
+% LSA als JSON
+%
+\subsection[Ampelobjekt im JSON-Format]{Ampelobjekt im \gls{JSON}-Format}
 \gls{JSON} ist ein leichtgewichtiges, auf JavaScript basierendes, Datenaustauschformat, das für Menschen gut les- und schreibbar und für Maschinen einfach analysier- und generierbar ist. Ein \gls{JSON}-Objekt besteht aus einer von zwei Grundstrukturen. Eine Auflistung von Schlüssel/Wert Paaren oder eine geordnete Liste von Werten, als Array realisiert. Der folgende Codeabschnitt zeigt beispielhaft ein \gls{JSON}-Ampelobjekt:  
 \begin{center}
 \rule{35em}{0.5pt}
 \lstinputlisting[language=JSON, caption=JSON-Ampelobjekt]{code/lsas.json}
 \rule{35em}{0.5pt}
 \end{center}
-Das hier aufgeführte Ampelobjekt hat den Namen \texttt{BornholmerR1}, der auf die Kreuzung auf der sich die Ampel befindet schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten an denen diese gelten. Der Wert \texttt{duration}   \texttt{greenFrom} \texttt{greenTo}
-\subsection{Positionsdaten + Geschwindigkeit}
+Das hier aufgeführte Ampelobjekt hat den Namen \texttt{SteinstraßeA1}, welcher auf die Kreuzung auf der sich die Ampel befindet schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten an denen diese gelten. Die Werte \texttt{greenFrom} und \texttt{greenTo} bezeichnen den Start und das Ende jeder Grünphase des Schaltplans. Da als Referenzzeit die Zeit zwischen 14 und 20 Uhr gewählt wurde, werden die Schaltpläne, welche diese nicht betreffen nicht aufgenommen.
+%\subsection{Fahrraddaten}
+%Position und Geschwindigkeit werden mittels \gls{GPS} ermittelt.
+%erst nach Änderung der Position Aktion...?
 % ### USE CASES ###
+\clearpage
 \section{Anwendungsfälle}
 Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den in Kapitel \ref{chap:szenarien} erarbeiteten Szenarien ergeben sich die folgenden fünf Use-Cases, die von der Anwendung erfüllt werden sollen.\\
 \begin{table}[H]
@@ -94,8 +99,11 @@ Das in Abbildung \ref{fig:uc} gezeigte Use-Case-Diagramm veranschaulicht die in 
     \label{fig:uc}
 \end{figure}
 \section{Klassenarchitektur}
-Die einzelnen Klassen der Anwendung werden ihrer Aufgaben entsprechend in Pakete gegliedert?\\
-Die zu erstellende Anwendung erhält den Namen AIS, das Hauptpaket den Namen \texttt{de.jacoba.ais}. AIS steht für Ampel-Informationssystem und ist der vorläufige Name der Anwendung. \\\\
+Die zu erstellende Anwendung erhält den Namen AIS, was für Ampel-Informationssystem steht und der vorläufige Name der Anwendung ist und besteht aus den nachfolgend beschriebenen Klassen. \\\\
+Die \texttt{MainActivity} ist die Hauptklasse der Android-Applikation. Sie definiert die grafische Oberfläche der Anwendung und stellt die notwendigen Methoden bereit. \\
+Der \texttt{\gls{JSON}Parser} liest die erstellte \gls{JSON}-Datei ein und wandelt deren Inhalt ein ein Array um. Dieses Beinhaltet Ampelobjekte mit deren Namen, Position und der Information darüber, ob sie verkehrsabhängig sind oder nicht. Sind sie es nicht, wird außerdem zu jeder Ampel ein Array, bestehend aus den Sigalschaltplanobjekten gespeichert. Diese enthalten benötigten alle Informationen über den Geltungszeitraum und der Grünphasen.\\ 
+\texttt{GPSTracker} implementiert die Schnittstelle \texttt{LocationListener} und kann so kontinuierlich die Position des Endgeräts verfolgen. Mit der eigenen Position und der aller Ampeln aus dem vom \texttt{JSONParser} erstellten Array ermittelt er außerdem die nächste Ampel. Ist diese identifiziert, wird über den \texttt{OnSetListener} die Klasse \texttt{SpeedHandler} aktiviert, welche anhand der Daten aus dem Signalschaltplanobjekt den Countdown der Rotanzeige und die optimale Geschwindigkeit berechnet und die Anzeige entsprechend aktualisiert. \\
+Das nachfolgende Klassendiagramm gibt eine Übersicht über die oben beschriebenen Klassen.
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=\textwidth]{uml} 
@@ -103,12 +111,9 @@ Die zu erstellende Anwendung erhält den Namen AIS, das Hauptpaket den Namen \te
     \caption{Klassendiagramm}
     \label{fig:uc}
 \end{figure}
-In dem Paket befindet sich die \texttt{MainActivity}, die Hauptklasse der Android-Applikation. Sie definiert die grafische Oberfläche der Anwendung und stellt die notwendigen Methoden bereit. \\
-\texttt{GPSTracker} trackt kontinuierlich die Position des Endgeräts.\\
-\texttt{SpeedAdvisory} enthält Berechnungsmethoden zur Ermittlung der optimalen Geschwindigkeit.\\
- \texttt{util} = Hilfsklassen -->
 % ### Design ###
-\section{Das Design}
+%\clearpage
+\section{Die graphische Oberfläche}
 Aus den Anforderungen an die graphische Oberfläche in Kapitel \ref{chap:anforderungen} entsteht das Design. Durch die überschaubare Anzahl an Funktionalitäten kann der Aufbau einfach gehalten werden. Aus den Empfehlungsanzeigen, welche den Systemzuständen entsprechen sind vier Ansichten abzuleiten. Die folgende Abbildung zeigt den Entwurf der Benutzeroberfläche.
 Abbildung \ref{fig:stop} zeigt die grapfische Umsetzung des Zustands \textit{a}, in dem die Ampelschaltung keine Weiterfahrt ermöglicht. Es wird ein großer roter Kreis mit einem schwarzen Kreuz verwendet. Rot ist eine Signalfarbe und steht auch bei Ampeln für "'Halt"' oder "'Stop"'. Auch das Kreuz wird häufig als \textit{verweigerndes} Symbol eingesetzt und ist somit intuitiv als solches erkennbar.\\
 Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, bei dem man mit der aktuellen Geschwindigkeit in der Grünen Welle fährt, um. Hier wird ist ein großer grüner Kreis verwendet, in der Mitte steht "'ok"'. Durch die nicht alleinige Benutzung der Ampelfarben Rot und Grün ist die Ansicht auch für Menschen mit einer Rot-Grün-Sehschwäche eindeutig interpretierbar.
@@ -149,12 +154,3 @@ Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, be
 \end{figure}
 Die Abbildungen \ref{fig:langsamer} und \ref{fig:schneller} für die Zustände \textit{c} und \textit{d} sind in der Anordnung der Elemente identisch. Mittig im Bild ist eine eingekreiste rote Zahl die den Countdown der Restrotanzeige darstellt. Sie wird also mit jeder Sekunde aktualisiert. Ober- und unterhalb des Countdowns befinden sich jeweils zwei hellblaue Pfeile. Je nach Differenz der aktuellen zur berechneten Geschwindigkeit sind ein oder zwei Pfeile ausgefüllt. Wird also empfohlen viel schneller zu fahren, sind die oberen Pfeile aktiv, bei der Aufforderung etwas das Tempo zu drosseln der untere. Es sind immer alle Pfeile zu sehen. Durch die Anzeige "'ein von zwei"' ist die Bedeutung der Geschwindigkeitsstufen klarer. Als Farbe für die Pfeile wurde Hellblau gewählt. Sie unterscheidet sich sowohl farblich als auch in der Helligkeitsstufe zu den anderen Farben und steht im hohen Kontrast zu dem Hintergrund. Auf schwarzem Hintergrund wirken die Farben intensiver und sind so auch aus dem Augenwinkel leichter zu erkennen und unterscheiden. Die in Abbildung \ref{fig:meh} gezeigte Darstellung erscheint, wenn keine Vorhersage möglich ist weil die Ampel verkehrsabhängig und die Vorhersage dadurch zu ungenau wird. Als Farbe wurde die dritte Ampelfarbe Gelb gewählt, was weder Rot für Anhalten, noch grün für Weiterfahren ist und so signalisiert, die Anwendung kann keine Empfehlung aussprechen. Das mittig platzierte Fragezeichen unterstützt die Aussage.\\
 Die aktuelle Geschwindigkeit wird bewusst nicht angezeigt. Auch nicht die Progressionsgeschwindigkeit. Die Differenz ist beim Fahrrad nicht so hoch wie bspw. im Auto. Bei einer Varianz von wenigen km/h genügt die Anzeigevariante "'schneller"' und "'noch schneller"'.
-\section{Theorie ?}
-\section{Entwicklungsumgebung ?}
-Für die Erstellung wird Folgendes verwendet:
-\begin{itemize}
-	\item Android Studio
-	\item ADT Bundle..., SDK, 
-	\item SQLite
-	\item Diagramme und Abbildungen
-\end{itemize}

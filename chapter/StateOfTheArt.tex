@@ -5,8 +5,7 @@ Sowohl in Radwegen integriert, als auch für den Einsatz in Kraftfahrzeugen gibt
 \section{Ampelinformationssysteme}
 Unter dem Prinzip "'Grüne Welle"' wird die Abstimmung der Ampelschaltzustände, sodass ein Fahrzeug in einer bestimmten Geschwindigkeit mehrere Ampeln passieren kann ohne anzuhalten, verstanden. Im folgenden Abschnitt werden die existierenden Lösungen und Ansätze für Ampelinformationssysteme dargestellt.
 \subsection{Grüne Welle auf Radwegen}
-In Kopenhagen unterstützen grüne \glspl{LED} auf Radwegen die RadfahrerInnen indem sie wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der Grünen Welle befinden. Abbildung \ref{fig:copenhagen} zeigt einen solchen Radweg mit einem Fahrradfahrer, der sich im grünen Bereich befindet. Zusätzlich erkennen Sensoren im Radweg Fahrradgruppen und veranlassen dann die Ampel zu einer längeren Grünphase. In einem anderen Stadtteil sind Leuchttafeln, die die verbleibende Zeit der Ampelphase anzeigen, am Radwegrand installiert\cite{KopIng}. \\\\
-Kopenhagen als Vorbild nehmend hat Berlin mit vier Ampeln in Schöneberg eine Grüne Welle für RadfahrerInnen umgesetzt und plant bereits die zweite\cite{BZ}. Auch hier möchte man die Benutzung des Rades attraktiver machen und den Fahrradverkehr beschleunigen.
+In Kopenhagen unterstützen grüne \glspl{LED} auf Radwegen die RadfahrerInnen indem sie wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der Grünen Welle befinden.
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.6\textwidth]{copenhagen} 
@@ -14,7 +13,8 @@ Kopenhagen als Vorbild nehmend hat Berlin mit vier Ampeln in Schöneberg eine Gr
     \caption[Grüne Welle durch \glspl{LED}]{Kopenhagen: \glspl{LED} signalisieren die Grüne Welle bei 20 km/h  Quelle: \cite{NYT}}
      \label{fig:copenhagen}
 \end{figure}
-
+Abbildung \ref{fig:copenhagen} zeigt einen solchen Radweg mit einem Fahrradfahrer, der sich im grünen Bereich befindet. Zusätzlich erkennen Sensoren im Radweg Fahrradgruppen und veranlassen dann die Ampel zu einer längeren Grünphase. In einem anderen Stadtteil sind Leuchttafeln, die die verbleibende Zeit der Ampelphase anzeigen, am Radwegrand installiert\cite{KopIng}. \\\\
+Kopenhagen als Vorbild nehmend hat Berlin mit vier Ampeln in Schöneberg eine Grüne Welle für RadfahrerInnen umgesetzt und plant bereits die zweite\cite{BZ}. Auch hier möchte man die Benutzung des Rades attraktiver machen und den Fahrradverkehr beschleunigen.
 % ### AUTO ###
 \subsection{Ampelinformationssysteme im Auto}
 In den letzten Jahrzehnten gab es immer wieder Intentionen, eine Anzeige von Geschwindigkeitsempfehlungen im Fahrzeug umzusetzen. Der folgende Abschnitt stellt existierende Lösungen und Ansätze für Ampelinformationssysteme im Auto vor.
@@ -35,15 +35,15 @@ Die Vorhersage der Schaltbilder ist aufgrund der verkehrsabhängigen Logik bei n
 Fundierend auf \textsc{Travolution} sind Folgeprojekte wie zum Beispiel das ebenfalls von Audi ins Leben gerufene "'Ampelinfo online"' entstanden. Über Mobilfunk ist in der \gls{C2X}-Anwendung das Auto mit dem zentralen Verkehrsrechner, welcher die Ampelanlagen steuert, vernetzt und visualisiert die entsprechenden Informationen im Bordcomputer. \cite{Ampelinfo}
 %%% KOLIBRI %%%
 \subsection*{\label{sec:kolibri}Projekt Kolibri}
-In Bayern wurde im April 2011 das Pilot-Projekt \textsc{kolibri}\footnote{ Kooperative Lichtsignaloptimierung -- Bayrisches Pilotprojekt} mit den Teststrecken der B13 bei München mit sieben und der St2145 in der Nähe von Regensburg mit acht ampelgeregelten Kreuzungen gestartet. Gemeinsam untersuchten die Projektpartner\footnote{ \url{http://www.kolibri-projekt.de/Sites/kolibri3.html}} die Funktionen und Auswirkungen eines Ampelassistenten außerhalb von Ortschaften (\cite{kolibri}). "'Per Mobilfunk übertragen die Ampeln ihre Daten an die Zentrale der TRANSVER GmbH. Dort wertet sie ein Computer aus und sendet die Ergebnisse an die Fahrzeuge. Ein Anzeigefeld im Bordcomputer oder eine Applikation auf dem \gls{Smartphone} zeigt an, ob sich das Fahrzeug in der Grünen Welle bewegt."' (\cite{kolibriTUM} ) 
-\begin{figure}[t]  
+In Bayern wurde im April 2011 das Pilot-Projekt \textsc{kolibri}\footnote{ Kooperative Lichtsignaloptimierung -- Bayrisches Pilotprojekt} mit den Teststrecken der B13 bei München mit sieben und der St2145 in der Nähe von Regensburg mit acht ampelgeregelten Kreuzungen gestartet. Gemeinsam untersuchten die Projektpartner\footnote{ \url{http://www.kolibri-projekt.de/Sites/kolibri3.html}} die Funktionen und Auswirkungen eines Ampelassistenten außerhalb von Ortschaften (\cite{kolibri}). "'Per Mobilfunk übertragen die Ampeln ihre Daten an die Zentrale der TRANSVER GmbH. Dort wertet sie ein Computer aus und sendet die Ergebnisse an die Fahrzeuge. Ein Anzeigefeld im Bordcomputer oder eine Applikation auf dem \gls{Smartphone} zeigt an, ob sich das Fahrzeug in der Grünen Welle bewegt."' (\cite{kolibriTUM} ) \\
+Die FahrerInnen wurden sowohl fahrzeugintegriert\footnote{ On-Board-Computer} als auch via \gls{Smartphone}, wie Abbildung \ref{fig:kolibri} zeigt, über die Schaltung der nächsten Ampel informiert und erhielten Empfehlungen über die aktuelle Progressionsgeschwindigkeit. Nach zwei Jahren erfolgreicher Arbeit war das Pilotprojekt abgeschlossen.
+\begin{figure}[H]  
     \centering  
     \includegraphics[width=0.7\textwidth]{kolibri}   
     \rule{35em}{0.5pt}   
     \caption[Projekt Kolibri]{Anzeige der Geschwindigkeitsempfehlung. Quelle: \cite{kolibri}}
     \label{fig:kolibri}
-\end{figure}
-Die FahrerInnen wurden sowohl fahrzeugintegriert\footnote{ On-Board-Computer} als auch via \gls{Smartphone}, wie Abbildung \ref{fig:kolibri} zeigt, über die Schaltung der nächsten Ampel informiert und erhielten Empfehlungen über die aktuelle Progressionsgeschwindigkeit. Nach zwei Jahren erfolgreicher Arbeit war das Pilotprojekt abgeschlossen 
+\end{figure} 
 \subsection*{Projekt Testfeld Telematik}
 Ende des Jahres 2013 wurde in Wien das Projekt \textsc{Testfeld Telematik} -- Feldversuch zur Stärkung österreichischen Know-Hows im Bereich umweltverträglicher Mobilität erfolgreich abgeschlossen. Per \gls{C2X}-Kommunikation bringt das Projekt Kooperative Dienste wie Ampelinformationen direkt ins Auto. Über Navigationssysteme, integrierte Systeme, Nachrüst-Plattformen oder mobile Endgeräte erreicht die FahrerInnen die Information der optimalen Geschwindigkeit sowie die Dauer der jeweiligen Ampelphase\cite{Telematik}. Abbildung \ref{fig:telematik} zeigt die mobile Anwendung auf einem Tablet mit der Anzeige von einer Grünen Welle bei 50 km/h. Um an die Informationen zu kommen wurden unter anderem Kameras und Sensoren, beispielsweise als Induktionsschleife in die Fahrbahn eingelassen. 
 \begin{figure}[H]
@@ -88,7 +88,7 @@ Dieser Ansatz ist für Fahrräder jedoch nicht umsetzbar, da das \gls{Smartphone
 %
 % FAHRRADERWEITERUNGEN %
 %
-\clearpage
+%\clearpage
 \section{Fahrraderweiterungen}
 Um das Fahrrad intelligenter und attraktiver zu machen gibt es verschiedene Erweiterungen mit zahlreichen Funktionen. Die hier aufgeführten Fahrraderweiterungen führen zum gewünschten Ziel und ergänzen die Navigation um zusätzliche Eigenschaften, die unter anderem den Weg dorthin \textit{erleichtern}.
 \subsection{Displaylose Fahrradnavigation}
@@ -114,7 +114,8 @@ Mehr Technologie, aber auch umfangreichere Funktionen bietet der vom amerikanisc
 % ### VANHAWKS ###
 \textsc{Vanhawks Valour} heißt das Rad, das ab April 2015 lieferbar ist. Wie im \textsc{Helios}-Lenker steckt auch hier ein über das \gls{Smartphone} steuerbares Navigationssystem, das die Abbiegehinweise per \gls{LED} signalisiert, im Lenker. Auf den gefahrenen Routen merkt sich das Rad durch einen Erschütterungssensor erfasste Hindernisse wie Unebenheiten in der Fahrbahn und ermittelt beim nächsten Mal darauf rücksicht nehmend eine andere Route. Es ist darüber hinaus in der Lage, mit anderen \textsc{Vanhawks valour}-Rädern zu kommunizieren und dessen Routenbegebenheiten ebenfalls zu berücksichtigen. Mittels Radarsensoren registriert das Fahrrad Autos im toten Winkel und benachrichtigt die FahrerInnen durch ein vibrierenden Lenker\cite{vanhawks}.
 \subsection{Das Samsung Smart Bike}
-Auf der Mailänder Designwoche hat Samsung ein Smartbike vorgestellt, das mit verschiedenen intelligenten Komponenten wie Bluetooth, einer Kamera und Laserprojektoren ausgestattet ist. Der Rahmen ist aus Aluminium und leicht geschwungen, was Vibrationen abfangen soll. Wie Abbildung \ref{fig:samsung} zeigt, zeichnen vier Laserprojektoren den eigenen, begleitenden Fahrradweg auf die Straße und sollen so die Sicherheit erhöhen, indem sie den Sicherheitsabstand markieren und aus dem toten Winkel sichtbar sind. 
+Auf der Mailänder Designwoche hat Samsung ein Smartbike vorgestellt, das mit verschiedenen intelligenten Komponenten wie Bluetooth, einer Kamera und Laserprojektoren ausgestattet ist. Der Rahmen ist aus Aluminium und leicht geschwungen, was Vibrationen abfangen soll. Wie Abbildung \ref{fig:samsung} zeigt, zeichnen vier Laserprojektoren den eigenen, begleitenden Fahrradweg auf die Straße und sollen so die Sicherheit erhöhen, indem sie den Sicherheitsabstand markieren und aus dem toten Winkel sichtbar sind. Natürlich ist auch dieses Fahrrad mit dem \gls{Smartphone} verbunden, das sich dank eines Magneten einfach am Lenker anbringen lässt. Darüber kann man die Laserprojektoren ein- und ausschalten, dafür einen Timer bestimmen und über die eingebaute Kamera unter dem Sattel den Verkehr hinter sich im Auge behalten. \\
+Das \gls{Smartphone} fungiert außerdem als Navigationsgerät und durch den eingebauten \gls{GPS}-Empfänger lassen eigene und Routen von anderen Nutzern speichern und intelligent verarbeiten\cite{smartbike}. Wenn also viele Menschen mit einem Samsung Smartbike unterwegs sind, erkennt das Rad die Route als angenehm und navigiert dort entlang. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{samsung}
@@ -122,7 +123,6 @@ Auf der Mailänder Designwoche hat Samsung ein Smartbike vorgestellt, das mit ve
     \caption[Samsung Smart Bike]{Samsung Smart Bike  Quelle: \cite{smartbike}} 
     \label{fig:samsung}
 \end{figure}
-Natürlich ist auch dieses Fahrrad mit dem \gls{Smartphone} verbunden, das sich dank eines Magneten einfach am Lenker anbringen lässt. Darüber kann man die Laserprojektoren ein- und ausschalten, dafür einen Timer bestimmen und über die eingebaute Kamera unter dem Sattel den Verkehr hinter sich im Auge behalten. Das \gls{Smartphone} fungiert außerdem als Navigationsgerät und durch den eingebauten \gls{GPS}-Empfänger lassen eigene und Routen von anderen Nutzern speichern und intelligent verarbeiten\cite{smartbike}. Wenn also viele Menschen mit einem Samsung Smartbike unterwegs sind, erkennt das Rad die Route als angenehm und navigiert dort entlang. 
 % ### COBI ###
 \subsection{Der COBI Fahrradcomputer}
 Ein Projekt aus Frankfurt am Main entwickelt das System \textsc{COBI} (Connected Biking), das alle standardisierten Fahrradsysteme wie Lampen, Navigation, Tachometer etc. vereinen soll. \textsc{COBI} ist ein Modul mit integrierter Frontleuchte in das man das \gls{Smartphone}, welches dann mit der installierten \textsc{COBI}-\Gls{App} als Fahrradcomputer dient, legt. Durch eine wasser- und stoßfeste Hülle ist es vor Umwelteinflüssen geschützt. Zu dem Lenkersystem gibt es auch Rückstrahler die beim Bremsen intensiver leuchten und eine Blinkfunktion haben.
