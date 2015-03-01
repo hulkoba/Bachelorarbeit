@@ -16,9 +16,18 @@ Für welche Android Versionen die Anwendung geschrieben wurde (\texttt{targetSdk
 \begin{center}
 \rule{35em}{0.5pt} \lstinputlisting[language=JSON, firstline=6, lastline=14,  caption={build.gradle}, label=lst:gradle]{code/build.gradle} \rule{35em}{0.5pt}
 \end{center}
-Hier wird der Name der \gls{Activity}-Klasse gesetzt und im \texttt{intent-filter}-Tag festgelegt, dass diese \gls{Activity} als \texttt{MainActivity} beim Start der Anwendung ausgeführt wird. \textit{label:android:?}
+Hier wird der Name der \gls{Activity}-Klasse gesetzt und im \texttt{intent-filter}-Tag festgelegt, dass diese \gls{Activity} als \texttt{MainActivity} beim Start der Anwendung ausgeführt wird. 
+%
+% MainActivity
+%
 \section{MainActivity-Klasse}
+Die Klasse \texttt{MainActivity} ist die \gls{Activity}, die beim Start der Anwendung ausgeführt wird.  Hier werden die Anzeigeelemente initialisiert und die zentralen Funktionalitäten implementiert \textit{, bzw. delegiert}.\\
+Die Methode \texttt{onCreate} ist die erste Methode im \gls{Activity}-Lebenszyklus und wird direkt nach dem Start der \gls{Activity} ausgeführt. Hier werden die Anzeigeelemente gesetzt und nach jeder Installation ein Dialog erstellt, der auf die oberste Priorität der Straßenverkehrsordnung hinweist.\\
+Es wird eine Instanz des \texttt{JSONParser}-Objekts erstellt, welche die \gls{JSON}-Datei aus dem Ressourcenordner liest und in ein Objektarray umwandelt. Neben der \texttt{SpeedHandler}-Objektinstanz, welche für die Geschwindigkeitsempfehlung und dessen Anzeige zuständig ist, wird die des \texttt{GPSTracker} erstellt. Auf diesen ist der \texttt{OnSetListener} gesetzt, welcher ein Ereignis wirft, sobald er die nächstgelegende Ampel gesetzt hat. Sobald dieser Fall eingetreten ist, wird der \texttt{SpeedHandler} beauftragt, den dazugehörigen Signalschaltplan zu holen, um dann anhand dieser Daten die Berechnungen durchzuführen und deren Ergebnisse anzuzeigen.   
 \section{Umsetzung Szenarien}
+%
+% Umsetzung Szenarien
+%
 \subsection{?Einlesen der Ampeldaten?}
 \subsection{Ermittlung der nächsten Ampel}
 \subsection{Algorithmus für die Geschwindigkeitsempfehlung}
@@ -26,7 +35,7 @@ Hier wird der Name der \gls{Activity}-Klasse gesetzt und im \texttt{intent-filte
 %
 % TEST
 %
-\chapter{Evaluierung}
+\chapter{Evaluation}
 \section{Systemtest}
 ist das GPS schnell/genau genug fürs Radfahren?
 Optimierung ggf. umsetzen\\
