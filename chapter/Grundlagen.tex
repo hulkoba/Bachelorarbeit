@@ -138,9 +138,11 @@ Der Abstand zur Ampel wird also durch die verbleibende Zeit dividiert.
 Die von der Berliner Verkehrsleitzentrale zur Verfügung gestellten Ampelsignalpläne und Lage der angesteuerten Ampel sind die Basis dieser Berechnung. Die aktuelle Position des Fahrrads wird vom \gls{GPS}-Sensor des \glspl{Smartphone} ermittelt und daraus der Abstand zur Ampel errechnet. Die Abbildung \ref{fig:vst} soll die Berechnungsgrundlagen veranschaulichen: 
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=1\textwidth]{vst}  
+    \includegraphics[width=0.75\textwidth]{vst}  
     \rule{35em}{0.5pt}   
     \caption[Berechnung Progressionsgeschwindigkeit]{Veranschaulichung der Berechnung}
     \label{fig:vst}
 \end{figure}
-Um die ensprechende \gls{LSA} während der Grünphase zu passieren, muss letztendlich die empfohlene Geschwindigkeit $v$ eingehalten werden.
+Da das System für Fahrräder entwickelt wird, ist auch die Beschleunigung von Bedeutung. FahrradfahrerInnen können nicht unbegrenzt beschleunigen, um die gewünschte Geschwindigkeit zu erreichen. Sie ist abhängig von der Geschwindigkeit und der Zeitspanne in der diese zu erreichen ist. Die Formel für Beschleunigung lautet:
+\[ a = \frac{v}{(t_{2} - t_{1})^{2}} \]
+ Um die ensprechende \gls{LSA} während der Grünphase zu passieren, muss letztendlich die empfohlene Geschwindigkeit $v$ eingehalten werden, wobei die maximale Beschleunigung nicht überschritten wird.

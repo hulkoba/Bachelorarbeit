@@ -29,9 +29,15 @@ Es wird eine Instanz des \texttt{JSONParser}-Objekts erstellt, welche die \gls{J
 %
 \section{Umsetzung Szenarien}
 Wie in Kapitel \ref{chap:szenarien} beschrieben, lassen sich die sieben möglichen Szenarien auf insgesamt fünf komprimieren, da die Szenarien R2 und G2, genauso wie die Szenarien R3 und G3 dasselbe Ergebnis haben. Die zusammengefassten fünf Szenarien eignen sich für eine prototypische Umsetzung, welche im Folgenden beschrieben wird.
+%
+% Einlesen der Ampeldaten
+%
 \subsection{?Einlesen der Ampeldaten?}
 Neben der Geräteposition bilden die Ampelposition und deren Signalschaltpläne die Grundlage der Anwendung. Hierbei ost das korrekte Einlesen und Auswerten der Daten obligatorisch. Die Aufgabe des \texttt{JSONParsers} ist es also, die manuell erstellte \gls{JSON}-Datei, welche die Ampeldaten beinhaltet, richtig zu konvertieren.  Die Klasse \texttt{JSONParser} liest also die Datei ein und wandelt dann die enthaltenen \gls{JSON}-Ampelobjekte in Java-Ampelobjekte um.\\ 
 Hierfür wird das \gls{JSON}-Array durchlaufen und für jedes enthaltende Objekt ein Ampelobjekt erzeugt. Aus den Werten \texttt{lat} und \texttt{lon}, stehend für latitude und longitude, wird ein \texttt{Location}-Objekt erzeugt, das als Attribut gesetzt wird. Der boolsche Wert \texttt{dependsOnTraffic} ist auf \texttt{true} gesetzt, sobald die \gls{LSA} verkehrsabhängig ist. Ist dies der Fall, ist eine Vorhersage der Ampel aufgrund beeinflussender Parameter nicht möglich und es wird ein Objekt mit den beiden genannten Attributen und dem bezeichnenden Namensattribut erzeugt. Andernfalls werden die zu der Ampel hinzugehörigen Schaltpläne durchlaufen und für jeden ein selbiges Objekt erzeugt, welche in einem Array gespeichert dem Ampelobjekt als weiteres Attribut übergeben wird. Es ist zu beachten, dass jeder Signalschaltplan über ein Array mit Tagen verfügt. Denn ein Schaltplan kann an mehreren Tagen gültig sein. Die Tage sind als Strings gespeichert und werden für die weitere Verwendung in Integer umgewandelt, wobei die Woche am Sonntag beginnt. Der Sonntag wird also als \texttt{1} gespeichert, der Montag als \texttt{2} und so weiter. 
+%
+% nächste Ampel
+%
 \subsection{Ermittlung der nächsten Ampel}
 Eigene Position - LocationManager, \texttt{LocationListener} liefern auch Geschwindigkeit.\\
 Alle LSA in Umgebung geholt\\
@@ -43,7 +49,7 @@ Wenn distanz wieder größer ist, lsa löschen\\
 wenn distanz größer als mindestreichweite ist -- array loschen. \\
 \begin{center}
 \rule{35em}{0.5pt}
-\lstinputlisting[language=Java, firstline=13, lastline=45, caption={GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
+\lstinputlisting[language=Java, firstline=8, lastline=48, caption={GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
 \rule{35em}{0.5pt}
 \end{center}
 Alternative: Straßendaten, routennavigation\\ vorteile, ampel ist sicher, nachteile:
@@ -55,15 +61,19 @@ App wird viel größer (mehrere MB),  interaktion einbauen, navigation einbauen 
 An dieser Stelle wird die Berechnung der Geschwindigkeitsempfehlung erklärt und im Listing \ref{lst:speed} veranschaulicht.
 Sobald alle benötigten Daten bestehend aus aktueller, eigener Position, Entfernung zur nächsten Ampel und deren Signalschaltplan wird die benötigte Geschwindigkeit errechnet, die Ampel bei Grün zu erreichen. Diese Geschwindigkeit wird mit er Formel: 
 \[ v = \frac{s}{t_{2} - t_{1}} \]
-berechnet, wobei $t_1$ die aktuelle Sekunde und $s$ die Entfernung zur Ampel ist. Bei der Festlegung der Variable $t_2$ wird zwischen den Ampelphasen unterschieden. Zeigt die Ampel Grün, wird der Zeitpunkt, an dem die Ampel auf Rot schaltet eingesetzt, zeigt sie Rot, der Zeitpunkt an dem sie auf Grün umschaltet. Das Verändert die Ergebnisse zugunsten der FahrerInnen. Wenn beispielsweise im Anwendungsfall UC2, bei dem langsamer gefahren werden muss, um die grüne Ampel zu passieren, wird so die Zeitspanne in der die Ampel grün ist abgezogen, und die anzupassende Geschwindigkeit ist weniger kleiner der aktuellen. \\  
+berechnet, wobei $t_1$ die aktuelle Sekunde, $t_2$ der Zeitpunkt zu dem die Ampel auf Rot schaltet und $s$ die Entfernung zur Ampel ist. \\
 Für FahrradfahrerInnen ist die Beschleunigung ebenfalls von nicht geringer Bedeutung, weil sie begrenzt ist. Die Formel für die Beschleunigung lautet:
 \[ a = \frac{v}{(t_{2} - t_{1})^{2}} \] 
 Die Variable $v$ ist hier die errechnete Empfehlungsgeschwindigkeit.
 \begin{center}
-\rule{35em}{0.5pt} \lstinputlisting[language=Java, firstline=121, lastline=134,  caption=SpeedHandler.java, label=lst:speed]{code/SpeedHandler.java} \rule{35em}{0.5pt}
+\rule{35em}{0.5pt} \lstinputlisting[language=Java, firstline=119, lastline=130,  caption=SpeedHandler.java, label=lst:speed]{code/SpeedHandler.java} \rule{35em}{0.5pt}
 \end{center}
-Anhand der Ergebnisse wird die \gls{GUI} aktualisiert.\textit{ Da zusätzlich zur Empfehlung der Countdown der Ampel dargestellt wird, geschieht dies jede Sekunde. Dafür wird ein \texttt{Timer} gesetzt, der genau das tut. Da die Methode zur Geschwindigkeitsberechnung aufgerufen wird, sobald sich die eigene Position um \textit{festgelegte Parameter} ändert, ist sicherzustellen, dass nicht mit jedem Aufruf der Methode ein neuer \texttt{Timer} erstellt wird, wurde die boolsche Variable \texttt{run} eingeführt. }\\\\
+Anhand der Ergebnisse wird die \gls{GUI} aktualisiert. Hier wird berücksichtigt, ob die errechnete Geschwindigkeit, sowie die Beschleunigung innerhalb festgelegter Parameter liegen.
+\textit{ Da bei einer Handlungsaufforderung zusätzlich zur Empfehlung der Countdown der Ampel dargestellt wird, geschieht dies jede Sekunde. Dafür wird ein \texttt{Timer} gesetzt, der genau das tut. Da die Methode zur Geschwindigkeitsberechnung aufgerufen wird, sobald sich die eigene Position um \textit{festgelegte Parameter} ändert, ist sicherzustellen, dass nicht mit jedem Aufruf der Methode ein neuer \texttt{Timer} erstellt wird, wurde die boolsche Variable \texttt{run} eingeführt. }\\\\
 \textit{Mit Straßendaten = andere Formel notwendig. Winkel / Hügel mit einbeziehen + Erdkugel etc.}
+%
+% Installationsanleitung
+%
 \section{Installationsanleitung}
 
 

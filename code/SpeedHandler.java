@@ -32,7 +32,7 @@ public class SpeedHandler{
         this.mainActivity = mainActivity;
     }
 
-    // Schaltplan der nächsten LSA holen, wenn keiner Vorhanden --> verkehrsabhängig --> keine Vorausage möglich
+    // Schaltplan der nächsten LSA holen, wenn keiner Vorhanden, verkehrsabhaengig, keine Vorausage möglich
     protected void getCurrentSzpl(LSA nearestLSA, Location loc){
         Log.d("getCurrentSzpl", "getCurrentSzpl");
 
@@ -115,15 +115,11 @@ public class SpeedHandler{
     protected void getOptSpeed(SZPL szpl){
         final int greenFrom = szpl.getGreenFrom();
         final int greenTo = szpl.getGreenTo();
-        int t2;
-       
+              
         c.setTime(new Date());
         int t1 = c.get(Calendar.SECOND);      
-        if(getPhase(t1, greenFrom, greenTo).equals("green")){
-            t2 = greenTo + 1;
-        } else {
-            t2 = greenFrom;
-        }
+        int t2 = greenTo + 1;
+       
         if(t2 < t1 || myLocation == null || lsaLocation == null) {
             return;
         }
