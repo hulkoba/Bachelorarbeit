@@ -91,6 +91,17 @@ public class SpeedHandler{
         }
     }
 
+   /*
+   * Ist die Ampel grün oder rot?
+   */
+    private String getPhase(int currentSecond, int greenFrom, int greenTo){
+       if(currentSecond>=greenFrom && currentSecond<=greenTo){            
+            return "green";
+        }else {
+            return "red";
+        }
+    }
+
     /*
      * Geschwindigkeit berechnen
      * v = s / (t2 - t1)
@@ -99,63 +110,42 @@ public class SpeedHandler{
      * t2 = Ampel schaltet auf rot
      * s = Abstand zwischen Fahrrad und Ampel
      * a = notwendige Beschleunigung
-     * speed = eigene Geschwindigkeit
-     *
-     * Timer updatet jede Sekunde die GUI
+     * speed = eigene Geschwindigkeit   
      */
-protected void getOptSpeed(SZPL szpl){
-    final int greenFrom = szpl.getGreenFrom();
-    final int greenTo = szpl.getGreenTo();
-    final float speed = myLocation.getSpeed();
-
-    c.setTime(new Date());
-    int t1 = c.get(Calendar.SECOND);
-    int t2 = greenTo + 1;
-    if(t2 < t1 || myLocation == null || lsaLocation == null) {
-        return;
-    }
-    float deltaT = t2 - t1;
-    float s = myLocation.distanceTo(lsaLocation);
-
-    final float v = s / deltaT;
-    final double a = v / Math.pow(deltaT, 2.0);
+    protected void getOptSpeed(SZPL szpl){
+        final int greenFrom = szpl.getGreenFrom();
+        final int greenTo = szpl.getGreenTo();
+        int t2;
        
-    final Timer myTimer = new Timer();
-    if(run) {
-        myTimer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                UpdateGUI(greenFrom, greenTo, speed, v, a);
-            }
-        }, 0, 1000);
-    }
-    run = false;
-}
-
-    /*
-     * countdown berechnen
-     */
-    private void setCountdown(int greenFrom, int greenTo){
         c.setTime(new Date());
-        int currentSecond = c.get(Calendar.SECOND);
-
-        if(currentSecond>=greenFrom && currentSecond<=greenTo || countdown < 0){
-            //Ampel ist grün
-            countdown = 0;
-        }else {
-            // Ampel ist rot
-            if(currentSecond < greenFrom) {
-                countdown = greenFrom - currentSecond;
-            } else {
-                countdown = (60-currentSecond) + greenFrom;
-            }
+        int t1 = c.get(Calendar.SECOND);      
+        if(getPhase(t1, greenFrom, greenTo).equals("green")){
+            t2 = greenTo + 1;
+        } else {
+            t2 = greenFrom;
         }
+        if(t2 < t1 || myLocation == null || lsaLocation == null) {
+            return;
+        }
+        float deltaT = t2 - t1;
+        float s = myLocation.distanceTo(lsaLocation);
+
+        final float v = s / deltaT;
+        final double a = v / Math.pow(deltaT, 2.0);
+        Log.d("v: " ,"\n"+ v +"\n in km/h: " + (v*3.6)+"\na= " +a +"\nspeed "+speed);
+
+        final float speed = myLocation.getSpeed();
+
+        UpdateGUI(greenFrom, greenTo, speed, v, a);
+
     }
 
     /*
      * GUI sekündlich updaten
      */
-    private void UpdateGUI(int greenFrom, int greenTo, float speed, float v, double a) {
+    private void UpdateGUI(final int greenFrom,final int greenTo, float speed, float v, double a) {
+        Log.d("###", "update GUI");
+       // myTimer.purge();
         Log.d("\nv: " , v +"\n in km/h: " + (v*3.6)+"\na= " +a +"\nspeed "+speed);
 
         // empfohlene Geschwindigkeit = aktuelles Tempo
@@ -166,26 +156,25 @@ protected void getOptSpeed(SZPL szpl){
         } else
         //langsamer als empfohlen --> schneller fahren
         if (speed < v && v < Constants.MAX_SPEED && v > Constants.MIN_SPEED && a < Constants.MAX_ACCELERATION) {
-            Log.d("\nx", "schnell");
-            setCountdown(greenFrom, greenTo);
+            Log.d("\nup", "schnell");
             up=true;
             ok = false; x = false; upper=false; down=false; downer = false;
 
         } else if (speed < v && (speed + Constants.DIFF_SPEED) < v && v < Constants.MAX_SPEED && v > Constants.MIN_SPEED && a < Constants.MAX_ACCELERATION) {
-            Log.d("\nx", "schneller²");
+            Log.d("\nup", "schneller");
             setCountdown(greenFrom, greenTo);
             up=false; upper=true;
             ok = false; x = false; down=false; downer = false;
             //schneller als empfohlen --> langsamer fahren
         } else if (speed > v && v < Constants.MAX_SPEED && v > Constants.MIN_SPEED && a < Constants.MAX_ACCELERATION) {
-            Log.d("\nx", "langsamer");
+            Log.d("\ndown", "langsam");
             setCountdown(greenFrom, greenTo);
             down=true;
             ok = false; x = false; upper=false; up=false; downer = false;
 
             // viel schneller als empfohlen >> viel langsamer fahren
         } else if ( speed > v && (speed - Constants.DIFF_SPEED) > v && v < Constants.MAX_SPEED && v > Constants.MIN_SPEED && a < Constants.MAX_ACCELERATION) {
-            Log.d("\nx", "langsamer²");
+            Log.d("\ndown", "langsamer");
             setCountdown(greenFrom, greenTo);
             down = false; downer = true;
             ok = false; x = false; upper = false; up = false;
@@ -197,6 +186,35 @@ protected void getOptSpeed(SZPL szpl){
         }
 
         myHandler.post(myRunnable);
+    }
+
+    /*
+     * countdown berechnen
+     */
+    private void setCountdown(final int greenFrom, final int greenTo){
+        c.setTime(new Date());
+        final int currentSecond = c.get(Calendar.SECOND);
+
+        final Timer myTimer = new Timer();
+        myTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                getCountdown(currentSecond, greenFrom, greenTo);
+            }
+        }, 0, 1000);
+    }
+
+    private void getCountdown(int currentSecond, int greenFrom, int greenTo){
+        if(getPhase(currentSecond, greenFrom, greenTo).equals("green")){
+            countdown = 0;
+        } else {
+            // Ampel ist rot
+            if(currentSecond < greenFrom) {
+                countdown = greenFrom - currentSecond;
+            } else {
+                countdown = (60-currentSecond) + greenFrom;
+            }
+        }
     }
 
     final Runnable myRunnable = new Runnable() {
