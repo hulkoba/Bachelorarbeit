@@ -12,9 +12,9 @@ Unterhalb des \texttt{application}-Tags, in Zeile 17, werden nun die Berechtigun
 \rule{35em}{0.5pt} \lstinputlisting[language=XML, firstline=2, lastline=21, caption={AndroidManifest.xml}, label=lst:manifest]{code/manifest.xml}
  \rule{35em}{0.5pt}
 \end{center}
-Für welche Android Versionen die Anwendung geschrieben wurde (\texttt{targetSdkVersion}) und das minimale \gls{API}-Level der Anwendung, also unter welcher Version die App noch ausgeführt werden kann:\\
+Für welche Android Versionen die Anwendung geschrieben wurde (\texttt{targetSdkVersion}) und das minimale \gls{API}-Level der Anwendung, also unter welcher Version die App noch ausgeführt werden kann:
 \begin{center}
-\rule{35em}{0.5pt} \lstinputlisting[language=JSON, firstline=6, lastline=14,  caption={build.gradle}, label=lst:gradle]{code/build.gradle} \rule{35em}{0.5pt}
+\rule{35em}{0.5pt} \lstinputlisting[language=JSON, firstline=6, lastline=14,  caption={Auszug aus der build.gradle-Datei}, label=lst:gradle]{code/build.gradle} \rule{35em}{0.5pt}
 \end{center}
 Hier wird der Name der \gls{Activity}-Klasse gesetzt und im \texttt{intent-filter}-Tag festgelegt, dass diese \gls{Activity} als \texttt{MainActivity} beim Start der Anwendung ausgeführt wird. 
 %
@@ -22,15 +22,31 @@ Hier wird der Name der \gls{Activity}-Klasse gesetzt und im \texttt{intent-filte
 %
 \section{MainActivity-Klasse}
 Die Klasse \texttt{MainActivity} ist die \gls{Activity}, die beim Start der Anwendung ausgeführt wird.  Hier werden die Anzeigeelemente initialisiert und die zentralen Funktionalitäten implementiert \textit{, bzw. delegiert}.\\
-Die Methode \texttt{onCreate} ist die erste Methode im \gls{Activity}-Lebenszyklus und wird direkt nach dem Start der \gls{Activity} ausgeführt. Hier werden die Anzeigeelemente gesetzt und nach jeder Installation ein Dialog erstellt, der auf die oberste Priorität der Straßenverkehrsordnung hinweist.\\
-Es wird eine Instanz des \texttt{JSONParser}-Objekts erstellt, welche die \gls{JSON}-Datei aus dem Ressourcenordner liest und in ein Objektarray umwandelt. Neben der \texttt{SpeedHandler}-Objektinstanz, welche für die Geschwindigkeitsempfehlung und dessen Anzeige zuständig ist, wird die des \texttt{GPSTracker} erstellt. Auf diesen ist der \texttt{OnSetListener} gesetzt, welcher ein Ereignis wirft, sobald er die nächstgelegende Ampel gesetzt hat. Sobald dieser Fall eingetreten ist, wird der \texttt{SpeedHandler} beauftragt, den dazugehörigen Signalschaltplan zu holen, um dann anhand dieser Daten die Berechnungen durchzuführen und deren Ergebnisse anzuzeigen.   
-\section{Umsetzung Szenarien}
+Die Methode \texttt{onCreate} ist die erste Methode im \gls{Activity}-Lebenszyklus\footnote{ \url{http://developer.android.com/training/basics/activity-lifecycle/starting.html} -- Zugriff: 02.03.2015} und wird direkt nach dem Start der \gls{Activity} ausgeführt. Hier werden die Anzeigeelemente gesetzt und nach jeder Installation ein Dialog erstellt, der auf die oberste Priorität der Straßenverkehrsordnung hinweist.\\
+Es wird eine Instanz des \texttt{JSONParser}-Objekts erstellt, welche die \gls{JSON}-Datei aus dem Ressourcenordner liest und in ein Objektarray umwandelt. Neben der \texttt{SpeedHandler}-Objektinstanz, welche für die Geschwindigkeitsempfehlung und dessen Anzeige zuständig ist, wird die des \texttt{GPSTracker} erstellt. Auf diesen ist der \texttt{OnSetListener} registriert, welcher ein Ereignis wirft sobald er die nächstgelegende Ampel gesetzt hat. Sobald dieser Fall eingetreten ist, wird der \texttt{SpeedHandler} beauftragt, den dazugehörigen Signalschaltplan zu holen, um dann anhand dieser Daten die Berechnungen durchzuführen und deren Ergebnisse anzuzeigen.   
 %
 % Umsetzung Szenarien
 %
+\section{Umsetzung Szenarien}
+Wie in Kapitel \ref{chap:szenarien} beschrieben, lassen sich die sieben möglichen Szenarien auf insgesamt fünf komprimieren, da die Szenarien R2 und G2, genauso wie die Szenarien R3 und G3 dasselbe Ergebnis haben. Die zusammengefassten fünf Szenarien eignen sich für eine prototypische Umsetzung, welche im Folgenden beschrieben wird.
 \subsection{?Einlesen der Ampeldaten?}
+Neben der Geräteposition bilden die Ampelposition und deren Signalschaltpläne die Grundlage der Anwendung. Hierbei ost das korrekte Einlesen und Auswerten der Daten obligatorisch. Die Aufgabe des \texttt{JSONParsers} ist es also, die manuell erstellte \gls{JSON}-Datei, welche die Ampeldaten beinhaltet, richtig zu konvertieren.  Die Klasse \texttt{JSONParser} liest also die Datei ein und wandelt dann die enthaltenen \gls{JSON}-Ampelobjekte in Java-Ampelobjekte um.\\ 
+Hierfür wird das \gls{JSON}-Array durchlaufen und für jedes enthaltende Objekt ein Ampelobjekt erzeugt. Aus den Werten \texttt{lat} und \texttt{lon}, stehend für latitude und longitude, wird ein \texttt{Location}-Objekt erzeugt, das als Attribut gesetzt wird. Der boolsche Wert \texttt{dependsOnTraffic} ist auf \texttt{true} gesetzt, sobald die \gls{LSA} verkehrsabhängig ist. Ist dies der Fall, ist eine Vorhersage der Ampel aufgrund beeinflussender Parameter nicht möglich und es wird ein Objekt mit den beiden genannten Attributen und dem bezeichnenden Namensattribut erzeugt. Andernfalls werden die zu der Ampel hinzugehörigen Schaltpläne durchlaufen und für jeden ein selbiges Objekt erzeugt, welche in einem Array gespeichert dem Ampelobjekt als weiteres Attribut übergeben wird. Es ist zu beachten, dass jeder Signalschaltplan über ein Array mit Tagen verfügt. Denn ein Schaltplan kann an mehreren Tagen gültig sein. Die Tage sind als Strings gespeichert und werden für die weitere Verwendung in Integer umgewandelt, wobei die Woche am Sonntag beginnt. Der Sonntag wird also als \texttt{1} gespeichert, der Montag als \texttt{2} und so weiter. 
 \subsection{Ermittlung der nächsten Ampel}
-\subsection{Algorithmus für die Geschwindigkeitsempfehlung}
+zuguidaiudaiuhdiashdoiafiaji oafoiuope aosf oa \\
+\begin{center}
+\rule{35em}{0.5pt}
+\lstinputlisting[language=Java, firstline=1, lastline=45, caption={GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
+\rule{35em}{0.5pt}
+\end{center}
+lalalalalal
+ 
+\subsection{Berechnung der Geschwindigkeitsempfehlung}
+kskdjdjowjdow
+\begin{center}
+\rule{35em}{0.5pt} \lstinputlisting[language=Java, firstline=106, lastline=135,  caption=SpeedHandler, label=lst:speed]{code/SpeedHandler.java} \rule{35em}{0.5pt}
+\end{center}
+hdhdjdjj
 
 %
 % TEST
