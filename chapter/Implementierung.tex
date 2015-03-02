@@ -1,6 +1,9 @@
 \chapter{\label{chap:implementierung}Der Prototyp}
 In diesem Kaptitel wird die nach dem in Kapitel \ref{chap:entwurf} präsentierten Lösungswegs die detaillierte Beschreibung der technischen Realisierung der Anwendung vorgestellt.\\
 Nach der Erklärung der Konfigurationsdateien wird auf die Umsetzung der Szenarien eingegangen. Im Zuge dessen werden die implementierten Algorithmen vorgestellt, wobei sich der erste mit dem Auffinden der nächsten relevanten Ampel befasst und der zweite die empfohlene Geschwindigkeit berechnet.
+%
+% MANIFEST
+%
 \section{Die Manifest- und build.gradle-Datei}
 Das Android-Manifest dient der Festlegung wichtiger Eigenschaften der Anwendung und gehört zu jedem Android-Projekt. (+ gradle...)\\
 
@@ -32,14 +35,20 @@ Wie in Kapitel \ref{chap:szenarien} beschrieben, lassen sich die sieben möglich
 %
 % Einlesen der Ampeldaten
 %
-\subsection{?Einlesen der Ampeldaten?}
+\subsection{??? Einlesen der Ampeldaten ???}
 Neben der Geräteposition bilden die Ampelposition und deren Signalschaltpläne die Grundlage der Anwendung. Hierbei ost das korrekte Einlesen und Auswerten der Daten obligatorisch. Die Aufgabe des \texttt{JSONParsers} ist es also, die manuell erstellte \gls{JSON}-Datei, welche die Ampeldaten beinhaltet, richtig zu konvertieren.  Die Klasse \texttt{JSONParser} liest also die Datei ein und wandelt dann die enthaltenen \gls{JSON}-Ampelobjekte in Java-Ampelobjekte um.\\ 
 Hierfür wird das \gls{JSON}-Array durchlaufen und für jedes enthaltende Objekt ein Ampelobjekt erzeugt. Aus den Werten \texttt{lat} und \texttt{lon}, stehend für latitude und longitude, wird ein \texttt{Location}-Objekt erzeugt, das als Attribut gesetzt wird. Der boolsche Wert \texttt{dependsOnTraffic} ist auf \texttt{true} gesetzt, sobald die \gls{LSA} verkehrsabhängig ist. Ist dies der Fall, ist eine Vorhersage der Ampel aufgrund beeinflussender Parameter nicht möglich und es wird ein Objekt mit den beiden genannten Attributen und dem bezeichnenden Namensattribut erzeugt. Andernfalls werden die zu der Ampel hinzugehörigen Schaltpläne durchlaufen und für jeden ein selbiges Objekt erzeugt, welche in einem Array gespeichert dem Ampelobjekt als weiteres Attribut übergeben wird. Es ist zu beachten, dass jeder Signalschaltplan über ein Array mit Tagen verfügt. Denn ein Schaltplan kann an mehreren Tagen gültig sein. Die Tage sind als Strings gespeichert und werden für die weitere Verwendung in Integer umgewandelt, wobei die Woche am Sonntag beginnt. Der Sonntag wird also als \texttt{1} gespeichert, der Montag als \texttt{2} und so weiter. 
 %
 % nächste Ampel
 %
 \subsection{Ermittlung der nächsten Ampel}
-Eigene Position - LocationManager, \texttt{LocationListener} liefern auch Geschwindigkeit.\\
+Zur Ermittlung der nächsten Ampel ist zunächst die eigene Position vonnöten. Dazu stellt der in dem \texttt{android.location}-Paket enthaltene \texttt{LocationManager} die entsprechenden Schnittstellen bereit. Indem die Klasse \texttt{GpsTracker} das \texttt{LocationListener}-Interface und mit ihm unter anderem die Methode \texttt{onLocationChanged}, welche aufgerufen wird, sobald neue Positionsdaten vorhanden sind implementiert, meldet sie sich beim \texttt{LocationManager}-Objekt zum Empfang von Geodaten an. Das hier gespeicherte \texttt{Location}-Objekt liefert neben dem Längen- und Breitengrad auch die Geschwindigkeit in Metern pro Sekunde. Mit ihm wird die Methode \texttt{getNearestLSA} aufgerufen, welche die nächste Ampel bestimmt. Um das nicht bei jeder Positionsänderung zu tun geschieht es erst, sobald sich das Gerät um eine bestimmt Distanz fortbewegt hat. Wie das umgesetzt wurde, ist im Codeabschnitt \ref{lst:gps1} abgebildet.\\
+\begin{center}
+\rule{35em}{0.5pt}
+\lstinputlisting[language=Java, firstline=50, lastline=53, caption={onLocationChanged() in GpsTracker.java}, label=lst:gps1]{code/gpstracker.java}
+\rule{35em}{0.5pt}
+\end{center}
+
 Alle LSA in Umgebung geholt\\
 diese inkl distanz gespeichert, im objekt speichern\\
 wenn welche gespeichert sind nach der distanz gucken/vergleichen, \\
@@ -49,7 +58,7 @@ Wenn distanz wieder größer ist, lsa löschen\\
 wenn distanz größer als mindestreichweite ist -- array loschen. \\
 \begin{center}
 \rule{35em}{0.5pt}
-\lstinputlisting[language=Java, firstline=8, lastline=48, caption={GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
+\lstinputlisting[language=Java, firstline=8, lastline=48, caption={getNearestLSA() GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
 \rule{35em}{0.5pt}
 \end{center}
 Alternative: Straßendaten, routennavigation\\ vorteile, ampel ist sicher, nachteile:
@@ -75,6 +84,5 @@ Anhand der Ergebnisse wird die \gls{GUI} aktualisiert. Hier wird berücksichtigt
 % Installationsanleitung
 %
 \section{Installationsanleitung}
-
 
 

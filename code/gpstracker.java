@@ -47,3 +47,7 @@ if(nearestLSA != null) {
     }
 }
 }
+if(myNewLocation == null || location.distanceTo(myNewLocation) >= Constants.MY_DISTANCE){
+    myNewLocation = location;
+    getNearestLSA(location);
+}
