@@ -154,6 +154,7 @@ Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, be
 \end{figure}
 Die Abbildungen \ref{fig:langsamer} und \ref{fig:schneller} für die Zustände \textit{c} und \textit{d} sind in der Anordnung der Elemente identisch. Mittig im Bild ist eine eingekreiste rote Zahl die den Countdown der Restrotanzeige darstellt. Sie wird also mit jeder Sekunde aktualisiert. Ober- und unterhalb des Countdowns befinden sich jeweils zwei hellblaue Pfeile. Je nach Differenz der aktuellen zur berechneten Geschwindigkeit sind ein oder zwei Pfeile ausgefüllt. Wird also empfohlen viel schneller zu fahren, sind die oberen Pfeile aktiv, bei der Aufforderung etwas das Tempo zu drosseln der untere. Es sind immer alle Pfeile zu sehen. Durch die Anzeige "'ein von zwei"' ist die Bedeutung der Geschwindigkeitsstufen klarer. Als Farbe für die Pfeile wurde Hellblau gewählt. Sie unterscheidet sich sowohl farblich als auch in der Helligkeitsstufe zu den anderen Farben und steht im hohen Kontrast zu dem Hintergrund. Auf schwarzem Hintergrund wirken die Farben intensiver und sind so auch aus dem Augenwinkel leichter zu erkennen und unterscheiden. Die in Abbildung \ref{fig:meh} gezeigte Darstellung erscheint, wenn keine Vorhersage möglich ist weil die Ampel verkehrsabhängig und die Vorhersage dadurch zu ungenau wird. Als Farbe wurde die dritte Ampelfarbe Gelb gewählt, was weder Rot für Anhalten, noch grün für Weiterfahren ist und so signalisiert, die Anwendung kann keine Empfehlung aussprechen. Das mittig platzierte Fragezeichen unterstützt die Aussage.\\
 Die aktuelle Geschwindigkeit wird bewusst nicht angezeigt. Auch nicht die Progressionsgeschwindigkeit. Die Differenz ist beim Fahrrad nicht so hoch wie bspw. im Auto. Bei einer Varianz von wenigen km/h genügt die Anzeigevariante "'schneller"' und "'noch schneller"'.
+% TESTFÄLLE
 \section{Testfälle}
 Folgende Testfälle werden während der Entwicklung stetig durchgeführt. Das erfolgreiche Bestehen dieser Tests ist eine notwendige Qualitätseigenschaft der zu entwickelnden Applikation.
 \begin{description}[leftmargin=0.7cm,style=nextline]
@@ -168,3 +169,17 @@ Die am nächsten gelegene Ampel und deren Rot- oder Grünphase kann nur ermittel
 \item[Ermittlung der Position:] 
 Die Empfehlung der Geschwindigkeit kann nur dann korrekt angezeigt werden, wenn die Position des Geräts ermittelt wurde. Weiter wird der eigene Standort neben dem der Ampel für die Berechnung der am nächsten gelegenen \gls{LSA} benötigt.\\
 \end{description}
+\section{Entwicklungsumgebung}
+Für die Erstellung der Smartphone-Applikation wurde folgende Soft- und Hardware verwendet:
+\subsubsection{Software}
+\begin{itemize}
+	\item Android Studio\footnote{ Download unter \url{http://developer.android.com/sdk/index.html}} Version 1.1. Enthält Android Studio IDE, Android \gls{SDK}-Tools, Android 5.0 Plattform, Android 5.0 Emulator System Image mit Google \glspl{API}
+	\item git, Version 1.7.10.4
+\end{itemize}
+\subsubsection{Hardware}
+\begin{itemize}
+	\item Lenovo Thinkpad W520 (Intel\textsuperscript{\textregistered} Core\texttrademark   i7-2630QM, 2,00GHz, 4GB RAM) als ersten Entwicklungsrechner (Betriebssystem: Debian\footnote{ Download unter \url{https://www.debian.org/index.de.html}} 7.8, 64-bit-Version)
+	\item Lenovo Thinkpad X200 (Intel\textsuperscript{\textregistered} Core\texttrademark   i7-2630QM, 2,00GHz, 8GB RAM) als zweiten Entwicklungsrechner (Betriebssystem: Debian 7.8, 64-bit-Version)
+	\item Android Testgeräte: Samsung Galaxy Note 2, LG Nexus 5
+\end{itemize}
+

@@ -2,7 +2,6 @@
 \glossaryentry{C2I?\glossaryentryfield{C2I}{\glsnamefont{C2I}}{Car-to-Infrastructure oder Vehicle-to-Infrastructure}{\relax }|glsseeformat[Glossary:]{C2Ig}}{Z}
 \glossaryentry{DSRC?\glossaryentryfield{DSRC}{\glsnamefont{DSRC}}{Dedicated Short Range Communication}{\relax }|glsseeformat[Glossary:]{DSRCg}}{Z}
 \glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{5}
-\glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{6}
 \glossaryentry{App?\glossaryentryfield{App}{\glsnamefont{App}}{Applikation}{\relax }|setentrycounter[]{page}\glsnumberformat}{6}
 \glossaryentry{LED?\glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{LED?\glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
@@ -109,6 +108,8 @@
 \glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{37}
 \glossaryentry{JSON?\glossaryentryfield{JSON}{\glsnamefont{JSON}}{JavaScript Object Notation}{\relax }|setentrycounter[]{page}\glsnumberformat}{37}
 \glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{40}
+\glossaryentry{SDK?\glossaryentryfield{SDK}{\glsnamefont{SDK}}{Software Development Kit}{\relax }|setentrycounter[]{page}\glsnumberformat}{40}
+\glossaryentry{API?\glossaryentryfield{API}{\glsnamefont{API}}{Application Programming Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{40}
 \glossaryentry{XML?\glossaryentryfield{XML}{\glsnamefont{XML}}{Extensible Markup Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{41}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{42}
 \glossaryentry{SDK?\glossaryentryfield{SDK}{\glsnamefont{SDK}}{Software Development Kit}{\relax }|setentrycounter[]{page}\glsnumberformat}{42}
