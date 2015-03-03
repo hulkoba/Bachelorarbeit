@@ -23,7 +23,7 @@ abstracton,
 \usepackage{booktabs}
 \usepackage[table,xcdraw,dvipsnames ]{xcolor}
 \usepackage{float}
-\usepackage[left=30mm,right=25mm,top=25mm,bottom=25mm]{geometry} %Seitenränder
+\usepackage[left=30mm,right=25mm,top=25mm,bottom=30mm]{geometry} %Seitenränder
 \usepackage[pdfborder={ 0 0 0 }, breaklinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{xspace} % setzt Leerzeichen, wenn welche hingehören 
@@ -60,7 +60,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 }
 \lstdefinelanguage{JSON}{
 	morestring=[b]",
-	stringstyle=\color{darkgray},
+	stringstyle=\color{purple},
     literate=
      *{0}{{{\color{violet}0}}}{1}
       {1}{{{\color{violet}1}}}{1}
@@ -125,15 +125,16 @@ toc]            %Einträge im Inhaltsverzeichnis
 %\hyphenation{JavaScript} %trennt JavaScript nie
 %
 % Kapitel
-%\input{chapter/Abstract}
+\input{chapter/Abstract}
 \input{chapter/Einleitung}
 \input{chapter/StateOfTheArt}
 \input{chapter/Entscheidung}
 \input{chapter/Grundlagen}
 \input{chapter/Szenarien}
-\input{chapter/Anforderungen}   %Anforderungsanalyse
-\input{chapter/Entwurf}         %Konzeption
-\input{chapter/Implementierung} %Umsetzung Prototyp
+\input{chapter/Anforderungen}   
+\input{chapter/Entwurf}         
+\input{chapter/Implementierung}
+\input{chapter/Test}
 \input{chapter/Fazit}
 %
 % Verzeichnisse
@@ -158,8 +159,8 @@ toc]            %Einträge im Inhaltsverzeichnis
 \nocite{stvo}
 % Anhang
 \clearpage
-%\appendix
+\appendix
 %\include{extra/Eid}
-%\addcontentsline{toc}{chapter}{Anhang}
+\addcontentsline{toc}{chapter}{Anhang}
 %\include{extra/Eidesstattliche}
 \end{document}

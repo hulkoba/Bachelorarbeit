@@ -1,3 +1,7 @@
+if(myNewLocation == null || location.distanceTo(myNewLocation) >= Constants.MY_DISTANCE){
+    myNewLocation = location;
+    getNearestLSA(location);
+}
 private void getNearestLSA(Location myLocation){
     Log.d("count ", "get Nearest");
     List<LSA> lsas = JSONParser.getLsaList();
@@ -28,26 +32,21 @@ if (nearestLSAs == null ) {
         && distance <= Constants.MIN_LSA_DISTANCE  
         && minDistance > distance){ 
             minDistance = distance;
-            nearestLSA = lsa;                   
+            nearestLSA = lsa;    
+            if(onSetListener != null){
+            // LSA gefunden?  per Listener MainActivity benachrichtigen              
+        		onSetListener.onLSASet(nearestLSA, myLocation);
+    		}               
         }
-    }
-
-    // LSA gefunden?  per Listener MainActivity benachrichtigen
-    if(nearestLSA != null && onSetListener != null){               
-        onSetListener.onLSASet(nearestLSA, myLocation);
-    }
+    }   
 }
 
 //Entfernung ist hoeher als geg. Distanz oder Entfernung ist groesser als vorher
 if(nearestLSA != null) {
     if(myLocation.distanceTo(nearestLSA.getLsaLocation()) > Constants.MIN_LSA_DISTANCE 
-      	|| myLocation.distanceTo(nearestLSA.getLsaLocation()) > distance) {
+      	|| myLocation.distanceTo(nearestLSA.getLsaLocation()) > (distance+0.1)) {
         nearestLSAs = null;
       	nearestLSA = null;
     }
 }
-}
-if(myNewLocation == null || location.distanceTo(myNewLocation) >= Constants.MY_DISTANCE){
-    myNewLocation = location;
-    getNearestLSA(location);
 }

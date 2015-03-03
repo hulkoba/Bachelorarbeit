@@ -45,24 +45,16 @@ Hierfür wird das \gls{JSON}-Array durchlaufen und für jedes enthaltende Objekt
 Zur Ermittlung der nächsten Ampel ist zunächst die eigene Position vonnöten. Dazu stellt der in dem \texttt{android.location}-Paket enthaltene \texttt{LocationManager} die entsprechenden Schnittstellen bereit. Indem die Klasse \texttt{GpsTracker} das \texttt{LocationListener}-Interface und mit ihm unter anderem die Methode \texttt{onLocationChanged}, welche aufgerufen wird, sobald neue Positionsdaten vorhanden sind implementiert, meldet sie sich beim \texttt{LocationManager}-Objekt zum Empfang von Geodaten an. Das hier gespeicherte \texttt{Location}-Objekt liefert neben dem Längen- und Breitengrad auch die Geschwindigkeit in Metern pro Sekunde. Mit ihm wird die Methode \texttt{getNearestLSA} aufgerufen, welche die nächste Ampel bestimmt. Um das nicht bei jeder Positionsänderung zu tun geschieht es erst, sobald sich das Gerät um eine bestimmt Distanz fortbewegt hat. Wie das umgesetzt wurde, ist im Codeabschnitt \ref{lst:gps1} abgebildet.\\
 \begin{center}
 \rule{35em}{0.5pt}
-\lstinputlisting[language=Java, firstline=50, lastline=53, caption={onLocationChanged() in GpsTracker.java}, label=lst:gps1]{code/gpstracker.java}
+\lstinputlisting[language=Java, firstline=1, lastline=4, caption={onLocationChanged() in GpsTracker.java}, label=lst:gps1]{code/gpstracker.java}
 \rule{35em}{0.5pt}
 \end{center}
-
-Alle LSA in Umgebung geholt\\
-diese inkl distanz gespeichert, im objekt speichern\\
-wenn welche gespeichert sind nach der distanz gucken/vergleichen, \\
-distant wird kleiner + (am nächsten dran) \\
-listener setzen und damit mainactivity benachrichtigen, sodass diese aufgabe an speedhandler delegieren kann\\
-Wenn distanz wieder größer ist, lsa löschen\\
-wenn distanz größer als mindestreichweite ist -- array loschen. \\
+Die Methode \texttt{getNearestLSA} ermittelt zunächst alle Ampeln im festgelegten Radius und speichert diese zusammen mit der Distanz zum Gerät zwischen. Dann werden diese wieder durchlaufen und die Distanzen verglichen. Die Ampel, zu der sich auch die Entfernung verringert, ist die Gesuchte. Ist die nächste Ampel ermittelt, kann der \texttt{OnSetListener} der \texttt{MainActivity} diese zusammen mit der geräteposition übergeben. \\
+Vergrößert sich die Distanz zu der \gls{LSA} wieder befindet sie sich außerhalb des durchsuchten Radius, wird sie zusammen mit den anderen gespeicherten Ampeln gelöscht. 
 \begin{center}
 \rule{35em}{0.5pt}
-\lstinputlisting[language=Java, firstline=8, lastline=48, caption={getNearestLSA() GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
+\lstinputlisting[language=Java, firstline=13, lastline=51, caption={getNearestLSA() GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
 \rule{35em}{0.5pt}
 \end{center}
-Alternative: Straßendaten, routennavigation\\ vorteile, ampel ist sicher, nachteile:
-App wird viel größer (mehrere MB),  interaktion einbauen, navigation einbauen etc. 
 %
 % v = s/t
 %
@@ -84,5 +76,4 @@ Anhand der Ergebnisse wird die \gls{GUI} aktualisiert. Hier wird berücksichtigt
 % Installationsanleitung
 %
 \section{Installationsanleitung}
-
-
+Um die Anwendung zu installieren muss deren .apk-Datei auf das Gerät geladen und von dort gestartet werden. Die .apk-Datei ist das als Zwischencode ausführbare Kompilat, welches dann auf dem Gerät zu Plattformcode kompiliert wird. Zum Auffinden und ausführen der Datei wird ein Dateimanager, wie zum Beispiel der kostenlose ASTRO File Manager\footnote{ Der ASTRO File Manager steht im Google Play Store unter \url{https://play.google.com/store/apps/details?id=com.metago.astro&hl=de} bereit.}  benötigt. 
