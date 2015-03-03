@@ -19,8 +19,9 @@ Die Eigenschaft \texttt{compileSdkVersion} beschreibt mit welcher Android \gls{S
 \begin{center}
 \rule{35em}{0.5pt} \lstinputlisting[language=JSON, firstline=6, lastline=14,  caption={Auszug aus der build.gradle-Datei}, label=lst:gradle]{code/build.gradle} \rule{35em}{0.5pt}
 \end{center}
-Es folgt das \texttt{defaultConfig} Element, das die Kerneinstellungen und fügt diese dynamisch aus dem Build-System in die  Manifestdatei ein. Hier wird unter anderem festgelegt, für welche Android Versionen die Anwendung geschrieben wurde (\texttt{targetSdkVersion}) und das minimale \gls{API}-Level\footnote{ Eine Übersicht über die \gls{API}-Level und der dazugehörigen Android-Version findet sich unter \url{http://developer.android.com/guide/topics/manifest/uses-sdk-element.html} -- Zugriff: 03.03.2015} der Anwendung (\texttt{minSdkVersion}). Letzteres ist auf "'8"' gesetzt und zeigt, dass die Anwendung auf Mobilgeräten auf denen mindestens die Android-Version 2.2 installiert sein muss. 
-Die Android-Version wurde auf 2.2 festgelegt, da damit alle Geräte, die auf den Google-Play-Store zugreifen können, abgedeckt sind. \cite{android_version} 
+Es folgt das \texttt{defaultConfig} Element, das die Kerneinstellungen und fügt diese dynamisch aus dem Build-System in die  Manifestdatei ein. Hier wird unter anderem festgelegt, für welche Android Versionen die Anwendung geschrieben wurde (\texttt{targetSdkVersion}) und das minimale \gls{API}-Level\footnote{ Eine Übersicht über die \gls{API}-Level und der dazugehörigen Android-Version findet sich unter \url{http://developer.android.com/guide/topics/manifest/uses-sdk-element.html} -- Zugriff: 03.03.2015} der Anwendung (\texttt{minSdkVersion}).\\ 
+Letzteres ist auf "'8"' gesetzt und zeigt, dass die Anwendung auf Mobilgeräten auf denen mindestens die Android-Version 2.2 installiert sein muss. 
+Die Android-Version wurde auf 2.2 festgelegt, da damit sämtliche Geräte, die auf den Google-Play-Store zugreifen können, abgedeckt sind. \cite{android_version} 
 %
 % MainActivity
 %
@@ -50,11 +51,12 @@ Zur Ermittlung der nächsten Ampel ist zunächst die eigene Position vonnöten. 
 \lstinputlisting[language=Java, firstline=1, lastline=4, caption={onLocationChanged() in GpsTracker.java}, label=lst:gps1]{code/gpstracker.java}
 \rule{35em}{0.5pt}
 \end{center}
-Die Methode \texttt{getNearestLSA} ermittelt zunächst alle Ampeln im festgelegten Radius und speichert diese zusammen mit der Distanz zum Gerät zwischen. Dann werden diese wieder durchlaufen und die Distanzen verglichen. Die Ampel, zu der sich auch die Entfernung verringert, ist die Gesuchte. Ist die nächste Ampel ermittelt, kann der \texttt{OnSetListener} der \texttt{MainActivity} diese zusammen mit der geräteposition übergeben. \\
-Vergrößert sich die Distanz zu der \gls{LSA} wieder befindet sie sich außerhalb des durchsuchten Radius, wird sie zusammen mit den anderen gespeicherten Ampeln gelöscht. 
+Die Methode \texttt{getNearestLSA} ermittelt zunächst alle Ampeln im festgelegten Radius und speichert diese zusammen mit der Distanz zum Gerät in einer temporären Liste. Dann werden diese wieder durchlaufen und die Distanzen verglichen. Die Ampel, zu der sich die Entfernung zum Gerät verringert und die kleinste Distanz zum Gerät hat, ist die Gesuchte. Ist die nächste Ampel ermittelt, kann der \texttt{OnSetListener} der \texttt{MainActivity} diese zusammen mit der Geräteposition übergeben. \\\\
+Vergrößert sich die Distanz zu der \gls{LSA} wieder befindet sie sich außerhalb des durchsuchten Radius bedeutet das, dass der Fahrer oder die Fahrerin sich von der Ampel oder der Kreuzung entfernt. Also werden diese dann zusammen mit den anderen gespeicherten Ampeln gelöscht. 
+\clearpage
 \begin{center}
-\rule{35em}{0.5pt}
-\lstinputlisting[language=Java, firstline=13, lastline=51, caption={getNearestLSA() GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
+%\rule{35em}{0.5pt}
+\lstinputlisting[language=Java, firstline=13, lastline=69, caption={getNearestLSA() GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
 \rule{35em}{0.5pt}
 \end{center}
 %
