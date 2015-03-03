@@ -5,26 +5,28 @@ Nach der Erklärung der Konfigurationsdateien wird auf die Umsetzung der Szenari
 % MANIFEST
 %
 \section{Die Manifest- und build.gradle-Datei}
-Das Android-Manifest dient der Festlegung wichtiger Eigenschaften der Anwendung und gehört zu jedem Android-Projekt. (+ gradle...)\\
-
-Die \gls{XML}-Datei (\texttt{AndroidManifest.xml}) ist im Hauptverzeichnis des Projekts zu finden und ist im Listing \ref{lst:manifest} abgebildet. \\
-In der zweiten Zeile wird hier der Paketname des Programms festgelegt. 
-Im \texttt{application}-Tag werden Variablen gesetzt, die das in dargestellte Icon und den Namen der Anwendung definieren. Darüber hinaus wird hier die \gls{Activity} der Applikation definiert. Zuerst wird der Name der \gls{Activity} gesetzt. Die Variable \texttt{screenOrientation} legt das Format der Anzeige fest und verhindert ein automatisches Drehen des Bildschirms. Im \texttt{intent-filter}-Tag dass diese Activity beim Start der App ausgeführt wird. Hätte die Anwendung über mehrere \glspl{Activity} implementiert, würden die anderen ebenfalls hier aufgeführt werden.\\
-Unterhalb des \texttt{application}-Tags, in Zeile 17, werden nun die Berechtigung des \gls{GPS}-Zugriffs der Applikation, um Standortdaten, also die jeweiligen geographischen Kordinaten des Endgeräts zu beziehen gesetzt.
+Das Android-Manifest dient der Festlegung wichtiger Eigenschaften der Anwendung und gehört zu jedem Android-Projekt. Die \gls{XML}-Datei (\texttt{AndroidManifest.xml}) ist im Hauptverzeichnis des Projekts zu finden und im Listing \ref{lst:manifest} abgebildet. In der zweiten Zeile wird hier der Paketname des Programms festgelegt. 
+Im \texttt{application}-Tag werden Variablen gesetzt, die das in dargestellte Icon und den Namen der Anwendung definieren. Darüber hinaus wird hier die \gls{Activity} der Applikation definiert. Zuerst wird der Name der \gls{Activity} gesetzt. Die Variable \texttt{screenOrientation} legt das Format der Anzeige fest und verhindert ein automatisches Drehen des Bildschirms. 
 \begin{center}
 \rule{35em}{0.5pt} \lstinputlisting[language=XML, firstline=2, lastline=21, caption={AndroidManifest.xml}, label=lst:manifest]{code/manifest.xml}
  \rule{35em}{0.5pt}
 \end{center}
-Für welche Android Versionen die Anwendung geschrieben wurde (\texttt{targetSdkVersion}) und das minimale \gls{API}-Level der Anwendung, also unter welcher Version die App noch ausgeführt werden kann:
+Im \texttt{intent-filter}-Tag dass diese Activity beim Start der App ausgeführt wird. Hätte die Anwendung über mehrere \glspl{Activity} implementiert, würden die anderen ebenfalls hier aufgeführt werden.
+Unterhalb des \texttt{application}-Tags, in Zeile 17, werden nun die Berechtigung des \gls{GPS}-Zugriffs der Applikation, um Standortdaten, also die jeweiligen geographischen Kordinaten des Endgeräts zu beziehen gesetzt.\\\\
+Android Studio-Projekte enthalten eine Top-Level-Build-Datei und eine Build-Datei für jedes Modul. Die Build-Dateien heißen \texttt{build.gradle} und sind einfache Textdateien, die die Groovy\footnote{ Programmier- und Skriptsprache}-Syntax verwendend. Hier lässt sich der Build mit den Elementen, welche vom Android Plugin Gradle\footnote{ Gradle ist ein auf Java basirerndes Build-Management-Automatisierungs-Tool.} unterstütz werden, konfigurieren. \cite{android_build} \\ 
+Listing \ref{lst:gradle} zeigt einen Ausschnitt aus der Build-Datei für die Anwendung. \\
+Die Eigenschaft \texttt{compileSdkVersion} beschreibt mit welcher Android \gls{SDK} Version kompiliert werden soll und \texttt{buildToolsVersion} gibt an, welche Version des Build-Tools verwendet wird.
 \begin{center}
 \rule{35em}{0.5pt} \lstinputlisting[language=JSON, firstline=6, lastline=14,  caption={Auszug aus der build.gradle-Datei}, label=lst:gradle]{code/build.gradle} \rule{35em}{0.5pt}
 \end{center}
-Hier wird der Name der \gls{Activity}-Klasse gesetzt und im \texttt{intent-filter}-Tag festgelegt, dass diese \gls{Activity} als \texttt{MainActivity} beim Start der Anwendung ausgeführt wird. 
+Es folgt das \texttt{defaultConfig} Element, das die Kerneinstellungen und fügt diese dynamisch aus dem Build-System in die  Manifestdatei ein. Hier wird unter anderem festgelegt, für welche Android Versionen die Anwendung geschrieben wurde (\texttt{targetSdkVersion}) und das minimale \gls{API}-Level\footnote{ Eine Übersicht über die \gls{API}-Level und der dazugehörigen Android-Version findet sich unter \url{http://developer.android.com/guide/topics/manifest/uses-sdk-element.html} -- Zugriff: 03.03.2015} der Anwendung (\texttt{minSdkVersion}). Letzteres ist auf "'8"' gesetzt und zeigt, dass die Anwendung auf Mobilgeräten auf denen mindestens die Android-Version 2.2 installiert sein muss. 
+Die Android-Version wurde auf 2.2 festgelegt, da damit alle Geräte, die auf den Google-Play-Store zugreifen können, abgedeckt sind. \cite{android_version} 
 %
 % MainActivity
 %
+\clearpage
 \section{MainActivity-Klasse}
-Die Klasse \texttt{MainActivity} ist die \gls{Activity}, die beim Start der Anwendung ausgeführt wird.  Hier werden die Anzeigeelemente initialisiert und die zentralen Funktionalitäten implementiert \textit{, bzw. delegiert}.\\
+Die Klasse \texttt{MainActivity} ist die \gls{Activity}, die beim Start der Anwendung ausgeführt wird.  Hier werden die Anzeigeelemente initialisiert und die zentralen Funktionalitäten delegiert.\\
 Die Methode \texttt{onCreate} ist die erste Methode im \gls{Activity}-Lebenszyklus\footnote{ \url{http://developer.android.com/training/basics/activity-lifecycle/starting.html} -- Zugriff: 02.03.2015} und wird direkt nach dem Start der \gls{Activity} ausgeführt. Hier werden die Anzeigeelemente gesetzt und nach jeder Installation ein Dialog erstellt, der auf die oberste Priorität der Straßenverkehrsordnung hinweist.\\
 Es wird eine Instanz des \texttt{JSONParser}-Objekts erstellt, welche die \gls{JSON}-Datei aus dem Ressourcenordner liest und in ein Objektarray umwandelt. Neben der \texttt{SpeedHandler}-Objektinstanz, welche für die Geschwindigkeitsempfehlung und dessen Anzeige zuständig ist, wird die des \texttt{GPSTracker} erstellt. Auf diesen ist der \texttt{OnSetListener} registriert, welcher ein Ereignis wirft sobald er die nächstgelegende Ampel gesetzt hat. Sobald dieser Fall eingetreten ist, wird der \texttt{SpeedHandler} beauftragt, den dazugehörigen Signalschaltplan zu holen, um dann anhand dieser Daten die Berechnungen durchzuführen und deren Ergebnisse anzuzeigen.   
 %
@@ -35,7 +37,7 @@ Wie in Kapitel \ref{chap:szenarien} beschrieben, lassen sich die sieben möglich
 %
 % Einlesen der Ampeldaten
 %
-\subsection{??? Einlesen der Ampeldaten ???}
+\subsection{Einlesen der Ampeldaten}
 Neben der Geräteposition bilden die Ampelposition und deren Signalschaltpläne die Grundlage der Anwendung. Hierbei ost das korrekte Einlesen und Auswerten der Daten obligatorisch. Die Aufgabe des \texttt{JSONParsers} ist es also, die manuell erstellte \gls{JSON}-Datei, welche die Ampeldaten beinhaltet, richtig zu konvertieren.  Die Klasse \texttt{JSONParser} liest also die Datei ein und wandelt dann die enthaltenen \gls{JSON}-Ampelobjekte in Java-Ampelobjekte um.\\ 
 Hierfür wird das \gls{JSON}-Array durchlaufen und für jedes enthaltende Objekt ein Ampelobjekt erzeugt. Aus den Werten \texttt{lat} und \texttt{lon}, stehend für latitude und longitude, wird ein \texttt{Location}-Objekt erzeugt, das als Attribut gesetzt wird. Der boolsche Wert \texttt{dependsOnTraffic} ist auf \texttt{true} gesetzt, sobald die \gls{LSA} verkehrsabhängig ist. Ist dies der Fall, ist eine Vorhersage der Ampel aufgrund beeinflussender Parameter nicht möglich und es wird ein Objekt mit den beiden genannten Attributen und dem bezeichnenden Namensattribut erzeugt. Andernfalls werden die zu der Ampel hinzugehörigen Schaltpläne durchlaufen und für jeden ein selbiges Objekt erzeugt, welche in einem Array gespeichert dem Ampelobjekt als weiteres Attribut übergeben wird. Es ist zu beachten, dass jeder Signalschaltplan über ein Array mit Tagen verfügt. Denn ein Schaltplan kann an mehreren Tagen gültig sein. Die Tage sind als Strings gespeichert und werden für die weitere Verwendung in Integer umgewandelt, wobei die Woche am Sonntag beginnt. Der Sonntag wird also als \texttt{1} gespeichert, der Montag als \texttt{2} und so weiter. 
 %
@@ -65,13 +67,9 @@ Sobald alle benötigten Daten bestehend aus aktueller, eigener Position, Entfern
 berechnet, wobei $t_1$ die aktuelle Sekunde, $t_2$ der Zeitpunkt zu dem die Ampel auf Rot schaltet und $s$ die Entfernung zur Ampel ist. \\
 Für FahrradfahrerInnen ist die Beschleunigung ebenfalls von nicht geringer Bedeutung, weil sie begrenzt ist. Die Formel für die Beschleunigung lautet:
 \[ a = \frac{v}{(t_{2} - t_{1})^{2}} \] 
-Die Variable $v$ ist hier die errechnete Empfehlungsgeschwindigkeit.
-\begin{center}
-\rule{35em}{0.5pt} \lstinputlisting[language=Java, firstline=119, lastline=130,  caption=SpeedHandler.java, label=lst:speed]{code/SpeedHandler.java} \rule{35em}{0.5pt}
-\end{center}
+Die Variable $v$ ist hier die errechnete Empfehlungsgeschwindigkeit.\\\\
 Anhand der Ergebnisse wird die \gls{GUI} aktualisiert. Hier wird berücksichtigt, ob die errechnete Geschwindigkeit, sowie die Beschleunigung innerhalb festgelegter Parameter liegen.
-\textit{ Da bei einer Handlungsaufforderung zusätzlich zur Empfehlung der Countdown der Ampel dargestellt wird, geschieht dies jede Sekunde. Dafür wird ein \texttt{Timer} gesetzt, der genau das tut. Da die Methode zur Geschwindigkeitsberechnung aufgerufen wird, sobald sich die eigene Position um \textit{festgelegte Parameter} ändert, ist sicherzustellen, dass nicht mit jedem Aufruf der Methode ein neuer \texttt{Timer} erstellt wird, wurde die boolsche Variable \texttt{run} eingeführt. }\\\\
-\textit{Mit Straßendaten = andere Formel notwendig. Winkel / Hügel mit einbeziehen + Erdkugel etc.}
+\textit{ Da bei einer Handlungsaufforderung zusätzlich zur Empfehlung der Countdown der Ampel dargestellt wird, geschieht dies jede Sekunde. Dafür wird ein \texttt{Timer} gesetzt, der genau das tut. Da die Methode zur Geschwindigkeitsberechnung aufgerufen wird, sobald sich die eigene Position um \textit{festgelegte Parameter} ändert, ist sicherzustellen, dass nicht mit jedem Aufruf der Methode ein neuer \texttt{Timer} erstellt wird, wurde die boolsche Variable \texttt{run} eingeführt. }
 %
 % Installationsanleitung
 %
