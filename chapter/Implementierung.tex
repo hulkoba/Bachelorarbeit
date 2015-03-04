@@ -20,8 +20,8 @@ Die Eigenschaft \texttt{compileSdkVersion} beschreibt mit welcher Android \gls{S
 \rule{35em}{0.5pt} \lstinputlisting[language=JSON, firstline=6, lastline=14,  caption={Auszug aus der build.gradle-Datei}, label=lst:gradle]{code/build.gradle} \rule{35em}{0.5pt}
 \end{center}
 Es folgt das \texttt{defaultConfig} Element, das die Kerneinstellungen und fügt diese dynamisch aus dem Build-System in die  Manifestdatei ein. Hier wird unter anderem festgelegt, für welche Android Versionen die Anwendung geschrieben wurde (\texttt{targetSdkVersion}) und das minimale \gls{API}-Level\footnote{ Eine Übersicht über die \gls{API}-Level und der dazugehörigen Android-Version findet sich unter \url{http://developer.android.com/guide/topics/manifest/uses-sdk-element.html} -- Zugriff: 03.03.2015} der Anwendung (\texttt{minSdkVersion}).\\ 
-Letzteres ist auf "'8"' gesetzt und zeigt, dass die Anwendung auf Mobilgeräten auf denen mindestens die Android-Version 2.2 installiert sein muss. 
-Die Android-Version wurde auf 2.2 festgelegt, da damit sämtliche Geräte, die auf den Google-Play-Store zugreifen können, abgedeckt sind. \cite{android_version} 
+Letzteres ist auf "'10"' gesetzt und zeigt, dass die Anwendung auf Mobilgeräten auf denen mindestens die Android-Version 2.3.3 installiert sein muss. 
+Die Android-Version wurde auf 2.3.3 festgelegt, da das die Mindestanforderung für das editieren der \texttt{SharedPreferences}, welche für das einmalige Anzeigen des Warndialogs benötigt werden, ist. Damit werden trotzdem noch 99,6\% der Geräte, die auf den Google-Play-Store zugreifen können, abgedeckt. \cite{android_version} 
 %
 % MainActivity
 %
@@ -45,18 +45,20 @@ Hierfür wird das \gls{JSON}-Array durchlaufen und für jedes enthaltende Objekt
 % nächste Ampel
 %
 \subsection{Ermittlung der nächsten Ampel}
-Zur Ermittlung der nächsten Ampel ist zunächst die eigene Position vonnöten. Dazu stellt der in dem \texttt{android.location}-Paket enthaltene \texttt{LocationManager} die entsprechenden Schnittstellen bereit. Indem die Klasse \texttt{GpsTracker} das \texttt{LocationListener}-Interface und mit ihm unter anderem die Methode \texttt{onLocationChanged}, welche aufgerufen wird, sobald neue Positionsdaten vorhanden sind implementiert, meldet sie sich beim \texttt{LocationManager}-Objekt zum Empfang von Geodaten an. Das hier gespeicherte \texttt{Location}-Objekt liefert neben dem Längen- und Breitengrad auch die Geschwindigkeit in Metern pro Sekunde. Mit ihm wird die Methode \texttt{getNearestLSA} aufgerufen, welche die nächste Ampel bestimmt. Um das nicht bei jeder Positionsänderung zu tun geschieht es erst, sobald sich das Gerät um eine bestimmt Distanz fortbewegt hat. Wie das umgesetzt wurde, ist im Codeabschnitt \ref{lst:gps1} abgebildet.\\
+Zur Ermittlung der nächsten Ampel ist zunächst die eigene Position vonnöten. Dazu stellt der in dem \texttt{android.location}-Paket enthaltene \texttt{LocationManager} die entsprechenden Schnittstellen bereit. Für den Empfang der \gls{GPS}-Daten implementiert die Klasse \texttt{GpsTracker} das Interface \texttt{LocationListener} und registriert sich beim \texttt{LocationManager} für \gls{GPS}-Updates.
+Letzteres ist im Listing \ref{lst:gps1} abgebildet. Die Methode erwartet neben dem Providertyp und dem zu benachrichtigenden Listener (\texttt{this}) zwei weitere Parameter. Der erste zeigt an nach wie vielen Millisekunden ein Update gesendet werden soll, der zweite dass ein Update nur gesendet werden soll, wenn sich die Position um die angegebene Distanz verändert hat.
 \begin{center}
 \rule{35em}{0.5pt}
-\lstinputlisting[language=Java, firstline=1, lastline=4, caption={onLocationChanged() in GpsTracker.java}, label=lst:gps1]{code/gpstracker.java}
+\lstinputlisting[language=Java, firstline=1, lastline=3, caption={Registrierung für GPS-Updates in GpsTracker.java}, label=lst:gps1]{code/gpstracker.java}
 \rule{35em}{0.5pt}
 \end{center}
+Mit der Implementierung des \texttt{LocationListener} wird unter anderem die Methode \texttt{onLocationChanged}, welche aufgerufen wird, sobald neue Positionsdaten vorhanden sind implementiert. Das hier gespeicherte \texttt{Location}-Objekt liefert neben dem Längen- und Breitengrad auch die Genauigkeit des \gls{GPS}-Signals in Metern und Geschwindigkeit in Metern pro Sekunde. Sofern die Genauigkeit nicht zu gering ist, wird mit ihm wird die Methode \texttt{getNearestLSA} aufgerufen, welche die nächste Ampel bestimmt.\\
 Die Methode \texttt{getNearestLSA} ermittelt zunächst alle Ampeln im festgelegten Radius und speichert diese zusammen mit der Distanz zum Gerät in einer temporären Liste. Dann werden diese wieder durchlaufen und die Distanzen verglichen. Die Ampel, zu der sich die Entfernung zum Gerät verringert und die kleinste Distanz zum Gerät hat, ist die Gesuchte. Ist die nächste Ampel ermittelt, kann der \texttt{OnSetListener} der \texttt{MainActivity} diese zusammen mit der Geräteposition übergeben. \\\\
 Vergrößert sich die Distanz zu der \gls{LSA} wieder befindet sie sich außerhalb des durchsuchten Radius bedeutet das, dass der Fahrer oder die Fahrerin sich von der Ampel oder der Kreuzung entfernt. Also werden diese dann zusammen mit den anderen gespeicherten Ampeln gelöscht. 
 \clearpage
 \begin{center}
 %\rule{35em}{0.5pt}
-\lstinputlisting[language=Java, firstline=13, lastline=69, caption={getNearestLSA() GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
+\lstinputlisting[language=Java, firstline=12, lastline=64, caption={getNearestLSA() GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
 \rule{35em}{0.5pt}
 \end{center}
 %
@@ -70,8 +72,7 @@ berechnet, wobei $t_1$ die aktuelle Sekunde, $t_2$ der Zeitpunkt zu dem die Ampe
 Für FahrradfahrerInnen ist die Beschleunigung ebenfalls von nicht geringer Bedeutung, weil sie begrenzt ist. Die Formel für die Beschleunigung lautet:
 \[ a = \frac{v}{(t_{2} - t_{1})^{2}} \] 
 Die Variable $v$ ist hier die errechnete Empfehlungsgeschwindigkeit.\\\\
-Anhand der Ergebnisse wird die \gls{GUI} aktualisiert. Hier wird berücksichtigt, ob die errechnete Geschwindigkeit, sowie die Beschleunigung innerhalb festgelegter Parameter liegen.
-\textit{ Da bei einer Handlungsaufforderung zusätzlich zur Empfehlung der Countdown der Ampel dargestellt wird, geschieht dies jede Sekunde. Dafür wird ein \texttt{Timer} gesetzt, der genau das tut. Da die Methode zur Geschwindigkeitsberechnung aufgerufen wird, sobald sich die eigene Position um \textit{festgelegte Parameter} ändert, ist sicherzustellen, dass nicht mit jedem Aufruf der Methode ein neuer \texttt{Timer} erstellt wird, wurde die boolsche Variable \texttt{run} eingeführt. }
+Anhand der Ergebnisse wird die \gls{GUI} aktualisiert. Hier wird berücksichtigt, ob die errechnete Geschwindigkeit, sowie die Beschleunigung innerhalb festgelegter Parameter liegen. Da bei einer Handlungsaufforderung zusätzlich zur Empfehlung der Countdown der Ampel dargestellt wird, geschieht dies swkündlich. 
 %
 % Installationsanleitung
 %

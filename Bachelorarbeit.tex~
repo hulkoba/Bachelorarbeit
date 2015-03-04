@@ -39,7 +39,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 \makeglossaries
 %Glossar-Befehle anschalten
 \include{extra/Glossary}
-\addtokomafont{chapter}{\scshape \mdseries}
+\addtokomafont{chapter}{ \scshape \mdseries}
 \addtokomafont{section}{\huge \scshape \mdseries \color{darkgray}} 
 \addtokomafont{subsection}{\LARGE \scshape \mdseries \color{gray}}
 \addtokomafont{subsubsection}{\large \scshape \mdseries}
@@ -134,7 +134,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 \input{chapter/Anforderungen}   
 \input{chapter/Entwurf}         
 \input{chapter/Implementierung}
-\input{chapter/Test}
+%\input{chapter/Test}
 \input{chapter/Fazit}
 %
 % Verzeichnisse
@@ -154,7 +154,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 \lstlistoflistings%quellcodeverzeichnis
 % Literaturverzeichnis
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\bibliographystyle{alphadin} %Art der Ausgabe alphadin
+\bibliographystyle{alphadin} 
 \bibliography{extra/literatur}
 \nocite{stvo}
 % Anhang
