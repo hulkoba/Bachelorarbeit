@@ -72,7 +72,9 @@ berechnet, wobei $t_1$ die aktuelle Sekunde, $t_2$ der Zeitpunkt zu dem die Ampe
 Für FahrradfahrerInnen ist die Beschleunigung ebenfalls von nicht geringer Bedeutung, weil sie begrenzt ist. Die Formel für die Beschleunigung lautet:
 \[ a = \frac{v}{(t_{2} - t_{1})^{2}} \] 
 Die Variable $v$ ist hier die errechnete Empfehlungsgeschwindigkeit.\\\\
-Anhand der Ergebnisse wird die \gls{GUI} aktualisiert. Hier wird berücksichtigt, ob die errechnete Geschwindigkeit, sowie die Beschleunigung innerhalb festgelegter Parameter liegen. Da bei einer Handlungsaufforderung zusätzlich zur Empfehlung der Countdown der Ampel dargestellt wird, geschieht dies swkündlich. 
+Anhand der Ergebnisse wird die \gls{GUI} aktualisiert. Hier wird berücksichtigt, ob die errechnete Geschwindigkeit, sowie die Beschleunigung innerhalb festgelegter Parameter liegen. Da bei einer Handlungsaufforderung zusätzlich zur Empfehlung der Countdown der Ampel dargestellt wird, geschieht dies sekündlich.\\
+Jede \gls{App} hat ihren eigenen \gls{UI}-Thread und nur Objekte, die auf dem \gls{UI}-Thread ausgeführt werden haben Zugang zu anderen Objekten auf diesem Thread. Um Daten aus einem Hintergrundthread auf den \gls{UI}-Thread zu verschieben wird der \texttt{Handler} verwendet.
+Also wird in der \texttt{SpeedHandler}-Klasse eine \texttt{Handler}- und eine \texttt{Runnable}-Instanz erzeugt. Ein \texttt{Handler} ist eine Schnittstelle für die Kommunikation zwischen Threads. Jede \texttt{Handler}-Instanz wird mit einem Thread und dessen Warteschlange verbunden. Ein \texttt{Runnable} ist ein Objekt, das etwas ausführen kann. Das \texttt{Runnable} wird nun mittels \texttt{post()} im \texttt{Handler} abgelegt, wodurch \texttt{Runnable} in der \texttt{MainActivity} aus dem \texttt{Handler} ausgelesen und gestartet wird. 
 %
 % Installationsanleitung
 %
