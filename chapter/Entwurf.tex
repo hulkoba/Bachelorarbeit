@@ -4,11 +4,13 @@ Die erarbeiteten Anforderungen an ein Ampelinformationssystem für Fahrradfahrer
 Die Anwendungsarchitektur verwendet die Vorgaben für Android-Applikationen. So wird die Hauptkomponente mit Hilfe sogenannter \glspl{Activity} realisiert. Als Basisklasse definiert eine \gls{Activity} das \gls{UI} einer mobilen Anwendung, stellt also die Ansicht mit der BenutzerInnen interagieren können bereit.\\
 Eine \gls{Activity} wird von der Bibliotheksklasse \texttt{android.app.Activity} abgeleitet, als Klasse implementiert und muss in der Manifestdatei der \gls{App} aufgeführt werden. \cite{android_activity} \\
 In der zu entwickelnden Fahrradapplikation wird keine Navigation innerhalb der Anwendung vonnöten sein, weshalb nur eine \gls{Activity} implementiert wird.
+%
 % DATENGRUNDLAGE
+%
 \section{Datengrundlage}
-%Ampeldaten werden erstellt. eigene Positionsdaten werden ermittelt,... 
-Zur Umsetzung der Anwendung werden die Ampeldaten benötigt, welche dann im \gls{JSON}-Format als Datei auf dem Mobilgerät abgelegt werden müssen.
+Neben den Daten der eigenen Position ist die Datengrundlage der Ampeln von höchster Priorität. Für die Umsetzung des Prototyps wurde als Ausführungsort auf die Stadt Plau am See in Mecklemburg Vorpommern festgelegt. Die Vorteile für die Benutzung im ländlichen Bereich liegen in der Verkehrsarmut, was auf weniger verkehrseingreifende Einflüsse schließen lässt. 
 \subsection{Ampeldaten}
+Die Ampeldaten werden manuell erfasst, strukturiert und im \gls{JSON}-Format als Datei auf dem Mobilgerät abgelegt.
 \textit{... Um einen Überblick zu gewähren, werden jedoch die wichtigsten Komponenten skizziert.\\ 
 Jede Kreuzung hat bis zu vier Schaltpläne, die zu festgelegten Tageszeitabschnitten greifen. Tabelle \ref{tab:zeitplan} zeigt, wie der Tagesplan einer Kreuzung aussehen kann, wobei an anderen Tagen die Uhrzeiten sowie die Reihenfolge und Quantität der Zeitschaltprogramme variieren können:}
 \begin{figure}[H]
