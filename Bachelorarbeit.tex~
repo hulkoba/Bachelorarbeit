@@ -134,7 +134,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 \input{chapter/Anforderungen}   
 \input{chapter/Entwurf}         
 \input{chapter/Implementierung}
-%\input{chapter/Test}
+\input{chapter/Test}
 \input{chapter/Fazit}
 %
 % Verzeichnisse
@@ -160,7 +160,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 % Anhang
 \clearpage
 \appendix
-%\include{extra/Eid}
+%\input{extra/Eid}
 \addcontentsline{toc}{chapter}{Anhang}
 %\include{extra/Eidesstattliche}
 \end{document}
