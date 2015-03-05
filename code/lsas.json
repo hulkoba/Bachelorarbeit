@@ -1,5 +1,5 @@
 { 
-    "name" : "Steinstr_A1",
+    "name" : "SteinstrA1",
     "lat": 52.552918,
     "lon": 13.423992,
     "dependsOnTraffic": false,

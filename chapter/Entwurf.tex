@@ -8,48 +8,55 @@ In der zu entwickelnden Fahrradapplikation wird keine Navigation innerhalb der A
 % DATENGRUNDLAGE
 %
 \section{Datengrundlage}
-Neben den Daten der eigenen Position ist die Datengrundlage der Ampeln von höchster Priorität. Für die Umsetzung des Prototyps wurde als Ausführungsort auf die Stadt Plau am See in Mecklemburg Vorpommern festgelegt. Die Vorteile für die Benutzung im ländlichen Bereich liegen in der Verkehrsarmut, was auf weniger verkehrseingreifende Einflüsse schließen lässt. 
+Neben den Daten der eigenen Position ist die Datengrundlage der Ampeln von höchster Priorität. Für die Umsetzung des Prototyps wurde im Rahmen dieser Arbeit als Ausführungsort die Stadt Plau am See in Mecklenburg-Vorpommern festgelegt.\\\\ 
+Die Vorteile der Anwendung im ländlichen Bereich liegen in der Verkehrsarmut und die daraus resultierende geringe Menge an Ampeln. Dieser Umstand ermöglicht die Erfassung sämtlicher Ampeln der Stadt, was ein überschaubares Testbild gibt. 
+Weiter gibt es keine Straßenbahnen ober Busse, welche den Verkehr durch Grünanforderung beeinflussen. Dadurch lässt sich die Anzahl der Ampeln, bei denen durch Verkehrsabhängigkeit keine Vorhersage möglich ist, minimieren. 
+
+%
+% Ampeldaten
+%
+\clearpage
 \subsection{Ampeldaten}
-Die Ampeldaten werden manuell erfasst, strukturiert und im \gls{JSON}-Format als Datei auf dem Mobilgerät abgelegt.
-\textit{... Um einen Überblick zu gewähren, werden jedoch die wichtigsten Komponenten skizziert.\\ 
-Jede Kreuzung hat bis zu vier Schaltpläne, die zu festgelegten Tageszeitabschnitten greifen. Tabelle \ref{tab:zeitplan} zeigt, wie der Tagesplan einer Kreuzung aussehen kann, wobei an anderen Tagen die Uhrzeiten sowie die Reihenfolge und Quantität der Zeitschaltprogramme variieren können:}
+Die Ampeldaten werden manuell erfasst, strukturiert und im \gls{JSON}-Format als Datei auf dem Mobilgerät abgelegt. Um einen Überblick zu gewähren, werden die wichtigsten Komponenten skizziert. \\\\
+\begin{minipage}{0.6\textwidth}
+Jede Kreuzung hat unterschiedliche Schaltpläne, die zu festgelegten Tageszeitabschnitten greifen. Die Tabelle \ref{tab:zeitplan} zeigt, wie ein solcher Tagesplan einer Kreuzung aussehen kann, wobei an anderen Tagen die Uhrzeiten sowie die Reihenfolge, Quantität und Dauer der Zeitschaltprogramme variieren können.\\\\
+Für jedes Schaltzeitprogramm existiert ein Signalschaltzeitplan der Informationen über die Ampelbezeichnung der Kreuzung und deren Rot-, Grün, Gelb, Rotgelb und Dunkelphasen. In letzterer ist die \gls{LSA} ausgeschaltet, was zum Beispiel nachts häufiger der Fall ist. 
+\end{minipage} \hspace{1cm}
+\begin{minipage}{0.3\textwidth}
+	\begin{tabular}{@{}cc@{}}
+	\toprule
+	\rowcolor[HTML]{ECF4FF} 
+	\multicolumn{2}{l}{\cellcolor[HTML]{ECF4FF}\textsc{\centering \large Bezeichnung der Kreuzung}}   \\ \midrule
+	\rowcolor[HTML]{EFEFEF} 
+	\multicolumn{1}{l}{\cellcolor[HTML]{EFEFEF}\textbf{Uhrzeit}} & \multicolumn{1}{l}{\cellcolor[HTML]{EFEFEF}\textbf{Schaltprogramm}} \\ \midrule
+05:00 & Früh   \\ \midrule
+11:00 & Tag    \\ \midrule
+17:00 & Spät   \\ \midrule
+23:00 & Nacht  \\ \bottomrule
+
+\end{tabular}
+\captionof{table}{Zeitschaltplan}	 
+\label{tab:zeitplan}
+\end{minipage}
+\\ \vspace{0.5cm} \\
+Die Abbildung \ref{fig:plan} zeigt auf, wie so ein Schaltzeitplan für eine Kreuzung mit vier Ampeln aussehen kann. Der Buchstabe R in der Bezeichnung steht hierbei für "'Radfahrampel"'. \\
 \begin{figure}[H]
 \centering
-	\begin{minipage}[b]{0.29\textwidth}	
-		\raisebox{\depth}{\begin{tabular}{@{}cc@{}}
-			\toprule
-			\rowcolor[HTML]{ECF4FF} 
-			\multicolumn{2}{l}{\cellcolor[HTML]{ECF4FF}\textsc{\centering \large Bezeichnung der Kreuzung}}                                                                  \\ \midrule
-			\rowcolor[HTML]{EFEFEF} 
-			\multicolumn{1}{l}{\cellcolor[HTML]{EFEFEF}\textbf{Uhrzeit}} & \multicolumn{1}{l}{\cellcolor[HTML]{EFEFEF}\textbf{Schaltprogramm}} \\ \midrule
-05:00 & Tag   \\ \midrule
-08:30 & Früh  \\ \midrule
-14:00 & Spät  \\ \midrule
-19:00 & Tag   \\ \midrule
-00:01 & Nacht \\ \bottomrule
-		\end{tabular}}
-		\captionof{table}{Zeitschaltplan}	
-		\label{tab:zeitplan}
-	\end{minipage} \hfill
-%
-	\begin{minipage}[b]{0.6\textwidth}
-		\includegraphics[width=\textwidth]{szpl}
-		\subcaption[Signalplan]{Typischer Signalschaltplan einer Ampel  Quelle: \cite{fig:signal}}
-		\label{fig:plan}
-	\end{minipage}
-	\rule{35em}{0.5pt}
-	\caption{Beispielschaltpläne vierer Ampeln einer Kreuzung}	
+	\includegraphics[width=0.8\textwidth]{szplGoogle}
+	\rule{36em}{0.5pt}
+	\caption[Signalplan]{Beispielhafter Signalschaltplan einer Kreuzung}
+	\label{fig:plan}	
 \end{figure}
-\textit{Für jedes Schaltzeitprogramm existieren ein Schaltzeit- und für einige Kreuzungen ein bis zwei Alternativschaltzeitpläne die in Intervallen von 60 bis 90 Sekunden die Rot-, Grün, Gelb, Rotgelb und Dunkelphasen zeigen. In den Dunkelphasen ist die \gls{LSA} ausgeschaltet -- zur Anschaltung gibt es dann den entsprechenden Einschaltplan. Abbildung \ref{fig:plan} zeigt auf, wie so ein Schaltzeitplan für eine Kreuzung aussehen kann. Um die Ampel dem entsprechenden Schaltplan zuzuordnen, liegen Lagepläne als \gls{PDF}-Datei bei, die eine genaue Darstellung der Kreuzung mit all ihren Komponenten zeigt. }
-\begin{figure}[H]  
-    \centering  
-    \includegraphics[width=0.7\textwidth]{kreuzung} 
-    \rule{35em}{0.5pt}
-    \caption{Lageplan}
-    \label{fig:kreuzung}
-\end{figure}
-\textit{Da die Position der Ampeln als Lageplan vorliegen, }sind diese manuell in das WGS84-Format konvertiert und in das gewählte \gls{JSON}-Format gebracht werden.
-Als Referenzzeit ist die Zeit zwischen 14 und 20 Uhr von Montag bis Freitag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt bis vervollständigt werden.
+In dem oben gezeigtem Beispiel steht demnach die Ampel R1 zwischen 11 und 17 Uhr in jeder Minute für die Sekunden 12 - 30 Grün und den Rest der Zeit Rot.\\\\
+%\begin{figure}[H]  
+%    \centering  
+%    \includegraphics[width=0.7\textwidth]{kreuzung} 
+%    \rule{35em}{0.5pt}
+%    \caption{Lageplan}
+%    \label{fig:kreuzung}
+%\end{figure}
+Auch die Position jeder Ampeln wird händisch erfasst und in das WGS84-Format konvertiert, um dann zusammen mit den Phasendaten in das gewählte \gls{JSON}-Format gebracht zu werden.\\
+Als Referenzzeit ist die Zeit zwischen 14 und 20 Uhr von Freitag bis Montag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt bis vervollständigt werden.
 %
 % LSA als JSON
 %
@@ -60,7 +67,7 @@ Als Referenzzeit ist die Zeit zwischen 14 und 20 Uhr von Montag bis Freitag gew�
 \lstinputlisting[language=JSON, caption=JSON-Ampelobjekt]{code/lsas.json}
 \rule{35em}{0.5pt}
 \end{center}
-Das hier aufgeführte Ampelobjekt hat den Namen \texttt{SteinstraßeA1}, welcher auf die Kreuzung auf der sich die Ampel befindet schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus, benötigt also auch keine weiteren Daten. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten an denen diese gelten. Die Werte \texttt{greenFrom} und \texttt{greenTo} bezeichnen den Start und das Ende jeder Grünphase des Schaltplans. Da als Referenzzeit die Zeit zwischen 14 und 20 Uhr gewählt wurde, werden die Schaltpläne, welche diese nicht betreffen nicht aufgenommen.
+Das hier aufgeführte Ampelobjekt hat den Namen \texttt{SteinstraßeA1}, welcher auf die Kreuzung auf der sich die Ampel befindet schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus, benötigt also auch keine weiteren Daten. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten an denen diese gelten. Die Werte \texttt{greenFrom} und \texttt{greenTo} bezeichnen den Start und das Ende jeder Grünphase des Schaltplans. Da als Referenzzeit die Zeit zwischen 10 und 16 Uhr gewählt wurde, werden die Schaltpläne, welche diese nicht betreffen nicht aufgenommen.
 %\subsection{Fahrraddaten}
 %Position und Geschwindigkeit werden mittels \gls{GPS} ermittelt.
 %erst nach Änderung der Position Aktion...?
