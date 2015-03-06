@@ -37,15 +37,30 @@ Um die Funktionalität des Prototyps zu erproben, wurden folgende Testgeräte ge
 \end{tabular}
 
 \rule{35em}{0.5pt}
-\caption{Testgeräte}
+\caption{Verwendete Testgeräte}
 \label{tab:geräte}
 \end{table}
-fgffdjhi
-hziuhziu
+Die Tests wurden durchgeführt, indem mit dem Fahrrad durch die Stadt Plau am See gefahren wurde. Neben dem \gls{Smartphone} mit laufender Anwendung wurde ein Tachometer für die Geschwindigkeitskontrolle am Lenker angebracht. \\
+Für das Durchlaufen der folgenden Testreihen wurde vorrübergehend eine Displayanzeige implementiert, welche die Ergebnisse der Berechnungen visualisiert.
+\section{Systemtest und Ergebnisse}
+Allumfassend lässt sich sagen, dass das Design sich auf jeder Displaygröße gut angepasst hat. Die Auflösung sämtlicher Anzeigeelemente haben die Größenverhältnisse sehr genau übernommen und waren gleichermaßen erkenn- und sichtbar.\\\\
+Bei dem \gls{GPS}-Sensor gab es jedoch bezüglich des Findens von Satelliten und deren Signalübetragung zwischen ihnen und dem internen \gls{GPS}-Empfänger Unterschiede. Hier zeigten die neueren \glspl{Smartphone} den Vorteil, dass die Dauer des Kaltstarts, insbesondere bei bewölktem Himmel, deutlich kürzer war.
+%
+% nächste Ampel
+%
+\subsection{Ermittlung der nächsten Ampel}
+In der ersten Testphase wurde vorwiegend die Richtigkeit der Ermittlung der nächsten Ampel überprüft.\\
+Insgesamt wurden ... von ... \glspl{LSA} korrekt aufgefunden. Der Algorithmus schlug also bei ... Ampel fehl, was wahrscheinlich durch ... verursacht wurde. Bei den restlichen Ampeln traf dies nicht zu und sie konnten problemlos zugeordnet werden. 
+\textit{Bei der Erkennung der gerade passierten Ampel traten Probleme auf. Hier fehlte bei einigen Geräten das nötige Positionsupdate, doch eine gewisse Ungenauigkeit des \gls{GPS}-Sensors war zu erwarten.} 
+\\Die Erfolgsquote liegt bei ... \% und ist damit als erfolgreich zu bezeichnen. 
+%
+% v = s/t
+%
+\subsection{Berechnung und Anzeige der Geschwindigkeitsempfehlung}
+In der zweiten Testphase lag das Hauptaugenmerk auf der ausgesprochenen Handlungsaufforderung und deren korrekter Berechnung. Hierfür wurden sämtliche Ampeln abgefahren und Stichprobenartig davor gehalten, um den Countdown und die Aktualität der Anzeige zu überprüfen. Um genauere Ergibnisse zu erlangen, wurde zusätzlich die Handlungsaufforderung bewusst missachtet.\\\\  
+Die Anzeige, eine Vorhersage ist aufgrund einer verkehrsabhängigen Ampel nicht möglich, wurde sofern die Ermittlung der nächsten Ampel korrekt war, .\\ 
+Bei den neueren Geräten wurde jedes Mal die richtige Empfehlung ausgesprochen, bei den Älteren gab es kleinere Abweichungen. Dies ist auf die fehlerhafte Geschwindigkeitsausgabe des \gls{GPS}-Empfängers zurückzuführen, was anhand des Tachometers abzulesen war. \\\\
+Bei der Countdownanzeige gab es teilweise geringfügige Abweichungen (1-2 Sekunden). Mit sehr hoher Wahrscheinlichkeit lag das an der fehlerhaften Erfassung der Phasendaten. Nach der Beseitigung dieser Fehler durch die Anpassung der Daten war die Anzeige in jedem Fall richtig.\\\\
 
-\section{Systemtest}
-
-ist das GPS schnell/genau genug fürs Radfahren?
-Optimierung ggf. umsetzen\\
-Personenbezogene Daten aufnehmen? Höchstgeschwindigkeit, maximale Beschleunigung
-\section{Testergebnisse}
+Abschließend ist zu sagen, dass die Anwendung stabil läuft. Probleme sind  ... GPS.... Genauigkeit...  \\
+Die protokollierten Testergebnisse sind im Anhang zu finden.
