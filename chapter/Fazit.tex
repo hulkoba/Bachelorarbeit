@@ -1,20 +1,29 @@
-\chapter{\label{chap:fazit}Ergebnis und Ausblick}
-\section{Ampelhinweissystem}
-Alle LSA aufnehmen = sehr zeitaufwändig, da Positionsdaten als Lageplan im \gls{PDF}-Format vorliegen. Keine genauen Latitude / longitude Werte vorhanden. An Ampeln in OSM kann man sich schlecht orientieren, da dort nur KraftfahrzeugAmpeln aufgeführt sind. Für Fahrräder ist zB die Abbiegeampel auf der gegenüberliegenden Straßenseite. \\
-Kompliziert den Überblick übe die \gls{LSA}-Daten zu gewinnen. Pro Tag unterschiedliche Zeitabschnitte, manchmal mit bis zu zusätzlichen zwei Alternativschaltplänen. Dazu kommen Einschaltpläne plus Phasenübergänge. Weitere Daten wie Feindlichkeitsmatritzen usw.\\
- Liegt am Land -- in Großstadt wahrscheinlich andere Genauigkeitsergebnisse wegen der vielen und hohen Gebäude.
-Optimierung ggf. umsetzen\\
-Personenbezogene Daten aufnehmen? Höchstgeschwindigkeit, maximale Beschleunigung
-\subsection{Datengrundlage}
-Wie liegen die Daten vor? Echtzeitdaten benutzen! 
-Schnittstelle zur Verfügung stellen - gerade für die verkehrsabhängigen Ampeln. Dann muss der Teil der Anwendung, welcher die Daten einliest, anders aufgebaut werden.
+\chapter{\label{chap:fazit}Zusammenfassung und Ausblick}
+Das Thema der Grünen Welle ist sehr interessant und wurde in den letzten Jahren oft diskutiert. Auch in Zukunft wird es mehr Untersuchungen zu dem Thema geben, da die Geschwindigkeitsempfehlung viel Potential bietet. Intelligente Erweiterungen für Fahrräder erfreuen sich auch immer größerer Beliebtheit, werden kreativer und intelligenter.\\\\
+Der im Rahmen dieser Arbeit entworfene Prototyp vereinigt diese beiden Themen in einer \gls{Smartphone}-\gls{App} für FahrradfahrerInnen. Die Anwendung versucht durch die Vermeidung von Halten an roten Ampeln, wenn es eigentlich nicht erforderlich sein müsste, eine entspannte Fahrt zu ermöglichen. Dafür werden manuell erfasste Ampeldaten, bestehend aus Position, Sigalzustände und geltender Zeitabschnitte, von der Anwendung eingelesen und ausgewertet. Anhand dieser Daten errechnet die Anwendung die optimale Geschwindigkeit, die eingehalten werden muss, um die nächstgelegende Ampel bei Grün zu passieren. Die Ergebnisse werden auf dem Display in einer intuitiven Form visuell umgesetzt.\\\\ 
+Die Evaluierung wurde in zwei Testphasen unterteilt. Zuerst wurde der Algorithmus zur Bestimmung der nächsten Ampel überprüft. ... \textit{Ergebnisse -- Das Thema von hierauf aufbauender Arbeiten kann es sein das zu überpfüfen...}\\
+In der zweiten Testphase wurde die Berechnung der Geschwindigkeitsempfehlung evaluiert. \textit{Ergebnisse...}\\
+Abschließend lässt sich sagen, dass die Anwendung stabil läuft... \textit{Ergebnisse}.\\\\
+%
+% Probleme und Verbesserungen
+%
+Die Erstellung der Datengrundlage erwies sich trotz der überschaubaren Anzahl an Ampeln als sehr zeitaufwändig. Für eine Ausdehnung der geltenden Reichweite der Anwendung ist es vorteilhaft, andere Möglichkeiten zu finden.\\ 
+In Zusammenarbeit mit den zuständigen Verkehrsleitzentralen und deren Möglichkeiten könnte zum Beispiel eine Schnittstelle bereitgestellt werden, welche die Phasendaten in Echtzeit übermittelt. So wäre eine Vorhersage selbst bei verkehrsabhängigen Ampeln möglich. Hierbei ist der Teil der Anwendung, welcher die Daten einliest, entsprechend angepasst werden.\\
+Eine weitere Option ist die Kommunikation zwischen \gls{Smartphone} und Ampel. Dazu ist eine Umrüstung der meisten Ampeln erforderlich, was eine gewisse Zeit in Anspruch nehmen wird. \cite{smart_lsa}\\\\
+Bei einer Erweiterung um mehrere Gebiete ist ebenfalls über eine andere Datengrundlage nachzudenken. Bei einer großen Menge an Ampeln bietet sich eine Datenbank zur Speicherung an. Da die Applikation auch auf Geodaten basiert, wäre die Verwendung einer räumlichen Datenbank für Geographische Informationssysteme vorteilhaft. \\\\
+Eine Integration der Routennavigation hätte ebenfalls gewisse Vorteile. So ist die nächste Ampel sicher und deren Signalwerte können eher ausgewertet werden. So werden auch nur die relevanten Abbiegeampeln berücksichtigt. Ohne Navigation ist es schwer einen Abbiegewunsch vorherzusagen. In Zukunft könnte also die entwickelte Anwendung mit einer Navigationssoftware verknüpft werden. Bei der Verwendung von Straßendaten   
 
-\section{Ausblick}
-
-Alternative: Straßendaten, routennavigation\\ vorteile, ampel ist sicher, nachteile:
-App wird viel größer (mehrere MB),  interaktion einbauen, navigation einbauen etc. 
 
 \textit{Mit Straßendaten = andere Formel notwendig. Winkel / Hügel mit einbeziehen + Erdkugel etc.}\\
 
-Unterschiede Klein-Großstadt? --> Datenbasis ist anders\\
-Nachts auf dem Land -- Ampeln ausgeschaltet. In Berlin nur 30 Prozent der Ampeln.
+
+\gls{GPS}-Sensoren im \gls{Smartphone} werden zukünftig mehr Verbesserungen erhalten. 
+Ein großer Fortschritt in Richtung Positionsbestimmung kann mit Galileo, dem europäischen \gls{GNSS} gemacht werden. In Kombination mit Daten von \gls{GPS} und \gls{GLONASS} könnten Ungenauigkeiten bald der Vergangenheit angehören. \cite{gnss}\\\\
+
+
+ Liegt am Land -- in Großstadt wahrscheinlich andere Genauigkeitsergebnisse wegen der vielen und hohen Gebäude.
+\\
+Unterschiede Klein-Großstadt? \\
+Nachts auf dem Land -- Ampeln ausgeschaltet. In Berlin nur 30 Prozent der Ampeln (Vgl. \cite{lsa_bln} S. 4).\\\\
+
+Personenbezogene Daten aufnehmen? Höchstgeschwindigkeit, maximale Beschleunigung
