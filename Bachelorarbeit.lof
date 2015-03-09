@@ -1,30 +1,34 @@
 \select@language {ngerman}
+\select@language {ngerman}
+\select@language {english}
+\select@language {ngerman}
+\select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Gr\IeC {\"u}ne Welle durch \glspl {LED}}}{6}{figure.caption.2}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Projekt Travolution}}{8}{figure.caption.3}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Projekt Kolibri}}{9}{figure.caption.4}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Projekt Testfeld-Telematik Ampelinformation}}{9}{figure.caption.5}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Connected Signals live Vorhersage}}{11}{figure.caption.6}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Signal Guru}}{11}{figure.caption.7}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Hammerhead}}{12}{figure.caption.8}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Helios-Lenker}}{13}{figure.caption.9}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Samsung Smart Bike}}{14}{figure.caption.10}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces COBI}}{14}{figure.caption.11}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Gr\IeC {\"u}ne Welle durch \glspl {LED}}}{7}{figure.caption.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Projekt Travolution}}{9}{figure.caption.3}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Projekt Kolibri}}{10}{figure.caption.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Projekt Testfeld-Telematik Ampelinformation}}{10}{figure.caption.5}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Connected Signals live Vorhersage}}{12}{figure.caption.6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Signal Guru}}{12}{figure.caption.7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Hammerhead}}{13}{figure.caption.8}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Helios-Lenker}}{14}{figure.caption.9}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Samsung Smart Bike}}{15}{figure.caption.10}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces COBI}}{15}{figure.caption.11}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Android-Systemarchitektur}}{19}{figure.caption.12}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Funkzellentriangulierung}}{21}{figure.caption.20}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces GPS Satelliten Konstellation}}{22}{figure.caption.22}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Berechnung Progressionsgeschwindigkeit}}{25}{figure.caption.25}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Android-Systemarchitektur}}{20}{figure.caption.12}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Funkzellentriangulierung}}{22}{figure.caption.20}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces GPS Satelliten Konstellation}}{23}{figure.caption.22}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Berechnung Progressionsgeschwindigkeit}}{26}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Szenarien}}{26}{figure.caption.26}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Szenarien}}{27}{figure.caption.26}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Signalplan}}{33}{figure.caption.27}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Use-Case-Diagramm\relax }}{36}{figure.caption.29}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Klassendiagramm\relax }}{37}{figure.caption.30}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Systemzust\IeC {\"a}nde im Ampelbereich}}{38}{figure.caption.31}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Signalplan}}{34}{figure.caption.27}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Use-Case-Diagramm\relax }}{37}{figure.caption.29}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Klassendiagramm\relax }}{38}{figure.caption.30}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Systemzust\IeC {\"a}nde im Ampelbereich}}{39}{figure.caption.31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

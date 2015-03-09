@@ -1,5 +1,5 @@
 \chapter{Evaluation}
-Um die Funktionalität des Prototyps zu erproben, wurden folgende Testgeräte gewählt. Es handelt sich hierbei um Geräte mit unterschiedlichen Bildschirmgrößen und Android-Versionen.\\ 
+Um die Funktionalität des Prototyps zu untersuchen, wurden folgende Testgeräte ausgewählt. Es handelt sich hierbei um Geräte mit unterschiedlichen Bildschirmgrößen und Android-Versionen.\\ 
 \begin{table}[H]
 \centering	
 	\begin{tabular}{@{}>{\columncolor[HTML]{ECF4FF}}l ll@{} p{0.4\textwidth}p{0.2\textwidth}p{0.2\textwidth}} \toprule	
@@ -18,18 +18,10 @@ Um die Funktionalität des Prototyps zu erproben, wurden folgende Testgeräte ge
 \multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}Samsung Galaxy Note 2} 
 & \multicolumn{1}{p{0.2\textwidth}}{\hspace*{0.2cm}4.4.2}
 & \multicolumn{1}{p{0.2\textwidth}}{\hspace*{0.2cm}1280 x 720 Pixel} \\ \midrule
-% GALAXY NEXUS
-\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}Samsung Galaxy Nexus} 
-& \multicolumn{1}{p{0.2\textwidth}}{\hspace*{0.2cm}4.3}
-& \multicolumn{1}{p{0.2\textwidth}}{\hspace*{0.2cm}1280 x 720 Pixel} \\ \midrule
 % Samsung Nexus S
 \multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}Samsung Nexus S} 
 & \multicolumn{1}{p{0.2\textwidth}}{\hspace*{0.2cm}4.1.2}
 & \multicolumn{1}{p{0.2\textwidth}}{\hspace*{0.2cm}800 x 480 Pixel}\\ \midrule
-%  Motorola RAZR Maxx
-\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}Motorola RAZR Maxx} 
-& \multicolumn{1}{p{0.2\textwidth}}{\hspace*{0.2cm}4.0.4}
-& \multicolumn{1}{p{0.2\textwidth}}{\hspace*{0.2cm}540 x 960 Pixel}\\ \midrule
 % HTC Desire HD
 \multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}HTC Desire HD} 
 & \multicolumn{1}{p{0.2\textwidth}}{\hspace*{0.2cm}2.3.5}
@@ -40,27 +32,28 @@ Um die Funktionalität des Prototyps zu erproben, wurden folgende Testgeräte ge
 \caption{Verwendete Testgeräte}
 \label{tab:geräte}
 \end{table}
+Es ist zu erwähnen, dass es hier um ältere Modelle (HTC Desire und Nexus S) mit dem Erscheinungsdatum im Jahr 2010 und neuere Geräte, die zwischen 2012 und 2013 auf den Markt gekommen sind, handelt. \\
 Die Tests wurden durchgeführt, indem mit dem Fahrrad durch die Stadt Plau am See gefahren wurde. Neben dem \gls{Smartphone} mit laufender Anwendung wurde ein Tachometer für die Geschwindigkeitskontrolle am Lenker angebracht. \\
 Für das Durchlaufen der folgenden Testreihen wurde vorrübergehend eine Displayanzeige implementiert, welche die Ergebnisse der Berechnungen visualisiert.
 \section{Systemtest und Ergebnisse}
-Allumfassend lässt sich sagen, dass das Design sich auf jeder Displaygröße gut angepasst hat. Die Auflösung sämtlicher Anzeigeelemente haben die Größenverhältnisse sehr genau übernommen und waren gleichermaßen erkenn- und sichtbar.\\\\
+Zusammenfassend lässt sich sagen, dass das Design sich auf jeder Displaygröße gut angepasst hat. Die Auflösung sämtlicher Anzeigeelemente haben die Größenverhältnisse genau übernommen und waren gleichermaßen erkenn- und sichtbar.\\\\
 Bei dem \gls{GPS}-Sensor gab es jedoch bezüglich des Findens von Satelliten und deren Signalübetragung zwischen ihnen und dem internen \gls{GPS}-Empfänger Unterschiede. Hier zeigten die neueren \glspl{Smartphone} den Vorteil, dass die Dauer des Kaltstarts, insbesondere bei bewölktem Himmel, deutlich kürzer war.
 %
 % nächste Ampel
 %
 \subsection{Ermittlung der nächsten Ampel}
 In der ersten Testphase wurde vorwiegend die Richtigkeit der Ermittlung der nächsten Ampel überprüft.\\
-Insgesamt wurden ... von ... \glspl{LSA} korrekt aufgefunden. Der Algorithmus schlug also bei ... Ampel fehl, was wahrscheinlich durch ... verursacht wurde. Bei den restlichen Ampeln traf dies nicht zu und sie konnten problemlos zugeordnet werden. 
-\textit{Bei der Erkennung der gerade passierten Ampel traten Probleme auf. Hier fehlte bei einigen Geräten das nötige Positionsupdate, doch eine gewisse Ungenauigkeit des \gls{GPS}-Sensors war zu erwarten.} 
-\\Die Erfolgsquote liegt bei ... \% und ist damit als erfolgreich zu bezeichnen. 
+Insgesamt wurden sämtliche \glspl{LSA} korrekt aufgefunden und konnten problemlos zugeordnet werden. Der Algorithmus schlug also bei keiner der Ampeln fehl. Es ist jedoch zu beachten, dass die Kreuzungen in Plau am See mit maximal vier Ampeln versehen sind und der Straßenverlauf kurvenarm ist.\\\\
+Bei der Erkennung einer gerade passierten Ampel traten bei einigen Geräten Probleme auf. Hier fehlte das nötige Positionsupdate, doch eine gewisse Ungenauigkeit des \gls{GPS}-Sensors war zu erwarten.\\ 
+Die Erfolgsquote liegt insgesamt bei 93\% und ist damit als erfolgreich zu bezeichnen. 
 %
 % v = s/t
 %
 \subsection{Berechnung und Anzeige der Geschwindigkeitsempfehlung}
-In der zweiten Testphase lag das Hauptaugenmerk auf der ausgesprochenen Handlungsaufforderung und deren korrekter Berechnung. Hierfür wurden sämtliche Ampeln abgefahren und Stichprobenartig davor gehalten, um den Countdown und die Aktualität der Anzeige zu überprüfen. Um genauere Ergibnisse zu erlangen, wurde zusätzlich die Handlungsaufforderung bewusst missachtet.\\\\  
-Die Anzeige, eine Vorhersage ist aufgrund einer verkehrsabhängigen Ampel nicht möglich, wurde sofern die Ermittlung der nächsten Ampel korrekt war, .\\ 
-Bei den neueren Geräten wurde jedes Mal die richtige Empfehlung ausgesprochen, bei den Älteren gab es kleinere Abweichungen. Dies ist auf die fehlerhafte Geschwindigkeitsausgabe des \gls{GPS}-Empfängers zurückzuführen, was anhand des Tachometers abzulesen war. \\\\
+In der zweiten Testphase lag das Hauptaugenmerk auf der ausgesprochenen Handlungsaufforderung und deren korrekter Berechnung. Hierfür wurden sämtliche Ampeln abgefahren und stichprobenartig davor gehalten, um den Countdown und die Aktualität der Anzeige zu überprüfen. Um genauere Ergibnisse zu erlangen, wurde zusätzlich die Handlungsaufforderung bewusst missachtet.\\\\  
+Die Anzeige, dass eine Vorhersage aufgrund einer verkehrsabhängigen oder ausgeschaltenen Ampel nicht möglich ist, wurde in 100\% der Testdurchläufe korrekt dargestellt.\\ 
+Bei den neueren Geräten wurde jedes Mal die richtige Empfehlung ausgesprochen, bei den älteren gab es kleinere Abweichungen. Dies ist auf die fehlerhafte Geschwindigkeitsausgabe des \gls{GPS}-Empfängers zurückzuführen, was anhand des Tachometers abzulesen war. \\\\
 Bei der Countdownanzeige gab es teilweise geringfügige Abweichungen (1-2 Sekunden). Mit sehr hoher Wahrscheinlichkeit lag das an der fehlerhaften Erfassung der Phasendaten. Nach der Beseitigung dieser Fehler durch die Anpassung der Daten war die Anzeige in jedem Fall richtig.\\\\
 
-Abschließend ist zu sagen, dass die Anwendung stabil läuft. Probleme sind  ... GPS.... Genauigkeit...  \\
-Die protokollierten Testergebnisse sind im Anhang zu finden.
+Abschließend ist zu sagen, dass die Anwendung stabil läuft. Aufgetretende Probleme lassen sich durch die Ungenauigkeit des \gls{GPS}-Empfängers erklären.\\
+Die protokollierten Testergebnisse sind auf der beiliegenden CD zu finden.

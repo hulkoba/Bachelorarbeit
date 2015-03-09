@@ -10,6 +10,7 @@ abstracton,
 \usepackage{lmodern}	 %Type1-Schriftart fuer nicht-englische Texte
 \usepackage{listings} %dient der Darstellung von Quellcode
 \usepackage{graphicx}
+\usepackage{wrapfig}
 \usepackage[justification=raggedright, format=hang,labelsep=quad]{caption}
 \usepackage{subcaption}
 \usepackage{titleref}
@@ -125,7 +126,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 %\hyphenation{JavaScript} %trennt JavaScript nie
 %
 % Kapitel
-\input{chapter/Abstract}
+%\input{chapter/Abstract}
 \input{chapter/Einleitung}
 \input{chapter/StateOfTheArt}
 \input{chapter/Entscheidung}
@@ -160,7 +161,8 @@ toc]            %Einträge im Inhaltsverzeichnis
 % Anhang
 \clearpage
 \appendix
-%\input{extra/Eid}
 \addcontentsline{toc}{chapter}{Anhang}
-%\include{extra/Eidesstattliche}
+\chapter*{Anhang}
+\section*{Eidesstattliche Erklärung} 
+\section*{Testprotokoll} 
 \end{document}
