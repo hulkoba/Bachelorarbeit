@@ -56,7 +56,7 @@ In dem oben gezeigtem Beispiel steht demnach die Ampel R1 zwischen 11 und 17 Uhr
 %    \label{fig:kreuzung}
 %\end{figure}
 Auch die Position jeder Ampeln wird händisch erfasst und in das WGS84-Format konvertiert, um dann zusammen mit den Phasendaten in das gewählte \gls{JSON}-Format gebracht zu werden.\\
-Als Referenzzeit ist die Zeit zwischen 14 und 20 Uhr von Freitag bis Montag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt bis vervollständigt werden.
+Als Referenzzeit ist die Zeit zwischen 12 und 16 Uhr von Freitag bis Montag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt bis vervollständigt werden.
 %
 % LSA als JSON
 %
@@ -67,7 +67,7 @@ Als Referenzzeit ist die Zeit zwischen 14 und 20 Uhr von Freitag bis Montag gew�
 \lstinputlisting[language=JSON, caption=JSON-Ampelobjekt]{code/lsas.json}
 \rule{35em}{0.5pt}
 \end{center}
-Das hier aufgeführte Ampelobjekt hat den Namen \texttt{SteinstraßeA1}, welcher auf die Kreuzung auf der sich die Ampel befindet schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus, benötigt also auch keine weiteren Daten. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten an denen diese gelten. Die Werte \texttt{greenFrom} und \texttt{greenTo} bezeichnen den Start und das Ende jeder Grünphase des Schaltplans. Da als Referenzzeit die Zeit zwischen 10 und 16 Uhr gewählt wurde, werden die Schaltpläne, welche diese nicht betreffen nicht aufgenommen.
+Das hier aufgeführte Ampelobjekt hat den Namen \texttt{SteinstraßeA1}, welcher auf die Kreuzung auf der sich die Ampel befindet schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus, benötigt also auch keine weiteren Daten. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten an denen diese gelten. Die Werte \texttt{greenFrom} und \texttt{greenTo} bezeichnen den Start und das Ende jeder Grünphase des Schaltplans. Da als Referenzzeit die Zeit zwischen 12 und 16 Uhr gewählt wurde, werden die Schaltpläne welche diese nicht betreffen nicht aufgenommen.
 %\subsection{Fahrraddaten}
 %Position und Geschwindigkeit werden mittels \gls{GPS} ermittelt.
 %erst nach Änderung der Position Aktion...?
@@ -190,6 +190,6 @@ Für die Erstellung der Smartphone-Applikation wurde folgende Soft- und Hardware
 \subsubsection{Hardware}
 \begin{itemize}
 	\item Lenovo Thinkpad W520 (Intel\textsuperscript{\textregistered} Core\texttrademark   i7-2630QM, 2,00GHz, 4GB RAM) als ersten Entwicklungsrechner (Betriebssystem: Debian\footnote{ Download unter \url{https://www.debian.org/index.de.html}} 7.8, 64-bit-Version)
-	\item Lenovo Thinkpad X200 (Intel\textsuperscript{\textregistered} Core\texttrademark   i7-2630QM, 2,00GHz, 8GB RAM) als zweiten Entwicklungsrechner (Betriebssystem: Debian 7.8, 64-bit-Version)
+	\item Lenovo Thinkpad X200 (Intel\textsuperscript{\textregistered} Core\texttrademark   2 Duo, 2,40GHz, 8GB RAM) als zweiten Entwicklungsrechner (Betriebssystem: Debian 7.8, 64-bit-Version)
 	\item Android Testgeräte: Samsung Galaxy Note 2, Samsung Galaxy Nexus, Samsung Nexus S, LG Nexus 4, LG Nexus 5, Motorola RAZR Maxx, HTC Desire HD
 \end{itemize}

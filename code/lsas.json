@@ -1,20 +1,20 @@
 { 
-    "name" : "SteinstrA1",
-    "lat": 52.552918,
-    "lon": 13.423992,
+    "name" : "Steinstr/SchulstrA1",
+    "lat": 53.4592628,
+    "lon": 12.2589130,
     "dependsOnTraffic": false,
     "timetable" : [
     {
-        "days": ["Mo", "Di", "Mi"] ,
-        "timeFrom": 14,
-        "timeTo": 20,       
+        "days": ["Mo", "Fr"] ,
+        "timeFrom": 12,
+        "timeTo": 16,       
         "greenFrom": 22,
         "greenTo": 27
     },
     {
-        "days": ["Do", "Fr"] , 
-        "timeFrom": 13,
-        "timeTo": 21,
+        "days": ["Sa", "So"] , 
+        "timeFrom": 12,
+        "timeTo": 16,
         "greenFrom": 2,
         "greenTo": 27
     }
