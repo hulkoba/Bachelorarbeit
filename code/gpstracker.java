@@ -12,7 +12,6 @@ private void getNearestLSA(Location myLocation){
 // wurden schon Ampeln gespeichert?
 if (nearestLSAs == null ) {            
     nearestLSAs = new ArrayList<LSA>();
-
     for (LSA lsa : lsas) {
     	// fuer saemtliche Ampeln die Distanz errechnen
         distance = myLocation.distanceTo(lsa.getLsaLocation());
@@ -54,7 +53,8 @@ if (nearestLSAs == null ) {
 // Entfernung ist hoeher als gegebene Distanz?
 // und Entfernung ist groesser als vorher
 if(nearestLSA != null) {
-    if(myLocation.distanceTo(nearestLSA.getLsaLocation()) > Constants.MIN_LSA_DISTANCE 
+    if(myLocation.distanceTo(nearestLSA.getLsaLocation()) 
+	> Constants.MIN_LSA_DISTANCE 
       	|| myLocation.distanceTo(nearestLSA.getLsaLocation()) > (distance+0.1)) {
         
         // Ampeln und temporaere Liste loeschen
