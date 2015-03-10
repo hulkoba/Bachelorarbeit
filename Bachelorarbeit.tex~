@@ -46,6 +46,9 @@ toc]            %Einträge im Inhaltsverzeichnis
 \addtokomafont{subsubsection}{\large \scshape \mdseries}
 \setlength{\parindent}{0pt}  % keine Einrückungen nach Absätzen
 
+\addto\captionsngerman{% 
+ \renewcommand{\abstractname}{Abstract}} 
+
 %------------------------------------------------------------------------
 % CODE
 %------------------------------------------------------------------------
@@ -114,6 +117,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 %Deckblatt
 %
 \input{extra/Deckblatt} 
+\input{chapter/Abstract}
 %
 %Inhaltsverzeichnis
 %
@@ -126,7 +130,7 @@ toc]            %Einträge im Inhaltsverzeichnis
 %\hyphenation{JavaScript} %trennt JavaScript nie
 %
 % Kapitel
-%\input{chapter/Abstract}
+
 \input{chapter/Einleitung}
 \input{chapter/StateOfTheArt}
 \input{chapter/Entscheidung}
@@ -164,5 +168,12 @@ toc]            %Einträge im Inhaltsverzeichnis
 \addcontentsline{toc}{chapter}{Anhang}
 \chapter*{Anhang}
 \section*{Eidesstattliche Erklärung} 
-\section*{Testprotokoll} 
+\section*{CD-Inhalt}
+Auf der beigefügten CD befinden sich
+\begin{itemize}
+	\item Die schriftliche Ausarbeitung dieser Bachelorarbeit im PDF-Format
+	\item Das erstellte Android-Projekt
+\end{itemize}
+
+ 
 \end{document}
