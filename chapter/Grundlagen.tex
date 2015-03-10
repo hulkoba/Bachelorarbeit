@@ -69,7 +69,6 @@ Zur Bestimmung von Standortdaten gibt es mehrere Techniken. Einige davon werden 
 Netzwerkgestützte Standortbestimmung basiert auf Informationen des \glspl{WLAN} oder der Funkzellen des Mobilfunknetzes.\\ 
 % MOBILFUNK %
 Funkzellentriangulierung verwendet die bekannte Geschwindigkeit von Funksignalen, um den Abstand zum Empfangsgerät zu berechnen. Das Mobilgerät muss mit einem Funkturm in Verbindung stehen. Bewegt sich das Gerät, verbindet es sich mit einem anderen Turm und die Signalstärke des sich nähernden Turms wird stärker. Unter Kenntnis der einzigartigen ID und der Position des Funkturms mit dem das Gerät verbunden ist und ggf. derer, mit denen das Gerät zuletzt verbunden war, lässt sich der eigene Standort ermitteln. (Vgl. \cite{location} S. 8f) \\
-Für eine gute Lokalisierung braucht es mindestens drei, vorzugsweise vier Mobilfunkmasten oder Antennen. In Städten, wenn sich mehr Signale der Mobilfunkmasten überlappen kann eine Genauigkeit von bis zu 200 Metern erreicht werden -- bei einer geringen Funkturmdichte sinkt diese auf bis zu mehreren Kilometern, wie in Abbildung \ref{fig:cell3} illustriert. \\
 \begin{figure}[H]
         \centering
         \begin{subfigure}[t]{0.23\textwidth}
@@ -93,6 +92,7 @@ Für eine gute Lokalisierung braucht es mindestens drei, vorzugsweise vier Mobil
         \caption[Funkzellentriangulierung]{Funkzellentriangulierung Quelle: \cite{fig:cell}}
         \label{fig:cell}
 \end{figure}
+Für eine gute Lokalisierung braucht es mindestens drei, vorzugsweise vier Mobilfunkmasten oder Antennen. In Städten, wenn sich mehr Signale der Mobilfunkmasten überlappen kann eine Genauigkeit von bis zu 200 Metern erreicht werden -- bei einer geringen Funkturmdichte sinkt diese auf bis zu mehreren Kilometern, wie in Abbildung \ref{fig:cell3} illustriert. \\
 So eine Überlappung von drei Funktürmen ist in Abbildung \ref{fig:cell1} veranschaulicht. Diese Genauigkeit kann, wie in Abbildung \ref{fig:cell2} demonstriert, erhöht werden wenn Richtantennen auf dem Funkturm installiert sind. So kann zusätzlich die Richtung des Mobiltelefonsignals ermittelt werden. (Vgl. \cite{gps} S. 23) \\\\
 %Ähnlich der funkzellenbastierten Standorterkennung funktioniert die \gls{WLAN}-basierte.
 \gls{WLAN}-basierte Standorterkennung funktioniert durch Funksignale, von \gls{WLAN}-Access Points\footnote{ Drahtloser Zugangspunkt der als Schnittstelle für kabellose Kommunikationsgeräte dient} ausgesendet, um den genauen Standort eines jeden Wi-Fi-fähigen Gerätes zu ermitteln. Bei Aktivierung scannt die Software die Umgebung nach \gls{WLAN}-Access Points und berechnet die Position des Gerätes indem sie die empfangenen Signale mit der Referenzdatenbank vergleicht. Wie bei der funkzellenbastierten Standorterkennung erhöht sich auch hier die Genauigkeit (auf 20 bis 40 Meter in Europa) mit wachsender Signaldichte. \\
@@ -101,7 +101,8 @@ Netzwerkgestützte Standortbestimmung schont zwar im Gegensatz zu \gls{GPS} den 
 % GEOLIKATION GPS %
 \subsubsection{Standortbestimmung via \gls{GPS}}
 Die satellitengestützte Positionsbestimmung \gls{GPS} gewährleistet die Bestimmung des exakten Standpunktes und ist so wesentlicher Bestandteil ortsgebundener Anwendungen wie zum Beispiel der in Kapitel \ref{chap:state} beschriebenen. \\
-\gls{GPS} wurde ursprünglich vom US-Militär entwickelt und dann Mitte der 90er Jahre der Öffentlichkeit zur Verfügung gestellt. Noch heute bleibt es mit einer Genauigkeit von bis zu drei Metern die genaueste Lokalisierungstechnologie. (Vgl. \cite{gps} S. 24f)
+\gls{GPS} wurde ursprünglich vom US-Militär entwickelt und dann Mitte der 90er Jahre der Öffentlichkeit zur Verfügung gestellt. Noch heute bleibt es mit einer Genauigkeit von bis zu drei Metern die genaueste Lokalisierungstechnologie. (Vgl. \cite{gps} S. 24f)\\
+Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Erde umkreisen und dabei kontinuierlich ihre eigene, aktuelle Position und Almanach-Daten aussenden. Almanach-Daten enthalten Daten über jeden Satelliten in der Konstellation. Abbildung \ref{fig:gps} zeigt eine Darstellung der GPS-Satellitenkonstellation. Jeder Satellit folgt einer definierten Bahn, sodass mindestens vier Satelliten von jedem Standpunkt auf der Erde aus "'sichtbar"' sind. (Vgl. \cite{location} S. 4f)\\
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.4\textwidth]{gps} 
@@ -109,7 +110,6 @@ Die satellitengestützte Positionsbestimmung \gls{GPS} gewährleistet die Bestim
     \caption[GPS Satelliten Konstellation]{GPS Satelliten Konstellation  Quelle: \cite{fig:gps}}
     \label{fig:gps}
 \end{figure}
-Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Erde umkreisen und dabei kontinuierlich ihre eigene, aktuelle Position und Almanach-Daten aussenden. Almanach-Daten enthalten Daten über jeden Satelliten in der Konstellation. Abbildung \ref{fig:gps} zeigt eine Darstellung der GPS-Satellitenkonstellation. Jeder Satellit folgt einer definierten Bahn, sodass mindestens vier Satelliten von jedem Standpunkt auf der Erde aus "'sichtbar"' sind. (Vgl. \cite{location} S. 4f)\\
 Mittels Triangulation errechnet daraus ein \gls{GPS}-Empfänger die eigene Position. Daten von einem einzigen Satelliten lässt die Position des \gls{GPS}-Empfängers auf deinen großen Bereich der Erde einschränken. Das Hinzufügen eines zweiten engt die Position auf den Bereich, in dem sich die zwei Bereiche überlappen ein. Mit den Daten eines dritten Satelliten bekommt man bereits eine relativ genaue Positionierung. Mit jedem weiteren Satelliten wird die Präzision erhöht und durch zusätzliche Positionsinformation wie Höhe erweitert. \gls{GPS}-Empfänger benutzen regelmäßig vier bis sieben, oder gar mehr Satelliten. (Vgl. \cite{gps} S. 25f)\\
 Trotzdem hat \gls{GPS}, insbesondere für mobile Plattformen einige Nachteile. Es verbraucht viel Energie, was die Akkulaufzeit des Mobiltelefons beeinträchtigt. Bevor der Standort berechnet werden kann müssen mehrere Satelliten ermittelt werden, was nach dem Kaltstart einige Zeit in Anspruch nehmen kann. (Vgl. \cite{location} S. 5)\\\\
 Inzwischen wird auf etlichen Mobiltelefonen zusätzlich das russische \gls{GNSS} names Global Navigation Satellite System (\gls{GLONASS}\footnote{ GLONASS, russisch Globalnaja nawigazionnaja sputnikowaja sistema, dt. Globales Satellitennavigationssystem}) eingesetzt\footnote{ \url{http://en.wikipedia.org/wiki/List_of_smartphones_supporting_GLONASS_navigation}}.
@@ -126,7 +126,7 @@ Der Abstand zwischen zwei Punkten wird mit \texttt{Location.distanceBetween()} a
 ( Vgl. \cite{location} S.43) 
 \\\\
 Der Fused Location Provider verwaltet die zugrunde liegenden Ortungstechnologie. Er ermöglicht zum Beispiel den Zugriff auf letzte Position und minimiert den Energieverbrauch der Anwendung indem er auf Grundlage aller eingehenden Standortanfragen und verfügbaren Sensoren die effizientesten auswählt. \cite{android_fused}
-\clearpage
+%\clearpage
 % -------------------------------------------------
 % MATHEMATISCHE GRUNDLAGEN
 % -------------------------------------------------
