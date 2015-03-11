@@ -1,10 +1,10 @@
 \chapter{\label{chap:grundlagen}Grundlagen}
-Dieses Kapitel befasst sich mit sowohl den mathematischen als auch den technischen Grundlagen der zu behandelnden Thematik, welche für das weitere Verständnis der Arbeit beitragen.
+Dieses Kapitel befasst sich mit den technischen und mathematischen Grundlagen.  
 % -------------------------------------------------
 % TECHNISCHE GRUNDLAGEN
 % -------------------------------------------------
 \section{\label{sec:technGrundlagen}Technische Grundlagen}
-Im Zuge dieser Arbeit wird eine \gls{Smartphone}-Anwendung erstellt, deren Grundlage für die Implementierung die Software-Plattform Android und der im \gls{Smartphone} integrierte \gls{GPS}-Sensor ist. Die eigene Position und Geschwindigkeit wird mittels \gls{GPS} ermittelt, um in Verbindung mit der festen Position der nächsten \gls{LSA} die optimale Geschwindigkeit für das Erreichen der "'Grünen Welle"' zu errechnen. Im folgenden Abschnitt werden Funktionsweise und Besonderheiten der verwendeten Technologien beschrieben. 
+Im Rahmen dieser Arbeit wird eine \gls{Smartphone}-Anwendung erstellt, deren Grundlage für die Implementierung die Software-Plattform Android und deren zentrales Merkmal die Bereitstellung von standortbezogenen Diensten ist. Die eigene Position wird mittels \gls{GPS} ermittelt, um in Verbindung mit der festen Position der nächsten \gls{LSA} die optimale Geschwindigkeit für das Erreichen der "'Grünen Welle"' zu errechnen. Im folgenden Abschnitt werden Funktionsweise und Besonderheiten der verwendeten Technologien beschrieben. 
 % ANDROID
 \subsection{Android}
 Android ist ein von Google entwickeltes Linux-basiertes Betriebssystem für Mobilgeräte. 
@@ -20,15 +20,15 @@ Einen Überblick über die komplexe Android-Systemarchitektur, welche nachfolgen
     \label{fig:android}
 \end{figure}
 \paragraph{Linux Kernel: }
-Android basiert auf dem Linux-Kernel. Wie in jedem Unix-System, stellt der Kernel-Treiber für Hardware, Netzwerk, Dateisystemzugriff und Prozessmanagement bereit.
+Android basiert auf dem Linux-Kernel. Wie in jedem Unix-System, stellt der Kerneltreiber für Hardware, Netzwerk, Dateisystemzugriff und Prozessmanagement bereit.
 \paragraph{Android Runtime: }
 Die Android Laufzeitumgebung nutzt die aus dem Apache-Harmony-Projekt nachimplementierten Java-Schnittstellen, die Dalvik \gls{VM} und die mit der Version 5.0 eingeführten Android Runtime (ART). \cite{android_5}\\
-Der Großteil von Android ist in Java implementiert und wird von einer Java \gls{JVM} ausgeführt. Androids aktuelle Umsetzung der \gls{JVM} heißt Dalvik. Dalvik wurde speziell auf mobile Geräte zugeschnitten und kann den Java-Bytecode nicht direkt ausführen. So wird der kompilierte Java-Bytecode vom erneut in Dalvik-Bytecode kompiliert und von der Dalvik-\gls{VM}, oder ab der Version 5.0 von der ART ausgeführt.\\
+Der Großteil von Android ist in Java implementiert und wird von einer \gls{JVM} ausgeführt. Androids aktuelle Umsetzung der \gls{JVM} heißt Dalvik. Dalvik wurde speziell auf mobile Geräte zugeschnitten und kann den Java-Bytecode nicht direkt ausführen. So wird der kompilierte Java-Bytecode vom erneut in Dalvik-Bytecode kompiliert und von der Dalvik-\gls{VM}, oder ab der Version 5.0 von der ART ausgeführt.\\
 Der Hauptunterschied der beiden \glspl{VM} besteht darin, dass ART die binäre Maschinensprache bei der \gls{App}-Installation, und nicht wie die Dalvik-\gls{VM}, bei der Ausführung erstellt.
 \paragraph{\gls{HAL}: }
 Der \gls{HAL} bietet die Möglichkeit eigene Gerätespezifikationen und deren benötigte Treiber, verbunden über eine Software-Schnittstelle zwischen dem Android-Stack und der Hardware, zu implementieren. \cite{android_hal}
 \paragraph{Bibliotheken: }
-Systemeigene Bibliotheken sind C/C++ Bibliotheken und sind vorinstalliert. Dazu gehören alle Bibliotheken im grünen Bereich von Abbildung \ref{fig:android}:
+Systemeigene Bibliotheken sind C/C++ Bibliotheken und sind vorinstalliert. Dazu gehören alle Bibliotheken im lila-Bereich von Abbildung \ref{fig:android}:
 \begin{itemize}[leftmargin=0.7cm]
 \renewcommand\labelitemi{--}
 	\item \textsc{Surface Manager} ~ Der für die Displayverwaltung verantwortliche Oberflächen-Manager
@@ -59,9 +59,8 @@ Die Android-Plattform unterstützt Bewegungssensoren zum Messen von Beschleunigu
 % LOCATION BASED SERVICE
 %
 \subsection{Standortbezogene Dienste}
-Standortbezogene Dienste (auch \gls{LBS}) sind Informationsdienste, die die geographische Position des Endgeräts nutzen, um für die NutzerInnen einen Mehrwert bereitzustellen. Sie ermöglichen den NutzerInnen den eigenen Standort zu bestimmen, zu erfahren was sich in der Nähe befindet und das (z.B. in sozialen Netzwerken) zu bewerten. Für die Bereitstellung von \gls{LBS} sind die vier Schlüsselkomponenten Mobilgerät, Content-Provider, Kommunikationsnetzwerke und Lokalisierungstechniken erforderlich. (Vgl. \cite{gps} S. 4f)\\
-Zur Bestimmung von Standortdaten gibt es mehrere Techniken. Einige davon werden im Folgenden erklärt.
-%\textit{via NFC/Bluetooth/Sensorik?}
+Standortbezogene Dienste (auch \gls{LBS}) sind Informationsdienste, die die geographische Position des Endgeräts nutzen, um für die NutzerInnen einen Mehrwert bereitzustellen. Sie ermöglichen den NutzerInnen den eigenen Standort zu bestimmen, zu erfahren was sich in der Nähe befindet und das (z.B. in sozialen Netzwerken) zu bewerten. Für die Bereitstellung von \gls{LBS} sind die vier Schlüsselkomponenten Mobilgerät, Content-Provider, Kommunikationsnetzwerke und Lokalisierungstechniken erforderlich. Das Kommunikationsnetzwerk (z.B. Internet) übeträgt die Daten an den Content-Provider (z.B. Server), welcher die bearbeiteten Anfragen an das Mobilgerät sendet. (Vgl. \cite{gps} S. 4f)\\
+Zur Bestimmung von Standortdaten gibt es mehrere Lokalisierungstechniken. Einige davon werden im Folgenden erklärt.
 %
 % GEOLOKATION NETWORK PROVIDER %
 %
@@ -110,8 +109,8 @@ Das Globale Positionsbestimmungssystem umfasst 27 Satelliten die ständig die Er
     \caption[GPS Satelliten Konstellation]{GPS Satelliten Konstellation  Quelle: \cite{fig:gps}}
     \label{fig:gps}
 \end{figure}
-Mittels Triangulation errechnet daraus ein \gls{GPS}-Empfänger die eigene Position. Daten von einem einzigen Satelliten lässt die Position des \gls{GPS}-Empfängers auf deinen großen Bereich der Erde einschränken. Das Hinzufügen eines zweiten engt die Position auf den Bereich, in dem sich die zwei Bereiche überlappen ein. Mit den Daten eines dritten Satelliten bekommt man bereits eine relativ genaue Positionierung. Mit jedem weiteren Satelliten wird die Präzision erhöht und durch zusätzliche Positionsinformation wie Höhe erweitert. \gls{GPS}-Empfänger benutzen regelmäßig vier bis sieben, oder gar mehr Satelliten. (Vgl. \cite{gps} S. 25f)\\
-Trotzdem hat \gls{GPS}, insbesondere für mobile Plattformen einige Nachteile. Es verbraucht viel Energie, was die Akkulaufzeit des Mobiltelefons beeinträchtigt. Bevor der Standort berechnet werden kann müssen mehrere Satelliten ermittelt werden, was nach dem Kaltstart einige Zeit in Anspruch nehmen kann. (Vgl. \cite{location} S. 5)\\\\
+Mittels Triangulation errechnet daraus ein \gls{GPS}-Empfänger die eigene Position. Daten von einem einzigen Satelliten lässt die Position des \gls{GPS}-Empfängers auf einen großen Bereich der Erde einschränken. Das Hinzufügen eines zweiten engt die Position auf den Bereich, in dem sich die zwei Bereiche überlappen ein. Mit den Daten eines dritten Satelliten bekommt man bereits eine relativ genaue Positionierung. Mit jedem weiteren Satelliten wird die Präzision erhöht und durch zusätzliche Positionsinformation wie Höhe erweitert. \gls{GPS}-Empfänger benutzen regelmäßig vier bis sieben, oder gar mehr Satelliten. (Vgl. \cite{gps} S. 25f)\\
+Trotzdem hat \gls{GPS}, insbesondere für mobile Plattformen einige Nachteile. Es verbraucht viel Energie, was die Akkulaufzeit des Mobiltelefons beeinträchtigt. Bevor der Standort berechnet werden kann müssen mehrere Satelliten ermittelt werden, was nach dem Kaltstart\footnote{ Start ohne aktuelle Satellitendaten} einige Zeit in Anspruch nehmen kann. (Vgl. \cite{location} S. 5)\\\\
 Inzwischen wird auf etlichen Mobiltelefonen zusätzlich das russische \gls{GNSS} names Global Navigation Satellite System (\gls{GLONASS}\footnote{ GLONASS, russisch Globalnaja nawigazionnaja sputnikowaja sistema, dt. Globales Satellitennavigationssystem}) eingesetzt\footnote{ \url{http://en.wikipedia.org/wiki/List_of_smartphones_supporting_GLONASS_navigation}}.
 Die europäische Variante in der Testphase mit ähnlichem Aufbau heißt Galileo, das chinesische, ausschließlich inländisch genutzte, \gls{GNSS} heißt BeiDou\footnote{ BeiDou, dt. Großer Bär}. (Vgl. \cite{gps} S. 24)
 % A-GPS
@@ -122,27 +121,27 @@ Viele moderne \glspl{Smartphone} sind heutzutage mit der \gls{GPS}-Variante \gls
 \subsubsection{Standortbestimmung unter Android}
 Android unterstützt mit dem \texttt{android.location} Paket den Zugriff auf die Ortungsdienste. Als zentrale Komponente des Location Frameworks stellt der \texttt{LocationManager} \glspl{API} zur Lokalisierung des Geräts bereit. Mit dem \texttt{LocationManager} ist die Anwendung in der Lage alle Location Provider\footnote{ Location Provider, dt. Standortanbieter. Ein Standortanbieter bietet regelmäßige Berichte über die geographische Lage des Gerätes} des letzten bekannten Standortes abzufragen, sich für regelmäßige Updates zur Position des Gerätes anzumelden und sich wieder abzumelden wenn sich das Gerät außerhalb gegebener Parameter befindet. \cite{android_gps} \\
 Die geographische Positionsangabe besteht aus Längengrad (Latitude) und Breitengrad (Longitude). Beide werden unter anderem vom \texttt{LocationManager} über das \texttt{Location}-Objekt als Gleitkommawert geliefert. Daneben auch Informationen wie die Höhe in Metern über der Mehreshöhe, Peilung, Zeitstempel und die Geschwindigkeit.\\
-Der Abstand zwischen zwei Punkten wird mit \texttt{Location.distanceBetween()} abgerufen. Diese Methode nimmt die Längen- und Breitenkoordinaten der beiden Punkte und ein Array mit \texttt{float}-Werten für die Ergebnisse. Dieses Array muss eine Größe von mindestens eins haben und gibt die ungefähre Entfernung in Metern im Index Null zurück. Abstandsberechnungen werden mit dem Referenzsystem WGS84\footnote{ World Geodetic System}-Ellipsoid definiert.
+Der Abstand zwischen zwei Punkten kann mit \texttt{Location.distanceBetween()} abgerufen werden. Diese Methode bekommt als Parameter die Längen- und Breitenkoordinaten der beiden Punkte und ein Array mit \texttt{float}-Werten für die Ergebnisse übergeben. Dieses Array muss eine Größe von mindestens eins haben und gibt die ungefähre Entfernung in Metern im Index Null zurück. Abstandsberechnungen werden mit dem Referenzsystem WGS84\footnote{ World Geodetic System}-Ellipsoid definiert.
 ( Vgl. \cite{location} S.43) 
 \\\\
 Der Fused Location Provider verwaltet die zugrunde liegenden Ortungstechnologie. Er ermöglicht zum Beispiel den Zugriff auf letzte Position und minimiert den Energieverbrauch der Anwendung indem er auf Grundlage aller eingehenden Standortanfragen und verfügbaren Sensoren die effizientesten auswählt. \cite{android_fused}
-%\clearpage
+\clearpage
 % -------------------------------------------------
 % MATHEMATISCHE GRUNDLAGEN
 % -------------------------------------------------
 \section{\label{sec:mathGrundlagen}Berechnung der Geschwindigkeitsempfehlung}
-Präsentiert das System während der Anwendung eine Geschwindigkeitsempfehlung, ist diese abhängig von der Fahrgeschwindigkeit und vom Abstand zur Ampel. Für einen Streckenabschnitt zwischen zwei Punkten (Position der Ampel und Position der Rades) wird die Zeitspanne $\Delta t$ benötigt. Diese errechnet man mit $t_{2} - t_{1}$, woraus sich dann die Durchschnittsgeschwindigkeit im untersuchten Streckenabschnitt ergibt.\\ 
+Präsentiert das System während der Anwendung eine Geschwindigkeitsempfehlung, ist diese abhängig von der Fahrgeschwindigkeit und vom Abstand zur Ampel. Für einen Streckenabschnitt zwischen zwei Punkten (Position der Ampel und Position der Rades) wird die Zeitspanne $\Delta t$ benötigt. Diese errechnet man mit $t_{2} - t_{1}$, woraus sich dann die Durchschnittsgeschwindigkeit im untersuchten Streckenabschnitt ergibt.\\\\ 
 Angenommen die Progressionsgeschwindigkeit $v$ wird zum Zeitpunkt $t_{1}$ ermittelt, die \gls {LSA} schaltet zum Zeitpunt $t_{2}$ auf Rot und Abstand zur Ampel beträgt $s$, dann gilt: \\
 \[ v = \frac{s}{t_{2} - t_{1}} \] \\
-Der Abstand zur Ampel wird also durch die verbleibende Zeit dividiert. 
-Die aus den erfassten Daten erstellten Ampelsignalpläne und Lage der angesteuerten Ampel sind die Basis dieser Berechnung. Die aktuelle Position des Fahrrads wird vom \gls{GPS}-Sensor des \glspl{Smartphone} ermittelt und daraus der Abstand zur Ampel errechnet. Die Abbildung \ref{fig:vst} soll die Berechnungsgrundlagen veranschaulichen: 
+Die aus den erfassten Daten erstellten Ampelsignalpläne und Position der angesteuerten Ampel sind die Basis dieser Berechnung. Die aktuelle Position des Fahrrads wird vom \gls{GPS}-Sensor des \glspl{Smartphone} ermittelt und daraus der Abstand zur Ampel errechnet. Die Abbildung \ref{fig:vst} illustriert die Grundlagen der Geschwindigkeitsberechnung: \\
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=0.75\textwidth]{vst}  
+    \includegraphics[width=\textwidth]{vst}  
     \rule{35em}{0.5pt}   
-    \caption[Berechnung Progressionsgeschwindigkeit]{Veranschaulichung der Berechnung}
+    \caption[Berechnung Progressionsgeschwindigkeit]{Visualisierung der Geschwindigkeitsberechnung}
     \label{fig:vst}
 \end{figure}
+\clearpage
 Da das System für Fahrräder entwickelt wird, ist auch die Beschleunigung von Bedeutung. FahrradfahrerInnen können nicht unbegrenzt beschleunigen, um die gewünschte Geschwindigkeit zu erreichen. Sie ist abhängig von der Geschwindigkeit und der Zeitspanne in der diese zu erreichen ist. Die Formel für Beschleunigung lautet:
 \[ a = \frac{v}{(t_{2} - t_{1})^{2}} \]
  Um die ensprechende \gls{LSA} während der Grünphase zu passieren, muss letztendlich die empfohlene Geschwindigkeit $v$ eingehalten werden, wobei die maximale Beschleunigung nicht überschritten wird.
