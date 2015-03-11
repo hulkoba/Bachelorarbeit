@@ -1,5 +1,5 @@
 \chapter{\label{chap:entwurf}Konzeption}
-Die erarbeiteten Anforderungen an ein Ampelinformationssystem für FahrradfahrerInnen werden in diesem Kapitel für die Konzeption angewendet. Beginnend mit dem Aufbau der Anwendung werden in den folgenden Abschnitten das Design, die von der Anwendung genutzten Daten, Anwendungsfälle, die Architektur und schließlich die Komponenten der Entwicklumgsumgebung, welche eingesetzt werden aufgeführt. 
+Die erarbeiteten Anforderungen an ein Ampelinformationssystem für FahrradfahrerInnen werden in diesem Kapitel für die Konzeption angewendet. Beginnend mit dem Aufbau der Anwendung werden in den folgenden Abschnitten das Design, die von der Anwendung genutzten Daten, Anwendungsfälle, die Architektur und schließlich die Komponenten der Entwicklumgsumgebung aufgeführt. 
 \section{Anwendungsaufbau}
 Die Anwendungsarchitektur verwendet die Vorgaben für Android-Applikationen. So wird die Hauptkomponente mit Hilfe sogenannter \glspl{Activity} realisiert. Als Basisklasse definiert eine \gls{Activity} das \gls{UI} einer mobilen Anwendung, stellt also die Ansicht mit der BenutzerInnen interagieren können bereit.\\
 Eine \gls{Activity} wird von der Bibliotheksklasse \texttt{android.app.Activity} abgeleitet, als Klasse implementiert und muss in der Manifestdatei der \gls{App} aufgeführt werden. \cite{android_activity} \\
@@ -55,7 +55,7 @@ In dem oben gezeigtem Beispiel steht demnach die Ampel R1 zwischen 11 und 17 Uhr
 %    \caption{Lageplan}
 %    \label{fig:kreuzung}
 %\end{figure}
-Auch die Position jeder Ampeln wird händisch erfasst und in das WGS84-Format konvertiert, um dann zusammen mit den Phasendaten in das gewählte \gls{JSON}-Format gebracht zu werden.\\
+Auch die Position jeder Ampel wird händisch erfasst und in das WGS84-Format konvertiert, um dann zusammen mit den Phasendaten in das gewählte \gls{JSON}-Format gebracht zu werden.\\
 Als Referenzzeit ist die Zeit zwischen 12 und 16 Uhr von Freitag bis Montag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt bis vervollständigt werden.
 %
 % LSA als JSON
@@ -67,7 +67,7 @@ Als Referenzzeit ist die Zeit zwischen 12 und 16 Uhr von Freitag bis Montag gew�
 \lstinputlisting[language=JSON, caption=JSON-Ampelobjekt]{code/lsas.json}
 \rule{35em}{0.5pt}
 \end{center}
-Das hier aufgeführte Ampelobjekt hat den Namen \texttt{SteinstraßeA1}, welcher auf die Kreuzung auf der sich die Ampel befindet schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus, benötigt also auch keine weiteren Daten. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten an denen diese gelten. Die Werte \texttt{greenFrom} und \texttt{greenTo} bezeichnen den Start und das Ende jeder Grünphase des Schaltplans. Da als Referenzzeit die Zeit zwischen 12 und 16 Uhr gewählt wurde, werden die Schaltpläne welche diese nicht betreffen nicht aufgenommen.
+Das hier aufgeführte Ampelobjekt hat den Namen \texttt{SteinstraßeA1}, welcher auf die Kreuzung oder Straße auf der sich die Ampel befindet, schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus, benötigt also auch keine weiteren Daten. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten, an denen diese gelten. Die Werte \texttt{greenFrom} und \texttt{greenTo} bezeichnen den Start und das Ende jeder Grünphase des Schaltplans. Da als Referenzzeit die Zeit zwischen 12.00 und 16.00 Uhr gewählt wurde, werden die Schaltpläne, welche diese nicht betreffen, nicht aufgenommen.
 %\subsection{Fahrraddaten}
 %Position und Geschwindigkeit werden mittels \gls{GPS} ermittelt.
 %erst nach Änderung der Position Aktion...?
@@ -92,10 +92,10 @@ Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den 
 & \multicolumn{1}{p{0.55\textwidth}}{Die aktuelle Geschwindigkeit ist genauso hoch wie die berechnete Empfehlungsgeschwindigkeit. Es wird angezeigt, dass kein Handlungsbedarf besteht, also das Tempo gehalten werden kann.}\\ \midrule
 % UC4
 \multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC4}} & \multicolumn{1}{p{0.35\textwidth}}{Ich muss in jedem Fall bei roter Ampel anhalten}
-& \multicolumn{1}{p{0.55\textwidth}}{Die berechnete Empfehlungsgeschwindigkeit übersteigt die festgelegte Höchstgeschwindigkeit oder die zu erreichende Beschleunigung ist in dem Maße nicht zu erreichen, also ist die Distanz zur Ampel zu lang. Eine Anzeige mit dem Signal "'keine Weiterfahrt ist möglich"' erscheint.}\\ \midrule
+& \multicolumn{1}{p{0.55\textwidth}}{Die berechnete Empfehlungsgeschwindigkeit übersteigt die festgelegte Höchstgeschwindigkeit oder die erforderliche Beschleunigung ist in dem Maße nicht erreichbar, also ist die Distanz zur Ampel zu lang. Eine Anzeige mit dem Signal "'keine Weiterfahrt ist möglich"' erscheint.}\\ \midrule
 %UC5
 \multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC5}} & \multicolumn{1}{p{0.35\textwidth}}{Es ist nicht möglich eine Vorhersage zu treffen}
-& \multicolumn{1}{p{0.55\textwidth}}{Eine verkehsrabhängige Ampel mit individueller Steuerung nähert sich. Es ist dem System nicht möglich eine wahrscheinliche Vorhersage zu treffen und so die entsprechende Empfehlung auszusprechen. Es wird \textit{ein gelbes Fragezeichen, symbolisch dafür} angezeigt.}\\ \bottomrule \cellcolor[HTML]{FFFFFF} \vspace{0.1cm}
+& \multicolumn{1}{p{0.55\textwidth}}{Eine verkehrsabhängige Ampel mit individueller Steuerung nähert sich. Es ist dem System nicht möglich eine wahrscheinliche Vorhersage zu treffen und so die entsprechende Empfehlung auszusprechen. Es wird \textit{ein gelbes Ausrufungszeichen, symbolisch dafür} angezeigt.}\\ \bottomrule \cellcolor[HTML]{FFFFFF} \vspace{0.1cm}
 \end{tabular}
 \rule{35em}{0.5pt}
 	\caption{Anwendungsfälle}	
@@ -111,9 +111,9 @@ Das in Abbildung \ref{fig:uc} gezeigte Use-Case-Diagramm veranschaulicht die in 
 \end{figure}
 \section{Klassenarchitektur}
 Die zu erstellende Anwendung erhält den Namen AIS, was für Ampel-Informationssystem steht und der vorläufige Name der Anwendung ist und besteht aus den nachfolgend beschriebenen Klassen. \\\\
-Die \texttt{MainActivity} ist die Hauptklasse der Android-Applikation. Sie definiert die grafische Oberfläche der Anwendung und stellt die notwendigen Methoden bereit. \\
-Der \texttt{\gls{JSON}Parser} liest die erstellte \gls{JSON}-Datei ein und wandelt deren Inhalt ein ein Array um. Dieses Beinhaltet Ampelobjekte mit deren Namen, Position und der Information darüber, ob sie verkehrsabhängig sind oder nicht. Sind sie es nicht, wird außerdem zu jeder Ampel ein Array, bestehend aus den Sigalschaltplanobjekten gespeichert. Diese enthalten benötigten alle Informationen über den Geltungszeitraum und der Grünphasen.\\ 
-\texttt{GPSTracker} implementiert die Schnittstelle \texttt{LocationListener} und kann so kontinuierlich die Position des Endgeräts verfolgen. Mit der eigenen Position und der aller Ampeln aus dem vom \texttt{JSONParser} erstellten Array ermittelt er außerdem die nächste Ampel. Ist diese identifiziert, wird über den \texttt{OnSetListener} die Klasse \texttt{SpeedHandler} aktiviert, welche anhand der Daten aus dem Signalschaltplanobjekt den Countdown der Rotanzeige und die optimale Geschwindigkeit berechnet und die Anzeige entsprechend aktualisiert. \\
+Die \texttt{MainActivity} ist die Hauptklasse der Android-Applikation. Sie definiert die graphische Oberfläche der Anwendung und stellt die notwendigen Methoden bereit. \\
+Der \texttt{\gls{JSON}Parser} liest die erstellte \gls{JSON}-Datei ein und wandelt deren Inhalt in ein Array um. Dieses beinhaltet Ampelobjekte mit deren Namen, Position und der Information darüber, ob sie verkehrsabhängig sind oder nicht. Sind sie es nicht, wird außerdem zu jeder Ampel ein Array, bestehend aus den Sigalschaltplanobjekten gespeichert. Diese enthalten alle benötigten Informationen über den Geltungszeitraum und die Grünphasen.\\ 
+Die Klasse \texttt{GPSTracker} implementiert die Schnittstelle \texttt{LocationListener} und kann so kontinuierlich die Position des Endgeräts verfolgen. Mit der eigenen Position und der aller Ampeln aus dem vom \texttt{JSONParser} erstellten Array ermittelt er außerdem die nächste Ampel. Ist diese identifiziert, wird über den \texttt{OnSetListener} die Klasse \texttt{SpeedHandler} aktiviert, welche anhand der Daten aus dem Signalschaltplanobjekt den Countdown der Rotanzeige und die optimale Geschwindigkeit berechnet \textit{sowie die Anzeige entsprechend aktualisiert.} \\
 Das nachfolgende Klassendiagramm gibt eine Übersicht über die oben beschriebenen Klassen.
 \begin{figure}[H]  
     \centering  
@@ -125,9 +125,9 @@ Das nachfolgende Klassendiagramm gibt eine Übersicht über die oben beschrieben
 % ### Design ###
 %\clearpage
 \section{Die graphische Oberfläche}
-Aus den Anforderungen an die graphische Oberfläche in Kapitel \ref{chap:anforderungen} entsteht das Design. Durch die überschaubare Anzahl an Funktionalitäten kann der Aufbau einfach gehalten werden. Aus den Empfehlungsanzeigen, welche den Systemzuständen entsprechen sind vier Ansichten abzuleiten. Die folgende Abbildung zeigt den Entwurf der Benutzeroberfläche.
-Abbildung \ref{fig:stop} zeigt die grapfische Umsetzung des Zustands \textit{a}, in dem die Ampelschaltung keine Weiterfahrt ermöglicht. Es wird ein großer roter Kreis mit einem schwarzen Kreuz verwendet. Rot ist eine Signalfarbe und steht auch bei Ampeln für "'Halt"' oder "'Stop"'. Auch das Kreuz wird häufig als \textit{verweigerndes} Symbol eingesetzt und ist somit intuitiv als solches erkennbar.\\
-Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, bei dem man mit der aktuellen Geschwindigkeit in der Grünen Welle fährt, um. Hier wird ist ein großer grüner Kreis verwendet, in der Mitte steht "'ok"'. Durch die nicht alleinige Benutzung der Ampelfarben Rot und Grün ist die Ansicht auch für Menschen mit einer Rot-Grün-Sehschwäche eindeutig interpretierbar.
+Aus den Anforderungen an die graphische Oberfläche in Kapitel \ref{chap:anforderungen} entsteht das Design. Durch die überschaubare Anzahl an Funktionalitäten kann der Aufbau einfach gehalten werden. Aus den Empfehlungsanzeigen, welche den Systemzuständen entsprechen, sind fünf Ansichten abzuleiten. Die folgende Abbildung zeigt den Entwurf der Benutzeroberfläche.
+Abbildung \ref{fig:stop} zeigt die graphische Umsetzung des Zustands \textit{a}, in dem die Ampelschaltung keine Weiterfahrt ermöglicht. Es wird ein großer roter Kreis mit einem schwarzen Kreuz verwendet. Rot ist eine Signalfarbe und steht auch bei Ampeln für "'Halt"' oder "'Stop"'. Auch das Kreuz wird häufig als verweigerndes Symbol eingesetzt und ist somit intuitiv als solches erkennbar.\\
+Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, bei dem man mit der aktuellen Geschwindigkeit in der Grünen Welle fährt. Hier wird ein großer grüner Kreis verwendet, in der Mitte steht "'ok"'. Durch die Kombination der Ampelfarben mit Textzeichen ist die Ansicht auch für Menschen mit einer Rot-Grün-Sehschwäche eindeutig interpretierbar.
 \begin{figure}[H]
         \centering
            \begin{subfigure}[t]{0.18\textwidth}
@@ -138,13 +138,13 @@ Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, be
            ~ 
               \begin{subfigure}[t]{0.18\textwidth}
                 \includegraphics[width=\textwidth]{yeah}
-                \caption[Systemzustand b]{Kein Aktionsbedarf}
+                \caption[Systemzustand b]{Änderung der Geschwindigkeit nicht erforderlich}
                 \label{fig:yeah}
         \end{subfigure}
            ~
         \begin{subfigure}[t]{0.18\textwidth}
                 \includegraphics[width=\textwidth]{langsamer}
-                \caption[Systemzustand c]{Weiterfahrt durch Verlangsamung  möglich}
+                \caption[Systemzustand c]{Weiterfahrt durch Verlangsamung möglich}
                 \label{fig:langsamer}
         \end{subfigure}
         ~
@@ -163,7 +163,7 @@ Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, be
         \caption[Systemzustände im Ampelbereich]{Entwurf des Designs anhand der Systemzustände}
         \label{fig:mockup}
 \end{figure}
-Die Abbildungen \ref{fig:langsamer} und \ref{fig:schneller} für die Zustände \textit{c} und \textit{d} sind in der Anordnung der Elemente identisch. Mittig im Bild ist eine eingekreiste rote Zahl die den Countdown der Restrotanzeige darstellt. Sie wird also mit jeder Sekunde aktualisiert. Ober- und unterhalb des Countdowns befinden sich jeweils zwei hellblaue Pfeile. Je nach Differenz der aktuellen zur berechneten Geschwindigkeit sind ein oder zwei Pfeile ausgefüllt. Wird also empfohlen viel schneller zu fahren, sind die oberen Pfeile aktiv, bei der Aufforderung etwas das Tempo zu drosseln der untere. Es sind immer alle Pfeile zu sehen. Durch die Anzeige "'ein von zwei"' ist die Bedeutung der Geschwindigkeitsstufen klarer. Als Farbe für die Pfeile wurde Hellblau gewählt. Sie unterscheidet sich sowohl farblich als auch in der Helligkeitsstufe zu den anderen Farben und steht im hohen Kontrast zu dem Hintergrund. Auf schwarzem Hintergrund wirken die Farben intensiver und sind so auch aus dem Augenwinkel leichter zu erkennen und unterscheiden. Die in Abbildung \ref{fig:meh} gezeigte Darstellung erscheint, wenn keine Vorhersage möglich ist weil die Ampel ausgeschaltet oder verkehrsabhängig und die Vorhersage dadurch zu ungenau wird. Als Farbe wurde die dritte Ampelfarbe Gelb gewählt, was weder Rot für Anhalten, noch grün für Weiterfahren ist und so signalisiert, die Anwendung kann keine Empfehlung aussprechen. Das mittig platzierte Ausrufungszeichen steht für "'Achtung"' und unterstützt so die Aussage.\\
+Die Abbildungen \ref{fig:langsamer} und \ref{fig:schneller} für die Zustände \textit{c} und \textit{d} sind in der Anordnung der Elemente identisch. Mittig im Bild ist eine eingekreiste rote Zahl die den Countdown der Restrotanzeige darstellt. Sie wird also mit jeder Sekunde aktualisiert. Ober- und unterhalb des Countdowns befinden sich jeweils zwei hellblaue Pfeile. Je nach Differenz der aktuellen zur berechneten Geschwindigkeit sind ein oder zwei Pfeile ausgefüllt. Wird also empfohlen, viel schneller zu fahren, sind die oberen Pfeile aktiv, bei der Aufforderung das Tempo etwas zu drosseln, der untere. Es sind immer alle Pfeile zu sehen. Durch die Anzeige "'ein von zwei"' ist die Bedeutung der Geschwindigkeitsstufen klarer. Als Farbe für die Pfeile wurde Hellblau gewählt. Sie unterscheidet sich sowohl farblich als auch in der Helligkeitsstufe zu den anderen Farben und steht im hohen Kontrast zum Hintergrund. Auf schwarzem Hintergrund wirken die Farben intensiver und sind so auch aus dem Augenwinkel leichter zu erkennen und unterscheiden. Die in Abbildung \ref{fig:meh} gezeigte Darstellung erscheint, wenn keine Vorhersage möglich ist, weil die Ampel ausgeschaltet oder verkehrsabhängig ist. Als Farbe wurde die dritte Ampelfarbe Gelb gewählt, was weder Rot für Anhalten, noch grün für Weiterfahren ist und so signalisiert, die Anwendung kann keine Empfehlung aussprechen. Das mittig platzierte Ausrufungszeichen steht für "'Achtung"' und unterstützt so die Aussage.\\
 Die aktuelle Geschwindigkeit wird bewusst nicht angezeigt. Auch nicht die Progressionsgeschwindigkeit. Die Differenz ist beim Fahrrad nicht so hoch wie bspw. im Auto. Bei einer Varianz von wenigen km/h genügt die Anzeigevariante "'schneller"' und "'noch schneller"'.
 % TESTFÄLLE
 \section{Testfälle}
@@ -178,7 +178,7 @@ Die Anwendung muss sich zu jedem Zeitpunkt beenden lassen. \\
 \item[Einlesen der Datei:] 
 Die am nächsten gelegene Ampel und deren Rot- oder Grünphase kann nur ermittelt werden, wenn die Daten richtig eingelesen werden. Auch kann der Countdown der Restrotanzeige nur mit den Daten des Schaltplans angezeigt werden.\\
 \item[Ermittlung der Position:] 
-Die Empfehlung der Geschwindigkeit kann nur dann korrekt angezeigt werden, wenn die Position des Geräts ermittelt wurde. Weiter wird der eigene Standort neben dem der Ampel für die Berechnung der am nächsten gelegenen \gls{LSA} benötigt.\\
+Die Ermittlung der nächsten Ampel kann nur erfolgreich sein, wenn sowohl die Position des Gerätes, als auch die Positionen der Ampeln bekannt ist. Die eigene Position und die der nächsten Ampel sind erforderlich für die korrekte Geschwindigkeitsberechnung.\\
 \end{description}
 \section{Entwicklungsumgebung}
 Für die Erstellung der Smartphone-Applikation wurde folgende Soft- und Hardware verwendet:

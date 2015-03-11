@@ -35,7 +35,7 @@ if (nearestLSAs == null ) {
         distance = myLocation.distanceTo(lsa.getLsaLocation());
 
         // verkleinert sich Distanz im Gegensatz zur Vorherigen?
-        // Ist die Distanz von allen nahem LSAs am geringsten? 
+        // Ist die Distanz von allen nahen LSAs am geringsten? 
         if (distance < lsa.getDistance() 
         && distance <= Constants.MIN_LSA_DISTANCE  
         && minDistance > distance){ 
