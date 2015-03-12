@@ -61,7 +61,8 @@ Als Referenzzeit ist die Zeit zwischen 12 und 16 Uhr von Freitag bis Montag gew�
 % LSA als JSON
 %
 \subsection[Ampelobjekt im JSON-Format]{Ampelobjekt im \gls{JSON}-Format}
-\gls{JSON} ist ein leichtgewichtiges, auf JavaScript basierendes, Datenaustauschformat, das für Menschen gut les- und schreibbar und für Maschinen einfach analysier- und generierbar ist. Ein \gls{JSON}-Objekt besteht aus einer von zwei Grundstrukturen. Eine Auflistung von Schlüssel/Wert Paaren oder eine geordnete Liste von Werten, als Array realisiert. Der folgende Codeabschnitt zeigt beispielhaft ein \gls{JSON}-Ampelobjekt:  
+\gls{JSON} ist ein leichtgewichtiges, auf JavaScript basierendes, Datenaustauschformat, das für Menschen gut les- und schreibbar und für Maschinen einfach analysier- und generierbar ist. Ein \gls{JSON}-Objekt besteht aus einer von zwei Grundstrukturen. Eine Auflistung von Schlüssel/Wert Paaren oder eine geordnete Liste von Werten, als Array realisiert. \cite{json}\\ 
+Der folgende Codeabschnitt zeigt beispielhaft ein \gls{JSON}-Ampelobjekt:  
 \begin{center}
 \grayRule
 \lstinputlisting[language=JSON, caption=JSON-Ampelobjekt]{code/lsas.json}
@@ -72,7 +73,7 @@ Das hier aufgeführte Ampelobjekt hat den Namen \texttt{SteinstraßeA1}, welcher
 %Position und Geschwindigkeit werden mittels \gls{GPS} ermittelt.
 %erst nach Änderung der Position Aktion...?
 % ### USE CASES ###
-\clearpage
+%\clearpage
 \section{Anwendungsfälle}
 Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den in Kapitel \ref{chap:szenarien} erarbeiteten Szenarien ergeben sich die folgenden fünf Use-Cases, die von der Anwendung erfüllt werden sollen.\\
 \begin{table}[H]
@@ -95,7 +96,7 @@ Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den 
 & \multicolumn{1}{p{0.55\textwidth}}{Die berechnete Empfehlungsgeschwindigkeit übersteigt die festgelegte Höchstgeschwindigkeit oder die erforderliche Beschleunigung ist in dem Maße nicht erreichbar, also ist die Distanz zur Ampel zu lang. Eine Anzeige mit dem Signal "'keine Weiterfahrt ist möglich"' erscheint.}\\ \midrule
 %UC5
 \multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC5}} & \multicolumn{1}{p{0.35\textwidth}}{Es ist nicht möglich eine Vorhersage zu treffen}
-& \multicolumn{1}{p{0.55\textwidth}}{Eine verkehrsabhängige Ampel mit individueller Steuerung nähert sich. Es ist dem System nicht möglich eine wahrscheinliche Vorhersage zu treffen und so die entsprechende Empfehlung auszusprechen. Es wird \textit{ein gelbes Ausrufungszeichen, symbolisch dafür} angezeigt.}\\ \bottomrule \cellcolor[HTML]{FFFFFF} \vspace{0.1cm}
+& \multicolumn{1}{p{0.55\textwidth}}{Eine ausgeschaltete oder verkehrsabhängige Ampel mit individueller Steuerung nähert sich. Es ist dem System nicht möglich eine wahrscheinliche Vorhersage zu treffen und so die entsprechende Empfehlung auszusprechen. Es wird ein gelbes Ausrufungszeichen, symbolisch dafür angezeigt.}\\ \bottomrule \cellcolor[HTML]{FFFFFF} \vspace{0.1cm}
 \end{tabular}
 \grayRule
 	\caption{Anwendungsfälle}	
@@ -104,7 +105,7 @@ Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den 
 Das in Abbildung \ref{fig:uc} gezeigte Use-Case-Diagramm veranschaulicht die in der obigen Tabelle \ref{tab:uc} aufgeführten Anwendungsfälle.  
 \begin{figure}[H]  
     \centering  
-    \includegraphics[width=0.8\textwidth]{uc} 
+    \includegraphics[width=\textwidth]{uc} 
 \grayRule
     \caption{Use-Case-Diagramm}      
     \label{fig:uc}
@@ -112,9 +113,9 @@ Das in Abbildung \ref{fig:uc} gezeigte Use-Case-Diagramm veranschaulicht die in 
 \section{Klassenarchitektur}
 Die zu erstellende Anwendung erhält den Namen AIS, was für Ampel-Informationssystem steht und der vorläufige Name der Anwendung ist und besteht aus den nachfolgend beschriebenen Klassen. \\\\
 Die \texttt{MainActivity} ist die Hauptklasse der Android-Applikation. Sie definiert die graphische Oberfläche der Anwendung und stellt die notwendigen Methoden bereit. \\
-Der \texttt{\gls{JSON}Parser} liest die erstellte \gls{JSON}-Datei ein und wandelt deren Inhalt in ein Array um. Dieses beinhaltet Ampelobjekte mit deren Namen, Position und der Information darüber, ob sie verkehrsabhängig sind oder nicht. Sind sie es nicht, wird außerdem zu jeder Ampel ein Array, bestehend aus den Sigalschaltplanobjekten gespeichert. Diese enthalten alle benötigten Informationen über den Geltungszeitraum und die Grünphasen.\\ 
+Der \texttt{\gls{JSON}Parser} liest die erstellte \gls{JSON}-Datei ein und speichert deren Inhalt in einem Array. Dieses beinhaltet Ampelobjekte (bezeichnet als \texttt{LSA}) mit deren Namen, Position und der Information darüber, ob sie verkehrsabhängig sind oder nicht. Sind sie es nicht, wird außerdem zu jeder Ampel ein Array, bestehend aus den Sigalschaltplanobjekten (bezeichnet als \texttt{SZPL}) gespeichert. Diese enthalten alle benötigten Informationen über den Geltungszeitraum und die Grünphasen.\\ 
 Die Klasse \texttt{GPSTracker} implementiert die Schnittstelle \texttt{LocationListener} und kann so kontinuierlich die Position des Endgeräts verfolgen. Mit der eigenen Position und der aller Ampeln aus dem vom \texttt{JSONParser} erstellten Array ermittelt er außerdem die nächste Ampel. Ist diese identifiziert, wird über den \texttt{OnSetListener} die Klasse \texttt{SpeedHandler} aktiviert, welche anhand der Daten aus dem Signalschaltplanobjekt den Countdown der Rotanzeige und die optimale Geschwindigkeit berechnet \textit{sowie die Anzeige entsprechend aktualisiert.} \\
-Das nachfolgende Klassendiagramm gibt eine Übersicht über die oben beschriebenen Klassen.
+Das nachfolgende Klassendiagramm gibt eine Übersicht über die oben beschriebenen Klassen.\\
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=\textwidth]{uml} 

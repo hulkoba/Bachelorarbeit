@@ -34,7 +34,7 @@ Es wird eine Instanz des \texttt{JSONParser}-Objekts erstellt, welche die \gls{J
 % Umsetzung Szenarien
 %
 \section{Umsetzung der Szenarien}
-Wie in Kapitel \ref{chap:szenarien} beschrieben, lassen sich die sieben möglichen Szenarien auf insgesamt fünf komprimieren, da die Szenarien R2 und G2, genauso wie die Szenarien R3 und G3 dasselbe Ergebnis haben. Die zusammengefassten fünf Ergebnisse eignen sich für eine prototypische Umsetzung, welche im Folgenden beschrieben wird.
+Wie in Kapitel \ref{chap:szenarien} beschrieben, lassen sich die sieben möglichen Szenarien auf insgesamt fünf komprimieren, da die Szenarien R2 und G2, R3 und G3, genauso wie die Szenarien V3 und V3 dasselbe Ergebnis haben. Die zusammengefassten fünf Ergebnisse eignen sich für eine prototypische Umsetzung, welche im Folgenden beschrieben wird.
 %
 % Einlesen der Ampeldaten
 %
@@ -46,11 +46,9 @@ Hierfür wird das \gls{JSON}-Array durchlaufen und für jedes enthaltende Objekt
 %
 \subsection{Ermittlung der nächsten Ampel}
 Zur Ermittlung der nächsten Ampel ist zunächst die eigene Position vonnöten. Dazu stellt der in dem \texttt{android.location}-Paket enthaltene \texttt{LocationManager} die entsprechenden Schnittstellen bereit. Für den Empfang der \gls{GPS}-Daten implementiert die Klasse \texttt{GpsTracker} das \texttt{LocationListener} Interface und registriert sich beim \texttt{LocationManager} für \gls{GPS}-Updates.
-Letzteres ist im Listing \ref{lst:gps1} abgebildet. Die Methode erwartet neben dem Providertyp und dem zu benachrichtigenden Listener (\texttt{this}) zwei weitere Parameter. Der erste zeigt an, nach wie vielen Millisekunden ein Update gesendet werden soll, der zweite, dass ein Update nur gesendet werden soll, sobald sich die Position um die angegebene Distanz verändert hat.
+Letzteres ist im Listing \ref{lst:gps1} abgebildet. Die Methode erwartet neben dem Providertyp (\gls{GPS}-Provider) und dem zu benachrichtigenden Listener (\texttt{this}) zwei weitere Parameter. Der erste zeigt an, nach wie vielen Millisekunden ein Update gesendet werden soll, der zweite, dass ein Update nur gesendet werden soll, sobald sich die Position um die angegebene Distanz verändert hat.
 \begin{center}
-\grayRule
-\lstinputlisting[language=Java, firstline=1, lastline=3, caption={Registrierung für GPS-Updates in GpsTracker.java}, label=lst:gps1]{code/gpstracker.java}
-\grayRule
+\lstinputlisting[language=Java, firstline=1, lastline=4, caption={Registrierung für GPS-Updates in GpsTracker.java}, label=lst:gps1]{code/gpstracker.java}
 \end{center}
 Zusammen mit dem \texttt{LocationListener} wird unter anderem die Methode \texttt{onLocationChanged} implementiert, welche aufgerufen wird, sobald neue Positionsdaten vorhanden sind. Das hier gespeicherte \texttt{Location}-Objekt liefert neben dem Längen- und Breitengrad auch die Genauigkeit des \gls{GPS}-Signals in Metern und Geschwindigkeit in Metern pro Sekunde. Sofern die Genauigkeit nicht zu gering ist, wird mit ihm die Methode \texttt{getNearestLSA} aufgerufen, welche die nächste Ampel bestimmt.\\
 Die Methode \texttt{getNearestLSA} ermittelt zunächst alle Ampeln im festgelegten Radius und speichert diese zusammen mit der Distanz zum Gerät in einer temporären Liste. Dann werden diese durchlaufen und die Distanzen verglichen. Die Ampel, zu der sich die Entfernung zum Gerät verringert und die die kleinste Distanz zum Gerät hat, ist die Gesuchte. Ist die nächste Ampel ermittelt, kann der \texttt{OnSetListener} der \texttt{MainActivity} diese zusammen mit der Geräteposition übergeben. \\\\
@@ -58,7 +56,7 @@ Vergrößert sich die Distanz zu der \gls{LSA} wieder oder befindet sie sich au�
 \clearpage
 \begin{center}
 %\grayRule
-\lstinputlisting[language=Java, firstline=12, lastline=64, caption={Ermittlung der nächsten LSA in GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
+\lstinputlisting[language=Java, firstline=13, lastline=65, caption={Ermittlung der nächsten LSA in GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
 %\grayRule
 \end{center}
 %
@@ -66,10 +64,10 @@ Vergrößert sich die Distanz zu der \gls{LSA} wieder oder befindet sie sich au�
 %
 \subsection{Berechnung der Geschwindigkeitsempfehlung}
 An dieser Stelle wird die Berechnung der Geschwindigkeitsempfehlung erklärt. Sobald alle benötigten Daten (bestehend aus aktueller, eigener Position, Entfernung zur nächsten Ampel und deren Signalschaltplan) vorhanden sind, wird die benötigte Geschwindigkeit errechnet, um die Ampel bei Grün zu erreichen. Diese Geschwindigkeit wird mit der Formel 
-\[ v = \frac{s}{t_{2} - t_{1}} \]\\
+\[ v = \frac{s}{t_{2} - t_{1}} \]
 berechnet, wobei $t_1$ die aktuelle Sekunde, $t_2$ der Zeitpunkt zu dem die Ampel auf Rot schaltet und $s$ die Entfernung zur Ampel ist. \\
 Für FahrradfahrerInnen ist die Beschleunigung ebenfalls von nicht geringer Bedeutung, weil sie begrenzt ist. Die Formel für die Beschleunigung lautet:
-\[ a = \frac{v}{(t_{2} - t_{1})^{2}} \] \\
+\[ a = \frac{v}{(t_{2} - t_{1})^{2}} \] 
 Die Variable $v$ ist hier die errechnete Empfehlungsgeschwindigkeit.\\\\
 Anhand der errechneten Geschwindigkeit, Beschleunigung und Geschwindigkeit des Geräts wird das \gls{GUI} aktualisiert. Hier wird berücksichtigt, ob die errechnete Geschwindigkeit sowie die Beschleunigung innerhalb festgelegter Parameter liegen. Da bei einer Handlungsaufforderung zusätzlich der Countdown der Ampel dargestellt wird, geschieht dies sekündlich.\\
 Jede \gls{App} hat ihren eigenen \gls{UI}-Thread und nur Objekte, die auf dem \gls{UI}-Thread ausgeführt werden, haben Zugang zu anderen Objekten auf diesem Thread. Um Daten aus einem Hintergrundthread auf den \gls{UI}-Thread zu verschieben, wird der \texttt{Handler} verwendet.

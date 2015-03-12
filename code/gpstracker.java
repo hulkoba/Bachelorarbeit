@@ -1,6 +1,7 @@
 // Registrieren fuer GPS Updates (alle 3 sekunden, nach 5 Metern)
 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 
-										3000, Constants.MY_DISTANCE, this);
+										Constants.UPDATE_INTERVAL, 
+										Constants.MY_DISTANCE, this);
 private void getNearestLSA(Location myLocation){
     Log.d("count ", "get Nearest");
     List<LSA> lsas = JSONParser.getLsaList();
