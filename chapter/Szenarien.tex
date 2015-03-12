@@ -1,5 +1,6 @@
 \chapter{\label{chap:szenarien}Szenarien im Ampelbereich}
-Alle in Kapitel \ref{chap:state} angeführten Studien zu Ampelinformationssystemen und Konzepte zu Fahrraderweiterungen haben die Gemeinsamkeit des selbstkontrollierten Fahrverhaltens der FahrerInnen. Die Verkehrslage und Ampelsituation sind trotzdem zu beachten. Ausgesprochen werden lediglich Empfehlungen, die möglichst intuitiv und schnell vermittelt werden. Grundlegend sollte die Anwendung in der Lage sein bei einer Annäherung an eine Ampel die passende Empfehlung oder Handlungsaufforderung anzuzeigen, die sich aus den Szenarien ergeben. Folgende Situationen können eintreten:\\
+Alle in Kapitel \ref{chap:state} angeführten Studien zu Ampelinformationssystemen und Konzepte zu Fahrraderweiterungen haben die Gemeinsamkeit des selbstkontrollierten Fahrverhaltens der FahrerInnen. Die Verkehrslage und Ampelsituation sind trotzdem zu beachten. Ausgesprochen werden lediglich Empfehlungen, die möglichst intuitiv und schnell vermittelt werden.\\ 
+Grundlegend sollte die Anwendung in der Lage sein bei einer Annäherung an eine Ampel die passende Empfehlung oder Handlungsaufforderung anzuzeigen, die sich aus den Szenarien ergeben. Folgende Situationen können eintreten:\\
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=1\textwidth]{Szenarien} 
@@ -8,6 +9,7 @@ Alle in Kapitel \ref{chap:state} angeführten Studien zu Ampelinformationssystem
     \label{fig:szenarien}
 \end{figure} \vspace{17pt}
 \begin{description}[leftmargin=0.7cm,style=nextline]
+\clearpage
 % ROT
 \item[Szenario R1:] 
 Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell roten Ampel. Die Anwendung zeigt den Countdown der Restrotzeit an und empfiehlt, langsamer zu fahren, um die Ampel ohne anzuhalten passieren zu können.  \\
@@ -22,18 +24,26 @@ Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell grünen Am
 Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell grünen Ampel. Die Anwendung zeigt an, dass eine Weiterfahrt bei gleichbleibender Geschwindigkeit gewährleistet ist. Es besteht kein Aktionsbedarf.\\ 
 \item[Szenario G3:] 
 Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell grünen Ampel. Die Anwendung meldet, das Anhalten bei auf Rot umspringende Ampel ist in jedem Fall erforderlich, da eine zu hohe Geschwindigkeit zum Erreichen der noch grünen Ampel erforderlich wäre.\\
+% Verkehrsabgängig oder aus
 \item[Szenario V1:] 
-Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer verkehrsabhängigen Ampel. Das bedeutet, die Schaltung ist unregelmäßig und die Wahrscheinlichkeit des Zutreffens der Vorhersage zu gering. Die Anwendung zeigt also an, dass es ihr nicht möglich ist, eine Vorhersage zu treffen.\\ 
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer ausgeschalteten Ampel. Es gibt weder Grün- noch Rotphasen. Das System zeigt an, das die aktuelle Verkehrslage beurteilt und entsprechend gehandelt werden sollte.\\ 
+\end{description}
+\clearpage
+\centerline{\grayRule}
+Die obigen Szenarien gehen von einer gleichbleibenden Ampelschaltung aus. Insbesondere in Großstädten gibt es viele Faktoren, die die Ampelschaltung beeinflussen können, indem sie Grün anfordern. Deshalb kann es außerdem zum Szanario V2 kommen. Da keine Echtzeitdaten mit speziellen Technologien zur Verfügung stehen, sollte die Anwendung für die Berechnungen ausschließlich die intervallgesteuerten \glspl{LSA} berücksichtigen.\\
+\centerline{\grayRule}
+\begin{description}[leftmargin=0.7cm,style=nextline]
 \item[Szenario V2:] 
-Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer ausgeschalteten Ampel. Das bedeutet, die Schaltung ist unregelmäßig und die Wahrscheinlichkeit des Zutreffens der Vorhersage zu gering, eine solche treffen zu können. Die Anwendung zeigt also an, dass es ihr nicht möglich ist eine Vorhersage zu treffen.\\ 
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer verkehrsabhängigen Ampel. Das bedeutet, die Schaltung ist unregelmäßig und die Wahrscheinlichkeit des Zutreffens der Vorhersage zu gering. Die Anwendung zeigt also an, dass es ihr nicht möglich ist, eine Vorhersage zu treffen.\\ 
 \end{description} %\vspace{27pt}
+% ERGEBNIS
 \subsection*{Ergebnis}
-Da die Szenarien \textit{R2} und \textit{G2} genau wie die Szenarien \textit{R3} und \textit{G3} zusammengefasst werden können, ergeben sich aus den sieben Szenarien im Ampelbereich die fünf nun aufgezählten Systemzustände.
+Da die Szenarien \textit{R2} und \textit{G2}, die Szenarien \textit{R3} und \textit{G3} sowie die Szenazien\textit{V1} und \textit{V2} zusammengefasst werden können, ergeben sich aus den acht Szenarien im Ampelbereich die fünf nun aufgezählten Fälle.
 \begin{itemize}
-	\item Zustand a: Anhalten bei Rot in jedem Fall erforderlich
-	\item Zustand b: Weiterfahrt mit gleichbleibender Geschwindigkeit möglich.\\ Kein Aktionsbedarf
-	\item Zustand c: Weiterfahrt durch Verlangsamung möglich
-	\item Zustand d: Weiterfahrt durch Beschleunigung möglich
-	\item Zustand e: Keine Vorhersage möglich
+	\item Fall a: Anhalten bei Rot in jedem Fall erforderlich
+	\item Fall b: Weiterfahrt mit gleichbleibender Geschwindigkeit möglich.\\ Kein Aktionsbedarf
+	\item Fall c: Weiterfahrt durch Verlangsamung möglich
+	\item Fall d: Weiterfahrt durch Beschleunigung möglich
+	\item Fall e: Keine Vorhersage möglich
 \end{itemize}
 Im weiteren Verlauf dieser Arbeit wird unter anderem beschrieben wie diese Systemzustände in die Konzeption der zu entwickelnden Anwendung eingebunden werden.
