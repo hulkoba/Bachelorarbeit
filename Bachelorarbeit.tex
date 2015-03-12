@@ -48,11 +48,18 @@ toc]            %Einträge im Inhaltsverzeichnis
 
 \addto\captionsngerman{% 
  \renewcommand{\abstractname}{Abstract}} 
+ 
+\definecolor{lightgray}{gray}{0.95}
+\definecolor{rulegray}{gray}{0.8}
+
+\newcommand{\grayRule}{
+    \textcolor{rulegray}{\rule{35em}{0.4pt}}
+}
 
 %------------------------------------------------------------------------
 % CODE
 %------------------------------------------------------------------------
-\definecolor{lightgray}{gray}{0.95}
+
 \lstdefinelanguage{XML}
 {
   morestring=[b]",
