@@ -11,7 +11,7 @@ Auch hier möchte man die Benutzung des Rades attraktiver machen und den Fahrrad
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.6\textwidth]{copenhagen} 
-    \rule{35em}{0.5pt}   
+    \grayRule
     \caption[Grüne Welle durch \glspl{LED}]{Kopenhagen: \glspl{LED} signalisieren die Grüne Welle bei 20 km/h  Quelle: \cite{NYT}}
      \label{fig:copenhagen}
 \end{figure}
@@ -28,7 +28,7 @@ Die Vorhersage der Schaltbilder ist aufgrund der verkehrsabhängigen Logik bei n
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.7\textwidth]{travolution}   
-    \rule{35em}{0.5pt}   
+    \grayRule
     \caption[Projekt Travolution]{Der Bordcomputer zeigt die optimale Geschwindigkeit an. Quelle: \cite{Travolution}}
     \label{fig:travolution}
 \end{figure} 
@@ -41,7 +41,7 @@ Die FahrerInnen wurden sowohl fahrzeugintegriert\footnote{ On-Board-Computer} al
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=0.7\textwidth]{kolibri}   
-    \rule{35em}{0.5pt}   
+    \grayRule
     \caption[Projekt Kolibri]{Anzeige der Geschwindigkeitsempfehlung. Quelle: \cite{kolibri}}
     \label{fig:kolibri}
 \end{figure} 
@@ -53,7 +53,7 @@ Abbildung \ref{fig:telematik} zeigt die mobile Anwendung auf einem Tablet mit de
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{telematik} 
-    \rule{35em}{0.5pt}    
+    \grayRule
     \caption[Projekt Testfeld-Telematik Ampelinformation]{Mobile Anwendung des Projekts Testfeld-Telematik Quelle: \cite{Telematik}}
     \label{fig:telematik}
 \end{figure}  
@@ -72,7 +72,7 @@ Connected Signals verbindet sich mit dem Verkehrsmanagementsystem der jeweiligen
 \begin{figure}[t]
     \centering
     \includegraphics[width=0.7\textwidth]{Portland_live} 
-    \rule{35em}{0.5pt}
+    \grayRule
     \label{fig:enlighten}
     \caption[Connected Signals live Vorhersage]{Live Ampelsignalvorhersage in Portland Quelle: \cite{signals}}
 \end{figure}
@@ -85,7 +85,7 @@ Signal Guru wurde von den Wissenschaftlern des MIT\footnote{ Massachusetts Insti
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{guru}
-    \rule{35em}{0.5pt}
+    \grayRule
     \caption[Signal Guru]{Signal Guru muss in der Lage sein, die Ampel zu 'sehen'.  Quelle: \cite{SignalGuruPaper}} \label{fig:AppSignalGuru}
 \end{figure}
 Dieser Ansatz ist für Fahrräder jedoch nicht umsetzbar, da das \gls{Smartphone} in der Halterung am Lenker die \gls{LSA} nicht erfassen kann.
@@ -101,7 +101,7 @@ Via Bluetooth ist \textsc{Hammerhead} an das \gls{Smartphone} gekoppelt, auf dem
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{hammerhead}
-    \rule{35em}{0.5pt}
+    \grayRule
     \caption[Hammerhead]{Hammerhead -- \glspl{LED} zeigen den Weg.  Quelle: \cite{Hammerhead}} 
     \label{fig:hammerhead}
 \end{figure}
@@ -112,7 +112,7 @@ Neben dem Frontlicht hat der Lenker wie in Abbildung \ref{fig:helios} zu sehen, 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{helios}
-    \rule{35em}{0.5pt}
+    \grayRule
     \caption[Helios-Lenker]{Helios-Lenker  Quelle: \cite{Helios}}		
     \label{fig:helios}
 \end{figure}
@@ -123,7 +123,7 @@ Auf der Mailänder Designwoche 2014 hatte Samsung ein Smartbike vorgestellt, das
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{samsung}
-    \rule{35em}{0.5pt}
+    \grayRule
     \caption[Samsung Smart Bike]{Samsung Smart Bike  Quelle: \cite{smartbike}} 
     \label{fig:samsung}
 \end{figure}
@@ -146,7 +146,7 @@ Ein Projekt aus Frankfurt am Main entwickelt das System \textsc{COBI} (Connected
                 \caption{Bremslicht und Blinker}
                 \label{fig:cobi2}
         \end{subfigure}
-        \rule{35em}{0.5pt}
+        \grayRule
         \caption[COBI]{COBI -- Das smarte Fahrradsystem. Quelle: \cite{cobi_pic}}
         \label{fig:cobi}
 \end{figure}

@@ -1,6 +1,6 @@
 \chapter{\label{chap:szenarien}Szenarien im Ampelbereich}
-Alle in Kapitel \ref{chap:state} angeführten Studien zu Ampelinformationssystemen und Konzepte zu Fahrrad- erweiterungen haben die Gemeinsamkeit des selbstkontrollierten Fahrverhaltens der FahrerInnen. Die Verkehrslage und Ampelsituation sind trotzdem zu beachten. Ausgesprochen werden lediglich Empfehlungen, die möglichst intuitiv und schnell vermittelt werden.\\ 
-Grundlegend sollte die Anwendung in der Lage sein bei einer Annäherung an eine Ampel die passende Empfehlung oder Handlungsaufforderung anzuzeigen, die sich aus den Szenarien ergeben. Folgende Situationen können eintreten:\\
+Alle in Kapitel \ref{chap:state} angeführten Studien zu Ampelinformationssystemen und Konzepte zu Fahrrad- erweiterungen haben die Gemeinsamkeit des selbstkontrollierten Fahrverhaltens der FahrerInnen. Die Verkehrslage und die Ampelsituation sind trotzdem zu beachten. Ausgesprochen werden lediglich Empfehlungen, die möglichst intuitiv und schnell vermittelt werden können.\\ 
+Prinzipiell sollte die Anwendung in der Lage sein bei einer Annäherung an eine Ampel die passende Empfehlung oder Handlungsaufforderung anzuzeigen, die sich aus den Szenarien ergeben. Folgende Situationen können eintreten:\\
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=1\textwidth]{Szenarien} 
@@ -14,7 +14,7 @@ Grundlegend sollte die Anwendung in der Lage sein bei einer Annäherung an eine 
 \item[Szenario R1:] 
 Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell roten Ampel. Die Anwendung zeigt den Countdown der Restrotzeit an und empfiehlt, langsamer zu fahren, um die Ampel ohne anzuhalten passieren zu können.  \\
 \item[Szenario R2:] 
-Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer roten aktuell Ampel. Die Anwendung zeigt an, dass eine Weiterfahrt bei gleichbleibender Geschwindigkeit gewährleistet ist. Es besteht kein Aktionsbedarf. \\
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell roten Ampel. Die Anwendung zeigt an, dass eine Weiterfahrt bei gleichbleibender Geschwindigkeit gewährleistet ist. Es besteht kein Aktionsbedarf. \\
 \item[Szenario R3:] 
 Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell roten Ampel. Die Anwendung meldet, das Erreichen der Grünphase ist auch bei Geschwindigkeitsreduktion nicht möglich.\\%in jedem Fall
 % GRÜN 
@@ -23,14 +23,14 @@ Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell grünen Am
 \item[Szenario G2:] 
 Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell grünen Ampel. Die Anwendung zeigt an, dass eine Weiterfahrt bei gleichbleibender Geschwindigkeit gewährleistet ist. Es besteht kein Aktionsbedarf.\\ 
 \item[Szenario G3:] 
-Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell grünen Ampel. Die Anwendung meldet, das Anhalten bei auf Rot umspringende Ampel ist in jedem Fall erforderlich, da eine zu hohe Geschwindigkeit zum Erreichen der noch grünen Ampel erforderlich wäre.\\
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer aktuell grünen Ampel. Die Anwendung meldet, das Anhalten bei einer auf Rot umspringenden Ampel ist in jedem Fall erforderlich, da eine zu hohe Geschwindigkeit zum Erreichen der noch grünen Ampel erforderlich wäre.\\
 % Verkehrsabgängig oder aus
 \item[Szenario V1:] 
-Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer ausgeschalteten Ampel. Es gibt weder Grün- noch Rotphasen. Das System zeigt an, das die aktuelle Verkehrslage beurteilt und entsprechend gehandelt werden sollte.\\ 
+Die Fahrradfahrerin oder der Fahrradfahrer nähert sich einer ausgeschalteten Ampel. Es gibt weder Grün- noch Rotphasen. Das System zeigt an, dass die aktuelle Verkehrslage beurteilt und entsprechend gehandelt werden sollte.\\ 
 \end{description}
 \clearpage
 \centerline{\grayRule}
-Die obigen Szenarien gehen von einer gleichbleibenden Ampelschaltung aus. Insbesondere in Großstädten gibt es viele Faktoren, die die Ampelschaltung beeinflussen können, indem sie Grün anfordern. Deshalb kann es außerdem zum Szanario V2 kommen. Da keine Echtzeitdaten mit speziellen Technologien zur Verfügung stehen, sollte die Anwendung für die Berechnungen ausschließlich die intervallgesteuerten \glspl{LSA} berücksichtigen.\\
+Die obigen Szenarien gehen von einer gleichbleibenden Ampelschaltung aus. Insbesondere in Großstädten gibt es viele Faktoren, die die Ampelschaltung beeinflussen können, indem sie Grün anfordern. Deshalb kann hier Szanario V2 eintreten. Da keine Echtzeitdaten mit speziellen Technologien zur Verfügung stehen, sollte die Anwendung für die Berechnungen ausschließlich die intervallgesteuerten \glspl{LSA} berücksichtigen.\\
 \centerline{\grayRule}
 \begin{description}[leftmargin=0.7cm,style=nextline]
 \item[Szenario V2:] 
@@ -42,8 +42,8 @@ Da die Szenarien \textit{R2} und \textit{G2}, die Szenarien \textit{R3} und \tex
 \begin{itemize}
 	\item Fall a: Anhalten bei Rot in jedem Fall erforderlich
 	\item Fall b: Weiterfahrt mit gleichbleibender Geschwindigkeit möglich.\\ Kein Aktionsbedarf
-	\item Fall c: Weiterfahrt durch Verlangsamung möglich
-	\item Fall d: Weiterfahrt durch Beschleunigung möglich
+	\item Fall c: Weiterfahrt bei Verlangsamung möglich
+	\item Fall d: Weiterfahrt bei Beschleunigung möglich
 	\item Fall e: Keine Vorhersage möglich
 \end{itemize}
-Im weiteren Verlauf dieser Arbeit wird unter anderem beschrieben wie diese Systemzustände in die Konzeption der zu entwickelnden Anwendung eingebunden werden.
+Im weiteren Verlauf dieser Arbeit wird unter anderem beschrieben wie diese Fälle in die Konzeption der zu entwickelnden Anwendung eingebunden werden.
