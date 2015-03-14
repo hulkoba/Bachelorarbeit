@@ -28,8 +28,9 @@ Die Android-Version wurde auf 2.3.3 festgelegt, da das die Mindestanforderung f�
 \clearpage
 \section{MainActivity-Klasse}
 Die Klasse \texttt{MainActivity} ist die \gls{Activity}, die beim Start der Anwendung ausgeführt wird.  Hier werden die Anzeigeelemente initialisiert und die zentralen Funktionalitäten delegiert.\\
-Die Methode \texttt{onCreate} ist die erste Methode im \gls{Activity}-Lebenszyklus\footnote{ \url{http://developer.android.com/training/basics/activity-lifecycle/starting.html} -- Zugriff: 02.03.2015} und wird direkt nach dem Start der \gls{Activity} ausgeführt. Hier werden die Anzeigeelemente gesetzt und nach jeder Installation ein Dialog erstellt, der auf die oberste Priorität der Straßenverkehrsordnung hinweist.\\
-Es wird eine Instanz des \texttt{JSONParser}-Objekts erstellt, welche die \gls{JSON}-Datei aus dem Ressourcenordner liest und in ein Objektarray umwandelt. Neben der \texttt{SpeedHandler}-Objektinstanz, welche für die Geschwindigkeitsempfehlung und \textit{deren Anzeige} zuständig ist, wird die des \texttt{GPSTracker} erstellt. Auf diesen ist der \texttt{OnSetListener} registriert, welcher ein Ereignis wirft, sobald er die nächstgelegende Ampel gesetzt hat. Sobald dieser Fall eingetreten ist, wird der \texttt{SpeedHandler} beauftragt, den dazugehörigen Signalschaltplan zu holen, um dann anhand dieser Daten die Berechnungen durchzuführen und deren Ergebnisse anzuzeigen.   
+Die Methode \texttt{onCreate} ist die erste Methode im \gls{Activity}-Lebenszyklus\footnote{ \url{http://developer.android.com/training/basics/activity-lifecycle/starting.html} -- Zugriff: 02.03.2015} und wird direkt nach dem Start der \gls{Activity} ausgeführt. Hier werden die Anzeigeelemente gesetzt und nach jeder Installation ein Dialog erstellt, der auf die oberste Priorität der Straßenverkehrsordnung hinweist. Sollte \gls{GPS} nicht aktiviert sein, wird ebenfalls in einem Dialog darauf hingewiesen.\\\\
+Es wird eine Instanz des \texttt{JSONParser}-Objekts erstellt, welche die \gls{JSON}-Datei aus dem Ressourcenordner einliest und daraus ein Objektarray erstellt. Außerdem werden Objektinstanzen von \texttt{GPSTracker} und \texttt{SpeedHandler} erstellt. Der \texttt{GPSTracker} verfolg stetig die Position des Gerätes und ermittelt unter Verwendung die nächstgelegene Ampel. Auf diesen ist der \texttt{OnSetListener} registriert, welcher ein Ereignis wirft, sobald er die nächstgelegende Ampel gesetzt hat. Sobald dieser Fall eingetreten ist, wird der \texttt{SpeedHandler} beauftragt, den dazugehörigen Signalschaltplan zu holen, um dann anhand dieser Daten die Berechnungen durchzuführen und deren Ergebnisse anzuzeigen.\\
+Die \texttt{onResume}-Methode, wird aufgerufen, kurz bevor die \texttt{Activity} aktiv ist. Hier wird auf den \texttt{SpeedHandler} der \texttt{AdviceListener} registriert, über den die Anzeigeelemente, entsprechend der empfohlenen Geschwindigkeitsanpassung, aktualisiert werden. 
 %
 % Umsetzung Szenarien
 %
@@ -48,16 +49,18 @@ Hierfür wird das \gls{JSON}-Array durchlaufen und für jedes enthaltende Objekt
 Zur Ermittlung der nächsten Ampel ist zunächst die eigene Position vonnöten. Dazu stellt der in dem \texttt{android.location}-Paket enthaltene \texttt{LocationManager} die entsprechenden Schnittstellen bereit. Für den Empfang der \gls{GPS}-Daten implementiert die Klasse \texttt{GpsTracker} das \texttt{LocationListener} Interface und registriert sich beim \texttt{LocationManager} für \gls{GPS}-Updates.
 Letzteres ist im Listing \ref{lst:gps1} abgebildet. Die Methode erwartet neben dem Providertyp (\gls{GPS}-Provider) und dem zu benachrichtigenden Listener (\texttt{this}) zwei weitere Parameter. Der erste zeigt an, nach wie vielen Millisekunden ein Update gesendet werden soll, der zweite, dass ein Update nur gesendet werden soll, sobald sich die Position um die angegebene Distanz verändert hat.
 \begin{center}
+\grayRule
 \lstinputlisting[language=Java, firstline=1, lastline=4, caption={Registrierung für GPS-Updates in GpsTracker.java}, label=lst:gps1]{code/gpstracker.java}
+\grayRule
 \end{center}
 Zusammen mit dem \texttt{LocationListener} wird unter anderem die Methode \texttt{onLocationChanged} implementiert, welche aufgerufen wird, sobald neue Positionsdaten vorhanden sind. Das hier gespeicherte \texttt{Location}-Objekt liefert neben dem Längen- und Breitengrad auch die Genauigkeit des \gls{GPS}-Signals in Metern und Geschwindigkeit in Metern pro Sekunde. Sofern die Genauigkeit nicht zu gering ist, wird mit ihm die Methode \texttt{getNearestLSA} aufgerufen, welche die nächste Ampel bestimmt.\\
 Die Methode \texttt{getNearestLSA} ermittelt zunächst alle Ampeln im festgelegten Radius und speichert diese zusammen mit der Distanz zum Gerät in einer temporären Liste. Dann werden diese durchlaufen und die Distanzen verglichen. Die Ampel, zu der sich die Entfernung zum Gerät verringert und die die kleinste Distanz zum Gerät hat, ist die Gesuchte. Ist die nächste Ampel ermittelt, kann der \texttt{OnSetListener} der \texttt{MainActivity} diese zusammen mit der Geräteposition übergeben. \\\\
-Vergrößert sich die Distanz zu der \gls{LSA} wieder oder befindet sie sich außerhalb des durchsuchten Radius bedeutet das, dass der Fahrer oder die Fahrerin sich von der Ampel oder der Kreuzung entfernt. Also werden diese dann zusammen mit den anderen gespeicherten Ampeln gelöscht. 
-\clearpage
+Vergrößert sich die Distanz zu der \gls{LSA} wieder oder befindet sie sich außerhalb des durchsuchten Radius bedeutet das, dass der Fahrer oder die Fahrerin sich von der Ampel oder der Kreuzung entfernt. Also werden diese dann zusammen mit den anderen gespeicherten Ampeln gelöscht.\\ 
+%\clearpage
 \begin{center}
-%\grayRule
+\grayRule
 \lstinputlisting[language=Java, firstline=13, lastline=65, caption={Ermittlung der nächsten LSA in GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
-%\grayRule
+\grayRule
 \end{center}
 %
 % v = s/t
@@ -69,9 +72,9 @@ berechnet, wobei $t_1$ die aktuelle Sekunde, $t_2$ der Zeitpunkt zu dem die Ampe
 Für FahrradfahrerInnen ist die Beschleunigung ebenfalls von nicht geringer Bedeutung, weil sie begrenzt ist. Die Formel für die Beschleunigung lautet:
 \[ a = \frac{v}{(t_{2} - t_{1})^{2}} \] 
 Die Variable $v$ ist hier die errechnete Empfehlungsgeschwindigkeit.\\\\
-Anhand der errechneten Geschwindigkeit, Beschleunigung und Geschwindigkeit des Geräts wird das \gls{GUI} aktualisiert. Hier wird berücksichtigt, ob die errechnete Geschwindigkeit sowie die Beschleunigung innerhalb festgelegter Parameter liegen. Da bei einer Handlungsaufforderung zusätzlich der Countdown der Ampel dargestellt wird, geschieht dies sekündlich.\\
-Jede \gls{App} hat ihren eigenen \gls{UI}-Thread und nur Objekte, die auf dem \gls{UI}-Thread ausgeführt werden, haben Zugang zu anderen Objekten auf diesem Thread. Um Daten aus einem Hintergrundthread auf den \gls{UI}-Thread zu verschieben, wird der \texttt{Handler} verwendet.
-Also werden in der umsetzenden \texttt{SpeedHandler}-Klasse eine \texttt{Handler}- und eine \texttt{Runnable}-Instanz erzeugt. Ein \texttt{Handler} ist eine Schnittstelle für die Kommunikation zwischen Threads. Jede \texttt{Handler}-Instanz wird mit einem Thread und dessen Warteschlange verbunden. Ein \texttt{Runnable} ist ein Objekt, das etwas ausführen kann. Das \texttt{Runnable} wird nun mittels \texttt{post()} im \texttt{Handler} abgelegt, wodurch \texttt{Runnable} aus dem \texttt{Handler} im \gls{UI}-Thread ausgelesen und gestartet wird. 
+Anhand der errechneten Geschwindigkeit, Beschleunigung und Geschwindigkeit des Geräts wird das \gls{GUI} aktualisiert. Hier wird berücksichtigt, ob die errechnete Geschwindigkeit sowie die Beschleunigung innerhalb festgelegter Parameter liegen. Da bei einer Handlungsaufforderung zusätzlich der Countdown der Ampel dargestellt wird, geschieht dies sekündlich. So wirft der \texttt{AdviceListener} jede Sekunde ein Ereignis mit dem errechnetem Ergebnis und den Wert des Countdowns, woraufhin er in der \texttt{MainActivity} die Anzeige aktualisiert.
+%Jede \gls{App} hat ihren eigenen \gls{UI}-Thread und nur Objekte, die auf dem \gls{UI}-Thread ausgeführt werden, haben Zugang zu anderen Objekten auf diesem Thread. Um Daten aus einem Hintergrundthread auf den \gls{UI}-Thread zu verschieben, wird der \texttt{Handler} verwendet.
+%Also werden in der umsetzenden \texttt{SpeedHandler}-Klasse eine \texttt{Handler}- und eine \texttt{Runnable}-Instanz erzeugt. Ein \texttt{Handler} ist eine Schnittstelle für die Kommunikation zwischen Threads. Jede \texttt{Handler}-Instanz wird mit einem Thread und dessen Warteschlange verbunden. Ein \texttt{Runnable} ist ein Objekt, das etwas ausführen kann. Das \texttt{Runnable} wird nun mittels \texttt{post()} im \texttt{Handler} abgelegt, wodurch \texttt{Runnable} aus dem \texttt{Handler} im \gls{UI}-Thread ausgelesen und gestartet wird. 
 %
 % Installationsanleitung
 %

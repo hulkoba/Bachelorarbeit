@@ -32,7 +32,6 @@ Für jedes Schaltzeitprogramm existiert ein Signalschaltzeitplan der Information
 11:00 & Tag    \\ \midrule
 17:00 & Spät   \\ \midrule
 23:00 & Nacht  \\ \bottomrule
-
 \end{tabular}
 \captionof{table}{Zeitschaltplan}	 
 \label{tab:zeitplan}
@@ -45,8 +44,8 @@ Die Abbildung \ref{fig:plan} zeigt auf, wie ein Schaltzeitplan für eine Kreuzun
 	\grayRule
 	\caption[Signalplan]{Beispielhafter Signalschaltplan einer Kreuzung}
 	\label{fig:plan}	
-\end{figure}
-In dem oben gezeigtem Beispiel steht demnach die Ampel R1 zwischen 11 und 17 Uhr in jeder Minute für die Sekunden 12 - 30 auf Grün und den Rest der Zeit auf Rot.\\\\
+\end{figure}\vspace{7pt}
+In dem oben gezeigtem Beispiel steht demnach die Ampel R1 zwischen 11.00 und 17.00 Uhr in jeder Minute für die Sekunden 12 - 30 auf Grün und den Rest der Zeit auf Rot.\\\\
 %\begin{figure}[H]  
 %    \centering  
 %    \includegraphics[width=0.7\textwidth]{kreuzung} 
@@ -55,7 +54,7 @@ In dem oben gezeigtem Beispiel steht demnach die Ampel R1 zwischen 11 und 17 Uhr
 %    \label{fig:kreuzung}
 %\end{figure}
 Auch die Position jeder Ampel wird manuell erfasst und in geographische Längen- und Breitengerade konvertiert, um dann zusammen mit den Phasendaten in das gewählte \gls{JSON}-Format gebracht zu werden.\\
-Als Referenzzeit ist die Zeit zwischen 12 und 16 Uhr von Freitag bis Montag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt, bzw. vervollständigt werden.
+Als Referenzzeit ist die Zeit zwischen 12.00 und 16.00 Uhr von Freitag bis Montag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt, bzw. vervollständigt werden.
 %
 % LSA als JSON
 %
@@ -67,7 +66,7 @@ Der folgende Codeabschnitt zeigt beispielhaft ein \gls{JSON}-Ampelobjekt:
 \lstinputlisting[language=JSON, caption=JSON-Ampelobjekt]{code/lsas.json}
 \grayRule
 \end{center}
-Das hier aufgeführte Ampelobjekt hat den Namen \texttt{SteinstraßeA1}, welcher auf die Kreuzung oder Straße auf der sich die Ampel befindet, schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus, benötigt also auch keine weiteren Daten. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten, an denen diese gelten. Die Werte \texttt{greenFrom} und \texttt{greenTo} bezeichnen den Start und das Ende jeder Grünphase des Schaltplans. Da als Referenzzeit die Zeit zwischen 12.00 und 16.00 Uhr gewählt wurde, werden die Schaltpläne, welche diese nicht betreffen, nicht aufgenommen.
+Das hier aufgeführte Ampelobjekt hat den Namen \texttt{SteinstraßeA1}, welcher auf die Kreuzung oder Straße auf der sich die Ampel befindet, schließen lässt. Es folgen die zwei Werte \texttt{lat} und \texttt{lon}, die die genaue Position der \gls{LSA} beschreiben und der boolsche Wert \texttt{dependsOnTraffic}, der auf \texttt{false} gesetzt ist, sobald die Ampel verkehrsunabhängig ist. Im anderen Fall ist sie verkehrsabhängig und fällt somit aus den Berechnungen heraus, benötigt also auch keine weiteren Daten. Das Array \texttt{timetable} beinhaltet Schaltplanobjekte mit einem Array aus Tagen und der Start-und Endzeiten, an denen diese gelten. Die Werte \texttt{greenFrom} und \texttt{greenTo} bezeichnen den Start und das Ende jeder Grünphase des Schaltplans. Wenn die Ampel ausgeschaltet ist, haben diese Attribute den Wert 999. Da als Referenzzeit die Zeit zwischen 12.00 und 16.00 Uhr gewählt wurde, werden die Schaltpläne, welche diese nicht betreffen, nicht aufgenommen.
 %\subsection{Fahrraddaten}
 %Position und Geschwindigkeit werden mittels \gls{GPS} ermittelt.
 %erst nach Änderung der Position Aktion...?
@@ -113,7 +112,7 @@ Das in Abbildung \ref{fig:uc} gezeigte Use-Case-Diagramm veranschaulicht die in 
 Die zu erstellende Anwendung erhält den Namen AIS, was für Ampel-Informationssystem steht und der vorläufige Name der Anwendung ist und besteht aus den nachfolgend beschriebenen Klassen. \\\\
 Die \texttt{MainActivity} ist die Hauptklasse der Android-Applikation. Sie definiert die graphische Oberfläche der Anwendung und stellt die notwendigen Methoden bereit. \\
 Der \texttt{\gls{JSON}Parser} liest die erstellte \gls{JSON}-Datei ein und speichert deren Inhalt in einem Array. Dieses beinhaltet Ampelobjekte (bezeichnet als \texttt{LSA}) mit deren Namen, Position und der Information darüber, ob sie verkehrsabhängig sind oder nicht. Sind sie es nicht, wird außerdem zu jeder Ampel ein Array, bestehend aus den Sigalschaltplanobjekten (bezeichnet als \texttt{SZPL}) gespeichert. Diese enthalten alle benötigten Informationen über den Geltungszeitraum und die Grünphasen.\\ 
-Die Klasse \texttt{GPSTracker} implementiert die Schnittstelle \texttt{LocationListener} und kann so kontinuierlich die Position des Endgeräts verfolgen. Mit der eigenen Position und der aller Ampeln aus dem vom \texttt{JSONParser} erstellten Array ermittelt er außerdem die nächste Ampel. Ist diese identifiziert, wird über den \texttt{OnSetListener} die Klasse \texttt{SpeedHandler} aktiviert, welche anhand der Daten aus dem Signalschaltplanobjekt den Countdown der Rotanzeige und die optimale Geschwindigkeit berechnet \textit{sowie die Anzeige entsprechend aktualisiert.} \\
+Die Klasse \texttt{GPSTracker} implementiert die Schnittstelle \texttt{LocationListener} und kann so kontinuierlich die Position des Endgeräts verfolgen. Mit der eigenen Position und der aller Ampeln aus dem vom \texttt{JSONParser} erstellten Array ermittelt er außerdem die nächste Ampel. Ist diese identifiziert, wird über den \texttt{OnSetListener} die Klasse \texttt{SpeedHandler} aktiviert, welche anhand der Daten aus dem Signalschaltplanobjekt den Countdown der Rotanzeige und die optimale Geschwindigkeit berechnet und dann mit Hilfe des \texttt{AdviceListener}s die Anzeige  entsprechend aktualisiert. Der \texttt{AdviceListener} wird in der \texttt{onResume} Methode der \texttt{MainActivity} gesetzt und "'lauscht"' dort auf neue Berechnungsergebnisse.\\
 Das nachfolgende Klassendiagramm gibt eine Übersicht über die oben beschriebenen Klassen.\\
 \begin{figure}[H]  
     \centering  
@@ -127,7 +126,7 @@ Das nachfolgende Klassendiagramm gibt eine Übersicht über die oben beschrieben
 \section{Die graphische Oberfläche}
 Aus den Anforderungen an die graphische Oberfläche in Kapitel \ref{chap:anforderungen} entsteht das Design. Durch die überschaubare Anzahl an Funktionalitäten kann der Aufbau einfach gehalten werden. Aus den Empfehlungsanzeigen, welche den Systemzuständen entsprechen, sind fünf Ansichten abzuleiten. Die folgende Abbildung zeigt den Entwurf der Benutzeroberfläche.
 Abbildung \ref{fig:stop} zeigt die graphische Umsetzung des Zustands \textit{a}, in dem die Ampelschaltung keine Weiterfahrt ermöglicht. Es wird ein großer roter Kreis mit einem schwarzen Kreuz verwendet. Rot ist eine Signalfarbe und steht auch bei Ampeln für "'Halt"' oder "'Stop"'. Auch das Kreuz wird häufig als verweigerndes Symbol eingesetzt und ist somit intuitiv als solches erkennbar.\\
-Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, bei dem man mit der aktuellen Geschwindigkeit in der Grünen Welle fährt. Hier wird ein großer grüner Kreis verwendet, in der Mitte steht "'ok"'. Durch die Kombination der Ampelfarben mit Textzeichen ist die Ansicht auch für Menschen mit einer Rot-Grün-Sehschwäche eindeutig interpretierbar.
+Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, bei dem man mit der aktuellen Geschwindigkeit in der Grünen Welle fährt. Hier wird ein großer grüner Kreis verwendet, in der Mitte steht "'ok"'. Durch die Kombination der Ampelfarben mit Textzeichen ist die Ansicht auch für Menschen mit einer Rot-Grün-Sehschwäche eindeutig interpretierbar.\\
 \begin{figure}[H]
         \centering
            \begin{subfigure}[t]{0.18\textwidth}
@@ -180,12 +179,17 @@ Die am nächsten gelegene Ampel und deren Rot- oder Grünphase kann nur ermittel
 \item[Ermittlung der Position:] 
 Die Ermittlung der nächsten Ampel kann nur erfolgreich sein, wenn sowohl die Position des Gerätes, als auch die Positionen der Ampeln bekannt ist. Die eigene Position und die der nächsten Ampel sind erforderlich für die korrekte Geschwindigkeitsberechnung.\\
 \end{description}
+%
+% Entwicklungsumgebung
+%
+\clearpage
 \section{Entwicklungsumgebung}
 Für die Erstellung der Smartphone-Applikation wurde folgende Soft- und Hardware verwendet:
 \subsubsection{Software}
 \begin{itemize}
 	\item Android Studio\footnote{ Download unter \url{http://developer.android.com/sdk/index.html}} Version 1.1. Enthält Android Studio IDE, Android \gls{SDK}-Tools, Android 5.0 Plattform, Android 5.0 Emulator System Image mit Google \glspl{API}
-	\item git, Version 1.7.10.4
+	\item git, Version 1.7.10.4 zur Versionsverwaltung
+	\item Google Drive zur Erstellung der Diagramme, Zeichnungen und Grafiken
 \end{itemize}
 \subsubsection{Hardware}
 \begin{itemize}
