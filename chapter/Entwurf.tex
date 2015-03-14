@@ -9,9 +9,8 @@ In der zu entwickelnden Fahrradapplikation wird keine Navigation innerhalb der A
 %
 \section{Datengrundlage}
 Neben den Daten der eigenen Position ist die Datengrundlage der Ampeln von höchster Priorität. Für die Umsetzung des Prototyps wurde im Rahmen dieser Arbeit als Ausführungsort die Stadt Plau am See in Mecklenburg-Vorpommern festgelegt.\\\\ 
-Die Vorteile der Anwendung im ländlichen Bereich liegen in der Verkehrsarmut und die daraus resultierende geringe Menge an Ampeln. Dieser Umstand ermöglicht die Erfassung sämtlicher Ampeln der Stadt, was ein überschaubares Testbild gibt. 
+Die Vorteile der Anwendung im ländlichen Bereich liegen in der Verkehrsarmut und der daraus resultierenden geringe Menge an Ampeln. Dieser Umstand ermöglicht die Erfassung sämtlicher Ampeln der Stadt, was ein überschaubares Testbild gibt. 
 Weiter gibt es keine Straßenbahnen ober Busse, welche den Verkehr durch Grünanforderung beeinflussen. Dadurch lässt sich die Anzahl der Ampeln, bei denen durch Verkehrsabhängigkeit keine Vorhersage möglich ist, minimieren. 
-
 %
 % Ampeldaten
 %
@@ -20,7 +19,7 @@ Weiter gibt es keine Straßenbahnen ober Busse, welche den Verkehr durch Grünan
 Die Ampeldaten werden manuell erfasst, strukturiert und im \gls{JSON}-Format als Datei auf dem Mobilgerät abgelegt. Um einen Überblick zu gewähren, werden die wichtigsten Komponenten skizziert. \\\\
 \begin{minipage}{0.6\textwidth}
 Jede Kreuzung hat unterschiedliche Schaltpläne, die zu festgelegten Tageszeitabschnitten greifen. Die Tabelle \ref{tab:zeitplan} zeigt, wie ein solcher Tagesplan einer Kreuzung aussehen kann, wobei an anderen Tagen die Uhrzeiten sowie die Reihenfolge, Quantität und Dauer der Zeitschaltprogramme variieren können.\\\\
-Für jedes Schaltzeitprogramm existiert ein Signalschaltzeitplan der Informationen über die Ampelbezeichnung der Kreuzung und deren Rot-, Grün, Gelb, Rotgelb und Dunkelphasen. In letzterer ist die \gls{LSA} ausgeschaltet, was zum Beispiel nachts häufiger der Fall ist. 
+Für jedes Schaltzeitprogramm existiert ein Signalschaltzeitplan der Informationen über die Ampelbezeichnung der Kreuzung und deren Rot-, Grün-, Gelb-, Rotgelb- und Dunkelphasen. In letzterer ist die \gls{LSA} ausgeschaltet, was zum Beispiel nachts häufiger der Fall ist. 
 \end{minipage} \hspace{1cm}
 \begin{minipage}{0.3\textwidth}
 	\begin{tabular}{@{}cc@{}}
@@ -39,7 +38,7 @@ Für jedes Schaltzeitprogramm existiert ein Signalschaltzeitplan der Information
 \label{tab:zeitplan}
 \end{minipage}
 \\ \vspace{0.5cm} \\
-Die Abbildung \ref{fig:plan} zeigt auf, wie so ein Schaltzeitplan für eine Kreuzung mit vier Ampeln aussehen kann. Der Buchstabe R in der Bezeichnung steht hierbei für "'Radfahrampel"'. \\
+Die Abbildung \ref{fig:plan} zeigt auf, wie ein Schaltzeitplan für eine Kreuzung mit vier Ampeln aussehen kann. Der Buchstabe R in der Bezeichnung steht hierbei für "'Radfahrampel"'. \\
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.8\textwidth]{szplGoogle}
@@ -47,7 +46,7 @@ Die Abbildung \ref{fig:plan} zeigt auf, wie so ein Schaltzeitplan für eine Kreu
 	\caption[Signalplan]{Beispielhafter Signalschaltplan einer Kreuzung}
 	\label{fig:plan}	
 \end{figure}
-In dem oben gezeigtem Beispiel steht demnach die Ampel R1 zwischen 11 und 17 Uhr in jeder Minute für die Sekunden 12 - 30 Grün und den Rest der Zeit Rot.\\\\
+In dem oben gezeigtem Beispiel steht demnach die Ampel R1 zwischen 11 und 17 Uhr in jeder Minute für die Sekunden 12 - 30 auf Grün und den Rest der Zeit auf Rot.\\\\
 %\begin{figure}[H]  
 %    \centering  
 %    \includegraphics[width=0.7\textwidth]{kreuzung} 
@@ -55,13 +54,13 @@ In dem oben gezeigtem Beispiel steht demnach die Ampel R1 zwischen 11 und 17 Uhr
 %    \caption{Lageplan}
 %    \label{fig:kreuzung}
 %\end{figure}
-Auch die Position jeder Ampel wird händisch erfasst und in das WGS84-Format konvertiert, um dann zusammen mit den Phasendaten in das gewählte \gls{JSON}-Format gebracht zu werden.\\
-Als Referenzzeit ist die Zeit zwischen 12 und 16 Uhr von Freitag bis Montag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt bis vervollständigt werden.
+Auch die Position jeder Ampel wird manuell erfasst und in geographische Längen- und Breitengerade konvertiert, um dann zusammen mit den Phasendaten in das gewählte \gls{JSON}-Format gebracht zu werden.\\
+Als Referenzzeit ist die Zeit zwischen 12 und 16 Uhr von Freitag bis Montag gewählt. Diese kann selbstverständlich bei Bedarf ausgedehnt, bzw. vervollständigt werden.
 %
 % LSA als JSON
 %
 \subsection[Ampelobjekt im JSON-Format]{Ampelobjekt im \gls{JSON}-Format}
-\gls{JSON} ist ein leichtgewichtiges, auf JavaScript basierendes, Datenaustauschformat, das für Menschen gut les- und schreibbar und für Maschinen einfach analysier- und generierbar ist. Ein \gls{JSON}-Objekt besteht aus einer von zwei Grundstrukturen. Eine Auflistung von Schlüssel/Wert Paaren oder eine geordnete Liste von Werten, als Array realisiert. \cite{json}\\ 
+\gls{JSON} ist ein leichtgewichtiges, auf JavaScript basierendes Datenaustauschformat, das für Menschen gut les- und schreibbar und für Maschinen einfach analysier- und generierbar ist. Ein \gls{JSON}-Objekt besteht aus einer von zwei Grundstrukturen: Eine Auflistung von Schlüssel/Wert Paaren oder eine geordnete Liste von Werten, als Array realisiert. \cite{json}\\ 
 Der folgende Codeabschnitt zeigt beispielhaft ein \gls{JSON}-Ampelobjekt:  
 \begin{center}
 \grayRule

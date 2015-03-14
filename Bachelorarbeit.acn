@@ -32,7 +32,7 @@
 \glossaryentry{GNSS?\glossaryentryfield{GNSS}{\glsnamefont{GNSS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{GNSS?\glossaryentryfield{GNSS}{\glsnamefont{GNSS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
-\glossaryentry{GLONASS?\glossaryentryfield{GLONASS}{\glsnamefont{GLONASS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{GLONASS?\glossaryentryfield{GLONASS}{\glsnamefont{GLONASS}}{Global Navigation Satellite System; das russische \gls {GNSS}}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{LED?\glossaryentryfield{LED}{\glsnamefont{LED}}{Licht-emittierende Diode}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
@@ -70,11 +70,13 @@
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
+\glossaryentry{WLAN?\glossaryentryfield{WLAN}{\glsnamefont{WLAN}}{Wireless Local Area Network}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{GNSS?\glossaryentryfield{GNSS}{\glsnamefont{GNSS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{GLONASS?\glossaryentryfield{GLONASS}{\glsnamefont{GLONASS}}{Global Navigation Satellite System; das russische \gls {GNSS}}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{GNSS?\glossaryentryfield{GNSS}{\glsnamefont{GNSS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{A-GPS?\glossaryentryfield{A-GPS}{\glsnamefont{A-GPS}}{Assisted Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
@@ -142,7 +144,7 @@
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{54}
 \glossaryentry{GNSS?\glossaryentryfield{GNSS}{\glsnamefont{GNSS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{54}
 \glossaryentry{GPS?\glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }|setentrycounter[]{page}\glsnumberformat}{54}
-\glossaryentry{GLONASS?\glossaryentryfield{GLONASS}{\glsnamefont{GLONASS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{54}
+\glossaryentry{GLONASS?\glossaryentryfield{GLONASS}{\glsnamefont{GLONASS}}{Global Navigation Satellite System; das russische \gls {GNSS}}{\relax }|setentrycounter[]{page}\glsnumberformat}{54}
 \glossaryentry{LSA?\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Lichtsignalanlage}{\relax }|setentrycounter[]{page}\glsnumberformat}{54}
 \glossaryentry{GNSS?\glossaryentryfield{GNSS}{\glsnamefont{GNSS}}{Global Navigation Satellite System}{\relax }|setentrycounter[]{page}\glsnumberformat}{55}
 \glossaryentry{WLAN?\glossaryentryfield{WLAN}{\glsnamefont{WLAN}}{Wireless Local Area Network}{\relax }|setentrycounter[]{page}\glsnumberformat}{57}
