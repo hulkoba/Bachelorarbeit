@@ -134,7 +134,7 @@ Der Fused Location Provider verwaltet die zugrunde liegenden Ortungstechnologie.
 Präsentiert das System während der Anwendung eine Geschwindigkeitsempfehlung, ist diese abhängig von der aktuellen Fahrgeschwindigkeit und vom Abstand zur Ampel. Für einen Streckenabschnitt $s$ zwischen zwei Punkten (Position der Ampel und Position der Rades) wird die Zeitspanne $\Delta t$ benötigt. Diese errechnet man mit $t_{2} - t_{1}$. In Kenntnis dieser beiden Größen lässt sich dann die erforderliche Durchschnittsgeschwindigkeit im untersuchten Streckenabschnitt errechnen.\\\\ 
 Angenommen die \gls{Progressionsgeschwindigkeit} $v$ wird zum Zeitpunkt $t_{1}$ ermittelt, die \gls {LSA} schaltet zum Zeitpunt $t_{2}$ auf Rot und Abstand zur Ampel beträgt $s$, dann gilt: \\
 \[ v = \frac{s}{t_{2} - t_{1}} \] \\
-Die aus den erfassten Daten erstellten Ampelsignalpläne und Position der angesteuerten Ampel sind die Basis dieser Berechnung. Die aktuelle Position des Fahrrads wird vom \gls{GPS}-Sensor des \glspl{Smartphone} ermittelt und daraus der Abstand zur Ampel errechnet. Die Abbildung \ref{fig:vst} illustriert die Grundlagen der Geschwindigkeitsberechnung: \\
+Die aus den erfassten Daten erstellten Ampelsignalpläne und Position der angesteuerten Ampel sind die Basis dieser Berechnung. Die aktuelle Position des Fahrrads wird vom \gls{GNSS}-Sensor des \glspl{Smartphone} ermittelt und daraus der Abstand zur Ampel errechnet. Die Abbildung \ref{fig:vst} illustriert die Grundlagen der Geschwindigkeitsberechnung: \\
 \begin{figure}[H]  
     \centering  
     \includegraphics[width=\textwidth]{vst}  

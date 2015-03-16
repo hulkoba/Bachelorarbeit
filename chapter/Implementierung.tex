@@ -54,12 +54,12 @@ Letzteres ist im Listing \ref{lst:gps1} abgebildet. Die Methode erwartet neben d
 \grayRule
 \end{center}
 Zusammen mit dem \texttt{LocationListener} wird unter anderem die Methode \texttt{onLocationChanged} implementiert, welche aufgerufen wird, sobald neue Positionsdaten vorhanden sind. Das hier gespeicherte \texttt{Location}-Objekt liefert neben dem Längen- und Breitengrad auch die Genauigkeit des \gls{GPS}-Signals in Metern und Geschwindigkeit in Metern pro Sekunde. Sofern die Genauigkeit nicht zu gering ist, wird mit ihm die Methode \texttt{getNearestLSA} aufgerufen, welche die nächste Ampel bestimmt.\\
-Die Methode \texttt{getNearestLSA} ermittelt zunächst alle Ampeln im festgelegten Radius und speichert diese zusammen mit der Distanz zum Gerät in einer temporären Liste. Dann werden diese durchlaufen und die Distanzen verglichen. Die Ampel, zu der sich die Entfernung zum Gerät verringert und die die kleinste Distanz zum Gerät hat, ist die Gesuchte. Ist die nächste Ampel ermittelt, kann der \texttt{OnSetListener} der \texttt{MainActivity} diese zusammen mit der Geräteposition übergeben. \\\\
-Vergrößert sich die Distanz zu der \gls{LSA} wieder oder befindet sie sich außerhalb des durchsuchten Radius, bedeutet daie, dass sich der Fahrer oder die Fahrerin sich von der Ampel oder der Kreuzung entfernt. Also werden diese dann zusammen mit den anderen gespeicherten Ampeln gelöscht.\\ 
+Die Methode \texttt{getNearestLSA} ermittelt zunächst alle Ampeln im festgelegten Radius und speichert diese zusammen mit der Distanz zum Gerät in einer temporären Liste. Dann werden diese durchlaufen und die Distanzen verglichen. Die Ampel, zu der sich die Entfernung zum Gerät verringert und die die kleinste Distanz zum Gerät hat, ist die Gesuchte. Ist die nächste Ampel ermittelt, kann der \texttt{LSAListener} diese zusammen mit der Geräteposition, der Klasse \texttt{GPSTracker} übergeben. \\\\
+Vergrößert sich die Distanz zu der \gls{LSA} wieder oder befindet sie sich außerhalb des durchsuchten Radius, bedeutet das, dass sich der Fahrer oder die Fahrerin von der Ampel oder der Kreuzung entfernt. Also werden diese dann zusammen mit den anderen gespeicherten Ampeln gelöscht.\\ 
 %\clearpage
 \begin{center}
 \grayRule
-\lstinputlisting[language=Java, firstline=13, lastline=65, caption={Ermittlung der nächsten LSA in GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
+\lstinputlisting[language=Java, firstline=13, lastline=64, caption={Ermittlung der nächsten LSA in GpsTracker.java}, label=lst:gps]{code/gpstracker.java}
 \grayRule
 \end{center}
 %

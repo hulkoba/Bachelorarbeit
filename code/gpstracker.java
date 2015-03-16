@@ -56,11 +56,10 @@ if (nearestLSAs == null ) {
 if(nearestLSA != null) {
     if(myLocation.distanceTo(nearestLSA.getLsaLocation()) 
 	> Constants.MIN_LSA_DISTANCE 
-      	|| myLocation.distanceTo(nearestLSA.getLsaLocation()) > (distance+0.1)) {
+      	|| myLocation.distanceTo(nearestLSA.getLsaLocation()) > (distance+1)) {
         
         // Ampeln und temporaere Liste loeschen
         nearestLSAs = null;
-      	nearestLSA = null;
     }
 }
 }
