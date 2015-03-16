@@ -1,11 +1,11 @@
 \chapter{\label{chap:state}Bestehende Konzepte}
-Sowohl in Radwegen integriert, als auch für den Einsatz in Kraftfahrzeugen gibt es bereits Projekte zu Ampelassistenten in Bordcomputern, Navigationssystemen, oder aber auch als mobile Applikation. Solche Anwendungen erkennen rote Ampeln und ermitteln die optimale Fahrgeschwindigkeit für die Grüne Welle. Auch Erweiterungen für Fahrräder werden immer vielfältiger --- vom einfachen Navigationssystem bis hin zu intelligenten Aufsätzen, die an das \gls{Smartphone} gekoppelt sind.
+Sowohl integriert in Radwegen, als auch für den Einsatz in Kraftfahrzeugen gibt es bereits Projekte zu Ampelassistenten in Bordcomputern, Navigationssystemen, oder als mobile Applikation. Solche Anwendungen erkennen rote Ampeln und ermitteln die optimale Fahrgeschwindigkeit für die Grüne Welle. Auch Erweiterungen für Fahrräder werden immer vielfältiger --- vom einfachen Navigationssystem bis hin zu intelligenten Aufsätzen, die an das \gls{Smartphone} gekoppelt sind.
 % ### Grüne Welle ###
 \section{Ampelinformationssysteme}
-Unter dem Prinzip "'Grüne Welle"' wird die Abstimmung der Ampelschaltzustände verstanden, sodass ein Fahrzeug in einer bestimmten Geschwindigkeit mehrere Ampeln passieren kann ohne anzuhalten. Im folgenden Abschnitt werden die existierenden Lösungen und Ansätze für Ampel- informationssysteme im Auto und für RadfahrerInnen dargestellt.
+Unter dem Prinzip "'Grüne Welle"' wird die Abstimmung der Ampelschaltzustände verstanden, sodass ein Fahrzeug in einer bestimmten Geschwindigkeit mehrere Ampeln passieren kann ohne anhalten zu müssen. Im folgenden Abschnitt werden die existierenden Lösungen und Ansätze für Ampel- informationssysteme im Auto und für RadfahrerInnen dargestellt.
 \subsection{Grüne Welle auf Radwegen}
 In Kopenhagen unterstützen grüne \glspl{LED} auf Radwegen die RadfahrerInnen indem sie, wenn diese mit einem Tempo von 20 km/h fahren, sie begleiten und so signalisieren, dass sie sich auf der "'Grünen Welle"' befinden.\\
-Abbildung \ref{fig:copenhagen} zeigt einen solchen Radweg mit einem Fahrradfahrer, der sich im grünen Bereich befindet. Zusätzlich erkennen Sensoren im Radweg Fahrradgruppen und veranlassen dann die Ampel zu einer längeren Grünphase. In einem anderen Stadtteil sind Leuchttafeln am Radwegrand installiert, die die verbleibende Zeit der Ampelphase anzeigen. \cite{KopIng}\\
+Abbildung \ref{fig:copenhagen} zeigt einen solchen Radweg mit einem Fahrradfahrer, der sich im "'grünen Bereich"' befindet. Zusätzlich erkennen Sensoren im Radweg Fahrradgruppen und veranlassen dann die Ampel zu einer längeren Grünphase. In einem anderen Stadtteil sind Leuchttafeln am Radwegrand installiert, die die verbleibende Zeit der Ampelphase anzeigen. \cite{KopIng}\\
 Kopenhagen als Vorbild nehmend hat Berlin mit vier Ampeln in Schöneberg eine Grüne Welle für RadfahrerInnen umgesetzt und plant bereits die zweite. \cite{BZ}\\ 
 Auch hier möchte man die Benutzung des Rades attraktiver machen und den Fahrradverkehr beschleunigen.
 \begin{figure}[H]  
@@ -49,7 +49,7 @@ Die FahrerInnen wurden sowohl fahrzeugintegriert\footnote{ On-Board-Computer} al
 \subsection*{Projekt Testfeld Telematik}
 Ende des Jahres 2013 wurde in Wien das Projekt \textsc{Testfeld Telematik} -- Feldversuch zur Stärkung österreichischen Know-Hows im Bereich umweltverträglicher Mobilität erfolgreich abgeschlossen.\\
 Per \gls{C2X}-Kommunikation bringt das Projekt kooperative Dienste wie Ampelinformationen direkt ins Auto. Über Navigationssysteme, integrierte Systeme, Nachrüst-Plattformen oder mobile Endgeräte erreicht die FahrerInnen die Information der optimalen Geschwindigkeit sowie die Dauer der jeweiligen Ampelphase. \cite{Telematik}\\ 
-Abbildung \ref{fig:telematik} zeigt die mobile Anwendung auf einem Tablet mit der Anzeige von einer Grünen Welle bei 50 km/h. Um an die Informationen zu kommen, wurden unter anderem Kameras und Sensoren, beispielsweise als Induktionsschleife, in die Fahrbahn eingelassen. \\
+Abbildung \ref{fig:telematik} zeigt die mobile Anwendung auf einem Tablet mit der Anzeige einer Grünen Welle bei 50 km/h. Um an die Informationen zu kommen, wurden unter anderem Kameras angebracht und Sensoren, beispielsweise als Induktionsschleife, in die Fahrbahn eingelassen. \\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{telematik} 
@@ -59,7 +59,7 @@ Abbildung \ref{fig:telematik} zeigt die mobile Anwendung auf einem Tablet mit de
 \end{figure}  
 Andere Autohersteller wie BMW, Volvo und Volkswagen kooperieren als Forschungsprojekt "'Car 2 Car Communication Consortium"' mit \textsc{Testfeld Telematik} ebenfalls mit dem Ziel, die Sicherheit an Kreuzungen zu verbessern. Im Auto installierte Sensoren kommunizieren mit Kameras und Scanner in der Ampel. Allerdings funktioniert das System nur, wenn alle Autohersteller zusammenarbeiten und sich auf den gleichen Standard einigen. \cite{Siemens}
 \subsection*{Toyota}
-Auch Toyota hat ein System entwickelt, welches allerdings ebenfalls eine spezielle Infrastruktur an Kreuzungen erfordert (Installation von Infrarot-Sendern die mit dem Toyota-Navigationssystem kommunizieren). An roter Ampel werden die Fahrer über die verbleibende Wartezeit informiert. Die ausgestatteten Navigationssysteme wurden bis jetzt jedoch ausschließlich in Japan getestet. \cite{Toyota}
+Auch Toyota hat ein System entwickelt, welches ebenfalls eine spezielle Infrastruktur an Kreuzungen erfordert (Installation von Infrarot-Sendern die mit dem Toyota-Navigationssystem kommunizieren). An einer roter Ampel werden die Fahrer über die verbleibende Wartezeit informiert. Die ausgestatteten Navigationssysteme wurden bis jetzt jedoch ausschließlich in Japan getestet. \cite{Toyota}
 %
 %%% Apps %%% 
 %
@@ -68,7 +68,7 @@ Auch Toyota hat ein System entwickelt, welches allerdings ebenfalls eine speziel
 %%% ENLIGHTEN %%%
 \subsection*{Mobile Applikation EnLighten}
 Connected Signals ist ein 2014 gegründetes Startup aus Eugene in Oregon (USA), das Echtzeit--Verkehrssignalinformationen sammelt und so Modelle zur Vorhersage von Ampelsignalen entwickelt. Die von Connected Signals erstellte Smartphone Applikation \textsc{EnLighten} bietet Treiber mit Vorhersagen, wie lange man an einer roten Ampel stehen wird. \cite{connectedSignals} \\
-Connected Signals verbindet sich mit dem Verkehrsmanagementsystem der jeweiligen Stadt, um Informationen über Signal- und Sensorzustände zu erhalten. Diese Informationen werden sowohl mit der Karte als auch den Geschwindigkeitsbegrenzungen kombiniert und in ein herstellerunabhängiges Format umgewandelt. Dann wendet Connected Signals die proprietäre Technologie an, um den Status der \gls{LSA} abzubilden und eine entsprechende Vorhersage über zukünftiges Verhalten zu treffen. \cite{signals} 
+Connected Signals verbindet sich mit dem Verkehrsmanagementsystem der jeweiligen Stadt, um Informationen über Signal- und Sensorzustände zu erhalten. Diese Informationen werden sowohl mit der Karte als auch den Geschwindigkeitsbegrenzungen kombiniert und in ein herstellerunabhängiges Format umgewandelt. Connected Signals wendet die proprietäre Technologie an, um den Status der \gls{LSA} abzubilden und eine entsprechende Vorhersage über zukünftiges Verhalten zu treffen. \cite{signals} 
 \begin{figure}[t]
     \centering
     \includegraphics[width=0.7\textwidth]{Portland_live} 
@@ -94,7 +94,7 @@ Dieser Ansatz ist für Fahrräder jedoch nicht umsetzbar, da das \gls{Smartphone
 %
 \clearpage
 \section{Fahrraderweiterungen}
-Um das Fahrrad intelligenter und attraktiver zu machen gibt es verschiedene Erweiterungen mit zahlreichen Funktionen. Die hier aufgeführten Fahrraderweiterungen führen zum gewünschten Ziel und ergänzen die Navigation um zusätzliche Eigenschaften, die unter anderem den Weg dorthin erleichtern.
+Um die Fahrräder intelligenter und attraktiver zu machen gibt es verschiedene Erweiterungen mit zahlreichen Funktionen. Die hier aufgeführten Fahrraderweiterungen führen zum gewünschten Ziel und ergänzen die Navigation um zusätzliche Eigenschaften, die unter anderem den Weg dorthin erleichtern.
 \subsection{Displaylose Fahrradnavigation}
 Das \textsc{Hammerhead} ist ein Gerät in der Form eines "'Hammers"' und wird an den Fahrradlenker angebracht. Mit verschiedenfarbigen \glspl{LED} bestückt zeigt es den Weg, warnt vor Hindernissen und ersetzt die vorderen Scheinwerfer.\\
 Via Bluetooth ist \textsc{Hammerhead} an das \gls{Smartphone} gekoppelt, auf dem die zugehörige Navigationsanwendung läuft mit der man Routen eingeben, teilen und speichern kann. \cite{Hammerhead}\\
@@ -107,8 +107,8 @@ Via Bluetooth ist \textsc{Hammerhead} an das \gls{Smartphone} gekoppelt, auf dem
 \end{figure}
 Ein sehr ähnliches Prinzip verfolgt das \textsc{CycleNav} von der Firma Schwinn. Unterschiede findet man hier im Design und einem integriertem Lautsprecher, der Abbiegehinweise ausgibt und auf Wunsch wiederholt. \cite{CycleNav}
 \subsection{Intelligente Fahrradlenker}
-Mehr Technologie, aber auch umfangreichere Funktionen bietet der vom amerikanischen Startup \textsc{Helios-Bikes} entwickelte \textsc{Helios}-Lenker.\\ 
-Neben dem Frontlicht hat der Lenker wie in Abbildung \ref{fig:helios} zu sehen, an den Enden \glspl{LED}, die einen zum gewünschten Ziel leiten. Sie passen ihre Farbe der Geschwindigkeit an und haben auf Wunsch auch eine Blinkfunktion. Verbindet man den Lenker mit einem \gls{Smartphone}, lässt sich die Farbe der \glspl{LED} individualisieren. Die Verbindung zum Handy hat weitere Vorteile: Dank des eingebauten \gls{GPS}-Trackers und eingesteckter SIM-Karte lässt sich das Fahrrad per SMS über den derzeitigen Standort abfragen\cite{Helios}, was im Falle eines Diebstahls sehr hilfreich sein kann.\\ 
+Mehr Technologie, aber auch umfangreichere Funktionen bietet der vom amerikanischen Start-up \textsc{Helios-Bikes} entwickelte \textsc{Helios}-Lenker.\\ 
+Neben dem Frontlicht hat der Lenker wie in Abbildung \ref{fig:helios} zu sehen, an den Enden \glspl{LED}, die zum gewünschten Ziel leiten. Sie passen ihre Farbe der Geschwindigkeit an und haben auf Wunsch auch eine Blinkfunktion. Verbindet man den Lenker mit einem \gls{Smartphone}, lässt sich die Farbe der \glspl{LED} individualisieren. Die Verbindung zum Handy hat weitere Vorteile: Dank des eingebauten \gls{GPS}-Trackers und eingesteckter SIM-Karte lässt sich das Fahrrad per SMS über den derzeitigen Standort abfragen\cite{Helios}, was im Falle eines Diebstahls sehr hilfreich sein kann.\\ 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{helios}
@@ -117,7 +117,7 @@ Neben dem Frontlicht hat der Lenker wie in Abbildung \ref{fig:helios} zu sehen, 
     \label{fig:helios}
 \end{figure}
 % ### VANHAWKS ###
-\textsc{Vanhawks Valour} heißt das Rad, das ab April 2015 lieferbar ist. Wie im \textsc{Helios}-Lenker steckt auch hier ein über das \gls{Smartphone} steuerbares Navigationssystem, das die Abbiegehinweise per \gls{LED} im Lenker signalisiert. Auf den gefahrenen Routen merkt sich das Rad durch einen Erschütterungssensor erfasste Hindernisse wie Unebenheiten in der Fahrbahn und ermittelt beim nächsten Mal darauf rücksicht nehmend eine andere Route. Es ist darüber hinaus in der Lage, mit anderen \textsc{Vanhawks valour}-Rädern zu kommunizieren und dessen Routenbegebenheiten ebenfalls zu berücksichtigen. Mittels Radarsensoren registriert das Fahrrad Autos im toten Winkel und benachrichtigt die FahrerInnen durch ein vibrierenden Lenker. \cite{vanhawks}
+\textsc{Vanhawks Valour} heißt das Rad, das ab April 2015 lieferbar ist. Wie im \textsc{Helios}-Lenker steckt auch hier ein über das \gls{Smartphone} steuerbares Navigationssystem, das die Abbiegehinweise per \gls{LED} im Lenker signalisiert. Auf den gefahrenen Routen merkt sich das Rad durch einen Erschütterungssensor erfasste Hindernisse wie Unebenheiten in der Fahrbahn und ermittelt beim nächsten Mal darauf rücksicht nehmend eine andere Route. Es ist darüber hinaus in der Lage, mit anderen \textsc{Vanhawks valour}-Rädern zu kommunizieren und deren Routenbegebenheiten ebenfalls zu berücksichtigen. Mittels Radarsensoren registriert das Fahrrad Autos im toten Winkel und benachrichtigt die FahrerInnen durch ein vibrierenden Lenker. \cite{vanhawks}
 \subsection{Das Samsung Smart Bike}
 Auf der Mailänder Designwoche 2014 hatte Samsung ein Smartbike vorgestellt, das mit intelligenten Komponenten wie Bluetooth, einer Kamera und Laserprojektoren ausgestattet ist.\\ 
 \begin{figure}[H]
@@ -128,8 +128,8 @@ Auf der Mailänder Designwoche 2014 hatte Samsung ein Smartbike vorgestellt, das
     \label{fig:samsung}
 \end{figure}
 Der Rahmen ist aus Aluminium und leicht geschwungen, was Vibrationen abfangen soll.\\
-Wie Abbildung \ref{fig:samsung} zeigt, zeichnen vier Laserprojektoren den eigenen Fahrradweg auf die Straße und sollen so die Sicherheit erhöhen, indem sie den Sicherheitsabstand markieren. Natürlich ist auch dieses Fahrrad mit dem \gls{Smartphone} verbunden, das sich dank eines Magneten einfach am Lenker anbringen lässt. Darüber kann man die Laserprojektoren ein- und ausschalten, dafür einen Timer bestimmen und über die eingebaute Kamera unter dem Sattel den Verkehr hinter sich im Auge behalten. Das \gls{Smartphone} fungiert außerdem als Navigationsgerät und durch den eingebauten \gls{GPS} -Empfänger lassen sich eigene und Routen von anderen Nutzern speichern und intelligent verarbeiten. \cite{smartbike}\\ 
-Wenn also viele Menschen mit einem Samsung Smartbike unterwegs sind, erkennt das Rad die Route als angenehm und navigiert dort entlang.
+Wie Abbildung \ref{fig:samsung} zeigt, zeichnen vier Laserprojektoren ihren "'eigenen Fahrradweg"' auf die Straße und sollen so die Sicherheit erhöhen, indem sie den Sicherheitsabstand markieren. Natürlich ist auch dieses Fahrrad mit dem \gls{Smartphone} verbunden, das sich dank eines Magneten einfach am Lenker anbringen lässt. Darüber kann man die Laserprojektoren ein- und ausschalten, dafür einen Timer bestimmen und über die eingebaute Kamera unter dem Sattel den Verkehr hinter sich im Auge behalten. Das \gls{Smartphone} fungiert außerdem als Navigationsgerät und durch den eingebauten \gls{GPS} -Empfänger lassen sich eigene und Routen von anderen Nutzern speichern und intelligent verarbeiten. \cite{smartbike}\\ 
+Wenn also viele Menschen mit einem Samsung Smartbike auf der gleichen Strecke unterwegs sind, erkennt das Rad die Route als angenehm und navigiert dort entlang.
 % ### COBI ###
 \subsection{Der COBI Fahrradcomputer}
 Ein Projekt aus Frankfurt am Main entwickelt das System \textsc{COBI} (Connected Biking), das alle standardisierten Fahrradsysteme wie Lampen, Navigation, Tachometer etc. vereinen soll. \textsc{COBI} ist ein Modul mit integrierter Frontleuchte in das man das \gls{Smartphone}, welches dann mit der installierten \textsc{COBI}-\Gls{App} als Fahrradcomputer dient, legt. Durch eine wasser- und stoßfeste Hülle ist es vor Umwelteinflüssen geschützt. Zu dem Lenkersystem gibt es auch Rückstrahler die beim Bremsen intensiver leuchten und eine Blinkfunktion haben.\\
@@ -151,7 +151,7 @@ Ein Projekt aus Frankfurt am Main entwickelt das System \textsc{COBI} (Connected
         \label{fig:cobi}
 \end{figure}
 Möchte man das \gls{Smartphone} trotzdem nicht am Lenker haben, bleibt die Verbindung zum Modul über Funk bestehen. Steuern lässt sich das System dann über einen Controller, den man am Lenker angebracht, mit dem Daumen bedienen kann. Ist es jedoch in der Halterung, wird das \gls{Smartphone} über den E-Bike-Akku oder einen zusätzlich integrierten Akku aufgeladen. Wie bei den anderen genannten Systemen ist in der \textsc{COBI}-\Gls{App} eine Navigationsanwendung, wie auch die tracking\&share Funktion inklusive. Darüber hinaus verfügt es über einen Diebstahlschutz, Fitnesstracker sowie die Möglichkeit einer Anbindung an Spotify\footnote{ Digitaler Musikstreaming Dienst}.\\
-Das Projekt ist bereits voll finanziert und der Versand der vorbestellten Systeme beginnt vorrausichtlich im Frühjahr 2015. \cite{cobi}
+Das Projekt ist bereits voll finanziert und der Versand der vorbestellten Systeme beginnt voraussichtlich im Frühjahr 2015. \cite{cobi}
 %%% ERGIBNIS %%%
 %\section{Analyseergebnis}
 %Das Thema der Geschwindigkeitsempfehlung zum Erreichen der Grünen Welle ist sehr interessant und wird in den nächsten Jahren weiter untersucht werden. Auch die Nachfrage an Fahrraderweiterungen steigt und die EntwicklerInnen solcher Systeme werden kreativer, wodurch immer mehr Produkte mit erweiternden Funktionen entstehen. Es existieren noch andere Studien und Produkte zu diesem Gebiet, doch um den Rahmen dieser Arbeit nicht zu sprengen, werden nicht alle aufgezählt. Sie haben zur Realisierung dieser Arbeit beigetragen indem sie deutlich zeigen, dass sich Forschung zu diesem Thema lohnt.Gerade eine Ampelassistents für das Fahrrad bewegt Menschen dazu, sich für das Radfahren zu begeistern. So wird der Verkehr flüssiger, die Teilnehmer entspannter und die Luft sauberer. AutofahrerInnen sind schon lange nicht mehr allein auf der Straße und so gilt es, dieses erfolgreiche Konzept für alle VerkehrsteilnehmerInnen zu erweitern.

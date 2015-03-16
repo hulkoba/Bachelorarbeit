@@ -1,5 +1,5 @@
 \chapter{\label{chap:implementierung}Der Prototyp}
-In diesem Kaptitel wird nach dem in Kapitel \ref{chap:entwurf} präsentierten Lösungsweg die detaillierte Beschreibung der technischen Realisierung der Anwendung vorgestellt.\\
+In diesem Kaptitel wird nach dem in Kapitel \ref{chap:entwurf} präsentiertem Lösungsweg die detaillierte Beschreibung der technischen Realisierung der Anwendung vorgestellt.\\
 Nach der Erklärung der Konfigurationsdateien wird auf die Umsetzung der Szenarien eingegangen. Im Zuge dessen werden die implementierten Algorithmen vorgestellt, wobei sich der erste mit dem Auffinden der nächsten relevanten Ampel befasst und der zweite die empfohlene Geschwindigkeit berechnet.
 %
 % MANIFEST
@@ -21,7 +21,7 @@ Die Eigenschaft \texttt{compileSdkVersion} beschreibt mit welcher Android \gls{S
 \end{center}
 Es folgt das \texttt{defaultConfig} Element, das die Kerneinstellungen festlegt und diese dynamisch aus dem Build-System in die  Manifestdatei einfügt. Hier wird unter anderem festgelegt, für welche Android Versionen die Anwendung geschrieben wurde (\texttt{targetSdkVersion}) und das minimale \gls{API}-Level\footnote{ Eine Übersicht über die \gls{API}-Level und der dazugehörigen Android-Versionen findet sich unter \url{http://developer.android.com/guide/topics/manifest/uses-sdk-element.html} -- Zugriff: 03.03.2015} der Anwendung (\texttt{minSdkVersion}).\\ 
 Letzteres ist auf "'10"' gesetzt und zeigt, dass für die Anwendung auf Mobilgeräten auf diesen mindestens die Android-Version 2.3.3 installiert sein muss. 
-Die Android-Version wurde auf 2.3.3 festgelegt, da das die Mindestanforderung für das editieren der \texttt{SharedPreferences}, welche für das einmalige Anzeigen des Warndialogs benötigt werden, ist. Damit werden trotzdem noch 99,6\% der Geräte, die auf den Google-Play-Store zugreifen können, abgedeckt. \cite{android_version} 
+Die Android-Version wurde auf 2.3.3 festgelegt, da das die Mindestanforderung für das Editieren der \texttt{SharedPreferences}, welche für das einmalige Anzeigen des Warndialogs benötigt werden, ist. Damit werden trotzdem noch 99,6\% der Geräte, die auf den Google-Play-Store zugreifen können, abgedeckt. \cite{android_version} 
 %
 % MainActivity
 %
@@ -29,13 +29,13 @@ Die Android-Version wurde auf 2.3.3 festgelegt, da das die Mindestanforderung f�
 \section{MainActivity-Klasse}
 Die Klasse \texttt{MainActivity} ist die \gls{Activity}, die beim Start der Anwendung ausgeführt wird.  Hier werden die Anzeigeelemente initialisiert und die zentralen Funktionalitäten delegiert.\\
 Die Methode \texttt{onCreate} ist die erste Methode im \gls{Activity}-Lebenszyklus\footnote{ \url{http://developer.android.com/training/basics/activity-lifecycle/starting.html} -- Zugriff: 02.03.2015} und wird direkt nach dem Start der \gls{Activity} ausgeführt. Hier werden die Anzeigeelemente gesetzt und nach jeder Installation ein Dialog erstellt, der auf die oberste Priorität der Straßenverkehrsordnung hinweist. Sollte \gls{GPS} nicht aktiviert sein, wird ebenfalls in einem Dialog darauf hingewiesen.\\\\
-Es wird eine Instanz des \texttt{JSONParser}-Objekts erstellt, welche die \gls{JSON}-Datei aus dem Ressourcenordner einliest und daraus ein Objektarray erstellt. Außerdem werden Objektinstanzen von \texttt{GPSTracker} und \texttt{SpeedHandler} erstellt. Der \texttt{GPSTracker} verfolg stetig die Position des Gerätes und ermittelt unter Verwendung die nächstgelegene Ampel. Auf diesen ist der \texttt{OnSetListener} registriert, welcher ein Ereignis wirft, sobald er die nächstgelegende Ampel gesetzt hat. Sobald dieser Fall eingetreten ist, wird der \texttt{SpeedHandler} beauftragt, den dazugehörigen Signalschaltplan zu holen, um dann anhand dieser Daten die Berechnungen durchzuführen und deren Ergebnisse anzuzeigen.\\
+Es wird eine Instanz des \texttt{JSONParser}-Objekts erstellt, welche die \gls{JSON}-Datei aus dem Ressourcenordner einliest und daraus ein Objektarray erstellt. Außerdem werden Objektinstanzen von \texttt{GPSTracker} und \texttt{SpeedHandler} erstellt. Der \texttt{GPSTracker} verfolgt stetig die Position des Gerätes und ermittelt unter Verwendung dieser die nächstgelegene Ampel. Auf diesen ist der \texttt{OnSetListener} registriert, welcher ein Ereignis wirft, sobald er die nächstgelegende Ampel gesetzt hat. Sobald dieser Fall eingetreten ist, wird der \texttt{SpeedHandler} beauftragt, den dazugehörigen Signalschaltplan zu holen, um dann anhand dieser Daten die Berechnungen durchzuführen und deren Ergebnisse anzuzeigen.\\
 Die \texttt{onResume}-Methode, wird aufgerufen, kurz bevor die \texttt{Activity} aktiv ist. Hier wird auf den \texttt{SpeedHandler} der \texttt{AdviceListener} registriert, über den die Anzeigeelemente, entsprechend der empfohlenen Geschwindigkeitsanpassung, aktualisiert werden. 
 %
 % Umsetzung Szenarien
 %
 \section{Umsetzung der Szenarien}
-Wie in Kapitel \ref{chap:szenarien} beschrieben, lassen sich die sieben möglichen Szenarien auf insgesamt fünf komprimieren, da die Szenarien R2 und G2, R3 und G3, genauso wie die Szenarien V3 und V3 dasselbe Ergebnis haben. Die zusammengefassten fünf Ergebnisse eignen sich für eine prototypische Umsetzung, welche im Folgenden beschrieben wird.
+Wie in Kapitel \ref{chap:szenarien} beschrieben, lassen sich die sieben möglichen Szenarien auf insgesamt fünf komprimieren, da die Szenarien R2 und G2, R3 und G3, genauso wie die Szenarien V3 und V3 jeweils ein gleichartiges Ergebnis haben. Die zusammengefassten fünf Ergebnisse eignen sich für eine prototypische Umsetzung, welche im Folgenden beschrieben wird.
 %
 % Einlesen der Ampeldaten
 %
@@ -55,7 +55,7 @@ Letzteres ist im Listing \ref{lst:gps1} abgebildet. Die Methode erwartet neben d
 \end{center}
 Zusammen mit dem \texttt{LocationListener} wird unter anderem die Methode \texttt{onLocationChanged} implementiert, welche aufgerufen wird, sobald neue Positionsdaten vorhanden sind. Das hier gespeicherte \texttt{Location}-Objekt liefert neben dem Längen- und Breitengrad auch die Genauigkeit des \gls{GPS}-Signals in Metern und Geschwindigkeit in Metern pro Sekunde. Sofern die Genauigkeit nicht zu gering ist, wird mit ihm die Methode \texttt{getNearestLSA} aufgerufen, welche die nächste Ampel bestimmt.\\
 Die Methode \texttt{getNearestLSA} ermittelt zunächst alle Ampeln im festgelegten Radius und speichert diese zusammen mit der Distanz zum Gerät in einer temporären Liste. Dann werden diese durchlaufen und die Distanzen verglichen. Die Ampel, zu der sich die Entfernung zum Gerät verringert und die die kleinste Distanz zum Gerät hat, ist die Gesuchte. Ist die nächste Ampel ermittelt, kann der \texttt{OnSetListener} der \texttt{MainActivity} diese zusammen mit der Geräteposition übergeben. \\\\
-Vergrößert sich die Distanz zu der \gls{LSA} wieder oder befindet sie sich außerhalb des durchsuchten Radius bedeutet das, dass der Fahrer oder die Fahrerin sich von der Ampel oder der Kreuzung entfernt. Also werden diese dann zusammen mit den anderen gespeicherten Ampeln gelöscht.\\ 
+Vergrößert sich die Distanz zu der \gls{LSA} wieder oder befindet sie sich außerhalb des durchsuchten Radius, bedeutet daie, dass sich der Fahrer oder die Fahrerin sich von der Ampel oder der Kreuzung entfernt. Also werden diese dann zusammen mit den anderen gespeicherten Ampeln gelöscht.\\ 
 %\clearpage
 \begin{center}
 \grayRule
