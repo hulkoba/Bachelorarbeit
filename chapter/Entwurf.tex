@@ -81,20 +81,20 @@ Aus den in Kapitel \ref{chap:anforderungen} beschriebenen Anforderungen und den 
 & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Anwendungsfall}} 
 & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Beschreibung}} \\ \hline
 % UC1
-\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC2}} & \multicolumn{1}{p{0.35\textwidth}}{Ich fahre langsamer, um die grüne Ampel zu passieren}
-& \multicolumn{1}{p{0.55\textwidth}}{Der Countdown der aktuellen Ampelphasendauer wird sekündlich aktualisiert und zusätzlich zur Aufforderung langsamer zu fahren angezeigt} \\ \midrule
+\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC2}} & \multicolumn{1}{p{0.35\textwidth}}{Ich fahre langsamer, um die grüne Ampel zu passieren.}
+& \multicolumn{1}{p{0.55\textwidth}}{Der Countdown der aktuellen Ampelphasendauer wird sekündlich aktualisiert und zusätzlich zur Aufforderung langsamer zu fahren angezeigt.} \\ \midrule
 % UC2
-\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC1}} & \multicolumn{1}{p{0.35\textwidth}}{Ich fahre schneller, um die grüne Ampel zu passieren}
-& \multicolumn{1}{p{0.55\textwidth}}{Es wird eine Beschleunigungsaufforderung ausgesprochen. Unterstützend wird der Countdown der aktuellen Ampelphasendauer sekündlich aktualisiert und zusätzlich angezeigt} \\ \midrule
+\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC1}} & \multicolumn{1}{p{0.35\textwidth}}{Ich fahre schneller, um die grüne Ampel zu passieren.}
+& \multicolumn{1}{p{0.55\textwidth}}{Es wird eine Beschleunigungsaufforderung ausgesprochen. Unterstützend wird der Countdown der aktuellen Ampelphasendauer sekündlich aktualisiert und zusätzlich angezeigt.} \\ \midrule
 % UC3
-\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC3}} & \multicolumn{1}{p{0.35\textwidth}}{Ich halte meine Geschwindigkeit, um die grüne Ampel zu passieren}
+\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC3}} & \multicolumn{1}{p{0.35\textwidth}}{Ich halte meine Geschwindigkeit, um die grüne Ampel zu passieren.}
 & \multicolumn{1}{p{0.55\textwidth}}{Die aktuelle Geschwindigkeit ist genauso hoch wie die berechnete Empfehlungsgeschwindigkeit. Es wird angezeigt, dass kein Handlungsbedarf besteht, also das Tempo gehalten werden kann.}\\ \midrule
 % UC4
-\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC4}} & \multicolumn{1}{p{0.35\textwidth}}{Ich muss in jedem Fall bei roter Ampel anhalten}
+\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC4}} & \multicolumn{1}{p{0.35\textwidth}}{Ich muss in jedem Fall bei roter Ampel anhalten.}
 & \multicolumn{1}{p{0.55\textwidth}}{Die berechnete Empfehlungsgeschwindigkeit übersteigt die festgelegte Höchstgeschwindigkeit oder die erforderliche Beschleunigung ist in dem Maße nicht erreichbar, also ist die Distanz zur Ampel zu lang. Eine Anzeige mit dem Signal "'keine Weiterfahrt ist möglich"' erscheint.}\\ \midrule
 %UC5
-\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC5}} & \multicolumn{1}{p{0.35\textwidth}}{Es ist nicht möglich eine Vorhersage zu treffen}
-& \multicolumn{1}{p{0.55\textwidth}}{Eine ausgeschaltete oder verkehrsabhängige Ampel mit individueller Steuerung nähert sich. Es ist dem System nicht möglich, eine wahrscheinliche Vorhersage zu treffen und so die entsprechende Empfehlung auszusprechen. Es wird symbolisch ein gelbes Ausrufungszeichen angezeigt.}\\ \bottomrule \cellcolor[HTML]{FFFFFF} \vspace{0.1cm}
+\multicolumn{1}{l}{\cellcolor[HTML]{ECF4FF}\textbf{UC5}} & \multicolumn{1}{p{0.35\textwidth}}{Es ist nicht möglich eine Vorhersage zu treffen.}
+& \multicolumn{1}{p{0.55\textwidth}}{Eine ausgeschaltete oder verkehrsabhängige Ampel mit individueller Steuerung nähert sich. Es ist dem System nicht möglich, eine wahrscheinliche Vorhersage zu treffen und so die entsprechende Empfehlung auszusprechen. Symbolisch hierfür wird ein gelbes Ausrufungszeichen angezeigt.}\\ \bottomrule \cellcolor[HTML]{FFFFFF} \vspace{0.1cm}
 \end{tabular}
 \grayRule
 	\caption{Anwendungsfälle}	
@@ -112,10 +112,10 @@ Das in Abbildung \ref{fig:uc} gezeigte Use-Case-Diagramm veranschaulicht die in 
 % KLASSENARCHITEKTUR
 %
 \section{Klassenarchitektur}
-Die zu erstellende Anwendung erhält den Namen AIS, was für Ampel-Informationssystem steht und der vorläufige Name der Anwendung ist. Die besteht aus den nachfolgend beschriebenen Klassen. \\\\
+Die zu erstellende Anwendung erhält den Namen AIS, was für Ampel-Informationssystem steht. Die Anwendung besteht aus den nachfolgend beschriebenen Klassen. \\\\
 Die \texttt{MainActivity} ist die Hauptklasse der Android-Applikation. Sie definiert die graphische Oberfläche der Anwendung und stellt die notwendigen Methoden bereit. \\
 Der \texttt{\gls{JSON}Parser} liest die erstellte \gls{JSON}-Datei ein und speichert deren Inhalt in einem Array. Dieses beinhaltet Ampelobjekte (bezeichnet als \texttt{LSA}) mit deren Namen, Position und der Information darüber, ob sie verkehrsabhängig sind oder nicht. Sind sie es nicht, wird außerdem zu jeder Ampel ein Array, bestehend aus den Sigalschaltplanobjekten (bezeichnet als \texttt{SZPL}) gespeichert. Diese enthalten alle benötigten Informationen über den Geltungszeitraum und die Grünphasen.\\ 
-Die Klasse \texttt{GPSTracker} implementiert die Schnittstelle \texttt{LocationListener} und kann so kontinuierlich die Position des Endgeräts verfolgen. Mit der eigenen Position und der aller Ampeln aus dem vom \texttt{JSONParser} erstellten Array ermittelt sie außerdem die nächste Ampel. Ist diese identifiziert, wird über den \texttt{OnSetListener} die Klasse \texttt{SpeedHandler} aktiviert, welche anhand der Daten aus dem Signalschaltplanobjekt den Countdown der Rotanzeige und die optimale Geschwindigkeit berechnet und dann mit Hilfe des \texttt{AdviceListener}s die Anzeige  entsprechend aktualisiert. Der \texttt{AdviceListener} wird in der \texttt{onResume} Methode der \texttt{MainActivity} gesetzt und "'lauscht"' dort auf neue Berechnungsergebnisse.\\
+Die Klasse \texttt{GPSTracker} implementiert die Schnittstelle \texttt{LocationListener} und kann so kontinuierlich die Position des Endgeräts verfolgen. Mit der eigenen Position und der aller Ampeln aus dem vom \texttt{JSONParser} erstellten Array ermittelt sie außerdem die nächste Ampel. Ist diese identifiziert, wird über den \texttt{LSAListener} die Klasse \texttt{SpeedHandler} aktiviert, welche anhand der Daten aus dem Signalschaltplanobjekt den Countdown der Rotanzeige und die optimale Geschwindigkeit berechnet und dann mit Hilfe des \texttt{AdviceListener}s die Anzeige  entsprechend aktualisiert. Der \texttt{AdviceListener} wird in der \texttt{onResume} Methode der \texttt{MainActivity} gesetzt und "'lauscht"' dort auf neue Berechnungsergebnisse.\\
 Das nachfolgende Klassendiagramm gibt eine Übersicht über die oben beschriebenen Klassen.\\
 \begin{figure}[H]  
     \centering  
@@ -127,8 +127,8 @@ Das nachfolgende Klassendiagramm gibt eine Übersicht über die oben beschrieben
 % ### Design ###
 %\clearpage
 \section{Die graphische Oberfläche}
-Aus den Anforderungen an die graphische Oberfläche in Kapitel \ref{chap:anforderungen} entsteht das Design. Durch die überschaubare Anzahl an Funktionalitäten kann der Aufbau einfach gehalten werden. Aus den Empfehlungsanzeigen, welche den Systemzuständen entsprechen, sind fünf Ansichten abzuleiten. Die folgende Abbildung zeigt den Entwurf der Benutzeroberfläche.
-Abbildung \ref{fig:stop} zeigt die graphische Umsetzung des Zustands \textit{a}, in dem die Ampelschaltung keine Weiterfahrt ermöglicht. Es wird ein großer roter Kreis mit einem schwarzen Kreuz verwendet. Rot ist eine Signalfarbe und steht auch bei Ampeln für "'Halt"' oder "'Stop"'. Auch das Kreuz wird häufig als verweigerndes Symbol eingesetzt und ist somit intuitiv als solches erkennbar.\\
+Aus den Anforderungen an die graphische Oberfläche in Kapitel \ref{chap:anforderungen} ergibt sich das Design. Durch die überschaubare Anzahl an Anzeigeelementen kann der Aufbau einfach gehalten werden. Aus den Empfehlungsanzeigen, welche den Systemzuständen entsprechen, sind fünf Ansichten abzuleiten. Die folgende Abbildung zeigt den Entwurf der Benutzeroberfläche.
+Abbildung \ref{fig:stop} zeigt die graphische Umsetzung des Zustands \textit{a}, in dem die Ampelschaltung keine Weiterfahrt ermöglicht. Es wird ein großer roter Kreis mit einem schwarzen Kreuz verwendet. Rot ist eine Signalfarbe und steht auch bei Ampeln für "'Halt"' oder "'Stop"'. Auch das Kreuz wird häufig als versperrendes Symbol eingesetzt und ist somit intuitiv als solches erkennbar.\\
 Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, bei dem man mit der aktuellen Geschwindigkeit in der Grünen Welle fährt. Hier wird ein großer grüner Kreis verwendet, in der Mitte steht "'ok"'. Durch die Kombination der Ampelfarben mit Textzeichen ist die Ansicht auch für Menschen mit einer Rot-Grün-Sehschwäche eindeutig interpretierbar.\\
 \begin{figure}[H]
         \centering
@@ -165,8 +165,8 @@ Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, be
         \caption[Systemzustände im Ampelbereich]{Entwurf des Designs anhand der Systemzustände}
         \label{fig:mockup}
 \end{figure}
-Die Abbildungen \ref{fig:langsamer} und \ref{fig:schneller} für die Zustände \textit{c} und \textit{d} sind in der Anordnung der Elemente identisch. Mittig im Bild ist eine eingekreiste rote Zahl, die den Countdown der Restrotanzeige darstellt. Sie wird also mit jeder Sekunde aktualisiert. Ober- und unterhalb des Countdowns befinden sich jeweils zwei hellblaue Pfeile. Je nach Differenz der aktuellen zur berechneten Geschwindigkeit sind ein oder zwei Pfeile ausgefüllt. Wird also empfohlen, viel schneller zu fahren, sind die oberen Pfeile aktiv, bei der Aufforderung das Tempo etwas zu drosseln, der untere. Es sind immer alle Pfeile zu sehen. Durch die Anzeige "'ein von zwei"' ist die Bedeutung der Geschwindigkeitsstufen klarer. Als Farbe für die Pfeile wurde Hellblau gewählt. Sie unterscheidet sich sowohl farblich als auch in der Helligkeitsstufe zu den anderen Farben und steht im hohen Kontrast zum Hintergrund. Auf schwarzem Hintergrund wirken die Farben intensiver und sind so auch aus dem Augenwinkel leichter zu erkennen und unterscheiden. Die in Abbildung \ref{fig:meh} gezeigte Darstellung erscheint, wenn keine Vorhersage möglich ist, weil die Ampel ausgeschaltet oder verkehrsabhängig ist. Als Farbe wurde die dritte Ampelfarbe Gelb gewählt, was weder Rot für Anhalten, noch grün für Weiterfahren ist und so signalisiert, die Anwendung kann keine Empfehlung aussprechen. Das mittig platzierte Ausrufungszeichen steht für "'Achtung"' und unterstützt so die Aussage.\\
-Die aktuelle Geschwindigkeit wie auch die Progressionsgeschwindigkeit werden bewusst nicht als Absolutwerte angezeigt. Die Differenz ist beim Fahrrad nicht so hoch wie bspw. im Auto. Bei einer Varianz von wenigen km/h genügen die Anzeigevarianten "'schneller"' und "'noch schneller"'.
+Die Abbildungen \ref{fig:langsamer} und \ref{fig:schneller} für die Zustände \textit{c} und \textit{d} sind in der Anordnung der Elemente identisch. Mittig im Bild ist eine eingekreiste rote Zahl, die den Countdown der Restrotanzeige darstellt. Sie wird also mit jeder Sekunde aktualisiert. Ober- und unterhalb des Countdowns befinden sich jeweils zwei hellblaue Pfeile. Je nach Differenz der aktuellen zur berechneten Geschwindigkeit sind ein oder zwei Pfeile ausgefüllt. Wird also empfohlen, viel schneller zu fahren, sind die oberen Pfeile aktiv, bei der Aufforderung das Tempo etwas zu drosseln, der untere. Es sind immer alle Pfeile zu sehen. Durch die Anzeige "'ein von zwei"' ist die Bedeutung der Geschwindigkeitsstufen klarer. Als Farbe für die Pfeile wurde Hellblau gewählt. Sie unterscheidet sich sowohl farblich als auch in der Helligkeitsstufe von den anderen Farben und steht im hohen Kontrast zum Hintergrund. Auf schwarzem Hintergrund wirken die Farben intensiver und sind so auch aus dem Augenwinkel leichter zu erkennen und unterscheiden. Die in Abbildung \ref{fig:meh} gezeigte Darstellung erscheint, wenn keine Vorhersage möglich ist, weil die Ampel ausgeschaltet oder verkehrsabhängig ist. Als Farbe wurde die dritte Ampelfarbe Gelb gewählt, was weder Rot für Anhalten, noch grün für Weiterfahren ist und so signalisiert, die Anwendung kann keine Empfehlung aussprechen. Das mittig platzierte Ausrufungszeichen steht für "'Achtung"' und unterstützt so die Aussage.\\
+Die aktuelle Geschwindigkeit wie auch die \gls{Progressionsgeschwindigkeit} werden bewusst nicht als Absolutwerte angezeigt. Die Differenz ist beim Fahrrad nicht so hoch wie bspw. im Auto. Bei einer Varianz von wenigen km/h genügen die Anzeigevarianten "'schneller"' und "'noch schneller"'.
 % TESTFÄLLE
 \section{Testfälle}
 Folgende Testfälle werden während der Entwicklung stetig durchgeführt. Das erfolgreiche Bestehen dieser Tests ist eine notwendige Qualitätseigenschaft der zu entwickelnden Applikation.
@@ -178,7 +178,7 @@ Die Anwendung muss sich zu jedem Zeitpunkt starten lassen. \\
 \item[Anwendung beenden:] 
 Die Anwendung muss sich zu jedem Zeitpunkt beenden lassen. \\
 \item[Einlesen der Daten:] 
-Die am nächsten gelegene Ampel und deren Rot- oder Grünphase kann nur ermittelt werden, wenn die Daten richtig eingelesen werden. Auch kann der Countdown der Restrotanzeige nur mit den Daten des Schaltplans angezeigt werden.\\
+Die am nächsten gelegene Ampel und deren Rot- oder Grünphase kann nur ermittelt werden, wenn die Daten richtig eingelesen werden. Auch kann der Countdown der Restrotanzeige nur mit den Daten des Schaltplans ermittelt und angezeigt werden.\\
 \item[Ermittlung der Position:] 
 Die Ermittlung der nächsten Ampel kann nur erfolgreich sein, wenn sowohl die Position des Gerätes, als auch die Positionen der Ampeln bekannt ist. Die eigene Position und die der nächsten Ampel sind erforderlich für die korrekte Geschwindigkeitsberechnung.\\
 \end{description}

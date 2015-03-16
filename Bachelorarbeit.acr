@@ -2,7 +2,7 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{A}\relax \glsresetentrylist %
 \glossaryentryfield{A-GPS}{\glsnamefont{A-GPS}}{Assisted Global Positioning System}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{26}}}%
+		\setentrycounter[]{page}\glsnumberformat{25\delimN 26}}}%
 \glossaryentryfield{API}{\glsnamefont{API}}{Application Programming Interface}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{20}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{22}\delimN 
@@ -30,14 +30,16 @@
 		\setentrycounter[]{page}\glsnumberformat{58}\delimN 
 		\glsseeformat[Glossary:]{DSRCg}{Z}}}\glsgroupskip
 \glsgroupheading{G}\relax \glsresetentrylist %
-\glossaryentryfield{GLONASS}{\glsnamefont{GLONASS}}{Global Navigation Satellite System; das russische \gls {GNSS}}{\relax }{\glossaryentrynumbers{\relax 
+\glossaryentryfield{GLONASS}{\glsnamefont{GLONASS}}{Globalnaja nawigazionnaja sputnikowaja sistema; das russische \gls {GNSS}}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{18}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{25}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{52}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{55}}}%
 \glossaryentryfield{GNSS}{\glsnamefont{GNSS}}{Global Navigation Satellite System}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{18}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{25}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{55\delimN 56}}}%
+		\setentrycounter[]{page}\glsnumberformat{52}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{54\delimR 56}}}%
 \glossaryentryfield{GPS}{\glsnamefont{GPS}}{Global Positioning System}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{11\delimN 12}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{14}\delimN 
@@ -47,7 +49,8 @@
 		\setentrycounter[]{page}\glsnumberformat{24\delimR 27}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{34}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{46\delimR 48}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{52\delimR 55}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{52\delimN 53}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{55}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{58}}}%
 \glossaryentryfield{GUI}{\glsnamefont{GUI}}{Graphical User Interface}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{50}}}\glsgroupskip

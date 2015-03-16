@@ -4,7 +4,7 @@
 \glossaryentryfield{Activity}{\glsnamefont{Activity}}{Eine Activity ist eine Android-Anwendungskomponente, welche den Bildschirm, beziehungsweise eine Ansicht zur Interaktion bereitstellt}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{36}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{45\delimR 47}}}%
-\glossaryentryfield{Arduino}{\glsnamefont{Arduino}}{ Die Arduino-Plattform ist eine quelloffene, aus Soft- und Hardware bestehende Physical-Computing-Plattform. Die Hardware besteht aus einem einfachen I/O-Board mit einem Mikrocontroller, analogen und digitalen Ein- und Ausgängen. Die Entwicklungsumgebung basiert auf Processing, die auch technisch weniger Versierten den Zugang zur Programmierung und zu Mikrocontrollern erleichtern soll}{\relax }{\glossaryentrynumbers{\relax 
+\glossaryentryfield{Arduino}{\glsnamefont{Arduino}}{ Die Arduino-Plattform ist eine quelloffene, aus Soft- und Hardware bestehende Physical-Computing-Plattform. Physical Computing bezeichnet den Vorgang, bei dem die digitale Welt mit realen Objekten kombiniert wird. Die Hardware besteht aus einem einfachen I/O-Board mit einem Mikrocontroller, analogen und digitalen Ein- und Ausgängen. Die Entwicklungsumgebung basiert auf der Programmiersprache Processing, die auch technisch weniger Versierten den Zugang zur Programmierung und zu Mikrocontrollern erleichtern soll}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{2}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{18\delimN 19}}}\glsgroupskip
 \glsgroupheading{C}\relax \glsresetentrylist %
@@ -15,13 +15,20 @@
 \glsgroupheading{D}\relax \glsresetentrylist %
 \glossaryentryfield{DSRCg}{\glsnamefont{DSRC}}{funkgestützte sicherheitsrelevante und private Dienste, die in der Automotive-Technik von mobilen Stationen ausgeführt werden können}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{58}}}\glsgroupskip
+\glsgroupheading{P}\relax \glsresetentrylist %
+\glossaryentryfield{Progressionsgeschwindigkeit}{\glsnamefont{Progressionsgeschwindigkeit}}{ Die Progressionsgeschwindigkeit bezeichnet jene Geschwindigkeit, bei der es, sofern sie eingehalten wird, möglich ist jede Ampel in ihrer Grünphase zu erreichen}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{9\delimN 10}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{27}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{43}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{59}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossaryentryfield{Smartphone}{\glsnamefont{Smartphone}}{ Mobiltelefon, das sich von einem klassischen Mobiltelefon durch einen größeren, berührungsempfindlichen Bildschirm (Touchscreen) und diverse Sensoren, wie dem \gls {GPS} unterscheidet. So ist eine Interaktion mit der Umgebung und den AnwenderInnen möglich}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{10\delimN 11}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{13\delimR 20}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{26\delimN 27}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{25}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{27}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{32}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{34}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{52\delimR 55}}}%
+		\setentrycounter[]{page}\glsnumberformat{52\delimR 54}}}%
 \end{theglossary}\glossarypostamble

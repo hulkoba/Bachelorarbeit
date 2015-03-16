@@ -1,3 +1,7 @@
+\newglossaryentry{Progressionsgeschwindigkeit}{
+    name={Progressionsgeschwindigkeit}, 
+    description={ Die Progressionsgeschwindigkeit bezeichnet jene Geschwindigkeit, bei der es, sofern sie eingehalten wird, möglich ist jede Ampel in ihrer Grünphase zu erreichen}
+}
 \newglossaryentry{C2Xg}{
     name={C2X}, 
     description={ direkter Informationsaustausch zwischen Fahrzeugen jeglicher Art, Verkehrsleittechnik wie z.B. Lichtsignalanlagen und Verkehrsleitzentralen}
