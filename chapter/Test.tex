@@ -43,15 +43,14 @@ Bei dem \gls{GNSS}-Sensor gab es jedoch bezüglich des Findens von Satelliten un
 \subsection{Ermittlung der nächsten Ampel}
 In der ersten Testphase wurde vorwiegend die Richtigkeit der Ermittlung der nächsten Ampel überprüft.\\
 Insgesamt wurden sämtliche \glspl{LSA} korrekt aufgefunden und konnten problemlos zugeordnet werden. Der Algorithmus schlug also bei keiner der Ampeln fehl. Es ist jedoch zu beachten, dass die Kreuzungen in Plau am See mit maximal vier Ampeln versehen sind und der Straßenverlauf kurvenarm ist.\\\\
-Bei der Erkennung einer gerade passierten Ampel traten bei einigen Geräten Probleme auf. Hier fehlte das nötige Positionsupdate, doch eine gewisse Ungenauigkeit des \gls{GPS}-Sensors war zu erwarten.\\ 
-Die Erfolgsquote liegt insgesamt bei 91.3\% und ist damit als erfolgreich zu bezeichnen. 
+Bei der Erkennung einer gerade passierten Ampel traten bei einigen Geräten Probleme auf. Hier fehlte das nötige Positionsupdate, doch eine gewisse Ungenauigkeit des \gls{GNSS}-Sensors war zu erwarten.
 %
 % v = s/t
 %
 \subsection{Berechnung der Geschwindigkeitsempfehlung}
 In der zweiten Testphase lag das Hauptaugenmerk auf der ausgesprochenen Handlungsaufforderung und deren korrekter Berechnung. Hierfür wurden sämtliche Ampeln abgefahren und stichprobenartig davor gehalten, um den Countdown und die Aktualität der Anzeige zu überprüfen. Um genauere Ergebnisse zu erlangen, wurde zusätzlich die Handlungsaufforderung bewusst missachtet.\\\\  
 Die Anzeige, dass eine Vorhersage aufgrund einer verkehrsabhängigen oder ausgeschaltenen Ampel nicht möglich ist, wurde in 100\% der Testdurchläufe korrekt dargestellt.\\ 
-Bei den neueren Geräten wurde jedes Mal die richtige Empfehlung ausgesprochen, bei den älteren gab es kleinere Abweichungen. Dies ist auf die fehlerhafte Geschwindigkeitsausgabe des \texttt{Location}-Objekts zurückzuführen, was anhand des Tachometers abzulesen war. \\
+Bei den neueren Geräten wurde jedes Mal die richtige Empfehlung ausgesprochen, bei den älteren gab es kleinere Abweichungen. Dies ist auf die fehlerhafte Geschwindigkeitsausgabe des \texttt{Location}-Objekts zurückzuführen, was anhand des Tachometers abzulesen war. Die Erfolgsquote liegt hier insgesamt bei 91.3\% und ist damit als erfolgreich zu bezeichnen. \\
 Bei der Countdownanzeige gab es teilweise geringfügige Abweichungen (1-2 Sekunden). Mit sehr hoher Wahrscheinlichkeit lag das an der fehlerhaften Erfassung der Phasendaten. Nach der Beseitigung dieser Fehler durch die Anpassung der Daten war die Anzeige in jedem Fall richtig.\\\\
-Abschließend ist zu sagen, dass die Anwendung stabil läuft. Aufgetretende Probleme lassen sich durch die Ungenauigkeit des \gls{GPS}-Empfängers erklären.\\
+Abschließend ist zu sagen, dass die Anwendung stabil läuft. Aufgetretende Probleme lassen sich durch die Ungenauigkeit des \gls{GNSS}-Empfängers erklären.\\
 Die protokollierten Testergebnisse sind auf der beiliegenden CD zu finden.

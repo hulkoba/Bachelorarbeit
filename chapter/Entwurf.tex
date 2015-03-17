@@ -8,7 +8,7 @@ In der zu entwickelnden Fahrradapplikation wird keine Navigation innerhalb der A
 % DATENGRUNDLAGE
 %
 \section{Datengrundlage}
-Neben den Daten der eigenen Position ist die Datengrundlage der Ampeln von höchster Priorität. Für die Umsetzung des Prototyps wurde im Rahmen dieser Arbeit als Ausführungsort die Stadt Plau am See in Mecklenburg-Vorpommern festgelegt.\\\\ 
+Neben den Daten der eigenen Position ist die Datengrundlage der Ampeln von höchster Priorität. Für die Umsetzung des Prototypen wurde im Rahmen dieser Arbeit als Ausführungsort die Stadt Plau am See in Mecklenburg-Vorpommern festgelegt.\\\\ 
 Die Vorteile der Anwendung im ländlichen Bereich liegen in der Verkehrsarmut und der daraus resultierenden geringen Menge an Ampeln. Dieser Umstand ermöglicht die Erfassung sämtlicher Ampeln der Stadt, was ein überschaubares Testbild ergibt. 
 Weiter gibt es keine Straßenbahnen ober Busse, welche den Verkehr durch Grünanforderung beeinflussen. Dadurch lässt sich die Anzahl der Ampeln, bei denen durch Verkehrsabhängigkeit keine Vorhersage möglich ist, minimieren. 
 %
@@ -128,7 +128,7 @@ Das nachfolgende Klassendiagramm gibt eine Übersicht über die oben beschrieben
 %\clearpage
 \section{Die graphische Oberfläche}
 Aus den Anforderungen an die graphische Oberfläche in Kapitel \ref{chap:anforderungen} ergibt sich das Design. Durch die überschaubare Anzahl an Anzeigeelementen kann der Aufbau einfach gehalten werden. Aus den Empfehlungsanzeigen, welche den Systemzuständen entsprechen, sind fünf Ansichten abzuleiten. Die folgende Abbildung zeigt den Entwurf der Benutzeroberfläche.
-Abbildung \ref{fig:stop} zeigt die graphische Umsetzung des Zustands \textit{a}, in dem die Ampelschaltung keine Weiterfahrt ermöglicht. Es wird ein großer roter Kreis mit einem schwarzen Kreuz verwendet. Rot ist eine Signalfarbe und steht auch bei Ampeln für "'Halt"' oder "'Stop"'. Auch das Kreuz wird häufig als versperrendes Symbol eingesetzt und ist somit intuitiv als solches erkennbar.\\
+Abbildung \ref{fig:stop} zeigt die graphische Umsetzung des Zustands \textit{a}, in dem die Ampelschaltung keine Weiterfahrt ermöglicht. Es wird ein großer roter Kreis mit einem rotem Kreuz verwendet. Rot ist eine Signalfarbe und steht auch bei Ampeln für "'Halt"' oder "'Stop"'. Auch das Kreuz wird häufig als versperrendes Symbol eingesetzt und ist somit intuitiv als solches erkennbar.\\
 Abbildung \ref{fig:yeah} setzt die Visualisierung des Zustands \textit{b} um, bei dem man mit der aktuellen Geschwindigkeit in der Grünen Welle fährt. Hier wird ein großer grüner Kreis verwendet, in der Mitte steht "'ok"'. Durch die Kombination der Ampelfarben mit Textzeichen ist die Ansicht auch für Menschen mit einer Rot-Grün-Sehschwäche eindeutig interpretierbar.\\
 \begin{figure}[H]
         \centering
